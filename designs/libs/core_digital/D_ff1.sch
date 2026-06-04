@@ -33,21 +33,16 @@ N 410 100 520 100 {lab=#net2}
 N 410 60 410 100 {lab=#net2}
 N 400 -190 400 -160 {lab=#net3}
 N 400 -190 510 -190 {lab=#net3}
-N 480 -120 510 -120 {lab=#net4}
-N 480 -120 480 -40 {lab=#net4}
-N 480 -40 720 -40 {lab=#net4}
-N 720 -40 720 60 {lab=#net4}
-N 720 60 770 60 {lab=#net4}
+N 480 -120 510 -120 {lab=Q_bar}
+N 480 -120 480 -40 {lab=Q_bar}
+N 480 -40 720 -40 {lab=Q_bar}
+N 720 -40 720 60 {lab=Q_bar}
+N 720 60 770 60 {lab=Q_bar}
 N 490 30 520 30 {lab=Q}
 N 490 -60 490 30 {lab=Q}
 N 490 -60 710 -60 {lab=Q}
 N 710 -160 710 -60 {lab=Q}
 N 710 -160 750 -160 {lab=Q}
-C {inv1.sym} 30 10 0 0 {name=x1}
-C {NAND2.sym} 280 -160 0 0 {name=x2}
-C {NAND2.sym} 290 60 0 0 {name=x3}
-C {NAND2.sym} 590 -160 0 0 {name=x4}
-C {NAND2.sym} 600 60 0 0 {name=x5}
 C {ipin.sym} -30 -190 0 0 {name=p1 lab=D}
 C {ipin.sym} 20 -250 0 0 {name=p2 lab=Vdd
 }
@@ -55,3 +50,8 @@ C {ipin.sym} 30 140 0 0 {name=p3 lab=Vss}
 C {ipin.sym} 160 80 0 0 {name=p4 lab=clk}
 C {opin.sym} 750 -160 0 0 {name=p5 lab=Q}
 C {opin.sym} 770 60 0 0 {name=p6 lab=Q_bar}
+C {libs/core_digital/inv1.sym} 30 10 0 0 {name=x1}
+C {libs/core_digital/NAND2.sym} 280 -160 0 0 {name=x2}
+C {libs/core_digital/NAND2.sym} 290 60 0 0 {name=x3}
+C {libs/core_digital/NAND2.sym} 600 60 0 0 {name=x4}
+C {libs/core_digital/NAND2.sym} 590 -160 0 0 {name=x5}

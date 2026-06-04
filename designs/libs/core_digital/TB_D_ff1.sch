@@ -23,7 +23,6 @@ N -70 120 -70 150 {lab=GND}
 N -130 -40 -130 -10 {lab=D}
 N -130 -40 -30 -40 {lab=D}
 N -130 50 -130 150 {lab=GND}
-C {D_ff1.sym} 50 -10 0 0 {name=x1}
 C {vsource.sym} -180 120 0 0 {name=V1 value=3.3 savecurrent=false}
 C {capa.sym} 210 0 0 0 {name=C1
 m=1
@@ -71,4 +70,6 @@ C {lab_wire.sym} -90 -40 0 0 {name=p2 sig_type=std_logic lab=D}
 C {lab_wire.sym} -50 40 0 0 {name=p3 sig_type=std_logic lab=clk}
 C {lab_wire.sym} 190 -50 0 0 {name=p4 sig_type=std_logic lab=Q}
 C {lab_wire.sym} 160 30 0 0 {name=p5 sig_type=std_logic lab=Q_bar}
-C {code.sym} -110 -310 0 0 {name=models only_toplevel=false value=.include $::180MCU_models/design.ngspice}
+C {code_shown.sym} 90 -220 0 0 {name=models only_toplevel=false value=".include $::180MCU_MODELS/design.ngspice
+.lib $::180MCU_MODELS/sm141064.ngspice typical "}
+C {libs/core_digital/D_ff1.sym} 50 -10 0 0 {name=x1}
