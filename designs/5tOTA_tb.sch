@@ -18,6 +18,9 @@ N 960 -300 1000 -300 {lab=vout}
 N 960 -300 960 -220 {lab=vout}
 N 960 -220 1160 -220 {lab=vout}
 N 1160 -320 1160 -220 {lab=vout}
+N 1190 -320 1300 -320 {lab=vout}
+N 1220 -320 1220 -280 {lab=vout}
+N 1220 -220 1220 -180 {lab=GND}
 C {5tOTA.sym} 1070 -320 0 0 {name=x1}
 C {devices/code_shown.sym} 20 -950 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
@@ -71,12 +74,19 @@ C {devices/gnd.sym} 640 -200 0 0 {name=l2 lab=GND}
 C {devices/vsource.sym} 640 -370 0 0 {name=V2 value=3.3 savecurrent=false}
 C {devices/lab_wire.sym} 640 -310 0 0 {name=p2 sig_type=std_logic lab=VSS}
 C {devices/lab_wire.sym} 640 -430 0 0 {name=p3 sig_type=std_logic lab=VDD}
-C {devices/isource.sym} 880 -257.5 3 0 {name=I0 value=50u}
+C {devices/isource.sym} 880 -257.5 3 0 {name=I0 value=100u}
 C {devices/lab_wire.sym} 830 -257.5 0 0 {name=p6 sig_type=std_logic lab=VDD}
 C {devices/vsource.sym} 720 -370 0 0 {name=V3 value=1.5 savecurrent=false}
 C {devices/lab_wire.sym} 720 -310 0 0 {name=p7 sig_type=std_logic lab=VSS}
 C {devices/lab_wire.sym} 720 -430 0 0 {name=p8 sig_type=std_logic lab=vin}
 C {devices/lab_wire.sym} 940 -340 0 0 {name=p9 sig_type=std_logic lab=vin}
-C {devices/lab_wire.sym} 1190 -320 0 0 {name=p1 sig_type=std_logic lab=vout}
+C {devices/lab_wire.sym} 1290 -320 0 0 {name=p1 sig_type=std_logic lab=vout}
 C {devices/lab_wire.sym} 1070 -257.5 0 0 {name=p4 sig_type=std_logic lab=VSS}
 C {devices/lab_wire.sym} 1070 -367.5 0 0 {name=p5 sig_type=std_logic lab=VDD}
+C {symbols/cap_mim_analog.sym} 1220 -250 0 0 {name=C1
+W=15.33e-6
+L=15.33e-6
+model=cap_mim_2f0_m3m4_noshield
+spiceprefix=X
+m=1000}
+C {devices/gnd.sym} 1220 -180 0 0 {name=l3 lab=GND}
