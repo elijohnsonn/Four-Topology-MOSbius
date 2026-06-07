@@ -50,24 +50,18 @@ value=
 
 "
 .control
-tran 1n 50u
-meas tran v_input find v(input) at=40u
-meas tran v_output find v(output) at=40u
-let v_error = v_input - v_output
-print v_error
-
-meas tran vpeak max v(output) from=10u to=50u
-meas tran vfinal find v(output) at=40u
-
-let target_low = vfinal * 0.999
-meas tran settle_01 when v(output) = target_low rise = last
-
-print v_input v_output
-print vpeak vfinal
-print settle_01
+tran 1n 100u
+meas tran v_before find v(output) at=24u
+meas tran v_after find v(output) at=90u
+let v_20 = v_before + 0.2 * (v_after - v_before)
+let v_80 = v_before + 0.8 * (v_after - v_before)
+meas tran t_20 when v(output) = v_20 rise = 1 from = 25u
+meas tran t_80 when v(output) = v_80 rise = 1 from = 25u
+let slew_rate = (v_80 - v_20) / (t_80 - t_20)
+print v_before v_after
+print slew_rate
 
 plot v(input) v(output)
-plot v(output) - v(input)
 .endc
 
 "}
@@ -81,7 +75,7 @@ device="ceramic capacitor"}
 C {lab_pin.sym} 580 -50 0 0 {name=p7 sig_type=std_logic lab=GND}
 C {lab_pin.sym} 630 -190 0 1 {name=p8 sig_type=std_logic lab=output}
 C {lab_pin.sym} 430 90 0 0 {name=p6 sig_type=std_logic lab=VDD}
-C {vsource.sym} 100 -190 0 0 {name=VINP value= "PULSE(0 0.1 25u 1p 100n 2m 1)" savecurrent=false}
+C {vsource.sym} 100 -190 0 0 {name=VINP value= "PULSE(0 1 25u 1p 100n 2m 1)" savecurrent=false}
 C {vsource.sym} 100 90 0 0 {name=VCM value= 1.65 savecurrent=false}
 C {lab_pin.sym} 100 150 0 0 {name=p9 sig_type=std_logic lab=GND}
 C {libs/core_amps/ota_folded_cascode/newfsym.sym} 490 -210 0 0 {name=x1}
