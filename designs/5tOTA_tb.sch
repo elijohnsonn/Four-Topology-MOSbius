@@ -30,6 +30,7 @@ format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
+.lib $::180MCU_MODELS/sm141064.ngspice mimcap_typical
 "}
 C {title.sym} 190 -70 0 0 {name=l1 author="Songhang Li"}
 C {devices/vsource.sym} 90 -300 0 0 {name=V1 value=0 savecurrent=false}
@@ -62,7 +63,7 @@ show all
 
 *DC V3 0 3.3 0.01
 *TRAN 10u
-*write 5tOTA_tb.raw
+write 5tOTA_tb.raw
 .endc
 "}
 C {devices/lab_wire.sym} 340 -320 0 0 {name=p10 sig_type=std_logic lab=i_bias}

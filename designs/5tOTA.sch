@@ -124,11 +124,10 @@ C {ipin.sym} 120 -350 0 0 {name=p5 lab=i_bias
 }
 C {lab_pin.sym} 290 -390 0 0 {name=p6 sig_type=std_logic lab=vin+}
 C {lab_pin.sym} 660 -390 0 0 {name=p3 sig_type=std_logic lab=vin-}
-C {ipin.sym} 240 -390 0 0 {name=p4 lab=vin+
-}
+C {ipin.sym} 240 -390 0 0 {name=p4 lab=vin+}
 C {ipin.sym} 690 -390 2 0 {name=p7 lab=vin-
 }
-C {lab_pin.sym} 470 -160 1 0 {name=p8 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 470 -180 2 0 {name=p8 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 350 -390 2 0 {name=p9 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 550 -390 0 0 {name=p10 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 560 -690 0 0 {name=p11 sig_type=std_logic lab=VDD}
