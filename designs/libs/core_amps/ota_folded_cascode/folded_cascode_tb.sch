@@ -5,57 +5,71 @@ V {}
 S {}
 E {}
 N 380 -80 380 -20 {lab=GND}
-N -60 -120 -60 -60 {lab=VDD}
-N -180 -120 -180 -60 {lab=GND}
-N -180 0 -180 50 {lab=GND}
-N -60 0 -60 50 {lab=GND}
-N -60 50 -60 60 {lab=GND}
-N -180 -60 -180 0 {lab=GND}
+N -70 -310 -70 -250 {lab=VDD}
+N -190 -310 -190 -250 {lab=GND}
+N -190 -190 -190 -140 {lab=GND}
+N -70 -190 -70 -140 {lab=GND}
+N -70 -140 -70 -130 {lab=GND}
+N -190 -250 -190 -190 {lab=GND}
 N 400 -340 400 -280 {lab=VDD}
 N 430 -30 430 -10 {lab=#net1}
 N 430 50 430 90 {lab=VDD}
 N 510 -190 630 -190 {lab=output}
 N 580 -190 580 -140 {lab=output}
 N 580 -80 580 -50 {lab=GND}
-N 190 -250 260 -250 {lab=#net2}
-N 100 -160 100 -120 {lab=#net3}
-N 190 -20 190 20 {lab=#net3}
-N 150 20 150 60 {lab=#net3}
-N 150 120 150 150 {lab=GND}
+N 190 -250 260 -250 {lab=input}
+N 100 -160 100 -120 {lab=#net2}
+N 190 -20 190 20 {lab=output}
+N 100 120 100 150 {lab=GND}
 N 430 -100 430 -30 {lab=#net1}
-N 190 -100 260 -100 {lab=#net4}
-N 190 -100 190 -80 {lab=#net4}
-N 100 -250 190 -250 {lab=#net2}
-N 100 -250 100 -220 {lab=#net2}
-N 100 -120 100 20 {lab=#net3}
-N 100 20 190 20 {lab=#net3}
+N 190 -100 260 -100 {lab=output}
+N 190 -100 190 -80 {lab=output}
+N 100 -250 190 -250 {lab=input}
+N 100 -250 100 -220 {lab=input}
+N 100 -120 100 20 {lab=#net2}
+N 190 -80 190 -20 {lab=output}
+N 190 20 190 180 {lab=output}
+N 190 180 510 180 {lab=output}
+N 510 -190 510 180 {lab=output}
+N 100 20 100 60 {lab=#net2}
 C {isource.sym} 430 20 2 0 {name=IBIAS value=100u}
-C {lab_pin.sym} -60 -120 0 0 {name=p1 sig_type=std_logic lab=VDD}
-C {vsource.sym} -60 -30 0 0 {name=V2 value= 3.3 savecurrent=false}
-C {lab_pin.sym} -180 -120 0 0 {name=p3 sig_type=std_logic lab=GND}
-C {gnd.sym} -180 50 0 0 {name=l1 lab=GND}
-C {lab_pin.sym} -60 60 0 0 {name=p4 sig_type=std_logic lab=GND}
-C {devices/code_shown.sym} 770 -70 0 0 {name=Models only_toplevel=false
+C {lab_pin.sym} -70 -310 0 0 {name=p1 sig_type=std_logic lab=VDD}
+C {vsource.sym} -70 -220 0 0 {name=V2 value= 3.3 savecurrent=false}
+C {lab_pin.sym} -190 -310 0 0 {name=p3 sig_type=std_logic lab=GND}
+C {gnd.sym} -190 -140 0 0 {name=l1 lab=GND}
+C {lab_pin.sym} -70 -130 0 0 {name=p4 sig_type=std_logic lab=GND}
+C {devices/code_shown.sym} -750 -380 0 0 {name=Models only_toplevel=false
 format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 "}
-C {code_shown.sym} 780 100 0 0 {name=Simulation only_toplevel=false 
+C {code_shown.sym} -830 -200 0 0 {name=Simulation only_toplevel=false 
 
 value=
 
 "
 .control
-ac dec 100 1 1G
+tran 1n 50u
+meas tran v_input find v(input) at=40u
+meas tran v_output find v(output) at=40u
+let v_error = v_input - v_output
+print v_error
 
-plot vdb(output) ph(v(output))*180/3.14159
+meas tran vpeak max v(output) from=10u to=50u
+meas tran vfinal find v(output) at=40u
 
-meas ac dc_gain find vdb(output) at=1
-let bw_level = dc_gain - 3
-meas ac bw when vdb(output) = bw_level
+let target_low = vfinal * 0.999
+meas tran settle_01 when v(output) = target_low rise = last
 
+print v_input v_output
+print vpeak vfinal
+print settle_01
+
+plot v(input) v(output)
+plot v(output) - v(input)
 .endc
+
 "}
 C {lab_pin.sym} 400 -340 0 0 {name=p2 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 380 -20 0 0 {name=p5 sig_type=std_logic lab=GND}
@@ -66,9 +80,9 @@ footprint=1206
 device="ceramic capacitor"}
 C {lab_pin.sym} 580 -50 0 0 {name=p7 sig_type=std_logic lab=GND}
 C {lab_pin.sym} 630 -190 0 1 {name=p8 sig_type=std_logic lab=output}
-C {vsource.sym} 190 -50 0 0 {name=VINN value= 0 AC -0.5 savecurrent=false}
 C {lab_pin.sym} 430 90 0 0 {name=p6 sig_type=std_logic lab=VDD}
-C {vsource.sym} 100 -190 0 0 {name=VINP value= AC 0.5 savecurrent=false}
-C {vsource.sym} 150 90 0 0 {name=VCM value= 1.65 savecurrent=false}
-C {lab_pin.sym} 150 150 0 0 {name=p9 sig_type=std_logic lab=GND}
+C {vsource.sym} 100 -190 0 0 {name=VINP value= "PULSE(0 0.1 25u 1p 100n 2m 1)" savecurrent=false}
+C {vsource.sym} 100 90 0 0 {name=VCM value= 1.65 savecurrent=false}
+C {lab_pin.sym} 100 150 0 0 {name=p9 sig_type=std_logic lab=GND}
 C {libs/core_amps/ota_folded_cascode/newfsym.sym} 490 -210 0 0 {name=x1}
+C {lab_pin.sym} 150 -250 1 0 {name=p10 sig_type=std_logic lab=input}
