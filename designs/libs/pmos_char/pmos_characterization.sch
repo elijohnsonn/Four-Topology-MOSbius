@@ -38,12 +38,12 @@ spiceprefix=X
 }
 C {vsource.sym} 150 0 0 0 {name=Vds value=1.5 savecurrent=false}
 C {vsource.sym} -130 -50 0 0 {name=Vgs value=0 savecurrent=false}
-C {code_shown.sym} 240 -30 0 0 {name=Simulation only_toplevel=false 
+C {code_shown.sym} 280 30 0 0 {name=Simulation only_toplevel=false 
 
 value=
 
 ".param W=10u L=5u
-.dc Vgs 3.3 0 -0.01
+.dc Vgs 0 3.3 0.01
 .control
 run
 let id = -i(Vds)
@@ -54,3 +54,9 @@ wrdata /foss/designs/libs/pmos_char/data/pmos_gmid_L5u.csv id gm gm_id id_w
 plot gm_id vs id_w xlog
 .endc"}
 C {gnd.sym} 0 90 0 0 {name=l1 lab=GND}
+C {devices/code_shown.sym} 230 -120 0 0 {name=Models1 only_toplevel=false
+format="tcleval( @value )"
+value="
+.include $::180MCU_MODELS/design.ngspice
+.lib $::180MCU_MODELS/sm141064.ngspice typical
+"}
