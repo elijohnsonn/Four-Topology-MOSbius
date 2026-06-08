@@ -78,7 +78,7 @@ spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 360 -590 0 1 {name=M3
 L=0.5u
-W=22.86u
+W=23u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -92,7 +92,7 @@ spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 540 -590 0 0 {name=M4
 L=0.5u
-W=22.86u
+W=23u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"

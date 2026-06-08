@@ -10,10 +10,8 @@ N 90 -500 90 -440 {lab=VDD}
 N 263.359375 -378.125 263.359375 -328.125 {lab=VDD}
 N 170 -380 170 -330 {lab=VSS}
 N 170 -500 170 -440 {lab=vin}
-N 390 -340 430 -340 {lab=vout}
-N 390 -340 390 -260 {lab=vout}
-N 390 -260 590 -260 {lab=vout}
-N 590 -360 590 -260 {lab=vout}
+N 390 -340 430 -340 {lab=vin}
+N 390 -340 390 -260 {lab=vin}
 N 620 -360 730 -360 {lab=vout}
 N 650 -360 650 -320 {lab=vout}
 N 650 -260 650 -220 {lab=GND}
@@ -38,7 +36,7 @@ C {devices/gnd.sym} 90 -240 0 0 {name=l2 lab=GND}
 C {devices/vsource.sym} 90 -410 0 0 {name=V2 value=3.3 savecurrent=false}
 C {devices/lab_wire.sym} 90 -350 0 0 {name=p2 sig_type=std_logic lab=VSS}
 C {devices/lab_wire.sym} 90 -470 0 0 {name=p3 sig_type=std_logic lab=VDD}
-C {devices/isource.sym} 263.359375 -408.125 2 0 {name=I0 value=100u}
+C {devices/isource.sym} 263.359375 -408.125 2 0 {name=I0 value=300u}
 C {devices/lab_wire.sym} 263.359375 -338.125 3 0 {name=p6 sig_type=std_logic lab=VDD}
 C {devices/vsource.sym} 170 -410 0 0 {name=V3 value=1.5 savecurrent=false}
 C {devices/lab_wire.sym} 170 -350 0 0 {name=p7 sig_type=std_logic lab=VSS}
@@ -60,6 +58,7 @@ save all
 OP
 *show all > op.log
 show all
+print v(vout)
 
 *DC V3 0 3.3 0.01
 *TRAN 10u
@@ -69,3 +68,4 @@ write 5tOTA_tb.raw
 C {devices/lab_wire.sym} 340 -320 0 0 {name=p10 sig_type=std_logic lab=i_bias}
 C {devices/lab_wire.sym} 280 -460 0 0 {name=p11 sig_type=std_logic lab=i_bias}
 C {devices/lab_wire.sym} 468.75 -276.25 0 0 {name=p4 sig_type=std_logic lab=VSS}
+C {devices/lab_wire.sym} 390 -270 0 0 {name=p12 sig_type=std_logic lab=vin}
