@@ -50,7 +50,7 @@ N 160 -190 180 -190 {lab=VSS}
 C {title.sym} 170 -40 0 0 {name=l1 author="Songhang Li"}
 C {symbols/nfet_03v3.sym} 320 -390 0 0 {name=M1
 L=0.5u
-W=11.43u
+W=3*11.43u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -64,7 +64,7 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 580 -390 0 1 {name=M2
 L=0.5u
-W=11.43u
+W=3*11.43u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -78,7 +78,7 @@ spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 360 -590 0 1 {name=M3
 L=0.5u
-W=23u
+W=100u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -92,7 +92,7 @@ spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 540 -590 0 0 {name=M4
 L=0.5u
-W=23u
+W=100u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -106,7 +106,7 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 430 -230 0 0 {name=M5
 L=0.5u
-W=22.86u
+W=3*22.86u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
