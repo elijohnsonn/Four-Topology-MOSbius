@@ -4,54 +4,34 @@ K {}
 V {}
 S {}
 E {}
-N 140 -10 140 30 {lab=#net1}
-N 140 30 210 30 {lab=#net1}
-N -30 -190 -30 -0 {lab=D}
-N -30 -190 200 -190 {lab=D}
-N 20 -250 20 -40 {lab=Vdd}
-N 20 -250 280 -250 {lab=Vdd}
-N 280 -250 280 -230 {lab=Vdd}
-N 280 -250 280 -230 {lab=Vdd}
-N 280 -250 590 -250 {lab=Vdd}
-N 590 -250 590 -230 {lab=Vdd}
-N 290 -10 600 -10 {lab=Vdd}
-N 290 -40 290 -10 {lab=Vdd}
-N 20 -40 290 -40 {lab=Vdd}
-N 280 -80 590 -80 {lab=Vss}
-N 460 -80 590 -80 {lab=Vss}
-N 460 -80 460 140 {lab=Vss}
-N 460 140 600 140 {lab=Vss}
-N 290 140 600 140 {lab=Vss}
-N 30 140 290 140 {lab=Vss}
-N 30 50 30 140 {lab=Vss}
-N 20 50 30 50 {lab=Vss}
-N 20 40 20 50 {lab=Vss}
-N 160 100 210 100 {lab=clk}
-N 160 -120 160 100 {lab=clk}
-N 160 -120 200 -120 {lab=clk}
-N 410 100 520 100 {lab=#net2}
-N 410 60 410 100 {lab=#net2}
-N 400 -190 400 -160 {lab=#net3}
-N 400 -190 510 -190 {lab=#net3}
-N 480 -120 510 -120 {lab=Q_bar}
-N 480 -120 480 -40 {lab=Q_bar}
-N 480 -40 720 -40 {lab=Q_bar}
-N 720 -40 720 60 {lab=Q_bar}
-N 720 60 770 60 {lab=Q_bar}
-N 490 30 520 30 {lab=Q}
-N 490 -60 490 30 {lab=Q}
-N 490 -60 710 -60 {lab=Q}
-N 710 -160 710 -60 {lab=Q}
-N 710 -160 750 -160 {lab=Q}
-C {ipin.sym} -30 -190 0 0 {name=p1 lab=D}
-C {ipin.sym} 20 -250 0 0 {name=p2 lab=Vdd
-}
-C {ipin.sym} 30 140 0 0 {name=p3 lab=Vss}
-C {ipin.sym} 160 80 0 0 {name=p4 lab=clk}
-C {opin.sym} 750 -160 0 0 {name=p5 lab=Q}
-C {opin.sym} 770 60 0 0 {name=p6 lab=Q_bar}
-C {libs/core_digital/inv1.sym} 30 10 0 0 {name=x1}
-C {libs/core_digital/NAND2.sym} 280 -160 0 0 {name=x2}
-C {libs/core_digital/NAND2.sym} 290 60 0 0 {name=x3}
-C {libs/core_digital/NAND2.sym} 600 60 0 0 {name=x4}
-C {libs/core_digital/NAND2.sym} 590 -160 0 0 {name=x5}
+N 180 -50 180 -0 {lab=VSS}
+N 180 -260 180 -220 {lab=VDD}
+N 60 -170 100 -170 {lab=D}
+N 60 -90 100 -90 {lab=CLK}
+N 290 -90 290 80 {lab=#net1}
+N 290 -90 360 -90 {lab=#net1}
+N 120 -10 120 90 {lab=CLK}
+N 100 -10 120 -10 {lab=CLK}
+N 100 -90 100 -10 {lab=CLK}
+N 170 20 170 50 {lab=VDD}
+N 270 -180 360 -180 {lab=#net2}
+N 360 -180 360 -170 {lab=#net2}
+N 440 -50 440 130 {lab=VSS}
+N 170 130 440 130 {lab=VSS}
+N 530 -100 560 -100 {lab=Q_bar}
+N 530 -180 560 -180 {lab=xxx}
+N 440 -240 440 -220 {lab=VDD}
+N 180 -240 440 -240 {lab=VDD}
+C {libs/core_digital/D_latch1.sym} 180 -140 0 0 {name=x1}
+C {libs/core_digital/inv1.sym} 180 100 0 0 {name=x6}
+C {ipin.sym} 60 -170 0 0 {name=p1 lab=D}
+C {ipin.sym} 60 -90 0 0 {name=p2 lab=CLK}
+C {ipin.sym} 180 -260 0 0 {name=p3 lab=VDD}
+C {ipin.sym} 180 -10 0 0 {name=p4 lab=VSS}
+C {lab_wire.sym} 180 -30 0 0 {name=p7 sig_type=std_logic lab=VSS}
+C {lab_wire.sym} 180 -230 0 0 {name=p8 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} 170 40 0 0 {name=p11 sig_type=std_logic lab=VDD}
+C {libs/core_digital/D_latch1.sym} 440 -140 0 0 {name=x2}
+C {lab_wire.sym} 360 130 0 0 {name=p5 sig_type=std_logic lab=VSS}
+C {opin.sym} 560 -180 0 0 {name=p6 lab=Q}
+C {opin.sym} 560 -100 0 0 {name=p9 lab=Q_bar}
