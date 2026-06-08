@@ -4,6 +4,7 @@ K {}
 V {}
 S {}
 E {}
+P 4 1 350 -480 {}
 N 380 -80 380 -20 {lab=GND}
 N -70 -310 -70 -250 {lab=VDD}
 N -190 -310 -190 -250 {lab=GND}
@@ -38,13 +39,13 @@ C {vsource.sym} -70 -220 0 0 {name=V2 value= 3.3 savecurrent=false}
 C {lab_pin.sym} -190 -310 0 0 {name=p3 sig_type=std_logic lab=GND}
 C {gnd.sym} -190 -140 0 0 {name=l1 lab=GND}
 C {lab_pin.sym} -70 -130 0 0 {name=p4 sig_type=std_logic lab=GND}
-C {devices/code_shown.sym} -750 -380 0 0 {name=Models only_toplevel=false
+C {devices/code_shown.sym} -850 -270 0 0 {name=Models only_toplevel=false
 format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 "}
-C {code_shown.sym} -830 -200 0 0 {name=Simulation only_toplevel=false 
+C {code_shown.sym} -870 -160 0 0 {name=Simulation only_toplevel=false 
 
 value=
 
@@ -78,5 +79,5 @@ C {lab_pin.sym} 430 90 0 0 {name=p6 sig_type=std_logic lab=VDD}
 C {vsource.sym} 100 -190 0 0 {name=VINP value= "PULSE(0 1 25u 1p 100n 2m 1)" savecurrent=false}
 C {vsource.sym} 100 90 0 0 {name=VCM value= 1.65 savecurrent=false}
 C {lab_pin.sym} 100 150 0 0 {name=p9 sig_type=std_logic lab=GND}
-C {libs/core_amps/ota_folded_cascode/newfsym.sym} 490 -210 0 0 {name=x1}
 C {lab_pin.sym} 150 -250 1 0 {name=p10 sig_type=std_logic lab=input}
+C {ota_folded_cascode.sym} 490 -210 0 0 {name=x1}
