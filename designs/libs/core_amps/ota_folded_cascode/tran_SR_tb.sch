@@ -39,13 +39,13 @@ C {vsource.sym} -70 -220 0 0 {name=V2 value= 3.3 savecurrent=false}
 C {lab_pin.sym} -190 -310 0 0 {name=p3 sig_type=std_logic lab=GND}
 C {gnd.sym} -190 -140 0 0 {name=l1 lab=GND}
 C {lab_pin.sym} -70 -130 0 0 {name=p4 sig_type=std_logic lab=GND}
-C {devices/code_shown.sym} -750 -380 0 0 {name=Models only_toplevel=false
+C {devices/code_shown.sym} -850 -270 0 0 {name=Models only_toplevel=false
 format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 "}
-C {code_shown.sym} -770 -270 0 0 {name=Simulation only_toplevel=false 
+C {code_shown.sym} -870 -160 0 0 {name=Simulation only_toplevel=false 
 
 value=
 
