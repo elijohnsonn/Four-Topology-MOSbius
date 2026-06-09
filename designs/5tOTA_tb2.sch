@@ -46,10 +46,13 @@ C {devices/lab_wire.sym} 370 -380 0 0 {name=p9 sig_type=std_logic lab=vin}
 C {devices/lab_wire.sym} 720 -360 0 0 {name=p1 sig_type=std_logic lab=vout}
 C {devices/lab_wire.sym} 500 -420 0 0 {name=p5 sig_type=std_logic lab=VDD}
 C {devices/gnd.sym} 650 -220 0 0 {name=l3 lab=GND}
-C {devices/code_shown.sym} 1240 -960 0 0 {name=Simulation only_toplevel=false value="
+C {devices/code_shown.sym} 1240 -1310 0 0 {name=Simulation only_toplevel=false value="
 .control
 op
 show all
+
+show m.x1.xm1.m0 m.x1.xm2.m0 m.x1.xm3.m0 m.x1.xm4.m0 m.x1.xm5.m0 m.x1.xm6.m0 : gm id vdsat vds
+
 print @m.x1.xm4.m0[gm]
 let gm4 = @m.x1.xm4.m0[gm]
 let id4 = @m.x1.xm4.m0[id]
@@ -79,6 +82,24 @@ print gm5/id5
 let gm6 = @m.x1.xm1.m0[gm]
 let id6 = @m.x1.xm1.m0[id]
 print gm6/id6
+
+let vsat1 = @m.x1.xm1.m0[vdsat]
+print vsat1
+
+let vsat2 = @m.x1.xm2.m0[vdsat]
+print vsat2
+
+let vsat3 = @m.x1.xm3.m0[vdsat]
+print vsat3
+
+let vsat4 = @m.x1.xm4.m0[vdsat]
+print vsat4
+
+let vsat5 = @m.x1.xm5.m0[vdsat]
+print vsat5
+
+let vsat6 = @m.x1.xm6.m0[vdsat]
+print vsat6
 
 
 
