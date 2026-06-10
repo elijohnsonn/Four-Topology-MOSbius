@@ -10,8 +10,8 @@ N 590 -490 590 -430 {lab=VDD}
 N 763.359375 -368.125 763.359375 -318.125 {lab=VDD}
 N 670 -370 670 -320 {lab=VSS}
 N 670 -490 670 -430 {lab=vin}
-N 890 -330 930 -330 {lab=#net1}
-N 890 -330 890 -250 {lab=#net1}
+N 890 -330 930 -330 {lab=vout}
+N 890 -330 890 -250 {lab=vout}
 N 1120 -350 1230 -350 {lab=vout}
 N 1150 -350 1150 -310 {lab=vout}
 N 1150 -250 1150 -210 {lab=GND}
@@ -23,6 +23,7 @@ N 763.359375 -450 790 -450 {lab=i_bias}
 N 1000.0390625 -290 1000.0390625 -266.25 {lab=VSS}
 N 967.5 -266.25 1000.0390625 -266.25 {lab=VSS}
 N 1090 -350 1090 -250 {lab=vout}
+N 890 -250 1090 -250 {lab=vout}
 C {5tOTA.sym} 1000 -350 0 0 {name=x1}
 C {devices/code_shown.sym} 20 -630 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
@@ -69,4 +70,3 @@ m=1
 value=100p
 footprint=1206
 device="ceramic capacitor"}
-C {devices/lab_wire.sym} 890 -260 0 0 {name=p12 sig_type=std_logic lab=vin}
