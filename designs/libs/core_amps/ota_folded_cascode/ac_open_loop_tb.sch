@@ -83,7 +83,6 @@ C {lab_pin.sym} 420 180 0 0 {name=p6 sig_type=std_logic lab=VDD}
 C {vsource.sym} 90 -100 0 0 {name=VINP value= AC 1 savecurrent=false}
 C {vsource.sym} 90 180 0 0 {name=VCM value= 1.65 savecurrent=false}
 C {lab_pin.sym} 90 240 0 0 {name=p9 sig_type=std_logic lab=GND}
-C {ota_folded_cascode.sym} 480 -120 0 0 {name=x1}
 C {ind.sym} 350 240 1 0 {name=L2
 m=1
 value=1
@@ -97,3 +96,4 @@ device="ceramic capacitor"}
 C {lab_pin.sym} 180 330 0 0 {name=p11 sig_type=std_logic lab=GND}
 C {vcvs.sym} 500 310 0 1 {name=E1 value=1}
 C {lab_pin.sym} 500 380 0 0 {name=p10 sig_type=std_logic lab=GND}
+C {libs/core_amps/ota_folded_cascode/ota_folded_cascode.sym} 480 -120 0 0 {name=x1}

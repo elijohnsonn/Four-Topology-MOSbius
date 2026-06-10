@@ -47,7 +47,6 @@ C {lab_pin.sym} 420 -150 0 1 {name=p8 sig_type=std_logic lab=output}
 C {lab_pin.sym} 220 130 0 0 {name=p6 sig_type=std_logic lab=VDD}
 C {vsource.sym} -110 0 0 0 {name=VCM value= 1.65 savecurrent=false}
 C {lab_pin.sym} -110 60 0 0 {name=p9 sig_type=std_logic lab=GND}
-C {ota_folded_cascode.sym} 280 -170 0 0 {name=x1}
 C {code_shown.sym} 580 -170 0 0 {name=Simulation only_toplevel=false 
 
 value=
@@ -77,3 +76,4 @@ print gmid_m11 gmid_m12 gmid_m13 gmid_m18
 
 .endc
 "}
+C {libs/core_amps/ota_folded_cascode/ota_folded_cascode.sym} 280 -170 0 0 {name=x1}

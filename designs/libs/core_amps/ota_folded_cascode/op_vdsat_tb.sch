@@ -78,4 +78,4 @@ print sat_m11 sat_m12 sat_m13 sat_m18
 
 "
 }
-C {ota_folded_cascode.sym} 120 -100 0 0 {name=x1}
+C {libs/core_amps/ota_folded_cascode/ota_folded_cascode.sym} 120 -100 0 0 {name=x1}
