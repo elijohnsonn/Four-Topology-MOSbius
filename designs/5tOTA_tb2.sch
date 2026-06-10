@@ -22,8 +22,8 @@ N 263.359375 -460 263.359375 -438.125 {lab=i_bias}
 N 263.359375 -460 290 -460 {lab=i_bias}
 N 500.0390625 -300 500.0390625 -276.25 {lab=VSS}
 N 467.5 -276.25 500.0390625 -276.25 {lab=VSS}
-N 390 -260 590 -260 {lab=vout}
 N 590 -360 590 -260 {lab=vout}
+N 390 -260 590 -260 {lab=vout}
 C {5tOTA.sym} 500 -360 0 0 {name=x1}
 C {devices/code_shown.sym} 20 -950 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
@@ -101,17 +101,18 @@ print vsat5
 let vsat6 = @m.x1.xm6.m0[vdsat]
 print vsat6
 
+print v(vout)
 
-
-*dc vin 0 4 0.001
-*let gain = deriv(v(vout))
-*meas dc icmr_low when gain = 0.95 rise = 1
-*meas dc icmr_high when gain = 0.95 fall = 1
-*let swing_low = icmr_low
-*let swing_high = icmr_high
-*print icmr_low icmr_high
-*print swing_high - swing_low
-*plot v(vout) gain
+*DC Unity
+dc vin 0 4 0.001
+let gain = deriv(v(vout))
+meas dc icmr_low when gain = 0.95 rise = 1
+meas dc icmr_high when gain = 0.95 fall = 1
+let swing_low = icmr_low
+let swing_high = icmr_high
+print icmr_low icmr_high
+print swing_high - swing_low
+plot v(vout) gain
 
 .endc
 "}
