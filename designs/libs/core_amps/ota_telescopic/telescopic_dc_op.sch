@@ -4,56 +4,54 @@ K {}
 V {}
 S {}
 E {}
-N 540 290 700 290 {lab=#net1}
-N 500 320 500 350 {lab=#net1}
+N 620 290 700 290 {lab=#net1}
+N 500 330 500 350 {lab=#net1}
 N 740 320 740 350 {lab=#net2}
 N 620 290 620 330 {lab=#net1}
 N 500 330 620 330 {lab=#net1}
-N 540 380 700 380 {lab=#net3}
-N 500 410 500 470 {lab=#net3}
+N 620 380 700 380 {lab=#net3}
+N 500 430 500 470 {lab=#net3}
 N 620 380 620 430 {lab=#net3}
 N 500 430 620 430 {lab=#net3}
 N 500 240 500 260 {lab=#net4}
-N 500 240 740 240 {lab=#net4}
+N 620 240 740 240 {lab=#net4}
 N 740 240 740 260 {lab=#net4}
 N 740 410 740 470 {lab=#net5}
 N 500 530 500 560 {lab=#net6}
-N 500 620 740 620 {lab=#net7}
+N 620 620 740 620 {lab=#net7}
 N 740 530 740 560 {lab=#net8}
-N 780 590 830 590 {lab=#net9}
+N 820 590 830 590 {lab=#net9}
 N 400 590 460 590 {lab=#net9}
-N 500 590 740 590 {lab=GND}
-N 710 590 710 720 {lab=GND}
-N 710 720 710 730 {lab=GND}
-N 540 500 700 500 {lab=#net10}
+N 710 590 740 590 {lab=GND}
+N 710 700 710 730 {lab=GND}
+N 580 500 700 500 {lab=#net10}
 N 580 500 580 510 {lab=#net10}
 N 580 570 580 590 {lab=GND}
 N 460 500 500 500 {lab=GND}
 N 740 500 800 500 {lab=GND}
 N 620 160 720 160 {lab=#net4}
-N 620 160 620 235 {lab=#net4}
-N 620 235 620 240 {lab=#net4}
+N 620 160 620 240 {lab=#net4}
 N 720 220 800 220 {lab=GND}
 N 460 290 500 290 {lab=#net4}
 N 460 290 460 380 {lab=#net4}
 N 460 380 500 380 {lab=#net4}
 N 460 240 460 290 {lab=#net4}
-N 460 240 510 240 {lab=#net4}
+N 500 240 620 240 {lab=#net4}
 N 740 240 790 240 {lab=#net4}
 N 790 240 790 290 {lab=#net4}
 N 740 380 785 380 {lab=#net4}
 N 785 290 785 380 {lab=#net4}
-N 740 290 790 290 {lab=#net4}
-N 820 590 820 645 {lab=#net9}
+N 785 290 790 290 {lab=#net4}
+N 820 640 820 645 {lab=#net9}
 N 500 470 540 470 {lab=#net3}
 N 500 530 540 530 {lab=#net6}
 N 620 620 620 770 {lab=#net7}
-N 400 800 580 800 {lab=#net11}
+N 440 800 580 800 {lab=#net11}
 N 360 830 360 850 {lab=GND}
 N 360 850 620 850 {lab=GND}
 N 620 830 620 850 {lab=GND}
 N 620 850 770 850 {lab=GND}
-N 770 730 770 850 {lab=GND}
+N 770 800 770 850 {lab=GND}
 N 360 740 440 740 {lab=#net11}
 N 440 740 440 800 {lab=#net11}
 N 310 740 360 740 {lab=#net11}
@@ -64,14 +62,30 @@ N 300 800 360 800 {lab=GND}
 N 300 800 300 850 {lab=GND}
 N 300 850 360 850 {lab=GND}
 N 620 800 770 800 {lab=GND}
-N 710 730 780 730 {lab=GND}
+N 770 730 780 730 {lab=GND}
 N 400 590 400 640 {lab=#net9}
 N 400 700 710 700 {lab=GND}
 N 400 640 820 640 {lab=#net9}
+N 540 290 620 290 {lab=#net1}
+N 500 320 500 330 {lab=#net1}
+N 540 380 620 380 {lab=#net3}
+N 500 410 500 430 {lab=#net3}
+N 460 240 500 240 {lab=#net4}
+N 580 590 710 590 {lab=GND}
+N 540 500 580 500 {lab=#net10}
+N 500 590 580 590 {lab=GND}
+N 740 290 785 290 {lab=#net4}
+N 780 590 820 590 {lab=#net9}
+N 500 620 620 620 {lab=#net7}
+N 710 730 770 730 {lab=GND}
+N 400 800 440 800 {lab=#net11}
+N 770 730 770 800 {lab=GND}
+N 710 590 710 700 {lab=GND}
+N 820 590 820 640 {lab=#net9}
 C {vsource.sym} 720 190 0 0 {name=V1 value=3.3 savecurrent=false}
 C {gnd.sym} 800 220 0 0 {name=l1 lab=GND}
 C {gnd.sym} 780 730 0 0 {name=l2 lab=GND}
-C {vsource.sym} 580 540 0 0 {name=V2 value=1.9 savecurrent=false}
+C {vsource.sym} 580 540 0 0 {name=V2 value=1.91 savecurrent=false}
 C {gnd.sym} 800 500 0 0 {name=l3 lab=GND}
 C {gnd.sym} 460 500 0 0 {name=l4 lab=GND}
 C {code_shown.sym} 920 325 0 0 {value=
@@ -137,7 +151,7 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 720 500 0 0 {name=M8
 L=0.28u
-W=28u
+W=26u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -151,7 +165,7 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 480 590 0 0 {name=M1
 L=0.28u
-W=28u
+W=26u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -165,7 +179,7 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 520 500 0 1 {name=M2
 L=0.28u
-W=28u
+W=26u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -179,7 +193,7 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 760 590 0 1 {name=M3
 L=0.28u
-W=28u
+W=26u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
