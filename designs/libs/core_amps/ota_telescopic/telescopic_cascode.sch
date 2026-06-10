@@ -63,10 +63,10 @@ N 12890 21350 12950 21350 {lab=GND}
 N 13210 21300 13360 21300 {lab=GND}
 N 13300 21230 13370 21230 {lab=GND}
 C {gnd.sym} 13370 21230 0 0 {name=l2 lab=GND}
-C {vsource.sym} 13170 21040 0 0 {name=V2 value=1.9 savecurrent=false}
+C {vsource.sym} 13170 21040 0 0 {name=V2 value=1.91 savecurrent=false}
 C {gnd.sym} 13390 21000 0 0 {name=l3 lab=GND}
 C {gnd.sym} 13050 21000 0 0 {name=l4 lab=GND}
-C {symbols/pfet_03v3.sym} 13310 20880 0 0 {name=M4
+C {symbols/pfet_03v3.sym} 13310 20880 0 0 {name=M8
 L=0.28u
 W=70u
 nf=1
@@ -80,9 +80,9 @@ sa=0 sb=0 sd=0
 model=pfet_03v3
 spiceprefix=X
 }
-C {symbols/nfet_03v3.sym} 13310 21000 0 0 {name=M8
+C {symbols/nfet_03v3.sym} 13310 21000 0 0 {name=M4
 L=0.28u
-W=28u
+W=26u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -96,7 +96,7 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 13070 21090 0 0 {name=M1
 L=0.28u
-W=28u
+W=26u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -110,7 +110,7 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 13110 21000 0 1 {name=M2
 L=0.28u
-W=28u
+W=26u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -124,7 +124,7 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 13350 21090 0 1 {name=M3
 L=0.28u
-W=28u
+W=26u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -213,7 +213,7 @@ C {lab_pin.sym} 13420 21090 2 0 {name=p4 sig_type=std_logic lab=vinn}
 C {code_shown.sym} 13505 20690 0 0 {name=s1 only_toplevel=false value="
 .include /foss/pdks/gf180mcuD/libs.tech/ngspice/design.ngspice
 .lib /foss/pdks/gf180mcuD/libs.tech/ngspice/sm141064.ngspice typical"}
-C {ipin.sym} 12990 21090 1 0 {name=p7 lab=vinp}
+C {ipin.sym} 13010 21090 1 0 {name=p7 lab=vinp}
 C {ipin.sym} 13420 21090 1 0 {name=p8 lab=vinn}
 C {opin.sym} 13330 20940 0 0 {name=p9 lab=output}
 C {iopin.sym} 13030 21250 0 0 {name=p10 lab=Ibias}
