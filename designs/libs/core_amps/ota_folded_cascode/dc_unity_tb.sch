@@ -77,4 +77,4 @@ C {lab_pin.sym} 90 140 0 0 {name=p6 sig_type=std_logic lab=VDD}
 C {vsource.sym} -240 -140 0 0 {name=VINP value= 0 savecurrent=false}
 C {vsource.sym} -240 140 0 0 {name=VCM value= 0 savecurrent=false}
 C {lab_pin.sym} -240 200 0 0 {name=p9 sig_type=std_logic lab=GND}
-C {ota_folded_cascode.sym} 150 -160 0 0 {name=x1}
+C {libs/core_amps/ota_folded_cascode/ota_folded_cascode.sym} 150 -160 0 0 {name=x1}
