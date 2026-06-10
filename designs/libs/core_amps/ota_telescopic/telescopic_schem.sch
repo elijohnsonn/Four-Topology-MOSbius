@@ -63,10 +63,10 @@ N 12890 21350 12950 21350 {lab=GND}
 N 13210 21300 13360 21300 {lab=GND}
 N 13300 21230 13370 21230 {lab=GND}
 C {gnd.sym} 13370 21230 0 0 {name=l2 lab=GND}
-C {vsource.sym} 13170 21040 0 0 {name=V2 value=1.91 savecurrent=false}
+C {vsource.sym} 13170 21040 0 0 {name=V2 value=1.9 savecurrent=false}
 C {gnd.sym} 13390 21000 0 0 {name=l3 lab=GND}
 C {gnd.sym} 13050 21000 0 0 {name=l4 lab=GND}
-C {symbols/pfet_03v3.sym} 13310 20880 0 0 {name=M8
+C {symbols/pfet_03v3.sym} 13310 20880 0 0 {name=M4
 L=0.28u
 W=70u
 nf=1
@@ -80,9 +80,9 @@ sa=0 sb=0 sd=0
 model=pfet_03v3
 spiceprefix=X
 }
-C {symbols/nfet_03v3.sym} 13310 21000 0 0 {name=M4
+C {symbols/nfet_03v3.sym} 13310 21000 0 0 {name=M8
 L=0.28u
-W=26u
+W=28u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -96,7 +96,7 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 13070 21090 0 0 {name=M1
 L=0.28u
-W=26u
+W=28u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -110,7 +110,7 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 13110 21000 0 1 {name=M2
 L=0.28u
-W=26u
+W=28u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -124,7 +124,7 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 13350 21090 0 1 {name=M3
 L=0.28u
-W=26u
+W=28u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
