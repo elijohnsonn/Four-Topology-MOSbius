@@ -55,6 +55,9 @@ value=
 .control
 op
 
+print v(x1.vbn2)
+print v(x1.vbp2)
+
 let sat_m1  = abs(@m.x1.xm1.m0[vds]) - abs(@m.x1.xm1.m0[vdsat])
 let sat_m2  = abs(@m.x1.xm2.m0[vds]) - abs(@m.x1.xm2.m0[vdsat])
 let sat_m3  = abs(@m.x1.xm3.m0[vds]) - abs(@m.x1.xm3.m0[vdsat])
