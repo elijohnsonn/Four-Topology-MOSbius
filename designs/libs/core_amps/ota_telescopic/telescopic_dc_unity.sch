@@ -57,13 +57,17 @@ value=
 .control
 
 dc VINP 0 4 0.001
+
 let gain = deriv(v(output))
-meas dc icmr_low when gain = 0.95 rise = 1
-meas dc icmr_high when gain = 0.95 fall = 1
-let swing_low = icmr_low
-let swing_high = icmr_high
-print icmr_low icmr_high
-print swing_high - swing_low
+
+meas dc icmr_low  when gain=0.95 rise=1
+meas dc icmr_high when gain=0.95 fall=1
+
+* Find output swing limit above 2 V input
+meas dc swing_high when gain=0.95 fall=1 from=2
+
+print icmr_low icmr_high swing_high
+print swing_high - icmr_low
 
 plot v(output) gain
 
@@ -73,7 +77,7 @@ C {lab_pin.sym} 60 -290 0 0 {name=p2 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 40 30 0 0 {name=p5 sig_type=std_logic lab=GND}
 C {capa.sym} 240 -60 0 0 {name=CLOAD
 m=1
-value=270p
+value=10p
 footprint=1206
 device="ceramic capacitor"}
 C {lab_pin.sym} 240 0 0 0 {name=p7 sig_type=std_logic lab=GND}
