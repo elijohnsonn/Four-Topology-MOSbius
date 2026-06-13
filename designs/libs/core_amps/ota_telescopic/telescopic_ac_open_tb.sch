@@ -79,7 +79,7 @@ C {lab_pin.sym} -1160 -790 0 0 {name=p2 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} -1180 -470 0 0 {name=p5 sig_type=std_logic lab=GND}
 C {capa.sym} -980 -560 0 0 {name=CLOAD
 m=1
-value=270p
+value=100p
 footprint=1206
 device="ceramic capacitor"}
 C {lab_pin.sym} -980 -500 0 0 {name=p7 sig_type=std_logic lab=GND}
