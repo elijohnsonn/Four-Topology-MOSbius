@@ -69,13 +69,13 @@ C {lab_pin.sym} 400 -340 0 0 {name=p2 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 380 -20 0 0 {name=p5 sig_type=std_logic lab=GND}
 C {capa.sym} 580 -110 0 0 {name=CLOAD
 m=1
-value=270p
+value=10p
 footprint=1206
 device="ceramic capacitor"}
 C {lab_pin.sym} 580 -50 0 0 {name=p7 sig_type=std_logic lab=GND}
 C {lab_pin.sym} 630 -190 0 1 {name=p8 sig_type=std_logic lab=output}
 C {lab_pin.sym} 430 90 0 0 {name=p6 sig_type=std_logic lab=VDD}
-C {vsource.sym} 100 -190 0 0 {name=VINP value= "PULSE(0 1 25u 1p 100n 2m 1)" savecurrent=false}
+C {vsource.sym} 100 -190 0 0 {name=VINP value= "PULSE(0 .1 25u 1p 100n 2m 1)" savecurrent=false}
 C {vsource.sym} 100 90 0 0 {name=VCM value= 1.65 savecurrent=false}
 C {lab_pin.sym} 100 150 0 0 {name=p9 sig_type=std_logic lab=GND}
 C {lab_pin.sym} 150 -250 1 0 {name=p10 sig_type=std_logic lab=input}

@@ -40,7 +40,7 @@ C {lab_pin.sym} 80 -170 0 0 {name=p2 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 60 150 0 0 {name=p5 sig_type=std_logic lab=GND}
 C {capa.sym} 260 60 0 0 {name=CLOAD
 m=1
-value=270p
+value=10p
 footprint=1206
 device="ceramic capacitor"}
 C {lab_pin.sym} 260 120 0 0 {name=p7 sig_type=std_logic lab=GND}
@@ -55,8 +55,8 @@ value=
 "
 .control
 op
-print v(x1.vbn1)
-
+print v(x1.vbn)
+print v(x1.vbp)
 let sat_m1  = abs(@m.X1.m.xm1.m0[vds]) - abs(@m.X1.m.xm1.m0[vdsat])
 let sat_m2  = abs(@m.x1.m.xm2.m0[vds]) - abs(@m.x1.m.xm2.m0[vdsat])
 let sat_m3  = abs(@m.x1.m.xm3.m0[vds]) - abs(@m.x1.m.xm3.m0[vdsat])
