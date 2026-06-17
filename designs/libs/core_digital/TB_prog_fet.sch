@@ -27,16 +27,16 @@ N 390 -80 410 -80 {lab=GND}
 N 410 -80 410 60 {lab=GND}
 N 30 60 410 60 {lab=GND}
 N 390 -300 390 -200 {lab=d}
-N 160 -80 160 -40 {lab=ena_bar<1>}
-N 160 -80 180 -80 {lab=ena_bar<1>}
-N 90 -70 90 -40 {lab=ena<1>}
-N 90 -110 90 -70 {lab=ena<1>}
-N 90 -110 180 -110 {lab=ena<1>}
-N 30 -170 30 -40 {lab=ena_bar<0>}
-N 30 -170 180 -170 {lab=ena_bar<0>}
-N -30 -200 -30 -80 {lab=ena<0>}
-N -30 -200 170 -200 {lab=ena<0>}
-N 170 -200 180 -200 {lab=ena<0>}
+N 160 -80 160 -40 {lab=ena_bar_1}
+N 160 -80 180 -80 {lab=ena_bar_1}
+N 90 -70 90 -40 {lab=ena_1}
+N 90 -110 90 -70 {lab=ena_1}
+N 90 -110 180 -110 {lab=ena_1}
+N 30 -170 30 -40 {lab=ena_bar_0}
+N 30 -170 180 -170 {lab=ena_bar_0}
+N -30 -200 -30 -80 {lab=ena_0}
+N -30 -200 170 -200 {lab=ena_0}
+N 170 -200 180 -200 {lab=ena_0}
 N 500 -300 500 -100 {lab=d}
 N 390 -300 500 -300 {lab=d}
 N 500 -40 500 60 {lab=GND}
@@ -55,10 +55,10 @@ C {vsource.sym} 160 -10 0 0 {name=V6 value="PULSE(3.3 0 1ms 0 0 1ms 2ms)" savecu
 C {vsource.sym} -80 30 0 0 {name=V7 value=3.3 savecurrent=false}
 C {vsource.sym} -30 -50 0 0 {name=V8 value="PULSE(0 3.3 0.5ms 0 0 0.5ms 1ms)" savecurrent=false}
 C {gnd.sym} 280 60 0 0 {name=l1 lab=GND}
-C {lab_wire.sym} 60 -200 0 0 {name=p1 sig_type=std_logic lab=ena<0>}
-C {lab_wire.sym} 60 -170 0 0 {name=p2 sig_type=std_logic lab=ena_bar<0>}
-C {lab_wire.sym} 130 -110 0 0 {name=p3 sig_type=std_logic lab=ena<1>}
-C {lab_wire.sym} 160 -80 0 0 {name=p4 sig_type=std_logic lab=ena_bar<1>}
+C {lab_wire.sym} 60 -200 0 0 {name=p1 sig_type=std_logic lab=ena_0}
+C {lab_wire.sym} 60 -170 0 0 {name=p2 sig_type=std_logic lab=ena_bar_0}
+C {lab_wire.sym} 130 -110 0 0 {name=p3 sig_type=std_logic lab=ena_1}
+C {lab_wire.sym} 160 -80 0 0 {name=p4 sig_type=std_logic lab=ena_bar_1}
 C {vsource.sym} 500 -70 0 0 {name=V1 value=3.3 savecurrent=false}
 C {lab_wire.sym} 440 -300 0 0 {name=p5 sig_type=std_logic lab=d}
 C {devices/code_shown.sym} 180 -430 0 0 {name=MODELS only_toplevel=true
@@ -81,10 +81,10 @@ value="* Transient Analysis and Plotting Script
   tran 1ns 2ms uic
 
   * --- Plot 1: ena<0> and ena<1> ---
-  plot v(ena<0>) v(ena<1>) title 'Enables' xlabel 'Time (s)' ylabel 'Voltage (V)'
+  plot v(ena_0) v(ena_1) title 'Enables' xlabel 'Time (s)' ylabel 'Voltage (V)'
 
   * --- Plot 2: ena_bar<0> and ena_bar<1> ---
-  plot v(ena_bar<0>) v(ena_bar<1>) title 'Enable-Bars' xlabel 'Time (s)' ylabel 'Voltage (V)'
+  plot v(ena_bar_0) v(ena_bar_1) title 'Enable-Bars' xlabel 'Time (s)' ylabel 'Voltage (V)'
 
   * --- Plot 3: Current into pin d ---
   plot -i(V1) title 'Drain Current' xlabel 'Time (s)' ylabel 'Current (A)'
