@@ -10,25 +10,12 @@ N 90 20 90 60 {lab=GND}
 N -80 60 30 60 {lab=GND}
 N -30 -20 -30 60 {lab=GND}
 N 250 -30 250 60 {lab=GND}
-N 270 -300 270 -270 {lab=#net1}
 N -90 -300 270 -300 {lab=#net1}
 N -90 -300 -90 -0 {lab=#net1}
 N -90 -0 -80 -0 {lab=#net1}
-N 320 -300 320 -270 {lab=GND}
-N 270 -270 270 -240 {lab=#net1}
-N 320 -270 320 -250 {lab=GND}
-N 320 -250 330 -250 {lab=GND}
-N 330 -250 330 -240 {lab=GND}
-N 330 -40 330 -30 {lab=#net1}
-N 320 -30 330 -30 {lab=#net1}
 N 250 -40 270 -40 {lab=GND}
 N 250 -40 250 -30 {lab=GND}
-N 390 -80 410 -80 {lab=GND}
-N 410 -80 410 60 {lab=GND}
 N 30 60 410 60 {lab=GND}
-N 390 -300 390 -200 {lab=d}
-N 160 -80 160 -40 {lab=ena_bar_1}
-N 160 -80 180 -80 {lab=ena_bar_1}
 N 90 -70 90 -40 {lab=ena_1}
 N 90 -110 90 -70 {lab=ena_1}
 N 90 -110 180 -110 {lab=ena_1}
@@ -37,18 +24,25 @@ N 30 -170 180 -170 {lab=ena_bar_0}
 N -30 -200 -30 -80 {lab=ena_0}
 N -30 -200 170 -200 {lab=ena_0}
 N 170 -200 180 -200 {lab=ena_0}
-N 500 -300 500 -100 {lab=d}
-N 390 -300 500 -300 {lab=d}
+N 500 -300 500 -100 {lab=#net2}
+N 390 -300 500 -300 {lab=#net2}
 N 500 -40 500 60 {lab=GND}
 N 410 60 500 60 {lab=GND}
-N 320 -30 320 140 {lab=#net1}
-N -180 140 320 140 {lab=#net1}
-N -180 -60 -180 140 {lab=#net1}
-N -180 -60 -90 -60 {lab=#net1}
-N 320 -340 320 -300 {lab=GND}
-N 320 -340 520 -340 {lab=GND}
-N 520 -340 520 60 {lab=GND}
-N 500 60 520 60 {lab=GND}
+N 270 -300 320 -300 {lab=#net1}
+N 320 -300 320 -240 {lab=#net1}
+N 390 -300 390 -280 {lab=#net2}
+N 290 -280 390 -280 {lab=#net2}
+N 290 -280 290 -240 {lab=#net2}
+N 180 -200 230 -200 {lab=ena_0}
+N 180 -170 230 -170 {lab=ena_bar_0}
+N 180 -110 230 -110 {lab=ena_1}
+N 270 -40 300 -40 {lab=GND}
+N 300 -40 320 -40 {lab=GND}
+N 160 -80 160 -40 {lab=ena_bar_1}
+N 160 -80 230 -80 {lab=ena_bar_1}
+N 370 -130 420 -130 {lab=GND}
+N 420 -130 420 60 {lab=GND}
+N -90 -140 230 -140 {lab=#net1}
 C {vsource.sym} 30 -10 0 0 {name=V4 value="PULSE(3.3 0 0.5ms 0 0 0.5ms 1ms)" savecurrent=false}
 C {vsource.sym} 90 -10 0 0 {name=V5 value="PULSE(0 3.3 1ms 0 0 1ms 2ms)" savecurrent=false}
 C {vsource.sym} 160 -10 0 0 {name=V6 value="PULSE(3.3 0 1ms 0 0 1ms 2ms)" savecurrent=false}
@@ -60,7 +54,6 @@ C {lab_wire.sym} 60 -170 0 0 {name=p2 sig_type=std_logic lab=ena_bar_0}
 C {lab_wire.sym} 130 -110 0 0 {name=p3 sig_type=std_logic lab=ena_1}
 C {lab_wire.sym} 160 -80 0 0 {name=p4 sig_type=std_logic lab=ena_bar_1}
 C {vsource.sym} 500 -70 0 0 {name=V1 value=3.3 savecurrent=false}
-C {lab_wire.sym} 440 -300 0 0 {name=p5 sig_type=std_logic lab=d}
 C {devices/code_shown.sym} 180 -430 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
@@ -90,4 +83,4 @@ value="* Transient Analysis and Plotting Script
   plot -i(V1) title 'Drain Current' xlabel 'Time (s)' ylabel 'Current (A)'
 
 .endc"}
-C {libs/core_digital/programmable_pfet.sym} 300 -140 0 0 {name=x1 width=0.5u length=0.28u}
+C {libs/core_digital/programmable_nfet.sym} 350 -130 0 0 {name=x1 width=0.22u length=0.28u}

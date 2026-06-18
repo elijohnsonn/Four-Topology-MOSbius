@@ -4,9 +4,9 @@ K {}
 V {}
 S {}
 E {}
-N 40 -100 40 -50 {lab=d}
-N 40 -100 390 -100 {lab=d}
-N 390 -100 390 -50 {lab=d}
+N 40 -100 40 -50 {lab=s}
+N 40 -100 390 -100 {lab=s}
+N 390 -100 390 -50 {lab=s}
 N 40 -20 70 -20 {lab=b}
 N 390 -20 440 -20 {lab=b}
 N 390 10 390 50 {lab=s}
@@ -67,8 +67,8 @@ C {ipin.sym} -100 30 0 0 {name=p10 lab=g}
 C {ipin.sym} 320 70 0 0 {name=p11 lab=ena_bar<1>}
 C {ipin.sym} -10 50 0 0 {name=p12 lab=ena_bar<0>}
 C {ipin.sym} -10 170 0 0 {name=p15 lab=ena<0>}
-C {iopin.sym} 390 -100 0 0 {name=p17 lab=d}
-C {iopin.sym} 330 50 0 0 {name=p18 lab=s}
+C {iopin.sym} 390 -100 0 0 {name=p17 lab=s}
+C {iopin.sym} 330 50 0 0 {name=p18 lab=d}
 C {symbols/pfet_03v3.sym} 20 -20 0 0 {name=M1
 L=\{length\}
 W=\{width\}
