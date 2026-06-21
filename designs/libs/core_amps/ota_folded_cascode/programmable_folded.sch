@@ -200,17 +200,8 @@ N -1660 80 -1580 80 {lab=VG_BIAS}
 N -1660 300 -660 300 {lab=VG_BIAS}
 N -1660 80 -1660 300 {lab=VG_BIAS}
 N -1720 80 -1660 80 {lab=VG_BIAS}
-C {libs/core_digital/programmable_nfet.sym} -480 20 0 0 {name=x1 width=11.5u length=0.5u}
-C {libs/core_digital/programmable_nfet.sym} -350 20 0 1 {name=x2 width=11.5u length=0.5u}
-C {libs/core_digital/programmable_nfet.sym} 30 220 0 1 {name=x3 width=0.22u length=0.28u}
-C {libs/core_digital/programmable_nfet.sym} 400 220 0 0 {name=x4 width=0.22u length=0.28u}
-C {libs/core_digital/programmable_nfet.sym} 30 490 0 1 {name=x5 width=0.22u length=0.28u}
-C {libs/core_digital/programmable_nfet.sym} 400 490 0 0 {name=x6 width=0.22u length=0.28u}
-C {libs/core_digital/programmable_nfet.sym} -360 310 0 0 {name=x7 width=23u length=0.5u}
-C {libs/core_digital/programmable_pfet.sym} 390 -90 0 0 {name=x8 width=0.22u length=0.28u}
-C {libs/core_digital/programmable_pfet.sym} 380 -360 0 0 {name=x9 width=100u length=0.5u}
-C {libs/core_digital/programmable_pfet.sym} 50 -360 0 1 {name=x10 width=100u length=0.5u}
-C {libs/core_digital/programmable_pfet.sym} 40 -90 0 1 {name=x11 width=0.22u length=0.28u}
+N -390 190 -390 200 {lab=VDD}
+N -390 190 -310 190 {lab=VDD}
 C {lab_pin.sym} -420 500 0 0 {name=p1 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} -420 70 0 0 {name=p2 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} -410 -70 0 0 {name=p3 sig_type=std_logic lab=VDD}
@@ -366,3 +357,15 @@ C {lab_pin.sym} -1070 -150 0 0 {name=p68 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} -1180 80 1 1 {name=p69 sig_type=std_logic lab= VBN2}
 C {lab_pin.sym} -940 -70 1 0 {name=p70 sig_type=std_logic lab=VBP2}
 C {iopin.sym} -1720 80 2 0 {name=p71 lab=VG_BIAS}
+C {libs/core_digital/programmable_nfet.sym} -360 310 0 0 {name=x1 width=23u length=0.5u nf=1 mult=1}
+C {libs/core_digital/programmable_nfet.sym} -480 20 0 0 {name=x2 width=11.5u length=0.5u nf=1 mult=1}
+C {libs/core_digital/programmable_nfet.sym} -350 20 0 1 {name=x3 width=11.5u length=0.5u nf=1 mult=1}
+C {libs/core_digital/programmable_nfet.sym} 30 490 0 1 {name=x4 width=23u length=0.5u nf=1 mult=2}
+C {libs/core_digital/programmable_nfet.sym} 400 490 0 0 {name=x5 width=23u length=0.5u nf=1 mult=2}
+C {libs/core_digital/programmable_nfet.sym} 30 220 0 1 {name=x6 width=34u length=0.5u nf=1 mult=1}
+C {libs/core_digital/programmable_nfet.sym} 400 220 0 0 {name=x7 width=34u length=0.5u nf=1 mult=1}
+C {libs/core_digital/programmable_pfet.sym} 380 -360 0 0 {name=x8 width=50u length=0.5u nf=1 mult=3}
+C {libs/core_digital/programmable_pfet.sym} 390 -90 0 0 {name=x10 width=50u length=0.5u nf=1 mult=2}
+C {libs/core_digital/programmable_pfet.sym} 40 -90 0 1 {name=x11 width=50u length=0.5u nf=1 mult=2}
+C {libs/core_digital/programmable_pfet.sym} 50 -360 0 1 {name=x9 width=50u length=0.5u nf=1 mult=3}
+C {lab_pin.sym} -310 190 0 1 {name=p72 sig_type=std_logic lab=VDD}
