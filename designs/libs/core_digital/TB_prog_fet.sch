@@ -40,9 +40,11 @@ N 270 -40 300 -40 {lab=GND}
 N 300 -40 320 -40 {lab=GND}
 N 160 -80 160 -40 {lab=ena_bar_1}
 N 160 -80 230 -80 {lab=ena_bar_1}
-N 370 -130 420 -130 {lab=GND}
-N 420 -130 420 60 {lab=GND}
-N -90 -140 230 -140 {lab=#net1}
+N 370 -130 420 -130 {lab=#net1}
+N 420 -240 420 -130 {lab=#net1}
+N 320 -240 420 -240 {lab=#net1}
+N 190 -140 230 -140 {lab=GND}
+N 190 -140 190 60 {lab=GND}
 C {vsource.sym} 30 -10 0 0 {name=V4 value="PULSE(3.3 0 0.5ms 0 0 0.5ms 1ms)" savecurrent=false}
 C {vsource.sym} 90 -10 0 0 {name=V5 value="PULSE(0 3.3 1ms 0 0 1ms 2ms)" savecurrent=false}
 C {vsource.sym} 160 -10 0 0 {name=V6 value="PULSE(3.3 0 1ms 0 0 1ms 2ms)" savecurrent=false}
@@ -83,4 +85,4 @@ value="* Transient Analysis and Plotting Script
   plot -i(V1) title 'Drain Current' xlabel 'Time (s)' ylabel 'Current (A)'
 
 .endc"}
-C {libs/core_digital/programmable_nfet.sym} 350 -130 0 0 {name=x1 width=0.22u length=0.28u}
+C {libs/core_digital/programmable_pfet.sym} 350 -140 0 0 {name=x1 width=0.22u length=0.28u nf=1 mult=2}

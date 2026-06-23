@@ -154,14 +154,14 @@ C {opin.sym} 960 -860 0 0 {name=p36 lab=vout}
 C {ipin.sym} 360 -470 0 0 {name=p37 lab=vin+}
 C {ipin.sym} 820 -470 2 0 {name=p38 lab=vin-
 }
-C {iopin.sym} 1060 -940 1 0 {name=p43 lab=EN0}
-C {iopin.sym} 1140 -940 1 0 {name=p44 lab=!EN0}
-C {iopin.sym} 1220 -940 1 0 {name=p46 lab=EN1}
-C {iopin.sym} 1300 -940 1 0 {name=p47 lab=!EN1}
-C {lab_pin.sym} 1060 -1000 0 0 {name=p45 sig_type=std_logic lab=EN0}
-C {lab_pin.sym} 1140 -1000 0 0 {name=p48 sig_type=std_logic lab=!EN0}
-C {lab_pin.sym} 1220 -1000 0 0 {name=p49 sig_type=std_logic lab=EN1}
-C {lab_pin.sym} 1300 -1000 0 0 {name=p50 sig_type=std_logic lab=!EN1}
+C {iopin.sym} 1180 -920 1 0 {name=p43 lab=EN0}
+C {iopin.sym} 1260 -920 1 0 {name=p44 lab=!EN0}
+C {iopin.sym} 1340 -920 1 0 {name=p46 lab=EN1}
+C {iopin.sym} 1420 -920 1 0 {name=p47 lab=!EN1}
+C {lab_pin.sym} 1180 -980 0 0 {name=p45 sig_type=std_logic lab=EN0}
+C {lab_pin.sym} 1260 -980 0 0 {name=p48 sig_type=std_logic lab=!EN0}
+C {lab_pin.sym} 1340 -980 0 0 {name=p49 sig_type=std_logic lab=EN1}
+C {lab_pin.sym} 1420 -980 0 0 {name=p50 sig_type=std_logic lab=!EN1}
 C {ipin.sym} 600 -1230 1 0 {name=p51 lab=VDD}
 C {ipin.sym} 600 -170 3 0 {name=p52 lab=VSS
 }
