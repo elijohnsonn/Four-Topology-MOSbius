@@ -124,6 +124,8 @@ N -810 140 -810 310 {lab=IBIAS}
 N -810 310 210 310 {lab=IBIAS}
 N 210 80 210 310 {lab=IBIAS}
 N 210 80 290 80 {lab=IBIAS}
+N 420 60 420 80 {lab=#net1}
+N 420 140 420 180 {lab=VDD}
 C {lab_pin.sym} -410 -400 0 0 {name=p1 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} -530 -400 0 0 {name=p3 sig_type=std_logic lab=VSS}
 C {symbols/nfet_03v3.sym} -910 140 0 1 {name=M1
@@ -403,3 +405,5 @@ C {iopin.sym} -410 -340 1 0 {name=p27 lab=VDD}
 C {iopin.sym} 130 -70 2 0 {name=p14 lab=INN}
 C {iopin.sym} 560 -70 2 1 {name=p17 lab=INP}
 C {iopin.sym} 1220 -80 2 1 {name=p6 lab=OUT}
+C {isource.sym} 420 110 2 0 {name=IBIAS value=100u}
+C {lab_pin.sym} 420 180 0 0 {name=p9 sig_type=std_logic lab=VDD}
