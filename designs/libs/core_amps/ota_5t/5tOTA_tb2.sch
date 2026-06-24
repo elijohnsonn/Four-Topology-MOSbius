@@ -24,7 +24,6 @@ N 500.0390625 -300 500.0390625 -276.25 {lab=VSS}
 N 467.5 -276.25 500.0390625 -276.25 {lab=VSS}
 N 590 -360 590 -260 {lab=vout}
 N 390 -260 590 -260 {lab=vout}
-C {5tOTA.sym} 500 -360 0 0 {name=x1}
 C {devices/code_shown.sym} 20 -950 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
@@ -124,3 +123,4 @@ m=1
 value=100p
 footprint=1206
 device="ceramic capacitor"}
+C {libs/core_amps/ota_5t/5tOTA.sym} 500 -360 0 0 {name=x1}
