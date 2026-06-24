@@ -75,7 +75,7 @@ N 380 -290 450 -290 {lab=!EN1}
 N 380 -320 450 -320 {lab=EN1}
 N 380 -380 450 -380 {lab=!EN0}
 N 380 -410 450 -410 {lab=EN0}
-N 200 -350 450 -350 {lab=i_bias}
+N 200 -350 450 -350 {lab=V_bias}
 N 510 -250 510 -190 {lab=VSS}
 N 510 -190 650 -190 {lab=VSS}
 N 650 -340 650 -190 {lab=VSS}
@@ -92,11 +92,11 @@ N 1250 -960 1320 -960 {lab=!EN0}
 N 1250 -900 1320 -900 {lab=EN1}
 N 1250 -870 1320 -870 {lab=!EN1}
 C {title.sym} 170 -40 0 0 {name=l1 author="Songhang Li"}
-C {libs/core_digital/programmable_pfet.sym} 290 -1040 0 1 {name=x1 width=0.22u length=0.28u nf=1 mult=1}
-C {libs/core_digital/programmable_nfet.sym} 280 -730 0 1 {name=x2 width=0.22u length=0.28u nf=1 mult=1}
-C {libs/core_digital/programmable_nfet.sym} 570 -340 0 0 {name=x3 width=0.22u length=0.28u nf=1 mult=1}
-C {libs/core_digital/programmable_pfet.sym} 730 -1040 0 0 {name=x4 width=0.22u length=0.28u nf=1 mult=1}
-C {libs/core_digital/programmable_nfet.sym} 740 -730 0 0 {name=x5 width=0.22u length=0.28u nf=1 mult=1}
+C {libs/core_digital/programmable_pfet.sym} 290 -1040 0 1 {name=x3 width=100u length=0.5u nf=1 mult=1}
+C {libs/core_digital/programmable_nfet.sym} 280 -730 0 1 {name=x1 width=3*11.43u length=0.28u nf=1 mult=1}
+C {libs/core_digital/programmable_nfet.sym} 570 -340 0 0 {name=x5 width=3*22.86u length=0.5u nf=1 mult=1}
+C {libs/core_digital/programmable_pfet.sym} 730 -1040 0 0 {name=x4 width=100u length=0.5u nf=1 mult=1}
+C {libs/core_digital/programmable_nfet.sym} 740 -730 0 0 {name=x2 width=3*11.43u length=0.28u nf=1 mult=1}
 C {lab_pin.sym} 230 -1080 0 0 {name=p14 sig_type=std_logic lab=VDD}
 C {ipin.sym} 510 -1260 1 0 {name=p15 lab=VDD}
 C {lab_pin.sym} 230 -930 2 0 {name=p16 sig_type=std_logic lab=VSS}
@@ -119,7 +119,7 @@ C {lab_pin.sym} 380 -430 0 0 {name=p31 sig_type=std_logic lab=EN0}
 C {lab_pin.sym} 380 -400 0 0 {name=p32 sig_type=std_logic lab=!EN0}
 C {lab_pin.sym} 380 -340 0 0 {name=p33 sig_type=std_logic lab=EN1}
 C {lab_pin.sym} 380 -310 0 0 {name=p34 sig_type=std_logic lab=!EN1}
-C {ipin.sym} 200 -350 0 0 {name=p35 lab=i_bias
+C {ipin.sym} 200 -350 0 0 {name=p35 lab=V_bias
 }
 C {ipin.sym} 510 -150 3 0 {name=p36 lab=VSS
 }
