@@ -77,11 +77,11 @@ C {lab_pin.sym} 500 100 0 0 {name=p10 sig_type=std_logic lab=GND}
 C {lab_pin.sym} 570 10 0 1 {name=p11 sig_type=std_logic lab=output}
 C {capa.sym} 40 -140 3 1 {name=CLOAD1
 m=1
-value=40p
+value=120p
 footprint=1206
 device="ceramic capacitor"}
 C {res.sym} -60 -140 3 1 {name=R1
-value=400
+value=500
 footprint=1206
 device=resistor
 m=1}

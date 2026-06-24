@@ -29,19 +29,19 @@ N -950 -80 -950 -20 {lab=GND}
 N 40 -160 40 -130 {lab=VDD}
 N 40 70 40 100 {lab=GND}
 N -150 -90 -90 -90 {lab=VDD}
-N -150 -70 -90 -70 {lab=GND}
-N -150 -110 -90 -110 {lab=VDD}
-N -150 -130 -90 -130 {lab=GND}
-N -250 80 -250 120 {lab=#net1}
+N -150 -70 -90 -70 {lab=#net1}
+N -150 -110 -90 -110 {lab=GND}
+N -150 -130 -90 -130 {lab=VDD}
+N -250 80 -250 120 {lab=#net2}
 N -250 360 -250 390 {lab=GND}
-N -250 -10 -250 20 {lab=#net2}
-N -250 120 -250 260 {lab=#net1}
-N -250 260 -250 300 {lab=#net1}
-N -250 -10 -90 -10 {lab=#net2}
-N -130 300 10 300 {lab=#net3}
+N -250 -10 -250 20 {lab=#net3}
+N -250 120 -250 260 {lab=#net2}
+N -250 260 -250 300 {lab=#net2}
+N -250 -10 -90 -10 {lab=#net3}
+N -130 300 10 300 {lab=#net4}
 N -130 360 -130 390 {lab=GND}
-N 70 300 190 300 {lab=#net4}
-N 190 300 190 340 {lab=#net4}
+N 70 300 190 300 {lab=#net5}
+N 190 300 190 340 {lab=#net5}
 N 190 400 190 440 {lab=GND}
 N 190 420 230 420 {lab=GND}
 N 230 390 230 420 {lab=GND}
@@ -51,8 +51,8 @@ N 410 -30 410 350 {lab=output}
 N 300 70 300 100 {lab=GND}
 N 300 -30 300 0 {lab=output}
 N 300 0 300 10 {lab=output}
-N -130 50 -90 50 {lab=#net3}
-N -130 50 -130 300 {lab=#net3}
+N -130 50 -90 50 {lab=#net4}
+N -130 50 -130 300 {lab=#net4}
 C {libs/core_amps/ota_folded_cascode/programmable_folded.sym} 260 -30 0 0 {name=x1}
 C {symbols/nfet_03v3.sym} -610 10 0 1 {name=M1
 L=.5u
@@ -87,12 +87,12 @@ C {vsource.sym} -250 330 0 0 {name=VCM value= 1.65 savecurrent=false}
 C {lab_pin.sym} -250 390 0 0 {name=p14 sig_type=std_logic lab=GND}
 C {ind.sym} 40 300 1 0 {name=L2
 m=1
-value=1
+value=10T
 footprint=1206
 device=inductor}
 C {capa.sym} -130 330 0 0 {name=CLOAD1
 m=1
-value=1
+value=10T
 footprint=1206
 device="ceramic capacitor"}
 C {lab_pin.sym} -130 390 0 0 {name=p15 sig_type=std_logic lab=GND}
@@ -128,5 +128,5 @@ meas ac bw when vdb(output) = bw_level fall=1
 .endc
 
 "}
-C {lab_pin.sym} -150 -130 0 0 {name=p12 sig_type=std_logic lab=GND}
-C {lab_pin.sym} -150 -110 0 0 {name=p13 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} -150 -110 0 0 {name=p12 sig_type=std_logic lab=GND}
+C {lab_pin.sym} -150 -130 0 0 {name=p13 sig_type=std_logic lab=VDD}
