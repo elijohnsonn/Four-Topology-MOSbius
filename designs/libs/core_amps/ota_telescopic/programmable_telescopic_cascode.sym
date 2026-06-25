@@ -1,0 +1,42 @@
+v {xschem version=3.4.7 file_version=1.2}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"
+}
+V {}
+S {}
+E {}
+L 4 130 -20 150 -20 {}
+L 4 -150 30 -130 30 {}
+L 4 -150 -70 -130 -70 {}
+L 7 -10 -100 -10 -80 {}
+L 7 -150 -50 -130 -50 {}
+L 7 -150 -30 -130 -30 {}
+L 7 -150 -10 -130 -10 {}
+L 7 -150 10 -130 10 {}
+L 7 20 40 20 60 {}
+L 7 -10 40 -10 60 {}
+B 5 -12.5 -102.5 -7.5 -97.5 {name=VDD dir=inout}
+B 5 147.5 -22.5 152.5 -17.5 {name=output dir=out}
+B 5 -152.5 -52.5 -147.5 -47.5 {name=EN0 dir=inout}
+B 5 -152.5 -32.5 -147.5 -27.5 {name=EN0_bar dir=inout}
+B 5 -152.5 -12.5 -147.5 -7.5 {name=EN1 dir=inout}
+B 5 -152.5 7.5 -147.5 12.5 {name=EN1_bar dir=inout}
+B 5 -152.5 27.5 -147.5 32.5 {name=vinn dir=in}
+B 5 -152.5 -72.5 -147.5 -67.5 {name=vinp dir=in}
+B 5 17.5 57.5 22.5 62.5 {name=VSS dir=inout}
+B 5 -12.5 57.5 -7.5 62.5 {name=vbias dir=inout}
+P 4 5 130 -80 -130 -80 -130 40 130 40 130 -80 {}
+T {@programmable_telescopic_cascode} -67.5 -6 0 0 0.3 0.3 {}
+T {Programmable Telescopic Cascode} -95 -22 0 0 0.2 0.2 {}
+T {VDD} -14 -75 3 1 0.2 0.2 {}
+T {output} 125 -24 0 1 0.2 0.2 {}
+T {EN0} -125 -54 0 0 0.2 0.2 {}
+T {EN0_bar} -125 -34 0 0 0.2 0.2 {}
+T {EN1} -125 -14 0 0 0.2 0.2 {}
+T {EN1_bar} -125 6 0 0 0.2 0.2 {}
+T {vinn} -125 26 0 0 0.2 0.2 {}
+T {vinp} -125 -74 0 0 0.2 0.2 {}
+T {VSS} 24 35 1 1 0.2 0.2 {}
+T {vbias} -6 35 1 1 0.2 0.2 {}
