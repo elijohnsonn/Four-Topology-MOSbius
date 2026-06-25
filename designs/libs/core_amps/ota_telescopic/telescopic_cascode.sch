@@ -86,9 +86,9 @@ C {gnd.sym} 12610 20350 0 0 {name=l3 lab=GND}
 C {gnd.sym} 12270 20350 0 0 {name=l4 lab=GND}
 C {symbols/pfet_03v3.sym} 12530 20230 0 0 {name=M8
 L=0.50u
-W=55u
+W=44u
 nf=1
-m=4
+m=5
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -100,9 +100,9 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 12530 20350 0 0 {name=M4
 L=0.5u
-W=60u
+W=30u
 nf=1
-m=3
+m=6
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -128,9 +128,9 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 12330 20350 0 1 {name=M2
 L=0.5u
-W=60u
+W=30u
 nf=1
-m=3
+m=6
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -156,9 +156,9 @@ spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 12530 20140 0 0 {name=M5
 L=0.50u
-W=60u
+W=30u
 nf=1
-m=4
+m=8
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -170,9 +170,9 @@ spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 12330 20230 0 1 {name=M6
 L=0.50u
-W=55u
+W=44u
 nf=1
-m=4
+m=5
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -184,9 +184,9 @@ spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 12330 20140 0 1 {name=M7
 L=0.50u
-W=60u
+W=30u
 nf=1
-m=4
+m=8
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -198,9 +198,9 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 12410 20650 0 0 {name=M9
 L=0.5u
-W=60u
+W=30u
 nf=1
-m=1
+m=2
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"

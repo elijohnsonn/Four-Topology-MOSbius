@@ -35,15 +35,15 @@ N -1010 -210 -1010 -180 {lab=GND}
 N -930 -640 -840 -640 {lab=output}
 N -1010 -250 -880 -250 {lab=output}
 N -880 -640 -880 -250 {lab=output}
-N -1920 -410 -1920 -390 {lab=#net5}
+N -1920 -410 -1920 -390 {lab=GND}
 N -1920 -500 -1840 -500 {lab=Ibias}
 N -1840 -500 -1840 -440 {lab=Ibias}
 N -1970 -500 -1920 -500 {lab=Ibias}
 N -1970 -530 -1970 -500 {lab=Ibias}
 N -1920 -500 -1920 -470 {lab=Ibias}
-N -1980 -440 -1920 -440 {lab=#net5}
-N -1980 -440 -1980 -390 {lab=#net5}
-N -1980 -390 -1920 -390 {lab=#net5}
+N -1980 -440 -1920 -440 {lab=GND}
+N -1980 -440 -1980 -390 {lab=GND}
+N -1980 -390 -1920 -390 {lab=GND}
 N -1370 -590 -1350 -590 {lab=#net2}
 N -1370 -590 -1370 -550 {lab=#net2}
 N -1880 -440 -1840 -440 {lab=Ibias}
@@ -83,7 +83,7 @@ meas ac bw when vdb(output) = bw_level fall=1
 C {lab_pin.sym} -1180 -440 0 1 {name=p5 sig_type=std_logic lab=GND}
 C {capa.sym} -980 -560 0 0 {name=CLOAD
 m=1
-value=10p
+value=100p
 footprint=1206
 device="ceramic capacitor"}
 C {lab_pin.sym} -980 -500 0 0 {name=p7 sig_type=std_logic lab=GND}
@@ -121,8 +121,9 @@ spiceprefix=X
 }
 C {lab_pin.sym} -1970 -530 0 0 {name=p12 sig_type=std_logic lab=Ibias}
 C {lab_pin.sym} -1350 -670 0 0 {name=p2 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} -1350 -650 0 0 {name=p13 sig_type=std_logic lab=GND}
+C {lab_pin.sym} -1350 -630 0 0 {name=p13 sig_type=std_logic lab=GND}
 C {lab_pin.sym} -1350 -610 0 0 {name=p14 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} -1350 -630 0 0 {name=p15 sig_type=std_logic lab=GND}
+C {lab_pin.sym} -1350 -650 0 0 {name=p15 sig_type=std_logic lab=GND}
 C {libs/core_amps/ota_telescopic/programmable_telescopic_cascode.sym} -1200 -620 0 0 {name=x1}
 C {lab_pin.sym} -1210 -720 1 0 {name=p16 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} -1980 -390 0 0 {name=p17 sig_type=std_logic lab=GND}
