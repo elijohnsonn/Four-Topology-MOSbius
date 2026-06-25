@@ -92,10 +92,10 @@ N 1250 -960 1320 -960 {lab=!EN0}
 N 1250 -900 1320 -900 {lab=EN1}
 N 1250 -870 1320 -870 {lab=!EN1}
 C {title.sym} 170 -40 0 0 {name=l1 author="Songhang Li"}
-C {libs/core_digital/programmable_pfet.sym} 290 -1040 0 1 {name=x3 width=100u length=0.5u nf=1 mult=1}
+C {libs/core_digital/programmable_pfet.sym} 290 -1040 0 1 {name=x3 width=50u length=0.5u nf=1 mult=2}
 C {libs/core_digital/programmable_nfet.sym} 280 -730 0 1 {name=x1 width=3*11.43u length=0.28u nf=1 mult=1}
-C {libs/core_digital/programmable_nfet.sym} 570 -340 0 0 {name=x5 width=3*22.86u length=0.5u nf=1 mult=1}
-C {libs/core_digital/programmable_pfet.sym} 730 -1040 0 0 {name=x4 width=100u length=0.5u nf=1 mult=1}
+C {libs/core_digital/programmable_nfet.sym} 570 -340 0 0 {name=x5 width=22.86u length=0.5u nf=1 mult=9}
+C {libs/core_digital/programmable_pfet.sym} 730 -1040 0 0 {name=x4 width=50u length=0.5u nf=1 mult=2}
 C {libs/core_digital/programmable_nfet.sym} 740 -730 0 0 {name=x2 width=3*11.43u length=0.28u nf=1 mult=1}
 C {lab_pin.sym} 230 -1080 0 0 {name=p14 sig_type=std_logic lab=VDD}
 C {ipin.sym} 510 -1260 1 0 {name=p15 lab=VDD}

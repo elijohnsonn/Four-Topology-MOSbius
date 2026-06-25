@@ -27,8 +27,8 @@ N 300 -300 300 -290 {lab=GND}
 N 180 -410 180 -350 {lab=GND}
 N 1160 -815 1160 -785 {lab=VDD}
 N 1160 -535 1160 -505 {lab=GND}
-N 950 -747.5 1010 -747.5 {lab=GND}
-N 950 -727.5 1010 -727.5 {lab=VDD}
+N 950 -747.5 1010 -747.5 {lab=VDD}
+N 950 -727.5 1010 -727.5 {lab=GND}
 N 950 -767.5 1010 -767.5 {lab=GND}
 N 950 -787.5 1010 -787.5 {lab=VDD}
 N 1430 -560 1430 -530 {lab=GND}
@@ -43,12 +43,12 @@ N 1220 -553.984375 1220 -500 {lab=V_bias}
 N 1220 -500 1230 -500 {lab=V_bias}
 N 1230 -500 1230 -460 {lab=V_bias}
 N 1310 -660 1590 -660 {lab=output}
-N 870 -625 1010 -625 {lab=#net2}
 N 870 -625 870 -600 {lab=#net2}
-N 930 -567.5 1010 -567.5 {lab=output}
 N 930 -567.5 930 -340 {lab=output}
 N 930 -340 1530 -340 {lab=output}
 N 1530 -660 1530 -340 {lab=output}
+N 870 -625 1010 -567.5 {lab=#net2}
+N 930 -567.5 1010 -625 {lab=output}
 C {title.sym} 190 -70 0 0 {name=l1 author="Songhang Li"}
 C {symbols/nfet_03v3.sym} 520 -320 0 1 {name=M2
 L=.5u
@@ -76,8 +76,8 @@ C {lab_pin.sym} 500 -230 0 0 {name=p20 sig_type=std_logic lab=GND}
 C {lab_pin.sym} 500 -550 0 0 {name=p21 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 1160 -815 0 1 {name=p22 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 1160 -505 0 0 {name=p23 sig_type=std_logic lab=GND}
-C {lab_pin.sym} 950 -727.5 0 0 {name=p24 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} 950 -747.5 0 0 {name=p25 sig_type=std_logic lab=GND}
+C {lab_pin.sym} 950 -747.5 0 0 {name=p24 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} 950 -727.5 0 0 {name=p25 sig_type=std_logic lab=GND}
 C {lab_pin.sym} 1590 -660 0 1 {name=p26 sig_type=std_logic lab=output}
 C {capa.sym} 1430 -590 0 0 {name=CLOAD
 m=1
