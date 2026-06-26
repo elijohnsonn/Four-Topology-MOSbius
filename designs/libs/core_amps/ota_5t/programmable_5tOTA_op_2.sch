@@ -25,30 +25,27 @@ N 180 -350 180 -300 {lab=GND}
 N 300 -350 300 -300 {lab=GND}
 N 300 -300 300 -290 {lab=GND}
 N 180 -410 180 -350 {lab=GND}
-N 1160 -815 1160 -785 {lab=VDD}
-N 1160 -535 1160 -505 {lab=GND}
-N 950 -747.5 1010 -747.5 {lab=GND}
-N 950 -727.5 1010 -727.5 {lab=VDD}
-N 950 -767.5 1010 -767.5 {lab=GND}
-N 950 -787.5 1010 -787.5 {lab=VDD}
-N 1430 -560 1430 -530 {lab=GND}
-N 1430 -660 1430 -630 {lab=output}
-N 1430 -630 1430 -620 {lab=output}
-N 870 -540 870 -500 {lab=#net1}
-N 870 -260 870 -230 {lab=GND}
-N 870 -500 870 -360 {lab=#net1}
-N 870 -360 870 -320 {lab=#net1}
-N 1215.1171875 -553.984375 1220 -553.984375 {lab=V_bias}
-N 1220 -553.984375 1220 -500 {lab=V_bias}
-N 1220 -500 1230 -500 {lab=V_bias}
-N 1230 -500 1230 -460 {lab=V_bias}
-N 1310 -660 1590 -660 {lab=output}
-N 870 -625 870 -600 {lab=#net2}
-N 930 -567.5 930 -340 {lab=output}
-N 930 -340 1530 -340 {lab=output}
-N 1530 -660 1530 -340 {lab=output}
-N 870 -625 1010 -567.5 {lab=#net2}
-N 930 -567.5 1010 -625 {lab=output}
+N 1140 -810 1140 -780 {lab=VDD}
+N 1140 -580 1140 -550 {lab=GND}
+N 960 -740 1020 -740 {lab=VDD}
+N 960 -720 1020 -720 {lab=GND}
+N 960 -760 1020 -760 {lab=GND}
+N 960 -780 1020 -780 {lab=VDD}
+N 1360 -580 1360 -550 {lab=GND}
+N 1360 -680 1360 -650 {lab=output}
+N 1360 -650 1360 -640 {lab=output}
+N 860 -555 860 -515 {lab=#net1}
+N 860 -275 860 -245 {lab=GND}
+N 860 -515 860 -375 {lab=#net1}
+N 860 -375 860 -335 {lab=#net1}
+N 1180 -600 1180 -560 {lab=V_bias}
+N 1240 -680 1520 -680 {lab=output}
+N 860 -640 860 -615 {lab=#net2}
+N 860 -640 1020 -640 {lab=#net2}
+N 960 -580 1020 -580 {lab=output}
+N 960 -580 960 -400 {lab=output}
+N 960 -400 1460 -400 {lab=output}
+N 1460 -680 1460 -400 {lab=output}
 C {title.sym} 190 -70 0 0 {name=l1 author="Songhang Li"}
 C {symbols/nfet_03v3.sym} 520 -320 0 1 {name=M2
 L=.5u
@@ -65,7 +62,7 @@ model=nfet_03v3
 spiceprefix=X
 }
 C {lab_pin.sym} 630 -320 0 1 {name=p15 sig_type=std_logic lab=V_bias}
-C {lab_pin.sym} 1230 -476.875 0 1 {name=p16 sig_type=std_logic lab=V_bias}
+C {lab_pin.sym} 1180 -560 0 1 {name=p16 sig_type=std_logic lab=V_bias}
 C {isource.sym} 500 -470 0 0 {name=I2 value=100u}
 C {lab_pin.sym} 300 -470 0 0 {name=p17 sig_type=std_logic lab=VDD}
 C {vsource.sym} 300 -380 0 0 {name=V3 value= 3.3 savecurrent=false}
@@ -74,25 +71,25 @@ C {gnd.sym} 180 -300 0 0 {name=l4 lab=GND}
 C {lab_pin.sym} 300 -290 0 0 {name=p19 sig_type=std_logic lab=GND}
 C {lab_pin.sym} 500 -230 0 0 {name=p20 sig_type=std_logic lab=GND}
 C {lab_pin.sym} 500 -550 0 0 {name=p21 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} 1160 -815 0 1 {name=p22 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} 1160 -505 0 0 {name=p23 sig_type=std_logic lab=GND}
-C {lab_pin.sym} 950 -727.5 0 0 {name=p24 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} 950 -747.5 0 0 {name=p25 sig_type=std_logic lab=GND}
-C {lab_pin.sym} 1590 -660 0 1 {name=p26 sig_type=std_logic lab=output}
-C {capa.sym} 1430 -590 0 0 {name=CLOAD
+C {lab_pin.sym} 1140 -810 0 1 {name=p22 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} 1140 -550 0 0 {name=p23 sig_type=std_logic lab=GND}
+C {lab_pin.sym} 960 -740 0 0 {name=p24 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} 960 -720 0 0 {name=p25 sig_type=std_logic lab=GND}
+C {lab_pin.sym} 1520 -680 0 1 {name=p26 sig_type=std_logic lab=output}
+C {capa.sym} 1360 -610 0 0 {name=CLOAD
 m=1
 value=100p
 footprint=1206
 device="ceramic capacitor"}
-C {lab_pin.sym} 1430 -530 0 0 {name=p27 sig_type=std_logic lab=GND}
+C {lab_pin.sym} 1360 -550 0 0 {name=p27 sig_type=std_logic lab=GND}
 C {devices/code_shown.sym} 80 -1010 0 0 {name=Models1 only_toplevel=false
 format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 "}
-C {lab_pin.sym} 950 -767.5 0 0 {name=p28 sig_type=std_logic lab=GND}
-C {lab_pin.sym} 950 -787.5 0 0 {name=p29 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} 960 -760 0 0 {name=p28 sig_type=std_logic lab=GND}
+C {lab_pin.sym} 960 -780 0 0 {name=p29 sig_type=std_logic lab=VDD}
 C {code_shown.sym} 80 -870 0 0 {name=Simulation1 only_toplevel=false 
 
 value=
@@ -113,8 +110,7 @@ plot v(output) gain
 
 .endc
 "}
-C {vsource.sym} 870 -570 0 0 {name=VINP value= 0 savecurrent=false}
-C {vsource.sym} 870 -290 0 0 {name=VCM value= 0 savecurrent=false}
-C {lab_pin.sym} 870 -230 0 0 {name=p30 sig_type=std_logic lab=GND}
-C {libs/core_amps/ota_5t/programmable_5tOTA.sym} 1160 -660 0 0 {name=x1}
-C {libs/core_amps/ota_5t/programmable_5tOTA_2.sym} 1600 -900 0 0 {name=x2}
+C {vsource.sym} 860 -585 0 0 {name=VINP value= 0 savecurrent=false}
+C {vsource.sym} 860 -305 0 0 {name=VCM value= 0 savecurrent=false}
+C {lab_pin.sym} 860 -245 0 0 {name=p30 sig_type=std_logic lab=GND}
+C {libs/core_amps/ota_5t/programmable_5tOTA_2.sym} 1140 -680 0 0 {name=x2}
