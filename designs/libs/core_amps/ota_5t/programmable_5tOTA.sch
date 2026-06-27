@@ -4,135 +4,135 @@ K {}
 V {}
 S {}
 E {}
-T {Programmable 5-Transister Operational Transconductance Amplifier} 160 -1360 0 0 0.4 0.4 {}
-N 320 -1200 320 -1140 {lab=VDD}
-N 320 -1200 700 -1200 {lab=VDD}
-N 700 -1200 700 -1140 {lab=VDD}
-N 230 -1030 270 -1030 {lab=VDD}
-N 230 -1200 230 -1030 {lab=VDD}
-N 230 -1200 320 -1200 {lab=VDD}
-N 750 -1030 790 -1030 {lab=VDD}
-N 790 -1200 790 -1030 {lab=VDD}
-N 700 -1200 790 -1200 {lab=VDD}
-N 350 -1200 350 -1140 {lab=VDD}
-N 670 -1200 670 -1140 {lab=VDD}
-N 410 -1100 610 -1100 {lab=EN0}
-N 510 -1260 510 -1200 {lab=VDD}
-N 410 -1070 610 -1070 {lab=!EN0}
-N 540 -1040 610 -1040 {lab=#net1}
-N 410 -1010 610 -1010 {lab=EN1}
-N 410 -980 610 -980 {lab=!EN1}
-N 340 -940 340 -840 {lab=#net1}
-N 680 -940 680 -840 {lab=vout}
-N 230 -940 320 -940 {lab=VSS}
-N 230 -940 230 -730 {lab=VSS}
-N 230 -730 260 -730 {lab=VSS}
-N 310 -880 310 -840 {lab=VDD}
-N 710 -880 710 -840 {lab=VDD}
-N 700 -940 790 -940 {lab=VSS}
-N 790 -940 790 -730 {lab=VSS}
-N 760 -730 790 -730 {lab=VSS}
-N 340 -880 510 -880 {lab=#net1}
-N 510 -1120 510 -1100 {lab=EN0}
-N 510 -1090 510 -1070 {lab=!EN0}
-N 410 -1040 480 -1040 {lab=#net1}
-N 480 -1050 480 -1040 {lab=#net1}
-N 480 -1050 540 -1050 {lab=#net1}
-N 540 -1050 540 -1040 {lab=#net1}
-N 510 -1050 510 -880 {lab=#net1}
-N 500 -1030 500 -1010 {lab=EN1}
-N 500 -1000 500 -980 {lab=!EN1}
-N 400 -800 620 -800 {lab=EN0}
-N 400 -770 620 -770 {lab=!EN0}
-N 400 -710 620 -710 {lab=EN1}
-N 400 -680 620 -680 {lab=!EN1}
-N 510 -820 510 -800 {lab=EN0}
-N 510 -790 510 -770 {lab=!EN0}
-N 510 -730 510 -710 {lab=EN1}
-N 510 -700 510 -680 {lab=!EN1}
-N 400 -740 440 -740 {lab=vin+}
-N 440 -740 440 -610 {lab=vin+}
-N 230 -510 440 -510 {lab=vin+}
-N 580 -740 620 -740 {lab=vin-}
-N 580 -740 580 -610 {lab=vin-}
-N 580 -510 790 -510 {lab=vin-}
-N 340 -570 680 -570 {lab=#net2}
-N 680 -900 970 -900 {lab=vout}
-N 340 -640 340 -570 {lab=#net2}
-N 680 -640 680 -570 {lab=#net2}
-N 510 -570 510 -450 {lab=#net2}
-N 230 -640 310 -640 {lab=VSS}
-N 230 -730 230 -640 {lab=VSS}
-N 710 -640 790 -640 {lab=VSS}
-N 790 -730 790 -640 {lab=VSS}
-N 440 -610 440 -510 {lab=vin+}
-N 580 -610 580 -510 {lab=vin-}
-N 380 -430 380 -410 {lab=EN0}
-N 380 -400 380 -380 {lab=!EN0}
-N 380 -340 380 -320 {lab=EN1}
-N 380 -310 380 -290 {lab=!EN1}
-N 380 -290 450 -290 {lab=!EN1}
-N 380 -320 450 -320 {lab=EN1}
-N 380 -380 450 -380 {lab=!EN0}
-N 380 -410 450 -410 {lab=EN0}
-N 200 -350 450 -350 {lab=V_bias}
-N 510 -250 510 -190 {lab=VSS}
-N 510 -190 650 -190 {lab=VSS}
-N 650 -340 650 -190 {lab=VSS}
-N 590 -340 650 -340 {lab=VSS}
-N 540 -250 540 -190 {lab=VSS}
-N 510 -190 510 -150 {lab=VSS}
-N 540 -490 540 -450 {lab=VDD}
-N 1250 -1010 1250 -990 {lab=EN0}
-N 1250 -980 1250 -960 {lab=!EN0}
-N 1250 -920 1250 -900 {lab=EN1}
-N 1250 -890 1250 -870 {lab=!EN1}
-N 1250 -990 1320 -990 {lab=EN0}
-N 1250 -960 1320 -960 {lab=!EN0}
-N 1250 -900 1320 -900 {lab=EN1}
-N 1250 -870 1320 -870 {lab=!EN1}
-C {title.sym} 170 -40 0 0 {name=l1 author="Songhang Li"}
-C {libs/core_digital/programmable_pfet.sym} 290 -1040 0 1 {name=x3 width=50u length=0.5u nf=1 mult=2}
-C {libs/core_digital/programmable_nfet.sym} 280 -730 0 1 {name=x1 width=3*11.43u length=0.28u nf=1 mult=1}
-C {libs/core_digital/programmable_nfet.sym} 570 -340 0 0 {name=x5 width=22.86u length=0.5u nf=1 mult=9}
-C {libs/core_digital/programmable_pfet.sym} 730 -1040 0 0 {name=x4 width=50u length=0.5u nf=1 mult=2}
-C {libs/core_digital/programmable_nfet.sym} 740 -730 0 0 {name=x2 width=3*11.43u length=0.28u nf=1 mult=1}
-C {lab_pin.sym} 230 -1080 0 0 {name=p14 sig_type=std_logic lab=VDD}
-C {ipin.sym} 510 -1260 1 0 {name=p15 lab=VDD}
-C {lab_pin.sym} 230 -930 2 0 {name=p16 sig_type=std_logic lab=VSS}
-C {lab_pin.sym} 310 -880 0 0 {name=p17 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} 710 -880 0 1 {name=p18 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} 790 -930 0 0 {name=p19 sig_type=std_logic lab=VSS}
-C {lab_pin.sym} 510 -1120 0 0 {name=p20 sig_type=std_logic lab=EN0}
-C {lab_pin.sym} 510 -1090 0 0 {name=p21 sig_type=std_logic lab=!EN0}
-C {lab_pin.sym} 500 -1030 0 0 {name=p22 sig_type=std_logic lab=EN1}
-C {lab_pin.sym} 500 -1000 0 0 {name=p23 sig_type=std_logic lab=!EN1}
-C {lab_pin.sym} 510 -820 0 0 {name=p24 sig_type=std_logic lab=EN0}
-C {lab_pin.sym} 510 -790 0 0 {name=p25 sig_type=std_logic lab=!EN0}
-C {lab_pin.sym} 510 -730 0 0 {name=p26 sig_type=std_logic lab=EN1}
-C {lab_pin.sym} 510 -700 0 0 {name=p27 sig_type=std_logic lab=!EN1}
-C {opin.sym} 970 -900 0 0 {name=p28 lab=vout}
-C {ipin.sym} 230 -510 0 0 {name=p29 lab=vin+}
-C {ipin.sym} 790 -510 2 0 {name=p30 lab=vin-
+T {Programmable 5-Transister Operational Transconductance Amplifier} 2197650 -1679700 0 0 0.4 0.4 {}
+N 2197810 -1679540 2197810 -1679480 {lab=VDD}
+N 2197810 -1679540 2198190 -1679540 {lab=VDD}
+N 2198190 -1679540 2198190 -1679480 {lab=VDD}
+N 2197720 -1679370 2197760 -1679370 {lab=VDD}
+N 2197720 -1679540 2197720 -1679370 {lab=VDD}
+N 2197720 -1679540 2197810 -1679540 {lab=VDD}
+N 2198240 -1679370 2198280 -1679370 {lab=VDD}
+N 2198280 -1679540 2198280 -1679370 {lab=VDD}
+N 2198190 -1679540 2198280 -1679540 {lab=VDD}
+N 2197840 -1679540 2197840 -1679480 {lab=VDD}
+N 2198160 -1679540 2198160 -1679480 {lab=VDD}
+N 2197900 -1679440 2198100 -1679440 {lab=EN0}
+N 2198000 -1679600 2198000 -1679540 {lab=VDD}
+N 2197900 -1679410 2198100 -1679410 {lab=!EN0}
+N 2198030 -1679380 2198100 -1679380 {lab=#net1}
+N 2197900 -1679350 2198100 -1679350 {lab=EN1}
+N 2197900 -1679320 2198100 -1679320 {lab=!EN1}
+N 2197830 -1679280 2197830 -1679180 {lab=#net1}
+N 2198170 -1679280 2198170 -1679180 {lab=vout}
+N 2197720 -1679280 2197810 -1679280 {lab=VSS}
+N 2197720 -1679280 2197720 -1679070 {lab=VSS}
+N 2197720 -1679070 2197750 -1679070 {lab=VSS}
+N 2197800 -1679220 2197800 -1679180 {lab=VDD}
+N 2198200 -1679220 2198200 -1679180 {lab=VDD}
+N 2198190 -1679280 2198280 -1679280 {lab=VSS}
+N 2198280 -1679280 2198280 -1679070 {lab=VSS}
+N 2198250 -1679070 2198280 -1679070 {lab=VSS}
+N 2197830 -1679220 2198000 -1679220 {lab=#net1}
+N 2198000 -1679460 2198000 -1679440 {lab=EN0}
+N 2198000 -1679430 2198000 -1679410 {lab=!EN0}
+N 2197900 -1679380 2197970 -1679380 {lab=#net1}
+N 2197970 -1679390 2197970 -1679380 {lab=#net1}
+N 2197970 -1679390 2198030 -1679390 {lab=#net1}
+N 2198030 -1679390 2198030 -1679380 {lab=#net1}
+N 2198000 -1679390 2198000 -1679220 {lab=#net1}
+N 2197990 -1679370 2197990 -1679350 {lab=EN1}
+N 2197990 -1679340 2197990 -1679320 {lab=!EN1}
+N 2197890 -1679140 2198110 -1679140 {lab=EN0}
+N 2197890 -1679110 2198110 -1679110 {lab=!EN0}
+N 2197890 -1679050 2198110 -1679050 {lab=EN1}
+N 2197890 -1679020 2198110 -1679020 {lab=!EN1}
+N 2198000 -1679160 2198000 -1679140 {lab=EN0}
+N 2198000 -1679130 2198000 -1679110 {lab=!EN0}
+N 2198000 -1679070 2198000 -1679050 {lab=EN1}
+N 2198000 -1679040 2198000 -1679020 {lab=!EN1}
+N 2197890 -1679080 2197930 -1679080 {lab=vin+}
+N 2197930 -1679080 2197930 -1678950 {lab=vin+}
+N 2197720 -1678850 2197930 -1678850 {lab=vin+}
+N 2198070 -1679080 2198110 -1679080 {lab=vin-}
+N 2198070 -1679080 2198070 -1678950 {lab=vin-}
+N 2198070 -1678850 2198280 -1678850 {lab=vin-}
+N 2197830 -1678910 2198170 -1678910 {lab=#net2}
+N 2198170 -1679240 2198460 -1679240 {lab=vout}
+N 2197830 -1678980 2197830 -1678910 {lab=#net2}
+N 2198170 -1678980 2198170 -1678910 {lab=#net2}
+N 2198000 -1678910 2198000 -1678790 {lab=#net2}
+N 2197720 -1678980 2197800 -1678980 {lab=VSS}
+N 2197720 -1679070 2197720 -1678980 {lab=VSS}
+N 2198200 -1678980 2198280 -1678980 {lab=VSS}
+N 2198280 -1679070 2198280 -1678980 {lab=VSS}
+N 2197930 -1678950 2197930 -1678850 {lab=vin+}
+N 2198070 -1678950 2198070 -1678850 {lab=vin-}
+N 2197870 -1678770 2197870 -1678750 {lab=EN0}
+N 2197870 -1678740 2197870 -1678720 {lab=!EN0}
+N 2197870 -1678680 2197870 -1678660 {lab=EN1}
+N 2197870 -1678650 2197870 -1678630 {lab=!EN1}
+N 2197870 -1678630 2197940 -1678630 {lab=!EN1}
+N 2197870 -1678660 2197940 -1678660 {lab=EN1}
+N 2197870 -1678720 2197940 -1678720 {lab=!EN0}
+N 2197870 -1678750 2197940 -1678750 {lab=EN0}
+N 2197690 -1678690 2197940 -1678690 {lab=V_bias}
+N 2198000 -1678590 2198000 -1678530 {lab=VSS}
+N 2198000 -1678530 2198140 -1678530 {lab=VSS}
+N 2198140 -1678680 2198140 -1678530 {lab=VSS}
+N 2198080 -1678680 2198140 -1678680 {lab=VSS}
+N 2198030 -1678590 2198030 -1678530 {lab=VSS}
+N 2198000 -1678530 2198000 -1678490 {lab=VSS}
+N 2198030 -1678830 2198030 -1678790 {lab=VDD}
+N 2198740 -1679350 2198740 -1679330 {lab=EN0}
+N 2198740 -1679320 2198740 -1679300 {lab=!EN0}
+N 2198740 -1679260 2198740 -1679240 {lab=EN1}
+N 2198740 -1679230 2198740 -1679210 {lab=!EN1}
+N 2198740 -1679330 2198810 -1679330 {lab=EN0}
+N 2198740 -1679300 2198810 -1679300 {lab=!EN0}
+N 2198740 -1679240 2198810 -1679240 {lab=EN1}
+N 2198740 -1679210 2198810 -1679210 {lab=!EN1}
+C {title.sym} 2197660 -1678380 0 0 {name=l1 author="Songhang Li"}
+C {libs/core_digital/programmable_pfet.sym} 2197780 -1679380 0 1 {name=x3 width=50u length=0.5u nf=1 mult=2}
+C {libs/core_digital/programmable_nfet.sym} 2197770 -1679070 0 1 {name=x1 width=3*11.43u length=0.28u nf=1 mult=1}
+C {libs/core_digital/programmable_nfet.sym} 2198060 -1678680 0 0 {name=x5 width=22.86u length=0.5u nf=1 mult=9}
+C {libs/core_digital/programmable_pfet.sym} 2198220 -1679380 0 0 {name=x4 width=50u length=0.5u nf=1 mult=2}
+C {libs/core_digital/programmable_nfet.sym} 2198230 -1679070 0 0 {name=x2 width=3*11.43u length=0.28u nf=1 mult=1}
+C {lab_pin.sym} 2197720 -1679420 0 0 {name=p14 sig_type=std_logic lab=VDD}
+C {ipin.sym} 2198000 -1679600 1 0 {name=p15 lab=VDD}
+C {lab_pin.sym} 2197720 -1679270 2 0 {name=p16 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 2197800 -1679220 0 0 {name=p17 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} 2198200 -1679220 0 1 {name=p18 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} 2198280 -1679270 0 0 {name=p19 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 2198000 -1679460 0 0 {name=p20 sig_type=std_logic lab=EN0}
+C {lab_pin.sym} 2198000 -1679430 0 0 {name=p21 sig_type=std_logic lab=!EN0}
+C {lab_pin.sym} 2197990 -1679370 0 0 {name=p22 sig_type=std_logic lab=EN1}
+C {lab_pin.sym} 2197990 -1679340 0 0 {name=p23 sig_type=std_logic lab=!EN1}
+C {lab_pin.sym} 2198000 -1679160 0 0 {name=p24 sig_type=std_logic lab=EN0}
+C {lab_pin.sym} 2198000 -1679130 0 0 {name=p25 sig_type=std_logic lab=!EN0}
+C {lab_pin.sym} 2198000 -1679070 0 0 {name=p26 sig_type=std_logic lab=EN1}
+C {lab_pin.sym} 2198000 -1679040 0 0 {name=p27 sig_type=std_logic lab=!EN1}
+C {opin.sym} 2198460 -1679240 0 0 {name=p28 lab=vout}
+C {ipin.sym} 2197720 -1678850 0 0 {name=p29 lab=vin+}
+C {ipin.sym} 2198280 -1678850 2 0 {name=p30 lab=vin-
 }
-C {lab_pin.sym} 380 -430 0 0 {name=p31 sig_type=std_logic lab=EN0}
-C {lab_pin.sym} 380 -400 0 0 {name=p32 sig_type=std_logic lab=!EN0}
-C {lab_pin.sym} 380 -340 0 0 {name=p33 sig_type=std_logic lab=EN1}
-C {lab_pin.sym} 380 -310 0 0 {name=p34 sig_type=std_logic lab=!EN1}
-C {ipin.sym} 200 -350 0 0 {name=p35 lab=V_bias
+C {lab_pin.sym} 2197870 -1678770 0 0 {name=p31 sig_type=std_logic lab=EN0}
+C {lab_pin.sym} 2197870 -1678740 0 0 {name=p32 sig_type=std_logic lab=!EN0}
+C {lab_pin.sym} 2197870 -1678680 0 0 {name=p33 sig_type=std_logic lab=EN1}
+C {lab_pin.sym} 2197870 -1678650 0 0 {name=p34 sig_type=std_logic lab=!EN1}
+C {ipin.sym} 2197690 -1678690 0 0 {name=p35 lab=V_bias
 }
-C {ipin.sym} 510 -150 3 0 {name=p36 lab=VSS
+C {ipin.sym} 2198000 -1678490 3 0 {name=p36 lab=VSS
 }
-C {lab_pin.sym} 540 -490 0 1 {name=p37 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} 1250 -1010 0 0 {name=p1 sig_type=std_logic lab=EN0}
-C {lab_pin.sym} 1250 -980 0 0 {name=p2 sig_type=std_logic lab=!EN0}
-C {lab_pin.sym} 1250 -920 0 0 {name=p3 sig_type=std_logic lab=EN1}
-C {lab_pin.sym} 1250 -890 0 0 {name=p4 sig_type=std_logic lab=!EN1}
-C {ipin.sym} 1320 -990 2 0 {name=p5 lab=EN0
+C {lab_pin.sym} 2198030 -1678830 0 1 {name=p37 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} 2198740 -1679350 0 0 {name=p1 sig_type=std_logic lab=EN0}
+C {lab_pin.sym} 2198740 -1679320 0 0 {name=p2 sig_type=std_logic lab=!EN0}
+C {lab_pin.sym} 2198740 -1679260 0 0 {name=p3 sig_type=std_logic lab=EN1}
+C {lab_pin.sym} 2198740 -1679230 0 0 {name=p4 sig_type=std_logic lab=!EN1}
+C {ipin.sym} 2198810 -1679330 2 0 {name=p5 lab=EN0
 }
-C {ipin.sym} 1320 -960 2 0 {name=p6 lab=!EN0
+C {ipin.sym} 2198810 -1679300 2 0 {name=p6 lab=!EN0
 }
-C {ipin.sym} 1320 -900 2 0 {name=p7 lab=EN1
+C {ipin.sym} 2198810 -1679240 2 0 {name=p7 lab=EN1
 }
-C {ipin.sym} 1320 -870 2 0 {name=p8 lab=!EN1
+C {ipin.sym} 2198810 -1679210 2 0 {name=p8 lab=!EN1
 }
