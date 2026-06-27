@@ -114,4 +114,4 @@ plot v(output) gain
 C {vsource.sym} 720 -525 0 0 {name=VINP value= 0 savecurrent=false}
 C {vsource.sym} 720 -245 0 0 {name=VCM value= 0 savecurrent=false}
 C {lab_pin.sym} 720 -185 0 0 {name=p30 sig_type=std_logic lab=GND}
-C {libs/core_amps/ota_5t/programmable_5tOTA_2.sym} 1000 -600 0 0 {name=x2}
+C {libs/core_amps/ota_5t/programmable_5tOTA.sym} 1000 -600 0 0 {name=x1}
