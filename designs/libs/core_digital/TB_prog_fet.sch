@@ -62,7 +62,7 @@ value="
 .include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 "}
-C {code_shown.sym} 550 -290 0 0 {name=NGSPICE only_toplevel=false 
+C {code_shown.sym} 560 -290 0 0 {name=NGSPICE only_toplevel=false 
 value="* Transient Analysis and Plotting Script
 .control
 
