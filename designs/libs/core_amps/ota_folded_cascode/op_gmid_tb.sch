@@ -23,6 +23,9 @@ N -110 -210 50 -210 {lab=#net2}
 N -110 -210 -110 -60 {lab=#net2}
 N -110 -60 50 -60 {lab=#net2}
 N -110 -60 -110 -30 {lab=#net2}
+N -440 -200 -440 -140 {lab=VDD}
+N -440 -80 -440 -30 {lab=GND}
+N -440 -30 -440 -20 {lab=GND}
 C {isource.sym} 220 60 2 0 {name=IBIAS value=100u}
 C {lab_pin.sym} -280 -270 0 0 {name=p1 sig_type=std_logic lab=VDD}
 C {vsource.sym} -280 -180 0 0 {name=V2 value= 3.3 savecurrent=false}
@@ -77,3 +80,6 @@ print gmid_m11 gmid_m12 gmid_m13 gmid_m18
 .endc
 "}
 C {libs/core_amps/ota_folded_cascode/ota_folded_cascode.sym} 280 -170 0 0 {name=x1}
+C {lab_pin.sym} -440 -200 0 0 {name=p10 sig_type=std_logic lab=VDD}
+C {vsource.sym} -440 -110 0 0 {name=V1 value= 3.3 savecurrent=false}
+C {lab_pin.sym} -440 -20 0 0 {name=p11 sig_type=std_logic lab=GND}
