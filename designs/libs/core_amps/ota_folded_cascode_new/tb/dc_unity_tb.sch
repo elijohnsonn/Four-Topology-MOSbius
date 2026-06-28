@@ -16,6 +16,7 @@ T {-Driving Ideal 120 pF load capacitance
 
 ICMR: 0.700V – 3.059V (2.36V range)
 Output Swing: 0.704V – 3.049V (2.35V range)
+Systematic offset: 27µV
 } -1280 -160 0 0 0.6 0.6 {}
 N -260 -180 -260 -120 {lab=VDD}
 N -380 -180 -380 -120 {lab=GND}
@@ -74,6 +75,9 @@ meas dc out_swing_high find v(output) when gain = 0.95 fall = 1
 print out_swing_low out_swing_high
 print out_swing_high - out_swing_low
 plot v(output) gain
+meas dc vos find v(output) at=1.65
+let offset = vos - 1.65
+print offset
 
 .endc
 "}
