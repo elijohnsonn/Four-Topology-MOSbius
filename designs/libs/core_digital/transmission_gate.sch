@@ -4,6 +4,7 @@ K {}
 V {}
 S {}
 E {}
+T {Transmission Gate} -70 -180 0 0 0.5 0.5 {}
 N 0 70 70 70 {lab=in}
 N 0 -30 -0 70 {lab=in}
 N 0 -30 20 -30 {lab=in}

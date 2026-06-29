@@ -4,6 +4,7 @@ K {}
 V {}
 S {}
 E {}
+T {NAND Gate} -40 -280 0 0 0.5 0.5 {}
 N 40 -50 40 -20 {lab=#net1}
 N 40 10 60 10 {lab=Vss}
 N 60 -80 60 10 {lab=Vss}

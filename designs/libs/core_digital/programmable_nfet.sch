@@ -4,6 +4,7 @@ K {}
 V {}
 S {}
 E {}
+T {Programmable NFET} 110 -200 0 0 0.5 0.5 {}
 N 50 -90 50 -40 {lab=d}
 N 50 -90 400 -90 {lab=d}
 N 400 -90 400 -40 {lab=d}

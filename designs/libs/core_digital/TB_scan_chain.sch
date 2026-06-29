@@ -208,8 +208,9 @@ value="* Transient Analysis - 10ms
 * NGSpice interactive plot command
 .control
   run
-  plot V(CLK) V(scan_in) title 'Inputs' xlabel 'Time (s)' ylabel 'Voltage (V)'
-  plot V(scan_out) title 'Outputs' xlabel 'Time (s)' ylabel 'Voltage (V)'
+  plot V(CLK) title 'CLK' xlabel 'Time (s)' ylabel 'Voltage (V)'
+  plot V(scan_in) title 'Scan In' xlabel 'Time (s)' ylabel 'Voltage (V)'
+  plot V(scan_out) title 'Scan Out' xlabel 'Time (s)' ylabel 'Voltage (V)'
 .endc
 
 .end"}
