@@ -31,7 +31,6 @@ N 1130 -205 1170 -205 {lab=GND}
 N 820 -275 910 -275 {lab=#net1}
 N 970 -275 1130 -275 {lab=#net2}
 N 820 -365 820 -275 {lab=#net1}
-C {5tOTA.sym} 930 -465 0 0 {name=x1}
 C {devices/code_shown.sym} 80 -720 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
@@ -93,3 +92,4 @@ footprint=1206
 device="ceramic capacitor"}
 C {gnd.sym} 820 -190 0 0 {name=l5 lab=GND}
 C {gnd.sym} 1130 -195 0 0 {name=l6 lab=GND}
+C {libs/core_amps/ota_5t/5tOTA.sym} 930 -465 0 0 {name=x1}
