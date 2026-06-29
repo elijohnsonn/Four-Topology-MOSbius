@@ -27,8 +27,8 @@ N 380 -270 380 -260 {lab=GND}
 N 260 -380 260 -320 {lab=GND}
 N 1210 -750 1210 -720 {lab=VDD}
 N 1210 -540 1210 -510 {lab=GND}
-N 1040 -670 1100 -670 {lab=GND}
-N 1040 -650 1100 -650 {lab=VDD}
+N 1040 -670 1100 -670 {lab=VDD}
+N 1040 -650 1100 -650 {lab=GND}
 N 1040 -690 1100 -690 {lab=GND}
 N 1040 -710 1100 -710 {lab=VDD}
 N 1450 -530 1450 -500 {lab=GND}
@@ -42,7 +42,7 @@ N 940 -370 940 -340 {lab=GND}
 N 940 -610 940 -460 {lab=#net1}
 N 940 -460 940 -430 {lab=#net1}
 N 940 -550 1040 -550 {lab=#net1}
-C {devices/code_shown.sym} 200 -810 0 0 {name=Models only_toplevel=false
+C {devices/code_shown.sym} 10 -1050 0 0 {name=Models only_toplevel=false
 format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
@@ -74,8 +74,8 @@ C {lab_pin.sym} 580 -200 0 0 {name=p20 sig_type=std_logic lab=GND}
 C {lab_pin.sym} 580 -520 0 0 {name=p21 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 1210 -750 0 1 {name=p22 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 1210 -510 0 0 {name=p23 sig_type=std_logic lab=GND}
-C {lab_pin.sym} 1040 -650 0 0 {name=p24 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} 1040 -670 0 0 {name=p25 sig_type=std_logic lab=GND}
+C {lab_pin.sym} 1040 -670 0 0 {name=p24 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} 1040 -650 0 0 {name=p25 sig_type=std_logic lab=GND}
 C {lab_pin.sym} 1610 -630 0 1 {name=p26 sig_type=std_logic lab=output}
 C {capa.sym} 1450 -560 0 0 {name=CLOAD1
 m=1
@@ -88,7 +88,7 @@ C {lab_pin.sym} 1040 -710 0 0 {name=p29 sig_type=std_logic lab=VDD}
 C {vsource.sym} 940 -400 0 0 {name=VCM1 value= 1.65 savecurrent=false}
 C {lab_pin.sym} 940 -340 0 0 {name=p10 sig_type=std_logic lab=GND}
 C {libs/core_amps/ota_5t/programmable_5tOTA.sym} 1250 -630 0 0 {name=x1}
-C {code_shown.sym} 170 -1410 0 0 {name=Simulation1 only_toplevel=false 
+C {code_shown.sym} 0 -930 0 0 {name=Simulation1 only_toplevel=false 
 
 value=
 
@@ -98,7 +98,21 @@ value=
 op
 show m : vdsat vth
 
-*print @m.x1.x5.xm1.m0[vdsat]
+let m.x1.x5.xm1.m0_vod = @m.x1.x5.xm1.m0[vgs]-@m.x1.x5.xm1.m0[vth]
+print  @m.x1.x5.xm1.m0[vgs] @m.x1.x5.xm1.m0[vth] @m.x1.x5.xm1.m0[vds] m.x1.x5.xm1.m0_vod
+
+let m.x1.x1.xm1.m0_vod = @m.x1.x1.xm1.m0[vgs]-@m.x1.x1.xm1.m0[vth]
+print  @m.x1.x1.xm1.m0[vgs] @m.x1.x1.xm1.m0[vth] @m.x1.x1.xm1.m0[vds] m.x1.x1.xm1.m0_vod
+
+let m.x1.x2.xm1.m0_vod = @m.x1.x2.xm1.m0[vgs]-@m.x1.x2.xm1.m0[vth]
+print  @m.x1.x2.xm1.m0[vgs] @m.x1.x2.xm1.m0[vth] @m.x1.x2.xm1.m0[vds] m.x1.x2.xm1.m0_vod
+
+let m.x1.x3.xm1.m0_vod = @m.x1.x3.xm1.m0[vgs]-@m.x1.x3.xm1.m0[vth]
+print  @m.x1.x3.xm1.m0[vgs] @m.x1.x3.xm1.m0[vth] @m.x1.x3.xm1.m0[vds] m.x1.x3.xm1.m0_vod
+
+let m.x1.x4.xm1.m0_vod = @m.x1.x4.xm1.m0[vgs]-@m.x1.x4.xm1.m0[vth]
+print  @m.x1.x4.xm1.m0[vgs] @m.x1.x4.xm1.m0[vth] @m.x1.x4.xm1.m0[vds] m.x1.x4.xm1.m0_vod
+
 
 .endc
 
