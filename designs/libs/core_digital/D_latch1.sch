@@ -15,11 +15,8 @@ N 280 -250 280 -230 {lab=Vdd}
 N 280 -250 590 -250 {lab=Vdd}
 N 590 -250 590 -230 {lab=Vdd}
 N 290 -10 600 -10 {lab=Vdd}
-N 290 -40 290 -10 {lab=Vdd}
-N 20 -40 290 -40 {lab=Vdd}
 N 280 -80 590 -80 {lab=Vss}
 N 460 -80 590 -80 {lab=Vss}
-N 460 -80 460 140 {lab=Vss}
 N 460 140 600 140 {lab=Vss}
 N 290 140 600 140 {lab=Vss}
 N 30 140 290 140 {lab=Vss}
@@ -55,3 +52,7 @@ C {libs/core_digital/NAND2.sym} 280 -160 0 0 {name=x2}
 C {libs/core_digital/NAND2.sym} 290 60 0 0 {name=x3}
 C {libs/core_digital/NAND2.sym} 600 60 0 0 {name=x4}
 C {libs/core_digital/NAND2.sym} 590 -160 0 0 {name=x5}
+C {lab_wire.sym} 420 -80 0 0 {name=p7 sig_type=std_logic lab=Vss}
+C {lab_wire.sym} 420 -10 0 0 {name=p8 sig_type=std_logic lab=Vdd}
+C {lab_wire.sym} 440 -250 0 0 {name=p9 sig_type=std_logic lab=Vdd}
+C {lab_wire.sym} 410 140 0 0 {name=p10 sig_type=std_logic lab=Vss}
