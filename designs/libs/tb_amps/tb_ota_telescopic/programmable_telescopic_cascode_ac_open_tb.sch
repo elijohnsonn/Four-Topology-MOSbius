@@ -94,12 +94,12 @@ C {vsource.sym} -1440 -350 0 0 {name=VCM value= 1.65 savecurrent=false}
 C {lab_pin.sym} -1440 -290 0 0 {name=p9 sig_type=std_logic lab=GND}
 C {ind.sym} -1200 -300 1 0 {name=L2
 m=1
-value=1
+value=1T
 footprint=1206
 device=inductor}
 C {capa.sym} -1370 -270 0 0 {name=CLOAD1
 m=1
-value=1
+value=1T
 footprint=1206
 device="ceramic capacitor"}
 C {lab_pin.sym} -1370 -210 0 0 {name=p11 sig_type=std_logic lab=GND}
