@@ -118,4 +118,4 @@ device="ceramic capacitor"}
 C {lab_pin.sym} -160 260 0 0 {name=p11 sig_type=std_logic lab=GND}
 C {vcvs.sym} 160 240 0 1 {name=E1 value=1}
 C {lab_pin.sym} 160 310 0 0 {name=p10 sig_type=std_logic lab=GND}
-C {libs/core_amps/ota_folded_cascode_new/schem/ota_folded_cascode.sym} 40 -100 0 0 {name=x1}
+C {libs/core_amps/ota_folded_cascode/schem/ota_folded_cascode.sym} 40 -100 0 0 {name=x1}
