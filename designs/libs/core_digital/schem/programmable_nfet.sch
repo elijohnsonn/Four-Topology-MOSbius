@@ -75,8 +75,6 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {libs/core_digital/transmission_gate.sym} -170 -20 0 0 {name=x1}
-C {libs/core_digital/transmission_gate.sym} 630 -10 0 1 {name=x3}
 C {lab_wire.sym} 70 -10 0 0 {name=p1 sig_type=std_logic lab=b}
 C {lab_wire.sym} 390 -10 0 0 {name=p3 sig_type=std_logic lab=b}
 C {lab_wire.sym} 140 230 0 0 {name=p5 sig_type=std_logic lab=VSS}
@@ -122,3 +120,5 @@ spiceprefix=X
 C {lab_wire.sym} 420 110 0 0 {name=p2 sig_type=std_logic lab=ena_bar<1>}
 C {lab_wire.sym} 760 -10 0 0 {name=p4 sig_type=std_logic lab=g}
 C {lab_wire.sym} -80 70 0 0 {name=p7 sig_type=std_logic lab=ena_bar<0>}
+C {libs/core_digital/schem/transmission_gate.sym} -170 -20 0 0 {name=x1}
+C {libs/core_digital/schem/transmission_gate.sym} 630 -10 0 1 {name=x2}

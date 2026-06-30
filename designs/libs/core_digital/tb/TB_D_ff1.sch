@@ -70,7 +70,6 @@ C {lab_wire.sym} -90 -40 0 0 {name=p2 sig_type=std_logic lab=D}
 C {lab_wire.sym} -50 40 0 0 {name=p3 sig_type=std_logic lab=clk}
 C {lab_wire.sym} 190 -50 0 0 {name=p4 sig_type=std_logic lab=Q}
 C {lab_wire.sym} 160 30 0 0 {name=p5 sig_type=std_logic lab=Q_bar}
-C {libs/core_digital/D_ff1.sym} 50 -10 0 0 {name=x1}
 C {code_shown.sym} 290 -90 0 0 {name=NGSPICE only_toplevel=false 
 value="*---------------------------------------------------------
 * Initial conditions (latch starts Reset: Q=0, Q_bar=1)
@@ -100,3 +99,4 @@ value="
 .include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 "}
+C {libs/core_digital/schem/D_ff1.sym} 50 -10 0 0 {name=x1}

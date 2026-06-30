@@ -84,4 +84,4 @@ value="* Transient Analysis and Plotting Script
   plot -i(V1) title 'Drain Current' xlabel 'Time (s)' ylabel 'Current (A)'
 
 .endc"}
-C {libs/core_digital/programmable_nfet.sym} 350 -130 0 0 {name=x1 width=0.22u length=0.28u nf=1 mult=1}
+C {libs/core_digital/schem/programmable_nfet.sym} 350 -130 0 0 {name=x1 width=0.22u length=0.28u nf=1 mult=1}

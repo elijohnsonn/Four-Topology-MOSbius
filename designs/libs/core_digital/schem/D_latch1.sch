@@ -48,12 +48,12 @@ C {ipin.sym} 30 140 0 0 {name=p3 lab=Vss}
 C {ipin.sym} 160 80 0 0 {name=p4 lab=clk}
 C {opin.sym} 750 -160 0 0 {name=p5 lab=Q}
 C {opin.sym} 770 60 0 0 {name=p6 lab=Q_bar}
-C {libs/core_digital/inv1.sym} 30 10 0 0 {name=x1}
-C {libs/core_digital/NAND2.sym} 280 -160 0 0 {name=x2}
-C {libs/core_digital/NAND2.sym} 290 60 0 0 {name=x3}
-C {libs/core_digital/NAND2.sym} 600 60 0 0 {name=x4}
-C {libs/core_digital/NAND2.sym} 590 -160 0 0 {name=x5}
 C {lab_wire.sym} 420 -80 0 0 {name=p7 sig_type=std_logic lab=Vss}
 C {lab_wire.sym} 420 -10 0 0 {name=p8 sig_type=std_logic lab=Vdd}
 C {lab_wire.sym} 440 -250 0 0 {name=p9 sig_type=std_logic lab=Vdd}
 C {lab_wire.sym} 410 140 0 0 {name=p10 sig_type=std_logic lab=Vss}
+C {libs/core_digital/schem/NAND2.sym} 280 -160 0 0 {name=x1}
+C {libs/core_digital/schem/NAND2.sym} 290 60 0 0 {name=x2}
+C {libs/core_digital/schem/NAND2.sym} 600 60 0 0 {name=x3}
+C {libs/core_digital/schem/NAND2.sym} 590 -160 0 0 {name=x4}
+C {libs/core_digital/schem/inv1.sym} 30 10 0 0 {name=x5}

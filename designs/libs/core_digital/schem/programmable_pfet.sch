@@ -44,9 +44,7 @@ N -60 50 -40 50 {lab=VDD}
 N -60 50 -60 80 {lab=VDD}
 N -60 80 -40 80 {lab=VDD}
 N -40 80 -40 100 {lab=VDD}
-N 590 -140 590 -110 {lab=#net3}
-C {libs/core_digital/transmission_gate.sym} -160 -40 0 0 {name=x1}
-C {libs/core_digital/transmission_gate.sym} 540 -60 0 1 {name=x3}
+N 590 -140 590 -110 {lab=VDD}
 C {lab_wire.sym} 60 -20 0 0 {name=p1 sig_type=std_logic lab=b
 }
 C {lab_wire.sym} 360 -20 0 0 {name=p3 sig_type=std_logic lab=b}
@@ -124,3 +122,5 @@ C {lab_wire.sym} 580 10 0 0 {name=p13 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} -280 -40 0 0 {name=p14 sig_type=std_logic lab=g}
 C {lab_wire.sym} -40 100 0 0 {name=p16 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 590 -140 0 0 {name=p20 sig_type=std_logic lab=VDD}
+C {libs/core_digital/schem/transmission_gate.sym} -160 -40 0 0 {name=x1}
+C {libs/core_digital/schem/transmission_gate.sym} 540 -60 0 1 {name=x2}

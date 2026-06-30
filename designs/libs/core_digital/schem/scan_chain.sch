@@ -14,8 +14,8 @@ N 650 50 650 100 {lab=VSS}
 N 870 50 870 100 {lab=VSS}
 N 1090 50 1090 100 {lab=VSS}
 N 1300 50 1300 100 {lab=VSS}
-N 1390 -80 1440 -80 {lab=ena<7>}
-N 1440 -80 1440 -70 {lab=ena<7>}
+N 1390 -80 1440 -80 {lab=ena<6>}
+N 1440 -80 1440 -70 {lab=ena<6>}
 N 1180 -80 1220 -80 {lab=ena<5>}
 N 1220 -80 1220 -70 {lab=ena<5>}
 N 960 -80 1010 -80 {lab=ena<4>}
@@ -57,15 +57,6 @@ N 440 -190 440 -120 {lab=VDD}
 N 220 -190 220 -120 {lab=VDD}
 N -130 -70 -80 -70 {lab=scan_in}
 N 1830 -80 1900 -80 {lab=scan_out}
-C {libs/core_digital/D_ff1.sym} 0 -40 0 0 {name=x1}
-C {libs/core_digital/D_ff1.sym} 220 -40 0 0 {name=x2}
-C {libs/core_digital/D_ff1.sym} 440 -40 0 0 {name=x3}
-C {libs/core_digital/D_ff1.sym} 650 -40 0 0 {name=x4}
-C {libs/core_digital/D_ff1.sym} 870 -40 0 0 {name=x5}
-C {libs/core_digital/D_ff1.sym} 1090 -40 0 0 {name=x6}
-C {libs/core_digital/D_ff1.sym} 1300 -40 0 0 {name=x7}
-C {libs/core_digital/D_ff1.sym} 1520 -40 0 0 {name=x8}
-C {libs/core_digital/D_ff1.sym} 1740 -40 0 0 {name=x9}
 C {ipin.sym} -130 -70 0 0 {name=p1 lab=scan_in}
 C {ipin.sym} -80 70 0 0 {name=p2 lab=CLK}
 C {ipin.sym} 0 100 0 0 {name=p3 lab=VSS}
@@ -87,3 +78,12 @@ C {opin.sym} 760 -80 3 0 {name=p18 lab=ena<3>}
 C {opin.sym} 550 -80 3 0 {name=p19 lab=ena<2>}
 C {opin.sym} 340 -80 3 0 {name=p20 lab=ena<1>}
 C {opin.sym} 120 -80 3 0 {name=p21 lab=ena<0>}
+C {libs/core_digital/schem/D_ff1.sym} 0 -40 0 0 {name=x1}
+C {libs/core_digital/schem/D_ff1.sym} 220 -40 0 0 {name=x2}
+C {libs/core_digital/schem/D_ff1.sym} 440 -40 0 0 {name=x3}
+C {libs/core_digital/schem/D_ff1.sym} 650 -40 0 0 {name=x4}
+C {libs/core_digital/schem/D_ff1.sym} 870 -40 0 0 {name=x5}
+C {libs/core_digital/schem/D_ff1.sym} 1090 -40 0 0 {name=x6}
+C {libs/core_digital/schem/D_ff1.sym} 1300 -40 0 0 {name=x7}
+C {libs/core_digital/schem/D_ff1.sym} 1520 -40 0 0 {name=x8}
+C {libs/core_digital/schem/D_ff1.sym} 1740 -40 0 0 {name=x9}

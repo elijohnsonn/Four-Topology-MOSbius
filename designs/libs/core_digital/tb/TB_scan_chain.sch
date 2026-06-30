@@ -214,3 +214,4 @@ value="* Transient Analysis - 10ms
 .endc
 
 .end"}
+C {libs/core_digital/schem/scan_chain.sym} -40 30 0 0 {name=x2}
