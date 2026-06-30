@@ -101,4 +101,4 @@ C {vsource.sym} 70 -90 0 0 {name=VINP value= "PULSE(0 .1 25u 1p 100n 2m 1)" save
 C {vsource.sym} 70 50 0 0 {name=VCM value= 1.65 savecurrent=false}
 C {lab_pin.sym} 70 110 0 0 {name=p9 sig_type=std_logic lab=GND}
 C {lab_pin.sym} 120 -150 1 0 {name=p10 sig_type=std_logic lab=input}
-C {libs/core_amps/ota_folded_cascode_new/schem/ota_folded_cascode.sym} 360 -50 0 0 {name=x1}
+C {libs/core_amps/ota_folded_cascode/schem/ota_folded_cascode.sym} 360 -50 0 0 {name=x1}

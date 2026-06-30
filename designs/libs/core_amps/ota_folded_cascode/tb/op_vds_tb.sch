@@ -119,4 +119,4 @@ print sat_xm6 sat_xm7 sat_xm8 sat_xm9
 
 .endc
 "}
-C {libs/core_amps/ota_folded_cascode_new/schem/ota_folded_cascode.sym} 40 -30 0 0 {name=x1}
+C {libs/core_amps/ota_folded_cascode/schem/ota_folded_cascode.sym} 40 -30 0 0 {name=x1}

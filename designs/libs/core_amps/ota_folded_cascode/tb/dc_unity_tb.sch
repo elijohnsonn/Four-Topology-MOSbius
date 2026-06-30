@@ -51,13 +51,13 @@ C {vsource.sym} -260 -90 0 0 {name=V2 value= 3.3 savecurrent=false}
 C {lab_pin.sym} -380 -180 0 0 {name=p3 sig_type=std_logic lab=GND}
 C {gnd.sym} -380 -10 0 0 {name=l1 lab=GND}
 C {lab_pin.sym} -260 0 0 0 {name=p4 sig_type=std_logic lab=GND}
-C {devices/code_shown.sym} 430 -240 0 0 {name=Models only_toplevel=false
+C {devices/code_shown.sym} 410 -240 0 0 {name=Models only_toplevel=false
 format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 "}
-C {code_shown.sym} 420 -130 0 0 {name=Simulation only_toplevel=false 
+C {code_shown.sym} 390 -130 0 0 {name=Simulation only_toplevel=false 
 
 value=
 
@@ -94,4 +94,4 @@ C {lab_pin.sym} 70 110 0 0 {name=p6 sig_type=std_logic lab=VDD}
 C {vsource.sym} -170 -110 0 0 {name=VINP value= 0 savecurrent=false}
 C {vsource.sym} -170 90 0 0 {name=VCM value= 0 savecurrent=false}
 C {lab_pin.sym} -170 150 0 0 {name=p9 sig_type=std_logic lab=GND}
-C {libs/core_amps/ota_folded_cascode_new/schem/ota_folded_cascode.sym} 50 -70 0 0 {name=x1}
+C {libs/core_amps/ota_folded_cascode/schem/ota_folded_cascode.sym} 50 -70 0 0 {name=x1}

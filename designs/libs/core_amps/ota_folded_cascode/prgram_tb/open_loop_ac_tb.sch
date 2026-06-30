@@ -4,8 +4,39 @@ K {}
 V {}
 S {}
 E {}
+L 4 -1570 -390 -1570 60 {}
+L 4 -1570 530 -730 530 {}
+L 4 -730 -400 -730 60 {}
+L 4 -1570 -400 -730 -400 {}
+L 4 -1570 -400 -1570 -390 {}
+L 4 -1570 60 -1570 520 {}
+L 4 -730 50 -730 520 {}
+L 4 -1570 520 -1570 530 {}
+L 4 -730 520 -730 530 {}
 P 4 1 -600 -210 {}
 P 4 1 -520 -200 {}
+T {Amplifier Performance} -1450 -360 0 0 1 1 {}
+T {-Driving Ideal 120 pF load capacitance 
+-Intended load of 100 pF off-chip, 
+	10-20 pF added for parasitic modeling
+
+1× Configuration:
+
+DC Gain: 76.0 dB
+GBW: 1.47 MHz
+Phase Margin: 86.7 Degrees
+
+2× Configuration:
+
+DC Gain: 76.0 dB
+GBW: 2.80 MHz
+Phase Margin: 83.5 Degrees
+
+3× Configuration:
+
+DC Gain: 76.0 dB
+GBW: 4.15 MHz
+Phase Margin: 83.0 Degrees} -1440 -260 0 0 0.6 0.6 {}
 N -540 -90 -540 -50 {lab=VG_BIAS}
 N -540 -50 -540 -30 {lab=VG_BIAS}
 N -540 -60 -470 -60 {lab=VG_BIAS}
@@ -28,8 +59,8 @@ N -460 320 -460 330 {lab=GND}
 N -580 210 -580 270 {lab=GND}
 N 40 -130 40 -100 {lab=VDD}
 N 40 40 40 70 {lab=GND}
-N -70 -40 -10 -40 {lab=GND}
-N -70 -20 -10 -20 {lab=VDD}
+N -70 -40 -10 -40 {lab=VDD}
+N -70 -20 -10 -20 {lab=GND}
 N -70 -60 -10 -60 {lab=GND}
 N -70 -80 -10 -80 {lab=VDD}
 N -250 100 -250 140 {lab=#net1}
@@ -81,8 +112,8 @@ C {lab_pin.sym} -540 90 0 0 {name=p5 sig_type=std_logic lab=GND}
 C {lab_pin.sym} -540 -230 0 0 {name=p7 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 40 -130 0 1 {name=p8 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 40 70 0 0 {name=p9 sig_type=std_logic lab=GND}
-C {lab_pin.sym} -70 -20 0 0 {name=p10 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} -70 -40 0 0 {name=p11 sig_type=std_logic lab=GND}
+C {lab_pin.sym} -70 -40 0 0 {name=p10 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} -70 -20 0 0 {name=p11 sig_type=std_logic lab=GND}
 C {vsource.sym} -250 70 0 0 {name=VINP value= AC 1 savecurrent=false}
 C {vsource.sym} -250 210 0 0 {name=VCM value= 1.65 savecurrent=false}
 C {lab_pin.sym} -250 270 0 0 {name=p14 sig_type=std_logic lab=GND}

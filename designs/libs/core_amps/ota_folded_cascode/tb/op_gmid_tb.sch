@@ -118,4 +118,4 @@ print gmid_xm6 gmid_xm7 gmid_xm8 gmid_xm9
 
 .endc
 "}
-C {libs/core_amps/ota_folded_cascode_new/schem/ota_folded_cascode.sym} 40 -30 0 0 {name=x1}
+C {libs/core_amps/ota_folded_cascode/schem/ota_folded_cascode.sym} 40 -30 0 0 {name=x1}

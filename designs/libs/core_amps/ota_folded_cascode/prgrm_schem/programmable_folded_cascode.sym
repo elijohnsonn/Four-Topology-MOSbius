@@ -1,0 +1,45 @@
+v {xschem version=3.4.7 file_version=1.2}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"
+}
+V {}
+S {}
+E {}
+L 7 -20 -50 0 -50 {}
+L 7 30 -70 30 -50 {}
+L 7 -20 -30 0 -30 {}
+L 7 30 50 30 70 {}
+L 7 -20 -10 0 -10 {}
+L 7 -20 10 0 10 {}
+L 7 -20 50 0 50 {}
+L 7 -20 30 0 30 {}
+L 7 120 0 140 0 {}
+L 7 60 40 60 60 {}
+B 5 -22.5 -52.5 -17.5 -47.5 {name=EN0 dir=inout}
+B 5 27.5 -72.5 32.5 -67.5 {name=VDD dir=inout}
+B 5 -22.5 -32.5 -17.5 -27.5 {name=!EN0 dir=inout}
+B 5 27.5 67.5 32.5 72.5 {name=VSS dir=inout}
+B 5 -22.5 -12.5 -17.5 -7.5 {name=EN1 dir=inout}
+B 5 -22.5 7.5 -17.5 12.5 {name=!EN1 dir=inout}
+B 5 -22.5 47.5 -17.5 52.5 {name=INN dir=inout}
+B 5 -22.5 27.5 -17.5 32.5 {name=INP dir=inout}
+B 5 137.5 -2.5 142.5 2.5 {name=OUT dir=inout}
+B 5 57.5 57.5 62.5 62.5 {name=VG_BIAS dir=inout}
+T {@prgrm_folded_cascode} 80.5 -76 0 0 0.3 0.3 {}
+T {@prgrm_folded_cascode} 105 -52 0 0 0.2 0.2 {}
+T {EN0} -35 -64 0 0 0.2 0.2 {}
+T {VDD} 45 -44 0 1 0.2 0.2 {}
+T {!EN0} -45 -44 0 0 0.2 0.2 {}
+T {VSS} 25 44 2 1 0.2 0.2 {}
+T {EN1} -15 -24 0 1 0.2 0.2 {}
+T {!EN1} -15 -4 0 1 0.2 0.2 {}
+T {INN} -35 36 0 0 0.2 0.2 {}
+T {INP} -35 16 0 0 0.2 0.2 {}
+T {OUT} 115 -4 0 1 0.2 0.2 {}
+T {VG_BIAS} 65 54 2 1 0.2 0.2 {}
+N 0 -60 0 60 {lab=#net1}
+N -0 60 120 20 {lab=#net1}
+N 0 -60 120 -20 {lab=#net1}
+N 120 -20 120 20 {lab=#net1}
