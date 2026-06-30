@@ -288,9 +288,9 @@ C {iopin.sym} -1770 240 2 0 {name=p71 lab=VG_BIAS}
 C {lab_pin.sym} -310 190 0 1 {name=p72 sig_type=std_logic lab=VDD}
 C {symbols/pfet_03v3.sym} -1300 30 0 0 {name=M29
 L=1u
-W=57.5u
+W=23u
 nf=1
-m=2
+m=5
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -302,9 +302,9 @@ spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} -1300 140 0 0 {name=M30
 L=.5u
-W=49u
+W=19.6u
 nf=1
-m=4
+m=10
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -350,9 +350,9 @@ C {lab_pin.sym} -1570 200 0 0 {name=p66 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} -1500 140 2 0 {name=p67 sig_type=std_logic lab= VBN1}
 C {symbols/pfet_03v3.sym} -1550 30 0 1 {name=M33
 L=1u
-W=57.5u
+W=23u
 nf=1
-m=2
+m=5
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -364,9 +364,9 @@ spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} -980 120 0 1 {name=M34
 L=1u
-W=57.5u
+W=23u
 nf=1
-m=2
+m=5
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -394,14 +394,14 @@ model=nfet_03v3
 spiceprefix=X
 }
 C {lab_pin.sym} -660 300 2 1 {name=p16 sig_type=std_logic lab= VBN1}
-C {libs/core_digital/schem/programmable_nfet.sym} -360 310 0 0 {name=x1 width=0.22u length=0.28u nf=1 mult=1}
-C {libs/core_digital/schem/programmable_nfet.sym} -480 20 0 0 {name=x2 width=0.22u length=0.28u nf=1 mult=1}
-C {libs/core_digital/schem/programmable_nfet.sym} -350 20 0 1 {name=x3 width=0.22u length=0.28u nf=1 mult=1}
-C {libs/core_digital/schem/programmable_nfet.sym} 30 490 0 1 {name=x4 width=0.22u length=0.28u nf=1 mult=1}
-C {libs/core_digital/schem/programmable_nfet.sym} 400 490 0 0 {name=x5 width=0.22u length=0.28u nf=1 mult=1}
-C {libs/core_digital/schem/programmable_nfet.sym} 30 220 0 1 {name=x6 width=0.22u length=0.28u nf=1 mult=1}
-C {libs/core_digital/schem/programmable_nfet.sym} 400 220 0 0 {name=x7 width=0.22u length=0.28u nf=1 mult=1}
-C {libs/core_digital/schem/programmable_pfet.sym} 40 -90 0 1 {name=x8 width=0.22u length=0.28u nf=1 mult=1}
-C {libs/core_digital/schem/programmable_pfet.sym} 390 -90 0 0 {name=x9 width=0.22u length=0.28u nf=1 mult=1}
-C {libs/core_digital/schem/programmable_pfet.sym} 50 -360 0 1 {name=x10 width=0.22u length=0.28u nf=1 mult=1}
-C {libs/core_digital/schem/programmable_pfet.sym} 380 -360 0 0 {name=x11 width=0.22u length=0.28u nf=1 mult=1}
+C {libs/core_digital/schem/programmable_nfet.sym} -360 310 0 0 {name=x1 width=20u length=1u nf=1 mult=2}
+C {libs/core_digital/schem/programmable_nfet.sym} -480 20 0 0 {name=x2 width=30u length=0.5u nf=1 mult=2}
+C {libs/core_digital/schem/programmable_nfet.sym} -350 20 0 1 {name=x3 width=30u length=0.5u nf=1 mult=2}
+C {libs/core_digital/schem/programmable_nfet.sym} 30 490 0 1 {name=x4 width=20.5u length=1u nf=1 mult=1}
+C {libs/core_digital/schem/programmable_nfet.sym} 400 490 0 0 {name=x5 width=20.5u length=1u nf=1 mult=1}
+C {libs/core_digital/schem/programmable_nfet.sym} 30 220 0 1 {name=x6 width=10.5u length=0.5u nf=1 mult=1}
+C {libs/core_digital/schem/programmable_nfet.sym} 400 220 0 0 {name=x7 width=10.5u length=0.5u nf=1 mult=1}
+C {libs/core_digital/schem/programmable_pfet.sym} 40 -90 0 1 {name=x8 width=29.6u length=0.5u nf=1 mult=5}
+C {libs/core_digital/schem/programmable_pfet.sym} 390 -90 0 0 {name=x9 width=29.6u length=0.5u nf=1 mult=5}
+C {libs/core_digital/schem/programmable_pfet.sym} 50 -360 0 1 {name=x10 width=34.8u length=1u nf=1 mult=10}
+C {libs/core_digital/schem/programmable_pfet.sym} 380 -360 0 0 {name=x11 width=34.8u length=1u nf=1 mult=10}
