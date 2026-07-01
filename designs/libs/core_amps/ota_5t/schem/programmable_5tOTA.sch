@@ -4,6 +4,8 @@ K {}
 V {}
 S {}
 E {}
+P 4 1 2198640 -1678800 {}
+P 4 1 2198610 -1678910 {}
 T {Programmable 5-Transister Operational Transconductance Amplifier} 2197650 -1679700 0 0 0.4 0.4 {}
 N 2197810 -1679540 2197810 -1679480 {lab=VDD}
 N 2197810 -1679540 2198190 -1679540 {lab=VDD}
@@ -83,20 +85,15 @@ N 2198080 -1678680 2198140 -1678680 {lab=VSS}
 N 2198030 -1678590 2198030 -1678530 {lab=VSS}
 N 2198000 -1678530 2198000 -1678490 {lab=VSS}
 N 2198030 -1678830 2198030 -1678790 {lab=VDD}
-N 2198740 -1679350 2198740 -1679330 {lab=EN0}
-N 2198740 -1679320 2198740 -1679300 {lab=!EN0}
-N 2198740 -1679260 2198740 -1679240 {lab=EN1}
-N 2198740 -1679230 2198740 -1679210 {lab=!EN1}
-N 2198740 -1679330 2198810 -1679330 {lab=EN0}
-N 2198740 -1679300 2198810 -1679300 {lab=!EN0}
-N 2198740 -1679240 2198810 -1679240 {lab=EN1}
-N 2198740 -1679210 2198810 -1679210 {lab=!EN1}
+N 2198370 -1678760 2198370 -1678740 {lab=EN0}
+N 2198370 -1678730 2198370 -1678710 {lab=!EN0}
+N 2198370 -1678670 2198370 -1678650 {lab=EN1}
+N 2198370 -1678640 2198370 -1678620 {lab=!EN1}
+N 2198370 -1678740 2198440 -1678740 {lab=EN0}
+N 2198370 -1678710 2198440 -1678710 {lab=!EN0}
+N 2198370 -1678650 2198440 -1678650 {lab=EN1}
+N 2198370 -1678620 2198440 -1678620 {lab=!EN1}
 C {title.sym} 2197660 -1678380 0 0 {name=l1 author="Songhang Li"}
-C {libs/core_digital/programmable_pfet.sym} 2197780 -1679380 0 1 {name=x3 width=50u length=0.5u nf=1 mult=2}
-C {libs/core_digital/programmable_nfet.sym} 2197770 -1679070 0 1 {name=x1 width=3*11.43u length=0.28u nf=1 mult=1}
-C {libs/core_digital/programmable_nfet.sym} 2198060 -1678680 0 0 {name=x5 width=22.86u length=0.5u nf=1 mult=9}
-C {libs/core_digital/programmable_pfet.sym} 2198220 -1679380 0 0 {name=x4 width=50u length=0.5u nf=1 mult=2}
-C {libs/core_digital/programmable_nfet.sym} 2198230 -1679070 0 0 {name=x2 width=3*11.43u length=0.28u nf=1 mult=1}
 C {lab_pin.sym} 2197720 -1679420 0 0 {name=p14 sig_type=std_logic lab=VDD}
 C {ipin.sym} 2198000 -1679600 1 0 {name=p15 lab=VDD}
 C {lab_pin.sym} 2197720 -1679270 2 0 {name=p16 sig_type=std_logic lab=VSS}
@@ -124,15 +121,20 @@ C {ipin.sym} 2197690 -1678690 0 0 {name=p35 lab=V_bias
 C {ipin.sym} 2198000 -1678490 3 0 {name=p36 lab=VSS
 }
 C {lab_pin.sym} 2198030 -1678830 0 1 {name=p37 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} 2198740 -1679350 0 0 {name=p1 sig_type=std_logic lab=EN0}
-C {lab_pin.sym} 2198740 -1679320 0 0 {name=p2 sig_type=std_logic lab=!EN0}
-C {lab_pin.sym} 2198740 -1679260 0 0 {name=p3 sig_type=std_logic lab=EN1}
-C {lab_pin.sym} 2198740 -1679230 0 0 {name=p4 sig_type=std_logic lab=!EN1}
-C {ipin.sym} 2198810 -1679330 2 0 {name=p5 lab=EN0
+C {lab_pin.sym} 2198370 -1678760 0 0 {name=p1 sig_type=std_logic lab=EN0}
+C {lab_pin.sym} 2198370 -1678730 0 0 {name=p2 sig_type=std_logic lab=!EN0}
+C {lab_pin.sym} 2198370 -1678670 0 0 {name=p3 sig_type=std_logic lab=EN1}
+C {lab_pin.sym} 2198370 -1678640 0 0 {name=p4 sig_type=std_logic lab=!EN1}
+C {ipin.sym} 2198440 -1678740 2 0 {name=p5 lab=EN0
 }
-C {ipin.sym} 2198810 -1679300 2 0 {name=p6 lab=!EN0
+C {ipin.sym} 2198440 -1678710 2 0 {name=p6 lab=!EN0
 }
-C {ipin.sym} 2198810 -1679240 2 0 {name=p7 lab=EN1
+C {ipin.sym} 2198440 -1678650 2 0 {name=p7 lab=EN1
 }
-C {ipin.sym} 2198810 -1679210 2 0 {name=p8 lab=!EN1
+C {ipin.sym} 2198440 -1678620 2 0 {name=p8 lab=!EN1
 }
+C {libs/core_digital/schem/programmable_nfet.sym} 2197770 -1679070 0 1 {name=x1 width=3*11.43u length=0.5u nf=1 mult=1}
+C {libs/core_digital/schem/programmable_nfet.sym} 2198230 -1679070 0 0 {name=x2 width=3*11.43u length=0.5u nf=1 mult=1}
+C {libs/core_digital/schem/programmable_pfet.sym} 2198220 -1679380 0 0 {name=x4 width=50u length=0.5u nf=1 mult=2}
+C {libs/core_digital/schem/programmable_pfet.sym} 2197780 -1679380 0 1 {name=x3 width=50u length=0.5u nf=1 mult=2}
+C {libs/core_digital/schem/programmable_nfet.sym} 2198060 -1678680 0 0 {name=x5 width=22.86u length=0.5u nf=1 mult=9}

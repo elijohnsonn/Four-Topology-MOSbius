@@ -85,4 +85,4 @@ footprint=1206
 device="ceramic capacitor"}
 C {vsource.sym} 200 -600 0 0 {name=V3 value=1.65 savecurrent=false}
 C {devices/gnd.sym} 200 -570 0 0 {name=l4 lab=GND}
-C {core_amps/ota_5t/5tOTA.sym} 530 -660 0 0 {name=x1}
+C {libs/core_amps/ota_5t/schem/5tOTA.sym} 530 -660 0 0 {name=x1}

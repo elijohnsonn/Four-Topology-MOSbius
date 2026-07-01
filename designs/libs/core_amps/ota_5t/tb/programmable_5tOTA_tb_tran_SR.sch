@@ -4,34 +4,49 @@ K {}
 V {}
 S {}
 E {}
-P 4 1 -610 -260 {}
-P 4 1 -530 -250 {}
-N -550 -140 -550 -100 {lab=VG_BIAS}
-N -550 -100 -550 -80 {lab=VG_BIAS}
-N -550 -110 -480 -110 {lab=VG_BIAS}
-N -480 -110 -480 -50 {lab=VG_BIAS}
-N -510 -50 -480 -50 {lab=VG_BIAS}
-N -550 -20 -550 20 {lab=GND}
-N -620 -50 -550 -50 {lab=GND}
-N -620 -50 -620 0 {lab=GND}
-N -620 0 -550 0 {lab=GND}
-N -550 20 -550 40 {lab=GND}
-N -550 -170 -550 -140 {lab=VG_BIAS}
-N -480 -50 -420 -50 {lab=VG_BIAS}
+B 4 670 -360 1470 230 {fill=0
+}
+P 4 1 -580 60 {}
+P 4 1 -500 70 {}
+T {Amplifier Performance(Transient)} 720 -300 0 0 0.8 0.8 {}
+T {-Driving Ideal 100 pF load capacitance
+
+Unity Step Response (1V step, 1.65V → 2.65V):
+
+1xW/L
+Slew Rate: 8.15 V/µs
+
+2xW/L
+Slew Rate: 17.05 V/µs
+
+3xW/L
+Slew Rate: 26.70 V/µs} 780 -200 0 0 0.5 0.5 {}
+N -520 180 -520 220 {lab=VG_BIAS}
+N -520 220 -520 240 {lab=VG_BIAS}
+N -520 210 -450 210 {lab=VG_BIAS}
+N -450 210 -450 270 {lab=VG_BIAS}
+N -480 270 -450 270 {lab=VG_BIAS}
+N -520 300 -520 340 {lab=GND}
+N -590 270 -520 270 {lab=GND}
+N -590 270 -590 320 {lab=GND}
+N -590 320 -520 320 {lab=GND}
+N -520 340 -520 360 {lab=GND}
+N -520 150 -520 180 {lab=VG_BIAS}
+N -450 270 -390 270 {lab=VG_BIAS}
 N 150 -10 150 60 {lab=VG_BIAS}
-N -550 -280 -550 -230 {lab=VDD}
-N -750 -200 -750 -140 {lab=VDD}
-N -870 -200 -870 -140 {lab=GND}
-N -870 -80 -870 -30 {lab=GND}
-N -750 -80 -750 -30 {lab=GND}
-N -750 -30 -750 -20 {lab=GND}
-N -870 -140 -870 -80 {lab=GND}
+N -520 40 -520 90 {lab=VDD}
+N -640 40 -640 100 {lab=VDD}
+N -760 40 -760 100 {lab=GND}
+N -760 160 -760 210 {lab=GND}
+N -640 160 -640 210 {lab=GND}
+N -640 210 -640 220 {lab=GND}
+N -760 100 -760 160 {lab=GND}
 N 100 -210 100 -180 {lab=VDD}
 N 100 0 100 30 {lab=GND}
-N -70 -130 -10 -130 {lab=VDD}
-N -70 -110 -10 -110 {lab=GND}
-N -70 -150 -10 -150 {lab=VDD}
-N -70 -170 -10 -170 {lab=GND}
+N -70 -130 -10 -130 {lab=GND}
+N -70 -110 -10 -110 {lab=VDD}
+N -70 -150 -10 -150 {lab=GND}
+N -70 -170 -10 -170 {lab=VDD}
 N -170 -70 -10 -70 {lab=input}
 N -50 240 90 240 {lab=output}
 N 150 240 270 240 {lab=output}
@@ -51,7 +66,7 @@ N -260 230 -260 270 {lab=#net1}
 N -260 -70 -170 -70 {lab=input}
 N -260 -70 -260 -40 {lab=input}
 N 220 -90 540 -90 {lab=output}
-C {symbols/nfet_03v3.sym} -530 -50 0 1 {name=M1
+C {symbols/nfet_03v3.sym} -500 270 0 1 {name=M1
 L=.5u
 W=23u
 nf=1
@@ -65,20 +80,20 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {lab_pin.sym} -420 -50 0 1 {name=p1 sig_type=std_logic lab=VG_BIAS}
+C {lab_pin.sym} -390 270 0 1 {name=p1 sig_type=std_logic lab=VG_BIAS}
 C {lab_pin.sym} 150 60 0 1 {name=p2 sig_type=std_logic lab=VG_BIAS}
-C {isource.sym} -550 -200 0 0 {name=I0 value=100u}
-C {lab_pin.sym} -750 -200 0 0 {name=p3 sig_type=std_logic lab=VDD}
-C {vsource.sym} -750 -110 0 0 {name=V2 value= 3.3 savecurrent=false}
-C {lab_pin.sym} -870 -200 0 0 {name=p4 sig_type=std_logic lab=GND}
-C {gnd.sym} -870 -30 0 0 {name=l1 lab=GND}
-C {lab_pin.sym} -750 -20 0 0 {name=p6 sig_type=std_logic lab=GND}
-C {lab_pin.sym} -550 40 0 0 {name=p5 sig_type=std_logic lab=GND}
-C {lab_pin.sym} -550 -280 0 0 {name=p7 sig_type=std_logic lab=VDD}
+C {isource.sym} -520 120 0 0 {name=I0 value=100u}
+C {lab_pin.sym} -640 40 0 0 {name=p3 sig_type=std_logic lab=VDD}
+C {vsource.sym} -640 130 0 0 {name=V2 value= 3.3 savecurrent=false}
+C {lab_pin.sym} -760 40 0 0 {name=p4 sig_type=std_logic lab=GND}
+C {gnd.sym} -760 210 0 0 {name=l1 lab=GND}
+C {lab_pin.sym} -640 220 0 0 {name=p6 sig_type=std_logic lab=GND}
+C {lab_pin.sym} -520 360 0 0 {name=p5 sig_type=std_logic lab=GND}
+C {lab_pin.sym} -520 40 0 0 {name=p7 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 100 -210 0 1 {name=p8 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 100 30 0 0 {name=p9 sig_type=std_logic lab=GND}
-C {lab_pin.sym} -70 -130 0 0 {name=p10 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} -70 -110 0 0 {name=p11 sig_type=std_logic lab=GND}
+C {lab_pin.sym} -70 -170 0 0 {name=p10 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} -70 -150 0 0 {name=p11 sig_type=std_logic lab=GND}
 C {lab_pin.sym} 540 -90 0 1 {name=p17 sig_type=std_logic lab=output}
 C {capa.sym} 380 -20 0 0 {name=CLOAD
 m=1
@@ -86,19 +101,19 @@ value=100p
 footprint=1206
 device="ceramic capacitor"}
 C {lab_pin.sym} 380 40 0 0 {name=p18 sig_type=std_logic lab=GND}
-C {devices/code_shown.sym} 720 -160 0 0 {name=Models only_toplevel=false
+C {devices/code_shown.sym} -820 -490 0 0 {name=Models only_toplevel=false
 format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 "}
-C {lab_pin.sym} -70 -170 0 0 {name=p12 sig_type=std_logic lab=GND}
-C {lab_pin.sym} -70 -150 0 0 {name=p13 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} -70 -130 0 0 {name=p12 sig_type=std_logic lab=GND}
+C {lab_pin.sym} -70 -110 0 0 {name=p13 sig_type=std_logic lab=VDD}
 C {vsource.sym} -260 20 0 0 {name=VINP value= "PULSE(0 1 25u 1p 100n 2m 1)" savecurrent=false}
 C {vsource.sym} -260 300 0 0 {name=VCM value= 1.65 savecurrent=false}
 C {lab_pin.sym} -260 360 0 0 {name=p14 sig_type=std_logic lab=GND}
 C {lab_pin.sym} -210 -70 1 0 {name=p15 sig_type=std_logic lab=input}
-C {code_shown.sym} 710 -20 0 0 {name=Simulation only_toplevel=false 
+C {code_shown.sym} -830 -350 0 0 {name=Simulation only_toplevel=false 
 
 value=
 
@@ -119,4 +134,4 @@ plot v(input) v(output)
 .endc
 
 "}
-C {libs/core_amps/ota_5t/programmable_5tOTA.sym} 140 -90 0 0 {name=x1}
+C {libs/core_amps/ota_5t/schem/programmable_5tOTA.sym} 140 -90 0 0 {name=x1}

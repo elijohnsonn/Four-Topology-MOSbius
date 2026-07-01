@@ -82,4 +82,4 @@ m=1
 value=100p
 footprint=1206
 device="ceramic capacitor"}
-C {core_amps/ota_5t/5tOTA.sym} 550 -680 0 0 {name=x1}
+C {libs/core_amps/ota_5t/schem/5tOTA.sym} 550 -680 0 0 {name=x1}
