@@ -4,7 +4,7 @@ K {}
 V {}
 S {}
 E {}
-B 4 60 -500 750 -110 {fill=0
+B 4 50 -500 760 -130 {fill=0
 }
 T {Amplifier Performance} 180 -480 0 0 0.8 0.8 {}
 T {} 100 -380 0 0 0.5 0.5 {}
@@ -91,4 +91,4 @@ footprint=1206
 device="ceramic capacitor"}
 C {vsource.sym} 200 -650 0 0 {name=V3 value=1.65 savecurrent=false}
 C {devices/gnd.sym} 200 -620 0 0 {name=l4 lab=GND}
-C {core_amps/ota_5t/5tOTA.sym} 530 -710 0 0 {name=x1}
+C {libs/core_amps/ota_5t/schem/5tOTA.sym} 530 -710 0 0 {name=x1}
