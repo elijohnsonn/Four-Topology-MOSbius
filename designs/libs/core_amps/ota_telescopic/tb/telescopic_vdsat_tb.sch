@@ -4,27 +4,23 @@ K {}
 V {}
 S {}
 E {}
-N 60 90 60 150 {lab=GND}
+N 110 40 110 100 {lab=GND}
 N -390 -140 -390 -80 {lab=VDD}
 N -510 -140 -510 30 {lab=GND}
 N -390 -20 -390 40 {lab=GND}
-N 80 -170 80 -60 {lab=VDD}
-N 110 220 110 260 {lab=VDD}
+N 120 -190 120 -80 {lab=VDD}
+N 130 190 130 230 {lab=VDD}
 N 260 -20 310 -20 {lab=output}
 N 260 -20 260 30 {lab=output}
 N 260 90 260 120 {lab=GND}
-N -220 160 -220 190 {lab=GND}
-N 110 70 110 160 {lab=#net1}
-N -220 -80 -60 -80 {lab=#net2}
-N -220 -80 -220 70 {lab=#net2}
-N -220 70 -60 70 {lab=#net2}
-N -220 70 -220 100 {lab=#net2}
-N -60 70 30 10 {lab=#net2}
-N -60 -80 30 -30 {lab=#net2}
-N 80 40 110 70 {lab=#net1}
-N 130 -10 190 -20 {lab=output}
+N -110 190 -110 220 {lab=GND}
+N 130 40 130 130 {lab=#net1}
+N -110 -50 50 -50 {lab=#net2}
+N -110 -50 -110 100 {lab=#net2}
+N -110 100 -110 130 {lab=#net2}
 N 190 -20 260 -20 {lab=output}
-C {isource.sym} 110 190 2 0 {name=IBIAS value=100u}
+N -110 10 50 10 {lab=#net2}
+C {isource.sym} 130 160 2 0 {name=IBIAS value=100u}
 C {lab_pin.sym} -390 -140 0 0 {name=p1 sig_type=std_logic lab=VDD}
 C {vsource.sym} -390 -50 0 0 {name=V2 value= 3.3 savecurrent=false}
 C {lab_pin.sym} -510 -140 0 0 {name=p3 sig_type=std_logic lab=GND}
@@ -36,18 +32,18 @@ value="
 .include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 "}
-C {lab_pin.sym} 80 -170 0 0 {name=p2 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} 60 150 0 0 {name=p5 sig_type=std_logic lab=GND}
+C {lab_pin.sym} 120 -190 0 0 {name=p2 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} 110 100 0 0 {name=p5 sig_type=std_logic lab=GND}
 C {capa.sym} 260 60 0 0 {name=CLOAD
 m=1
-value=10p
+value=100p
 footprint=1206
 device="ceramic capacitor"}
 C {lab_pin.sym} 260 120 0 0 {name=p7 sig_type=std_logic lab=GND}
 C {lab_pin.sym} 310 -20 0 1 {name=p8 sig_type=std_logic lab=output}
-C {lab_pin.sym} 110 260 0 0 {name=p6 sig_type=std_logic lab=VDD}
-C {vsource.sym} -220 130 0 0 {name=VCM value= 1.65 savecurrent=false}
-C {lab_pin.sym} -220 190 0 0 {name=p9 sig_type=std_logic lab=GND}
+C {lab_pin.sym} 130 230 0 0 {name=p6 sig_type=std_logic lab=VDD}
+C {vsource.sym} -110 160 0 0 {name=VCM value= 1.65 savecurrent=false}
+C {lab_pin.sym} -110 220 0 0 {name=p9 sig_type=std_logic lab=GND}
 C {code_shown.sym} 470 -40 0 0 {name=Simulation only_toplevel=false 
 
 value=
@@ -75,4 +71,4 @@ print sat_m6 sat_m7 sat_m8 sat_m9 sat_m10
 
 "
 }
-C {libs/core_amps/ota_telescopic/telescopic_cascode.sym} -40 -20 0 0 {name=X1}
+C {libs/core_amps/ota_telescopic/ota_telescopic schematics/telescopic_cascode.sym} 110 50 0 0 {name=x1}
