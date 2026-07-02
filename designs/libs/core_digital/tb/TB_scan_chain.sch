@@ -20,18 +20,18 @@ N -160 -20 -160 20 {lab=EN_1_FOLDED}
 N -30 -40 -30 -10 {lab=!EN_1_FOLDED}
 N -120 -10 -30 -10 {lab=!EN_1_FOLDED}
 N -120 -10 -120 20 {lab=!EN_1_FOLDED}
-N -10 -40 -10 -0 {lab=#net1}
-N -70 -0 -10 -0 {lab=#net1}
-N -70 -0 -70 20 {lab=#net1}
-N 10 -40 10 -0 {lab=#net2}
-N 10 -0 10 10 {lab=#net2}
-N -30 10 10 10 {lab=#net2}
-N -30 10 -30 20 {lab=#net2}
-N 30 -40 30 20 {lab=#net3}
-N 10 20 30 20 {lab=#net3}
-N 50 -40 50 20 {lab=#net4}
-N 70 -40 70 20 {lab=#net5}
-N 70 20 90 20 {lab=#net5}
+N -10 -40 -10 -0 {lab=EN_0_TELESCOPIC}
+N -70 -0 -10 -0 {lab=EN_0_TELESCOPIC}
+N -70 -0 -70 20 {lab=EN_0_TELESCOPIC}
+N 10 -40 10 -0 {lab=!EN_0_TELESCOPIC}
+N 10 -0 10 10 {lab=!EN_0_TELESCOPIC}
+N -30 10 10 10 {lab=!EN_0_TELESCOPIC}
+N -30 10 -30 20 {lab=!EN_0_TELESCOPIC}
+N 30 -40 30 20 {lab=EN_1_TELESCOPIC}
+N 10 20 30 20 {lab=EN_1_TELESCOPIC}
+N 50 -40 50 20 {lab=!EN_1_TELESCOPIC}
+N 70 -40 70 20 {lab=EN_0_5T}
+N 70 20 90 20 {lab=EN_0_5T}
 N 210 -40 380 -40 {lab=!EN_1_CS}
 N 380 -40 380 20 {lab=!EN_1_CS}
 N 190 -40 190 -30 {lab=EN_1_CS}
@@ -43,16 +43,16 @@ N 300 -20 300 20 {lab=!EN_0_CS}
 N 150 -40 150 -10 {lab=EN_0_CS}
 N 150 -10 260 -10 {lab=EN_0_CS}
 N 260 -10 260 20 {lab=EN_0_CS}
-N 130 -40 130 -0 {lab=#net6}
-N 130 -0 210 0 {lab=#net6}
-N 210 0 210 20 {lab=#net6}
-N 110 -40 110 10 {lab=#net7}
-N 110 10 170 10 {lab=#net7}
-N 170 10 170 20 {lab=#net7}
-N 90 -40 90 -0 {lab=#net8}
-N 90 0 100 0 {lab=#net8}
-N 100 0 100 20 {lab=#net8}
-N 100 20 130 20 {lab=#net8}
+N 130 -40 130 -0 {lab=!EN_1_5T}
+N 130 -0 210 0 {lab=!EN_1_5T}
+N 210 0 210 20 {lab=!EN_1_5T}
+N 110 -40 110 10 {lab=EN_1_5T}
+N 110 10 170 10 {lab=EN_1_5T}
+N 170 10 170 20 {lab=EN_1_5T}
+N 90 -40 90 -0 {lab=!EN_0_5T}
+N 90 0 100 0 {lab=!EN_0_5T}
+N 100 0 100 20 {lab=!EN_0_5T}
+N 100 20 130 20 {lab=!EN_0_5T}
 N -240 80 -240 110 {lab=GND}
 N -240 110 380 110 {lab=GND}
 N 380 80 380 110 {lab=GND}
@@ -78,7 +78,7 @@ N 440 -100 440 110 {lab=GND}
 N 380 110 440 110 {lab=GND}
 N -270 -150 -270 -130 {lab=scan_in}
 N -270 -150 -150 -150 {lab=scan_in}
-N -320 -170 -320 -130 {lab=#net9}
+N -320 -170 -320 -130 {lab=#net1}
 N -320 -70 -320 -50 {lab=GND}
 N -320 -50 -270 -50 {lab=GND}
 N -270 -70 -270 -50 {lab=GND}
@@ -87,23 +87,23 @@ N -300 110 -240 110 {lab=GND}
 N -150 -150 -140 -150 {lab=scan_in}
 N -140 -310 -140 -170 {lab=CLK}
 N -190 -310 -140 -310 {lab=CLK}
-N -390 -170 -320 -170 {lab=#net9}
-N -390 -310 -390 -170 {lab=#net9}
-N -390 -310 -360 -310 {lab=#net9}
+N -390 -170 -320 -170 {lab=#net1}
+N -390 -310 -390 -170 {lab=#net1}
+N -390 -310 -360 -310 {lab=#net1}
 N -310 -260 -310 -230 {lab=GND}
 N -320 -410 -320 -360 {lab=VDD}
-N -500 -450 -500 -290 {lab=#net10}
-N -500 -450 -270 -450 {lab=#net10}
-N -270 -450 -270 -360 {lab=#net10}
+N -500 -450 -500 -290 {lab=#net2}
+N -500 -450 -270 -450 {lab=#net2}
+N -270 -450 -270 -360 {lab=#net2}
 N -500 -230 -500 -200 {lab=GND}
 N -500 -200 -450 -200 {lab=GND}
 N -450 -230 -450 -200 {lab=GND}
-N -450 -290 -410 -290 {lab=#net11}
-N -410 -290 -410 -210 {lab=#net11}
-N -410 -210 -280 -210 {lab=#net11}
-N -280 -280 -280 -210 {lab=#net11}
-N -280 -280 -270 -280 {lab=#net11}
-N -270 -290 -270 -280 {lab=#net11}
+N -450 -290 -410 -290 {lab=#net3}
+N -410 -290 -410 -210 {lab=#net3}
+N -410 -210 -280 -210 {lab=#net3}
+N -280 -280 -280 -210 {lab=#net3}
+N -280 -280 -270 -280 {lab=#net3}
+N -270 -290 -270 -280 {lab=#net3}
 C {vsource.sym} -390 -20 0 0 {name=V1 value=3.3 savecurrent=false}
 C {gnd.sym} -390 70 0 0 {name=l1 lab=GND}
 C {lab_wire.sym} -390 40 0 0 {name=p1 sig_type=std_logic lab=GND
@@ -201,7 +201,7 @@ footprint=1206
 device="ceramic capacitor"}
 C {lab_wire.sym} 250 -170 1 0 {name=p7 sig_type=std_logic lab=scan_out}
 C {vsource.sym} -320 -100 0 0 {name=V2 value="PULSE(0 3.3 0 1n 1n 0.025m 0.05m)" savecurrent=false}
-C {vsource.sym} -270 -100 0 0 {name=V3 value="PWL(0 0 0.12499m 0 0.125m 3.3 0.1749m 3.3 0.175m 0 0.34999m 0 0.35m 3.3 0.499999m 3.3 0.5m 0)" savecurrent=false}
+C {vsource.sym} -270 -100 0 0 {name=V3 value="PWL(0 0 0.1499m 0 0.15m 3.3 0.24999m 3.3 0.25m 0)" savecurrent=false}
 C {lab_wire.sym} -140 -250 0 0 {name=p5 sig_type=std_logic lab=CLK
 }
 C {lab_wire.sym} -220 -150 0 0 {name=p8 sig_type=std_logic lab=scan_in
@@ -226,7 +226,11 @@ value="* Transient Analysis - 10ms
   run
   plot V(scan_in) title 'Scan In' xlabel 'Time (s)' ylabel 'Voltage (V)'
   plot V(EN_0_FOLDED) V(!EN_0_FOLDED) title 'Folded Enable 0' xlabel 'Time (s)' ylabel 'Voltage (V)'
-  plot V(EN_1_FOLDED) V(!EN_1_FOLDED) title 'Folded Enable 1' xlabel 'Time (s)' ylabel 'Voltage (V)' 
+  plot V(EN_1_FOLDED) V(!EN_1_FOLDED) title 'Folded Enable 1' xlabel 'Time (s)' ylabel 'Voltage (V)'
+  plot V(EN_0_TELESCOPIC) V(!EN_0_TELESCOPIC) title 'Telescopic Enable 0' xlabel 'Time (s)' ylabel 'Voltage (V)'
+  plot V(EN_1_TELESCOPIC) V(!EN_1_TELESCOPIC) title 'Telescopic Enable 1' xlabel 'Time (s)' ylabel 'Voltage (V)'
+  plot V(EN_0_5T) V(!EN_0_5T) title '5T Enable 0' xlabel 'Time (s)' ylabel 'Voltage (V)'
+  plot V(EN_1_5T) V(!EN_1_5T) title '5T Enable 1' xlabel 'Time (s)' ylabel 'Voltage (V)' 
   plot V(EN_0_CS) V(!EN_0_CS) title 'CS Enable 0' xlabel 'Time (s)' ylabel 'Voltage (V)'
   plot V(EN_1_CS) V(!EN_1_CS) title 'CS Enable 1' xlabel 'Time (s)' ylabel 'Voltage (V)'
 .endc
@@ -252,4 +256,20 @@ C {lab_wire.sym} 300 0 0 0 {name=p17 sig_type=std_logic lab=!EN_0_CS
 C {lab_wire.sym} 280 -30 0 0 {name=p18 sig_type=std_logic lab=EN_1_CS
 }
 C {lab_wire.sym} 330 -40 0 0 {name=p19 sig_type=std_logic lab=!EN_1_CS
+}
+C {lab_wire.sym} -50 0 0 0 {name=p20 sig_type=std_logic lab=EN_0_TELESCOPIC
+}
+C {lab_wire.sym} 0 10 0 0 {name=p21 sig_type=std_logic lab=!EN_0_TELESCOPIC
+}
+C {lab_wire.sym} 30 -10 0 0 {name=p22 sig_type=std_logic lab=EN_1_TELESCOPIC
+}
+C {lab_wire.sym} 50 10 0 0 {name=p23 sig_type=std_logic lab=!EN_1_TELESCOPIC
+}
+C {lab_wire.sym} 70 0 0 0 {name=p24 sig_type=std_logic lab=EN_0_5T
+}
+C {lab_wire.sym} 110 20 0 0 {name=p25 sig_type=std_logic lab=!EN_0_5T
+}
+C {lab_wire.sym} 140 10 0 0 {name=p26 sig_type=std_logic lab=EN_1_5T
+}
+C {lab_wire.sym} 130 -20 0 0 {name=p27 sig_type=std_logic lab=!EN_1_5T
 }
