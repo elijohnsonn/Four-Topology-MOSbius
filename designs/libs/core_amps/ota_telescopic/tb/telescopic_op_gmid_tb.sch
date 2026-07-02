@@ -4,31 +4,28 @@ K {}
 V {}
 S {}
 E {}
-N -620 -240 -620 -180 {lab=GND}
+N -680 -320 -680 -260 {lab=GND}
 N -1070 -470 -1070 -410 {lab=VDD}
 N -1190 -470 -1190 -410 {lab=GND}
 N -1190 -350 -1190 -300 {lab=GND}
 N -1070 -350 -1070 -300 {lab=GND}
 N -1070 -300 -1070 -290 {lab=GND}
 N -1190 -410 -1190 -350 {lab=GND}
-N -600 -500 -600 -440 {lab=VDD}
-N -570 -190 -570 -170 {lab=#net1}
-N -570 -110 -570 -70 {lab=VDD}
-N -490 -350 -370 -350 {lab=output}
-N -420 -350 -420 -300 {lab=output}
-N -420 -240 -420 -210 {lab=GND}
+N -670 -500 -670 -440 {lab=VDD}
+N -660 -250 -660 -230 {lab=#net1}
+N -660 -170 -660 -130 {lab=VDD}
+N -600 -380 -480 -380 {lab=output}
+N -530 -380 -530 -330 {lab=output}
+N -530 -270 -530 -240 {lab=GND}
 N -900 -170 -900 -140 {lab=GND}
-N -570 -260 -570 -190 {lab=#net1}
+N -660 -320 -660 -250 {lab=#net1}
 N -900 -410 -740 -410 {lab=#net2}
-N -900 -410 -900 -260 {lab=#net2}
-N -900 -260 -740 -260 {lab=#net2}
-N -900 -260 -900 -230 {lab=#net2}
-N -620 -400 -600 -440 {lab=VDD}
-N -740 -410 -670 -370 {lab=#net2}
-N -740 -260 -670 -330 {lab=#net2}
-N -620 -300 -570 -260 {lab=#net1}
-N -570 -350 -480 -350 {lab=output}
-C {isource.sym} -570 -140 2 0 {name=IBIAS value=100u}
+N -740 -350 -740 -260 {lab=output}
+N -900 -410 -900 -230 {lab=#net2}
+N -740 -260 -740 -80 {lab=output}
+N -740 -80 -580 -80 {lab=output}
+N -580 -380 -580 -80 {lab=output}
+C {isource.sym} -660 -200 2 0 {name=IBIAS value=100u}
 C {lab_pin.sym} -1070 -470 0 0 {name=p1 sig_type=std_logic lab=VDD}
 C {vsource.sym} -1070 -380 0 0 {name=V2 value= 3.3 savecurrent=false}
 C {lab_pin.sym} -1190 -470 0 0 {name=p3 sig_type=std_logic lab=GND}
@@ -40,16 +37,16 @@ value="
 .include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 "}
-C {lab_pin.sym} -600 -500 0 0 {name=p2 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} -620 -180 0 0 {name=p5 sig_type=std_logic lab=GND}
-C {capa.sym} -420 -270 0 0 {name=CLOAD
+C {lab_pin.sym} -670 -500 0 0 {name=p2 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} -680 -260 0 0 {name=p5 sig_type=std_logic lab=GND}
+C {capa.sym} -530 -300 0 0 {name=CLOAD
 m=1
-value=10p
+value=100p
 footprint=1206
 device="ceramic capacitor"}
-C {lab_pin.sym} -420 -210 0 0 {name=p7 sig_type=std_logic lab=GND}
-C {lab_pin.sym} -370 -350 0 1 {name=p8 sig_type=std_logic lab=output}
-C {lab_pin.sym} -570 -70 0 0 {name=p6 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} -530 -240 0 0 {name=p7 sig_type=std_logic lab=GND}
+C {lab_pin.sym} -480 -380 0 1 {name=p8 sig_type=std_logic lab=output}
+C {lab_pin.sym} -660 -130 0 0 {name=p6 sig_type=std_logic lab=VDD}
 C {vsource.sym} -900 -200 0 0 {name=VCM value= 1.65 savecurrent=false}
 C {lab_pin.sym} -900 -140 0 0 {name=p9 sig_type=std_logic lab=GND}
 C {code_shown.sym} -210 -370 0 0 {name=Simulation only_toplevel=false 
@@ -76,4 +73,4 @@ print gmid_m6 gmid_m7 gmid_m8 gmid_m9 gmid_m10
 
 .endc
 "}
-C {libs/core_amps/ota_telescopic/telescopic_cascode.sym} -740 -360 0 0 {name=X1}
+C {libs/core_amps/ota_telescopic/ota_telescopic schematics/telescopic_cascode.sym} -680 -310 0 0 {name=x1}
