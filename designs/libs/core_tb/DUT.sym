@@ -1,0 +1,73 @@
+v {xschem version=3.4.7 file_version=1.2}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"
+}
+V {}
+S {}
+E {}
+L 7 60 -210 60 -190 {}
+L 7 230 -120 250 -120 {}
+L 7 90 -210 90 -190 {}
+L 7 -90 -210 -90 -190 {}
+L 7 -70 -210 -70 -190 {}
+L 7 230 -60 250 -60 {}
+L 7 -230 -130 -210 -130 {}
+L 7 230 0 250 0 {}
+L 7 -230 110 -210 110 {}
+L 7 -230 80 -210 80 {}
+L 7 -230 -100 -210 -100 {}
+L 7 -230 -70 -210 -70 {}
+L 7 -230 -40 -210 -40 {}
+L 7 -230 -10 -210 -10 {}
+L 7 230 60 250 60 {}
+L 7 230 120 250 120 {}
+L 7 -230 50 -210 50 {}
+L 7 -230 20 -210 20 {}
+B 5 57.5 -212.5 62.5 -207.5 {name=CLK dir=inout}
+B 5 247.5 -122.5 252.5 -117.5 {name=SCAN_OUT dir=inout}
+B 5 87.5 -212.5 92.5 -207.5 {name=SCAN_IN dir=inout}
+B 5 -92.5 -212.5 -87.5 -207.5 {name=VSS dir=inout}
+B 5 -72.5 -212.5 -67.5 -207.5 {name=VDD dir=inout}
+B 5 247.5 -62.5 252.5 -57.5 {name=OUT_FOLDED dir=inout}
+B 5 -232.5 -132.5 -227.5 -127.5 {name=INP_FOLDED dir=inout}
+B 5 247.5 -2.5 252.5 2.5 {name=OUT_5T dir=inout}
+B 5 -232.5 107.5 -227.5 112.5 {name=IBIAS2 dir=inout}
+B 5 -232.5 77.5 -227.5 82.5 {name=IBIAS1 dir=inout}
+B 5 -232.5 -102.5 -227.5 -97.5 {name=INN_FOLDED dir=inout}
+B 5 -232.5 -72.5 -227.5 -67.5 {name=INP_5T dir=inout}
+B 5 -232.5 -42.5 -227.5 -37.5 {name=INN_5T dir=inout}
+B 5 -232.5 -12.5 -227.5 -7.5 {name=INP_TELESCOPIC dir=inout}
+B 5 247.5 57.5 252.5 62.5 {name=OUT_TELESCOPIC dir=inout}
+B 5 247.5 117.5 252.5 122.5 {name=OUT_CS dir=inout}
+B 5 -232.5 47.5 -227.5 52.5 {name=IN_CS dir=inout}
+B 5 -232.5 17.5 -227.5 22.5 {name=INN_TELESCOPIC dir=inout}
+T {@DUT} -31.5 -26 0 0 0.5 0.5 {}
+T {@DUT} -5 8 0 0 0.2 0.2 {}
+T {CLK} 56 -185 3 1 0.2 0.2 {}
+T {SCAN_OUT} 225 -124 0 1 0.2 0.2 {}
+T {SCAN_IN} 86 -185 3 1 0.2 0.2 {}
+T {VSS} -94 -185 3 1 0.2 0.2 {}
+T {VDD} -74 -185 3 1 0.2 0.2 {}
+T {OUT_FOLDED} 225 -64 0 1 0.2 0.2 {}
+T {INP_FOLDED} -205 -134 0 0 0.2 0.2 {}
+T {OUT_5T} 225 -4 0 1 0.2 0.2 {}
+T {IBIAS2} -205 106 0 0 0.2 0.2 {}
+T {IBIAS1} -205 76 0 0 0.2 0.2 {}
+T {INN_FOLDED} -205 -104 0 0 0.2 0.2 {}
+T {INP_5T} -205 -74 0 0 0.2 0.2 {}
+T {INN_5T} -205 -44 0 0 0.2 0.2 {}
+T {INP_TELESCOPIC} -205 -14 0 0 0.2 0.2 {}
+T {OUT_TELESCOPIC} 225 56 0 1 0.2 0.2 {}
+T {OUT_CS} 225 116 0 1 0.2 0.2 {}
+T {IN_CS} -205 46 0 0 0.2 0.2 {}
+T {INN_TELESCOPIC} -205 16 0 0 0.2 0.2 {}
+N -210 10 -210 210 {lab=#net1}
+N -210 -190 -210 10 {lab=#net1}
+N -210 -190 10 -190 {lab=#net1}
+N 10 -190 230 -190 {lab=#net1}
+N -210 210 10 210 {lab=#net1}
+N 10 210 230 210 {lab=#net1}
+N 230 10 230 210 {lab=#net1}
+N 230 -190 230 10 {lab=#net1}
