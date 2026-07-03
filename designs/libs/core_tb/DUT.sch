@@ -113,6 +113,7 @@ N -490 470 -490 510 {lab=!EN_0_CS}
 N -470 470 -470 510 {lab=EN_1_CS}
 N -450 470 -450 510 {lab=!EN_1_CS}
 N 410 610 440 610 {lab=OUT_TELESCOPIC}
+N 860 650 870 650 {lab=IN_CS}
 C {libs/core_digital/schem/scan_chain.sym} -610 430 0 0 {name=x1}
 C {libs/core_amps/ota_folded_cascode/prgrm_schem/programmable_folded_cascode.sym} 260 310 0 0 {name=x2}
 C {libs/core_amps/ota_telescopic/programmable_ota_telescopic schematics/programmable_telescopic_cascode.sym} 270 610 0 0 {name=x4}
@@ -215,3 +216,4 @@ C {libs/core_amps/ota_5t/prgram_schem/programmable_5tOTA.sym} 970 330 0 0 {name=
 C {lab_pin.sym} 920 740 0 0 {name=p20 sig_type=std_logic lab=IBIAS1}
 C {lab_pin.sym} 980 450 0 1 {name=p19 sig_type=std_logic lab=IBIAS1}
 C {lab_pin.sym} 320 400 0 1 {name=p17 sig_type=std_logic lab=IBIAS2}
+C {lab_pin.sym} -330 -220 0 1 {name=p18 sig_type=std_logic lab=IBIAS1}
