@@ -103,7 +103,6 @@ N -1520 -190 -1480 -190 {lab=INN_FOLDED}
 N -1610 -220 -1520 -220 {lab=INP_FOLDED}
 N -1480 -190 -1370 -190 {lab=INN_FOLDED}
 N -1520 -140 -1520 50 {lab=INN_FOLDED}
-C {libs/core_tb/DUT.sym} -760 -90 0 0 {name=x1}
 C {vsource.sym} 470 420 0 0 {name=V3 value="PWL(0 0 0.34999m 0 0.35m 3.3 0.499999m 3.3 0.5m 0)" savecurrent=false}
 C {gnd.sym} 470 490 0 0 {name=l1 lab=GND}
 C {gnd.sym} -900 -320 0 0 {name=l2 lab=GND}
@@ -129,13 +128,13 @@ C {isource.sym} -1030 120 2 1 {name=IBIAS2 value=100u}
 C {lab_pin.sym} -1080 180 0 0 {name=p9 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} -1030 180 0 1 {name=p10 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} -270 -150 0 1 {name=p11 sig_type=std_logic lab=OUT_FOLDED}
-C {devices/code_shown.sym} 1400 -60 0 0 {name=MODELS only_toplevel=true
+C {devices/code_shown.sym} 930 -70 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 "}
-C {code_shown.sym} 1400 50 0 0 {name=Simulation1 only_toplevel=false 
+C {code_shown.sym} 930 40 0 0 {name=Simulation1 only_toplevel=false 
 
 value=
 
@@ -171,3 +170,4 @@ value=500k
 footprint=1206
 device=resistor
 m=1}
+C {libs/core_tb/schem/DUT.sym} -760 -90 0 0 {name=x1}
