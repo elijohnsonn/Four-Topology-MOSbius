@@ -29,7 +29,7 @@ N 290 210 290 240 {lab=VDD}
 N 930 210 930 240 {lab=VDD}
 N 400 -290 400 -230 {lab=VDD}
 N 280 -290 280 -230 {lab=VSS}
-N 330 670 330 710 {lab=VSS}
+N 330 670 330 710 {lab=IBIAS1}
 N 920 690 920 740 {lab=IBIAS1}
 N 290 380 290 410 {lab=VSS}
 N 930 420 930 450 {lab=VSS}
@@ -60,7 +60,7 @@ N -460 -340 -460 -310 {lab=IBIAS1}
 N -390 -220 -330 -220 {lab=IBIAS1}
 N 320 370 320 400 {lab=IBIAS2}
 N 980 410 980 450 {lab=IBIAS1}
-N 300 680 300 720 {lab=IBIAS1}
+N 300 680 300 720 {lab=VSS}
 N 180 660 250 660 {lab=INN_TELESCOPIC}
 N 170 560 250 560 {lab=INP_TELESCOPIC}
 N 170 360 240 360 {lab=INN_FOLDED}
@@ -131,7 +131,7 @@ C {lab_pin.sym} 930 210 0 0 {name=p5 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 300 510 0 0 {name=p6 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 980 550 0 0 {name=p7 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 290 410 0 0 {name=p8 sig_type=std_logic lab=VSS}
-C {lab_pin.sym} 330 710 0 1 {name=p9 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 300 720 0 0 {name=p9 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 980 710 0 1 {name=p10 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 930 450 0 0 {name=p11 sig_type=std_logic lab=VSS}
 C {symbols/nfet_03v3.sym} -90 -220 0 1 {name=M1
@@ -164,7 +164,7 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {lab_pin.sym} 300 720 0 0 {name=p13 sig_type=std_logic lab=IBIAS1}
+C {lab_pin.sym} 330 710 0 1 {name=p13 sig_type=std_logic lab=IBIAS1}
 C {lab_pin.sym} -460 -130 0 0 {name=p14 sig_type=std_logic lab=GND}
 C {iopin.sym} 180 660 2 0 {name=p21 lab=INN_TELESCOPIC}
 C {iopin.sym} 170 560 2 0 {name=p22 lab=INP_TELESCOPIC}
