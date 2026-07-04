@@ -1,6 +1,0 @@
-* Extracted by KLayout with GF180MCU LVS runset on : 26/05/2026 21:41
-
-.SUBCKT inv vdd vo vss vin
-M$1 vdd vin vo vdd pfet_03v3 L=0.28U W=2U AS=1.3P AD=1.3P PS=5.3U PD=5.3U
-M$2 vss vin vo vss nfet_03v3 L=0.28U W=1U AS=0.61P AD=0.61P PS=3.22U PD=3.22U
-.ENDS inv
