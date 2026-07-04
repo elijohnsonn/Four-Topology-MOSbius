@@ -201,7 +201,7 @@ footprint=1206
 device="ceramic capacitor"}
 C {lab_wire.sym} 250 -170 1 0 {name=p7 sig_type=std_logic lab=scan_out}
 C {vsource.sym} -320 -100 0 0 {name=V2 value="PULSE(0 3.3 0 1n 1n 0.025m 0.05m)" savecurrent=false}
-C {vsource.sym} -270 -100 0 0 {name=V3 value="PWL(0 0 0.1499m 0 0.15m 3.3 0.24999m 3.3 0.25m 0)" savecurrent=false}
+C {vsource.sym} -270 -100 0 0 {name=V3 value="PWL(0 0 0.39999m 0 0.4m 3.3 0.499999m 3.3 0.5m 0)" savecurrent=false}
 C {lab_wire.sym} -140 -250 0 0 {name=p5 sig_type=std_logic lab=CLK
 }
 C {lab_wire.sym} -220 -150 0 0 {name=p8 sig_type=std_logic lab=scan_in
