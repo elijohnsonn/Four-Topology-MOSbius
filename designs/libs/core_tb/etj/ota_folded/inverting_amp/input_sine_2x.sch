@@ -23,7 +23,7 @@ turns off after around .425ms, which is when the
 scan in signal has fully propogated through the scan chain} 140 -410 0 0 0.4 0.4 {}
 T {VDD, GND, SCAN INPUT} 150 150 0 0 1 1 {}
 T {Scan chain input artificially generated to 
-enable folded cascode 1x sizing} 230 220 0 0 0.4 0.4 {}
+enable folded cascode 2x sizing} 230 220 0 0 0.4 0.4 {}
 T {R2 = 500K} -880 360 0 0 0.75 0.75 {}
 T {R1 = 100K} -1460 -110 0 0 0.75 0.75 {}
 T {CL = 120p} -280 -60 0 0 0.75 0.75 {}
@@ -34,7 +34,7 @@ T {DC = 1.65V
 T {DC = 1.65V} -1780 200 0 0 0.5 0.5 {}
 T {IBIAS1=IBIAS2=100u} -1200 220 0 0 0.4 0.4 {}
 T {IMPLEMENTATION} -1170 -620 0 0 1 1 {}
-T {Configure the folded cascode in 1× mode 
+T {Configure the folded cascode in 2× mode 
 as an inverting amplifier to amplify a 
 sine wave input by 5 while driving a 
 120pF capacitive load.} -1160 -560 0 0 0.4 0.4 {}
@@ -103,7 +103,7 @@ N -1570 -180 -1530 -180 {lab=INN_FOLDED}
 N -1660 -210 -1570 -210 {lab=INP_FOLDED}
 N -1530 -180 -1420 -180 {lab=INN_FOLDED}
 N -1570 -130 -1570 60 {lab=INN_FOLDED}
-C {vsource.sym} 420 430 0 0 {name=V3 value="PWL(0 0 0.39999m 0 0.4m 3.3 0.499999m 3.3 0.5m 0)" savecurrent=false}
+C {vsource.sym} 420 430 0 0 {name=V3 value="PWL(0 0 0.34999m 0 0.35m 3.3 0.399999m 3.3 0.4m 0)" savecurrent=false}
 C {gnd.sym} 420 500 0 0 {name=l1 lab=GND}
 C {gnd.sym} -950 -310 0 0 {name=l2 lab=GND}
 C {vsource.sym} 270 430 0 0 {name=V1 value=3.3 savecurrent=false}
