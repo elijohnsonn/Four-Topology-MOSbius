@@ -28,21 +28,20 @@ T {Artificially generate a clock signal and ensure it
 turns off after around .425ms, which is when the 
 scan in signal has fully propogated through the scan chain} 490 -490 0 0 0.4 0.4 {}
 T {VDD, GND, SCAN INPUT} 500 70 0 0 1 1 {}
-T {Scan chain input artificially generated to 
-enable folded cascode 3x sizing} 580 140 0 0 0.4 0.4 {}
+T {Scan chain input artificially generated to enable 
+folded cascode 1x and common source 1x sizing} 540 140 0 0 0.4 0.4 {}
 T {CL = 120p} -100 130 0 0 0.75 0.75 {}
 T {IBIAS1=IBIAS2=100u} -1100 140 0 0 0.4 0.4 {}
 T {IMPLEMENTATION} -1070 -700 0 0 1 1 {}
-T {Configure the folded cascode in 3× mode 
-as an inverting amplifier to amplify a 
-sine wave input by 5 while driving a 
-120pF capacitive load.} -1060 -640 0 0 0.4 0.4 {}
+T {Configure the folded cascode in 1× mode and the common source stage 
+in 1x mode as a two-stage inverting amplifier to amplify a sine wave 
+input by 5 while driving a 120pF capacitive load.} -1190 -630 0 0 0.4 0.4 {}
 T {DC = 1.65V
 500Hz Frequency 
 50mV Amplitude
-1ms Delay} -1790 130 0 0 0.5 0.5 {}
-T {DC = 1.65V} -1490 130 0 0 0.5 0.5 {}
-T {R1 = 100K} -1750 -370 0 0 0.75 0.75 {}
+1ms Delay} -1740 110 0 0 0.5 0.5 {}
+T {DC = 1.65V} -1490 110 0 0 0.5 0.5 {}
+T {R1 = 100K} -1500 -390 0 0 0.75 0.75 {}
 T {R2 = 500K} -730 420 0 0 0.75 0.75 {}
 T {Rm = 2.7K} -410 -300 0 0 0.75 0.75 {}
 T {Cc = 20p} -130 -290 0 0 0.75 0.75 {}
@@ -116,11 +115,15 @@ N -1380 -260 -1320 -260 {lab=#net6}
 N -730 360 -670 360 {lab=#net7}
 N -1080 -290 -940 -290 {lab=#net7}
 N -270 -220 -220 -220 {lab=#net9}
-N -1600 -290 -1080 -290 {lab=#net7}
-N -1600 -290 -1600 -230 {lab=#net7}
 N -610 360 -540 360 {lab=OUT_CS}
 N -1600 -30 -1600 70 {lab=GND}
-N -1600 -170 -1600 -90 {lab=INN_FOLDED}
+N -1600 -170 -1600 -90 {lab=#net10}
+N -1600 -230 -1600 -170 {lab=#net10}
+N -1350 -290 -1080 -290 {lab=#net7}
+N -1370 -290 -1350 -290 {lab=#net7}
+N -1580 -290 -1430 -290 {lab=#net10}
+N -1600 -290 -1580 -290 {lab=#net10}
+N -1600 -290 -1600 -230 {lab=#net10}
 C {vsource.sym} 650 350 0 0 {name=V3 value="PWL(0 0 0.0999m 0 0.1m 3.3 0.1499m 3.3 0.15m 0 0.39999m 0 0.4m 3.3 0.499999m 3.3 0.5m 0)" savecurrent=false}
 C {gnd.sym} 650 420 0 0 {name=l1 lab=GND}
 C {gnd.sym} -850 -390 0 0 {name=l2 lab=GND}
@@ -146,13 +149,13 @@ C {isource.sym} -980 50 2 1 {name=IBIAS2 value=100u}
 C {lab_pin.sym} -1030 110 0 0 {name=p9 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} -980 110 0 1 {name=p10 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} -50 -40 0 1 {name=p11 sig_type=std_logic lab=OUT_CS}
-C {devices/code_shown.sym} 1230 -140 0 0 {name=MODELS only_toplevel=true
+C {devices/code_shown.sym} 1270 -80 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 "}
-C {code_shown.sym} 1230 -30 0 0 {name=Simulation1 only_toplevel=false 
+C {code_shown.sym} 1270 30 0 0 {name=Simulation1 only_toplevel=false 
 
 value=
 
@@ -187,7 +190,7 @@ footprint=1206
 device="ceramic capacitor"}
 C {vsource.sym} -1470 10 0 0 {name=V7 value=1.65 savecurrent=false}
 C {libs/core_tb/schem/DUT.sym} -710 -160 0 0 {name=x1}
-C {res.sym} -1600 -200 2 0 {name=R2
+C {res.sym} -1400 -290 3 0 {name=R2
 value=100k
 footprint=1206
 device=resistor
@@ -199,4 +202,4 @@ device=resistor
 m=1}
 C {vsource.sym} -1600 -60 0 1 {name=V6 value= "dc 1.65 ac 0 sin(1.65 50m 500 1m)" savecurrent=false}
 C {gnd.sym} -1600 70 0 0 {name=l9 lab=GND}
-C {lab_pin.sym} -1600 -130 0 0 {name=p13 sig_type=std_logic lab=INN_FOLDED}
+C {lab_pin.sym} -1600 -290 0 0 {name=p13 sig_type=std_logic lab=INN_FOLDED}
