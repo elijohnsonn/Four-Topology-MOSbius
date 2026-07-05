@@ -39,11 +39,11 @@ N -110 -270 -110 -250 {lab=IBIAS2}
 N -110 -280 -40 -280 {lab=IBIAS2}
 N -40 -280 -40 -220 {lab=IBIAS2}
 N -70 -220 -40 -220 {lab=IBIAS2}
-N -110 -190 -110 -150 {lab=GND}
-N -180 -220 -110 -220 {lab=GND}
-N -180 -220 -180 -170 {lab=GND}
-N -180 -170 -110 -170 {lab=GND}
-N -110 -150 -110 -130 {lab=GND}
+N -110 -190 -110 -150 {lab=VSS}
+N -180 -220 -110 -220 {lab=VSS}
+N -180 -220 -180 -170 {lab=VSS}
+N -180 -170 -110 -170 {lab=VSS}
+N -110 -150 -110 -130 {lab=VSS}
 N -110 -340 -110 -310 {lab=IBIAS2}
 N -40 -220 20 -220 {lab=IBIAS2}
 N -460 -310 -460 -270 {lab=IBIAS1}
@@ -51,11 +51,11 @@ N -460 -270 -460 -250 {lab=IBIAS1}
 N -460 -280 -390 -280 {lab=IBIAS1}
 N -390 -280 -390 -220 {lab=IBIAS1}
 N -420 -220 -390 -220 {lab=IBIAS1}
-N -460 -190 -460 -150 {lab=GND}
-N -530 -220 -460 -220 {lab=GND}
-N -530 -220 -530 -170 {lab=GND}
-N -530 -170 -460 -170 {lab=GND}
-N -460 -150 -460 -130 {lab=GND}
+N -460 -190 -460 -150 {lab=#net1}
+N -530 -220 -460 -220 {lab=#net1}
+N -530 -220 -530 -170 {lab=#net1}
+N -530 -170 -460 -170 {lab=#net1}
+N -460 -150 -460 -130 {lab=#net1}
 N -460 -340 -460 -310 {lab=IBIAS1}
 N -390 -220 -330 -220 {lab=IBIAS1}
 N 320 370 320 400 {lab=IBIAS2}
@@ -149,7 +149,6 @@ model=nfet_03v3
 spiceprefix=X
 }
 C {lab_pin.sym} 20 -220 0 1 {name=p12 sig_type=std_logic lab=IBIAS2}
-C {lab_pin.sym} -110 -130 0 0 {name=p16 sig_type=std_logic lab=GND}
 C {symbols/nfet_03v3.sym} -440 -220 0 1 {name=M2
 L=.5u
 W=23u
@@ -165,7 +164,6 @@ model=nfet_03v3
 spiceprefix=X
 }
 C {lab_pin.sym} 330 710 0 1 {name=p13 sig_type=std_logic lab=IBIAS1}
-C {lab_pin.sym} -460 -130 0 0 {name=p14 sig_type=std_logic lab=GND}
 C {iopin.sym} 180 660 2 0 {name=p21 lab=INN_TELESCOPIC}
 C {iopin.sym} 170 560 2 0 {name=p22 lab=INP_TELESCOPIC}
 C {iopin.sym} 170 340 2 0 {name=p23 lab=INP_FOLDED}
@@ -217,3 +215,5 @@ C {lab_pin.sym} 920 740 0 0 {name=p20 sig_type=std_logic lab=IBIAS1}
 C {lab_pin.sym} 980 450 0 1 {name=p19 sig_type=std_logic lab=IBIAS1}
 C {lab_pin.sym} 320 400 0 1 {name=p17 sig_type=std_logic lab=IBIAS2}
 C {lab_pin.sym} -330 -220 0 1 {name=p18 sig_type=std_logic lab=IBIAS1}
+C {lab_pin.sym} -110 -130 0 0 {name=p16 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} -460 -130 0 0 {name=p14 sig_type=std_logic lab=VSS}
