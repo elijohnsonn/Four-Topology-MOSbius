@@ -53,7 +53,20 @@ N 160 420 400 420 {lab=output}
 N 400 380 400 420 {lab=output}
 N -120 -140 -120 -10 {lab=#net3}
 N -120 -140 -90 -140 {lab=#net3}
-C {libs/core_amps/ota_folded_cascode/ota_folded_cascode.sym} -160 -30 0 0 {name=x1}
+N -240 40 -240 70 {lab=#net4}
+N -240 70 -220 70 {lab=#net4}
+N -220 70 -220 80 {lab=#net4}
+N -260 40 -260 100 {lab=GND}
+N -270 100 -260 100 {lab=GND}
+N -380 10 -320 10 {lab=INN}
+N -380 10 -380 80 {lab=INN}
+N -390 80 -380 80 {lab=INN}
+N -390 -50 -320 -50 {lab=#net1}
+N -390 -70 -390 -50 {lab=#net1}
+N -180 -20 -150 -20 {lab=#net3}
+N -150 -20 -150 -10 {lab=#net3}
+N -150 -10 -140 -10 {lab=#net3}
+N -250 -100 -250 -80 {lab=VDD}
 C {libs/core_amps/cs_stage/cs_schematic.sym} 220 0 0 0 {name=x2}
 C {lab_pin.sym} 850 -160 0 0 {name=p1 sig_type=std_logic lab=VDD}
 C {vsource.sym} 850 -70 0 0 {name=V2 value= 3.3 savecurrent=false}
@@ -77,11 +90,11 @@ C {lab_pin.sym} 500 100 0 0 {name=p10 sig_type=std_logic lab=GND}
 C {lab_pin.sym} 570 10 0 1 {name=p11 sig_type=std_logic lab=output}
 C {capa.sym} 40 -140 3 1 {name=CLOAD1
 m=1
-value=120p
+value=20p
 footprint=1206
 device="ceramic capacitor"}
 C {res.sym} -60 -140 3 1 {name=R1
-value=500
+value=2.7k
 footprint=1206
 device=resistor
 m=1}
@@ -142,3 +155,4 @@ plot phase
 .endc
 
 "}
+C {libs/core_amps/ota_folded_cascode/schem/ota_folded_cascode.sym} -260 50 0 0 {name=x1}
