@@ -29,10 +29,11 @@ N 10 -10 10 -0 {lab=VDD}
 N 10 -10 50 -10 {lab=VDD}
 N -20 200 -20 240 {lab=VSS}
 N 10 200 10 240 {lab=VSS}
-N 0 -90 0 -80 {lab=#net1}
-N -0 -80 50 -80 {lab=#net1}
-C {libs/core_digital/schem/programmable_nfet.sym} 40 110 0 0 {name=x1 width=0.22u length=0.28u nf=1 mult=1}
-C {libs/core_digital/schem/programmable_pfet.sym} 30 -190 0 0 {name=x2 width=0.22u length=0.28u nf=1 mult=1}
+N 0 -90 0 -80 {lab=VSS}
+N -0 -80 50 -80 {lab=VSS}
+N 60 110 110 110 {lab=VSS}
+C {libs/core_digital/schem/programmable_nfet.sym} 40 110 0 0 {name=x1 width=23u length=0.5u nf=1 mult=1}
+C {libs/core_digital/schem/programmable_pfet.sym} 30 -190 0 0 {name=x2 width=7.8u length=0.5u nf=1 mult=10}
 C {lab_pin.sym} 450 -300 0 0 {name=p36 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 330 -300 0 0 {name=p37 sig_type=std_logic lab=VSS}
 C {iopin.sym} 330 -240 1 0 {name=p38 lab=VSS}
@@ -65,3 +66,4 @@ C {lab_pin.sym} 50 -10 0 1 {name=p14 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} -20 240 0 0 {name=p15 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 10 240 0 1 {name=p16 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 50 -80 0 1 {name=p17 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 110 110 0 1 {name=p18 sig_type=std_logic lab=VSS}
