@@ -8,17 +8,21 @@ L 4 460 -400 460 40 {}
 L 4 460 40 1130 40 {}
 L 4 1130 -400 1130 40 {}
 L 4 460 -400 1130 -400 {}
-L 4 -1750 -470 -1750 480 {}
+L 4 -1810 -470 -1810 480 {}
 L 4 -1750 480 60 480 {}
-L 4 60 -530 60 480 {}
+L 4 160 -530 160 480 {}
 L 4 -1750 -530 60 -530 {}
-L 4 -1750 -530 -1750 -460 {}
+L 4 -1810 -530 -1810 -460 {}
 L 4 350 200 350 480 {}
 L 4 350 480 1040 480 {}
 L 4 1230 200 1230 480 {}
 L 4 350 200 1040 200 {}
 L 4 1040 200 1230 200 {}
 L 4 1040 480 1230 480 {}
+L 4 -1810 -530 -1750 -530 {}
+L 4 -1810 480 -1750 480 {}
+L 4 60 480 160 480 {}
+L 4 60 -530 160 -530 {}
 T {CLOCK GENERATION} 510 -560 0 0 1 1 {}
 T {Artificially generate a clock signal and ensure it 
 turns off after around .425ms, which is when the 
@@ -26,13 +30,22 @@ scan in signal has fully propogated through the scan chain} 490 -490 0 0 0.4 0.4
 T {VDD, GND, SCAN INPUT} 500 70 0 0 1 1 {}
 T {Scan chain input artificially generated to 
 enable folded cascode 3x sizing} 580 140 0 0 0.4 0.4 {}
-T {CL = 120p} -160 130 0 0 0.75 0.75 {}
+T {CL = 120p} -100 130 0 0 0.75 0.75 {}
 T {IBIAS1=IBIAS2=100u} -1100 140 0 0 0.4 0.4 {}
 T {IMPLEMENTATION} -1070 -700 0 0 1 1 {}
 T {Configure the folded cascode in 3× mode 
 as an inverting amplifier to amplify a 
 sine wave input by 5 while driving a 
 120pF capacitive load.} -1060 -640 0 0 0.4 0.4 {}
+T {DC = 1.65V
+500Hz Frequency 
+50mV Amplitude
+1ms Delay} -1790 130 0 0 0.5 0.5 {}
+T {DC = 1.65V} -1490 130 0 0 0.5 0.5 {}
+T {R1 = 100K} -1750 -370 0 0 0.75 0.75 {}
+T {R2 = 500K} -730 420 0 0 0.75 0.75 {}
+T {Rm = 2.7K} -410 -300 0 0 0.75 0.75 {}
+T {Cc = 20p} -130 -290 0 0 0.75 0.75 {}
 N -650 -410 -650 -370 {lab=CLK}
 N -620 -410 -620 -370 {lab=SCAN_IN}
 N 650 270 650 320 {lab=SCAN_IN}
@@ -107,7 +120,7 @@ N -1600 -290 -1080 -290 {lab=#net7}
 N -1600 -290 -1600 -230 {lab=#net7}
 N -610 360 -540 360 {lab=OUT_CS}
 N -1600 -30 -1600 70 {lab=GND}
-N -1600 -170 -1600 -90 {lab=#net10}
+N -1600 -170 -1600 -90 {lab=INN_FOLDED}
 C {vsource.sym} 650 350 0 0 {name=V3 value="PWL(0 0 0.0999m 0 0.1m 3.3 0.1499m 3.3 0.15m 0 0.39999m 0 0.4m 3.3 0.499999m 3.3 0.5m 0)" savecurrent=false}
 C {gnd.sym} 650 420 0 0 {name=l1 lab=GND}
 C {gnd.sym} -850 -390 0 0 {name=l2 lab=GND}
@@ -147,18 +160,12 @@ value=
 .control
 tran 1u 10m
 
-meas tran en0_folded find v(x1.en_0_folded) at=.75m
-meas tran enb0_folded find v(x1.!en_0_folded) at=.75m
-meas tran en1_folded find v(x1.en_1_folded) at=.75m
-meas tran enb1_folded find v(x1.!en_1_folded) at=.75m
-meas tran en0_cs find v(x1.en_0_cs) at=.75m
-meas tran enb0_cs find v(x1.!en_0_cs) at=.75m
-meas tran en1_cs find v(x1.en_1_cs) at=.75m
-meas tran enb1_cs find v(x1.!en_1_cs) at=.75m
-print en0_folded enb0_folded en1_folded enb1_folded
-print en0_cs enb0_cs en1_cs enb1_cs
+plot v(OUT_CS) v(INN_FOLDED)
+meas tran vout_pp pp v(out_cs) from=5m to=10m
+meas tran vin_pp pp v(inn_folded) from=5m to=10m
+let gain = vout_pp / vin_pp
+print gain
 
-plot v(OUT_CS)
 .endc
 "}
 C {capa.sym} -90 20 0 0 {name=CLOAD
@@ -192,3 +199,4 @@ device=resistor
 m=1}
 C {vsource.sym} -1600 -60 0 1 {name=V6 value= "dc 1.65 ac 0 sin(1.65 50m 500 1m)" savecurrent=false}
 C {gnd.sym} -1600 70 0 0 {name=l9 lab=GND}
+C {lab_pin.sym} -1600 -130 0 0 {name=p13 sig_type=std_logic lab=INN_FOLDED}
