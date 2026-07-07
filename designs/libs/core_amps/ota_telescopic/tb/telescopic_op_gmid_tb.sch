@@ -71,6 +71,15 @@ let gmid_m10 = @m.x1.m.xm10.m0[gm]/@m.x1.m.xm10.m0[id]
 print gmid_m1 gmid_m2 gmid_m3 gmid_m4 gmid_m5
 print gmid_m6 gmid_m7 gmid_m8 gmid_m9 gmid_m10
 
+print @m.x1.m.xm1.m0[gm]
+print @m.x1.m.xm1.m0[gds]
+print @m.x1.m.xm2.m0[gm]
+print @m.x1.m.xm2.m0[gds]
+print @m.x1.m.xm6.m0[gm]
+print @m.x1.m.xm6.m0[gds]
+print @m.x1.m.xm7.m0[gm]
+print @m.x1.m.xm7.m0[gds]
+
 .endc
 "}
 C {libs/core_amps/ota_telescopic/ota_telescopic schematics/telescopic_cascode.sym} -680 -310 0 0 {name=x1}

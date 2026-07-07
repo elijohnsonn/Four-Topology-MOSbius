@@ -194,8 +194,8 @@ model=pfet_03v3
 spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 12410 20650 0 0 {name=M9
-L=0.5u
-W=30u
+L=1u
+W=27.1u
 nf=1
 m=2
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -208,8 +208,8 @@ model=nfet_03v3
 spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 12190 20650 0 1 {name=M10
-L=.5u
-W=20u
+L=1u
+W=27.1u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
