@@ -78,8 +78,8 @@ C {vsource.sym} -220 -50 0 0 {name=VINP value= 0 savecurrent=false}
 C {vsource.sym} -220 230 0 0 {name=VCM value= 0 savecurrent=false}
 C {lab_pin.sym} -220 290 0 0 {name=p9 sig_type=std_logic lab=GND}
 C {lab_pin.sym} -130 -190 0 0 {name=p10 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} -130 -130 0 0 {name=p11 sig_type=std_logic lab=GND}
-C {lab_pin.sym} -130 -150 0 0 {name=p12 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} -130 -150 0 0 {name=p11 sig_type=std_logic lab=GND}
+C {lab_pin.sym} -130 -130 0 0 {name=p12 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} -130 -170 0 0 {name=p13 sig_type=std_logic lab=GND}
 C {isource.sym} -700 -50 0 0 {name=IBIAS value=100u}
 C {lab_pin.sym} -700 -120 2 0 {name=p6 sig_type=std_logic lab=VDD}

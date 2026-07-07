@@ -4,15 +4,15 @@ K {}
 V {}
 S {}
 E {}
-L 4 140 -640 620 -640 {}
-L 4 620 -640 620 -360 {}
-L 4 140 -360 620 -360 {}
-L 4 140 -640 140 -360 {}
-T {Bias Voltage Circuit} 220 -700 0 0 0.6 0.6 {}
-N 830 -740 860 -740 {lab=EN0}
-N 830 -720 860 -720 {lab=!EN0}
-N 830 -700 860 -700 {lab=EN1}
-N 830 -680 860 -680 {lab=!EN1}
+L 4 510 -980 990 -980 {}
+L 4 990 -980 990 -700 {}
+L 4 510 -700 990 -700 {}
+L 4 510 -980 510 -700 {}
+T {Bias Voltage Circuit} 590 -1040 0 0 0.6 0.6 {}
+N 740 -1160 770 -1160 {lab=EN0}
+N 740 -1140 770 -1140 {lab=!EN0}
+N 740 -1120 770 -1120 {lab=EN1}
+N 740 -1100 770 -1100 {lab=!EN1}
 N 1380 -460 1380 -420 {lab=#net1}
 N 1380 -220 1410 -220 {lab=VSS}
 N 1190 -320 1320 -320 {lab=VG_BIAS}
@@ -52,40 +52,40 @@ N 1220 -970 1380 -970 {lab=#net4}
 N 1210 -1420 1240 -1420 {lab=VDD}
 N 1240 -1420 1520 -1420 {lab=VDD}
 N 1520 -1420 1550 -1420 {lab=VDD}
-N 300 -510 300 -470 {lab=VBN}
-N 340 -540 340 -490 {lab=VBN}
-N 300 -490 340 -490 {lab=VBN}
-N 300 -410 490 -410 {lab=VSS}
-N 300 -440 390 -440 {lab=VSS}
-N 390 -440 490 -440 {lab=VSS}
-N 530 -490 530 -440 {lab=VBP}
-N 490 -510 490 -470 {lab=VBP}
-N 490 -490 530 -490 {lab=VBP}
-N 340 -540 450 -540 {lab=VBN}
-N 390 -440 390 -410 {lab=VSS}
-N 230 -440 260 -440 {lab=VG_BIAS}
-N 280 -540 300 -540 {lab=VDD}
-N 280 -570 280 -540 {lab=VDD}
-N 280 -570 300 -570 {lab=VDD}
-N 300 -570 490 -570 {lab=VDD}
-N 490 -540 510 -540 {lab=VDD}
-N 510 -570 510 -540 {lab=VDD}
-N 490 -570 510 -570 {lab=VDD}
+N 670 -850 670 -810 {lab=VBN}
+N 710 -880 710 -830 {lab=VBN}
+N 670 -830 710 -830 {lab=VBN}
+N 670 -750 860 -750 {lab=VSS}
+N 670 -780 760 -780 {lab=VSS}
+N 760 -780 860 -780 {lab=VSS}
+N 900 -830 900 -780 {lab=VBP}
+N 860 -850 860 -810 {lab=VBP}
+N 860 -830 900 -830 {lab=VBP}
+N 710 -880 820 -880 {lab=VBN}
+N 760 -780 760 -750 {lab=VSS}
+N 600 -780 630 -780 {lab=VG_BIAS}
+N 650 -880 670 -880 {lab=VDD}
+N 650 -910 650 -880 {lab=VDD}
+N 650 -910 670 -910 {lab=VDD}
+N 670 -910 860 -910 {lab=VDD}
+N 860 -880 880 -880 {lab=VDD}
+N 880 -910 880 -880 {lab=VDD}
+N 860 -910 880 -910 {lab=VDD}
 C {lab_pin.sym} 1600 -1420 2 0 {name=p1 sig_type=std_logic lab=VDD}
-C {code_shown.sym} 2345 -1200 0 0 {name=s1 only_toplevel=false value="
+C {code_shown.sym} 1755 -1250 0 0 {name=s1 only_toplevel=false value="
 .include /foss/pdks/gf180mcuD/libs.tech/ngspice/design.ngspice
 .lib /foss/pdks/gf180mcuD/libs.tech/ngspice/sm141064.ngspice typical"}
 C {opin.sym} 1540 -960 0 0 {name=p9 lab=output}
 C {iopin.sym} 1580 -1420 3 0 {name=p5 lab=VDD}
-C {iopin.sym} 860 -720 0 0 {name=p15 lab=!EN0
+C {iopin.sym} 770 -1140 0 0 {name=p15 lab=!EN0
 }
-C {iopin.sym} 860 -700 0 0 {name=p16 lab=EN1}
-C {iopin.sym} 860 -740 0 0 {name=p17 lab=EN0}
-C {iopin.sym} 860 -680 0 0 {name=p18 lab=!EN1}
-C {lab_pin.sym} 830 -740 0 0 {name=p19 sig_type=std_logic lab=EN0}
-C {lab_pin.sym} 830 -720 0 0 {name=p20 sig_type=std_logic lab=!EN0}
-C {lab_pin.sym} 830 -680 0 0 {name=p22 sig_type=std_logic lab=!EN1}
-C {lab_pin.sym} 830 -700 0 0 {name=p21 sig_type=std_logic lab=EN1}
+C {iopin.sym} 770 -1120 0 0 {name=p16 lab=EN1}
+C {iopin.sym} 770 -1160 0 0 {name=p17 lab=EN0}
+C {iopin.sym} 770 -1100 0 0 {name=p18 lab=!EN1}
+C {lab_pin.sym} 740 -1160 0 0 {name=p19 sig_type=std_logic lab=EN0}
+C {lab_pin.sym} 740 -1140 0 0 {name=p20 sig_type=std_logic lab=!EN0}
+C {lab_pin.sym} 740 -1100 0 0 {name=p22 sig_type=std_logic lab=!EN1}
+C {lab_pin.sym} 740 -1120 0 0 {name=p21 sig_type=std_logic lab=EN1}
 C {lab_pin.sym} 1320 -380 0 0 {name=p48 sig_type=std_logic lab=EN0}
 C {lab_pin.sym} 1320 -350 0 0 {name=p49 sig_type=std_logic lab=!EN0}
 C {lab_pin.sym} 1320 -290 0 0 {name=p50 sig_type=std_logic lab=EN1}
@@ -145,7 +145,7 @@ C {lab_pin.sym} 1460 -1260 0 0 {name=p102 sig_type=std_logic lab=!EN1}
 C {lab_pin.sym} 1550 -1220 0 1 {name=p103 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 1610 -1180 2 0 {name=p3 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 1150 -1180 0 0 {name=p4 sig_type=std_logic lab=VDD}
-C {symbols/nfet_03v3.sym} 280 -440 0 0 {name=M1
+C {symbols/nfet_03v3.sym} 650 -780 0 0 {name=M1
 L=0.5u
 W=30u
 nf=1
@@ -159,7 +159,7 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {symbols/nfet_03v3.sym} 510 -440 0 1 {name=M2
+C {symbols/nfet_03v3.sym} 880 -780 0 1 {name=M2
 L=0.5u
 W=1.5u
 nf=1
@@ -173,7 +173,7 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {symbols/pfet_03v3.sym} 470 -540 0 0 {name=M4
+C {symbols/pfet_03v3.sym} 840 -880 0 0 {name=M4
 L=0.50u
 W=70u
 nf=1
@@ -187,7 +187,7 @@ sa=0 sb=0 sd=0
 model=pfet_03v3
 spiceprefix=X
 }
-C {symbols/pfet_03v3.sym} 320 -540 0 1 {name=M3
+C {symbols/pfet_03v3.sym} 690 -880 0 1 {name=M3
 L=0.50u
 W=70u
 nf=1
@@ -201,19 +201,19 @@ sa=0 sb=0 sd=0
 model=pfet_03v3
 spiceprefix=X
 }
-C {lab_pin.sym} 490 -490 0 0 {name=p11 sig_type=std_logic lab=VBP}
-C {lab_pin.sym} 300 -490 0 0 {name=p13 sig_type=std_logic lab=VBN}
-C {lab_pin.sym} 400 -570 1 0 {name=p2 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} 390 -410 1 1 {name=p6 sig_type=std_logic lab=VSS}
-C {lab_pin.sym} 230 -440 0 0 {name=p7 sig_type=std_logic lab=VG_BIAS}
+C {lab_pin.sym} 860 -830 0 0 {name=p11 sig_type=std_logic lab=VBP}
+C {lab_pin.sym} 670 -830 0 0 {name=p13 sig_type=std_logic lab=VBN}
+C {lab_pin.sym} 770 -910 1 0 {name=p2 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} 760 -750 1 1 {name=p6 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 600 -780 0 0 {name=p7 sig_type=std_logic lab=VG_BIAS}
 C {iopin.sym} 1460 -280 0 0 {name=p8 lab=VSS}
 C {iopin.sym} 1210 -320 3 0 {name=p10 lab=VG_BIAS}
-C {libs/core_digital/schem/programmable_pfet.sym} 1580 -1320 0 0 {name=x12 width=40u length=0.5u nf=1 mult=6}
+C {libs/core_digital/schem/programmable_pfet.sym} 1580 -1320 0 0 {name=x9 width=40u length=0.5u nf=1 mult=6}
 C {libs/core_digital/schem/programmable_pfet.sym} 1180 -1320 0 1 {name=x8 width=40u length=0.5u nf=1 mult=6}
-C {libs/core_digital/schem/programmable_pfet.sym} 1170 -1080 0 1 {name=x9 width=47u length=0.4u nf=1 mult=5}
-C {libs/core_digital/schem/programmable_pfet.sym} 1590 -1080 0 0 {name=x6 width=47u length=0.4u nf=1 mult=5}
-C {libs/core_digital/schem/programmable_nfet.sym} 1600 -830 0 0 {name=x7 width=45u length=0.5u nf=1 mult=6}
-C {libs/core_digital/schem/programmable_nfet.sym} 1160 -830 0 1 {name=x4 width=45u length=0.5u nf=1 mult=6}
-C {libs/core_digital/schem/programmable_nfet.sym} 1280 -590 0 0 {name=x5 width=30u length=0.5u nf=1 mult=1}
-C {libs/core_digital/schem/programmable_nfet.sym} 1480 -590 0 1 {name=x2 width=30u length=0.5u nf=1 mult=1}
-C {libs/core_digital/schem/programmable_nfet.sym} 1440 -310 0 0 {name=x3 width=30u length=0.5u nf=1 mult=2}
+C {libs/core_digital/schem/programmable_pfet.sym} 1170 -1080 0 1 {name=x6 width=47u length=0.5u nf=1 mult=5}
+C {libs/core_digital/schem/programmable_pfet.sym} 1590 -1080 0 0 {name=x7 width=47u length=0.5u nf=1 mult=5}
+C {libs/core_digital/schem/programmable_nfet.sym} 1600 -830 0 0 {name=x5 width=45u length=0.4u nf=1 mult=6}
+C {libs/core_digital/schem/programmable_nfet.sym} 1160 -830 0 1 {name=x4 width=45u length=0.4u nf=1 mult=6}
+C {libs/core_digital/schem/programmable_nfet.sym} 1280 -590 0 0 {name=x2 width=30u length=0.5u nf=1 mult=1}
+C {libs/core_digital/schem/programmable_nfet.sym} 1480 -590 0 1 {name=x3 width=30u length=0.5u nf=1 mult=1}
+C {libs/core_digital/schem/programmable_nfet.sym} 1440 -310 0 0 {name=x1 width=27.1u length=1u nf=1 mult=2}

@@ -99,8 +99,8 @@ spiceprefix=X
 }
 C {lab_pin.sym} -220 170 0 0 {name=p17 sig_type=std_logic lab=GND}
 C {lab_pin.sym} 310 -170 0 0 {name=p11 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} 310 -130 0 0 {name=p12 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} 310 -110 0 0 {name=p13 sig_type=std_logic lab=GND}
+C {lab_pin.sym} 310 -110 0 0 {name=p12 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} 310 -130 0 0 {name=p13 sig_type=std_logic lab=GND}
 C {lab_pin.sym} 310 -150 0 0 {name=p15 sig_type=std_logic lab=GND}
 C {libs/core_amps/ota_telescopic/programmable_ota_telescopic schematics/programmable_telescopic_cascode.sym} 330 -120 0 0 {name=x1}
 C {lab_pin.sym} -80 120 0 1 {name=p16 sig_type=std_logic lab=VG}

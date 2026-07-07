@@ -115,8 +115,8 @@ model=nfet_03v3
 spiceprefix=X
 }
 C {lab_pin.sym} -1310 -690 0 0 {name=p2 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} -1310 -630 0 0 {name=p13 sig_type=std_logic lab=GND}
-C {lab_pin.sym} -1310 -650 0 0 {name=p14 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} -1310 -650 0 0 {name=p13 sig_type=std_logic lab=GND}
+C {lab_pin.sym} -1310 -630 0 0 {name=p14 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} -1310 -670 0 0 {name=p15 sig_type=std_logic lab=GND}
 C {lab_pin.sym} -1260 -710 1 0 {name=p16 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} -1920 -330 0 0 {name=p17 sig_type=std_logic lab=GND}
