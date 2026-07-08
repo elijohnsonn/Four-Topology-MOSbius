@@ -79,7 +79,7 @@ C {symbols/nfet_03v3.sym} 410 -230 0 1 {name=M1
 L=.5u
 W=23u
 nf=1
-m=1
+m=1*0.589
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -154,4 +154,4 @@ let gain_db = vdb(output)
 "}
 C {lab_pin.sym} 780 -600 0 0 {name=p12 sig_type=std_logic lab=GND}
 C {lab_pin.sym} 780 -580 0 0 {name=p13 sig_type=std_logic lab=VDD}
-C {libs/core_amps/ota_5t/schem/programmable_5tOTA.sym} 990 -560 0 0 {name=x1}
+C {libs/core_amps/ota_5t/prgram_schem/programmable_5tOTA.sym} 990 -560 0 0 {name=x1}

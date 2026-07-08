@@ -68,7 +68,7 @@ C {symbols/nfet_03v3.sym} 430 -320 0 1 {name=M2
 L=.5u
 W=23u
 nf=1
-m=1
+m=1*0.589
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -130,4 +130,4 @@ plot v(output) gain
 C {vsource.sym} 630 -525 0 0 {name=VINP value= 0 savecurrent=false}
 C {vsource.sym} 630 -245 0 0 {name=VCM value= 0 savecurrent=false}
 C {lab_pin.sym} 630 -185 0 0 {name=p30 sig_type=std_logic lab=GND}
-C {libs/core_amps/ota_5t/schem/programmable_5tOTA.sym} 910 -600 0 0 {name=x1}
+C {libs/core_amps/ota_5t/prgram_schem/programmable_5tOTA.sym} 910 -600 0 0 {name=x1}

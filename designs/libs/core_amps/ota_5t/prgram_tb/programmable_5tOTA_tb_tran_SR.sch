@@ -14,13 +14,13 @@ T {-Driving Ideal 100 pF load capacitance
 Unity Step Response (1V step, 1.65V → 2.65V):
 
 1xW/L
-Slew Rate: 8.15 V/µs
+Slew Rate: 8.10 V/µs
 
 2xW/L
 Slew Rate: 17.05 V/µs
 
 3xW/L
-Slew Rate: 26.70 V/µs} 780 -200 0 0 0.5 0.5 {}
+Slew Rate: 24.91 V/µs} 780 -200 0 0 0.5 0.5 {}
 N -520 180 -520 220 {lab=VG_BIAS}
 N -520 220 -520 240 {lab=VG_BIAS}
 N -520 210 -450 210 {lab=VG_BIAS}
@@ -43,8 +43,8 @@ N -640 210 -640 220 {lab=GND}
 N -760 100 -760 160 {lab=GND}
 N 100 -210 100 -180 {lab=VDD}
 N 100 0 100 30 {lab=GND}
-N -70 -130 -10 -130 {lab=GND}
-N -70 -110 -10 -110 {lab=VDD}
+N -70 -130 -10 -130 {lab=VDD}
+N -70 -110 -10 -110 {lab=GND}
 N -70 -150 -10 -150 {lab=GND}
 N -70 -170 -10 -170 {lab=VDD}
 N -170 -70 -10 -70 {lab=input}
@@ -70,7 +70,7 @@ C {symbols/nfet_03v3.sym} -500 270 0 1 {name=M1
 L=.5u
 W=23u
 nf=1
-m=1
+m=1*0.589
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -107,8 +107,8 @@ value="
 .include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 "}
-C {lab_pin.sym} -70 -130 0 0 {name=p12 sig_type=std_logic lab=GND}
-C {lab_pin.sym} -70 -110 0 0 {name=p13 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} -70 -110 0 0 {name=p12 sig_type=std_logic lab=GND}
+C {lab_pin.sym} -70 -130 0 0 {name=p13 sig_type=std_logic lab=VDD}
 C {vsource.sym} -260 20 0 0 {name=VINP value= "PULSE(0 1 25u 1p 100n 2m 1)" savecurrent=false}
 C {vsource.sym} -260 300 0 0 {name=VCM value= 1.65 savecurrent=false}
 C {lab_pin.sym} -260 360 0 0 {name=p14 sig_type=std_logic lab=GND}
@@ -134,4 +134,4 @@ plot v(input) v(output)
 .endc
 
 "}
-C {libs/core_amps/ota_5t/schem/programmable_5tOTA.sym} 140 -90 0 0 {name=x1}
+C {libs/core_amps/ota_5t/prgram_schem/programmable_5tOTA.sym} 140 -90 0 0 {name=x1}
