@@ -52,7 +52,7 @@ C {symbols/nfet_03v3.sym} 600 -290 0 1 {name=M2
 L=.5u
 W=23u
 nf=1
-m=1
+m=1*0.589
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -87,7 +87,6 @@ C {lab_pin.sym} 1040 -690 0 0 {name=p28 sig_type=std_logic lab=GND}
 C {lab_pin.sym} 1040 -710 0 0 {name=p29 sig_type=std_logic lab=VDD}
 C {vsource.sym} 940 -400 0 0 {name=VCM1 value= 1.65 savecurrent=false}
 C {lab_pin.sym} 940 -340 0 0 {name=p10 sig_type=std_logic lab=GND}
-C {libs/core_amps/ota_5t/programmable_5tOTA.sym} 1250 -630 0 0 {name=x1}
 C {code_shown.sym} 0 -930 0 0 {name=Simulation1 only_toplevel=false 
 
 value=
@@ -118,3 +117,4 @@ print  @m.x1.x4.xm1.m0[vgs] @m.x1.x4.xm1.m0[vth] @m.x1.x4.xm1.m0[vds] m.x1.x4.xm
 
 "
 }
+C {libs/core_amps/ota_5t/prgram_schem/programmable_5tOTA.sym} 1250 -630 0 0 {name=x1}
