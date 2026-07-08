@@ -13,10 +13,11 @@ L 4 -70 830 1260 830 {}
 L 4 1260 110 1260 830 {}
 L 4 -70 110 1260 110 {}
 L 4 -70 110 -70 190 {}
-L 4 -650 -500 -650 -80 {}
-L 4 -650 -80 480 -80 {}
-L 4 480 -500 480 -80 {}
-L 4 -650 -500 480 -500 {}
+L 4 240 -500 240 -80 {}
+L 4 -480 -80 240 -80 {}
+L 4 -480 -490 -480 -80 {}
+L 4 -480 -500 240 -500 {}
+L 4 -480 -500 -480 -490 {}
 T {SCAN CHAIN} -790 110 0 0 1 1 {}
 T {CORE AMPLIFIERS} 360 20 0 0 1 1 {}
 T {BIAS AND POWER PINS} -400 -590 0 0 1 1 {}
@@ -27,39 +28,27 @@ N 980 550 980 580 {lab=VDD}
 N 300 510 300 540 {lab=VDD}
 N 290 210 290 240 {lab=VDD}
 N 930 210 930 240 {lab=VDD}
-N 400 -290 400 -230 {lab=VDD}
-N 280 -290 280 -230 {lab=VSS}
-N 330 670 330 710 {lab=IBIAS1}
+N 160 -290 160 -230 {lab=VDD}
+N 40 -290 40 -230 {lab=VSS}
+N 330 670 330 710 {lab=IBIAS}
 N 920 690 920 740 {lab=IBIAS1}
 N 290 380 290 410 {lab=VSS}
 N 930 420 930 450 {lab=VSS}
 N 980 660 980 710 {lab=VSS}
-N -110 -310 -110 -270 {lab=IBIAS2}
-N -110 -270 -110 -250 {lab=IBIAS2}
-N -110 -280 -40 -280 {lab=IBIAS2}
-N -40 -280 -40 -220 {lab=IBIAS2}
-N -70 -220 -40 -220 {lab=IBIAS2}
-N -110 -190 -110 -150 {lab=VSS}
-N -180 -220 -110 -220 {lab=VSS}
-N -180 -220 -180 -170 {lab=VSS}
-N -180 -170 -110 -170 {lab=VSS}
-N -110 -150 -110 -130 {lab=VSS}
-N -110 -340 -110 -310 {lab=IBIAS2}
-N -40 -220 20 -220 {lab=IBIAS2}
-N -460 -310 -460 -270 {lab=IBIAS1}
-N -460 -270 -460 -250 {lab=IBIAS1}
-N -460 -280 -390 -280 {lab=IBIAS1}
-N -390 -280 -390 -220 {lab=IBIAS1}
-N -420 -220 -390 -220 {lab=IBIAS1}
-N -460 -190 -460 -150 {lab=#net1}
-N -530 -220 -460 -220 {lab=#net1}
-N -530 -220 -530 -170 {lab=#net1}
-N -530 -170 -460 -170 {lab=#net1}
-N -460 -150 -460 -130 {lab=#net1}
-N -460 -340 -460 -310 {lab=IBIAS1}
-N -390 -220 -330 -220 {lab=IBIAS1}
-N 320 370 320 400 {lab=IBIAS2}
-N 980 410 980 450 {lab=IBIAS1}
+N -350 -310 -350 -270 {lab=IBIAS}
+N -350 -270 -350 -250 {lab=IBIAS}
+N -350 -280 -280 -280 {lab=IBIAS}
+N -280 -280 -280 -220 {lab=IBIAS}
+N -310 -220 -280 -220 {lab=IBIAS}
+N -350 -190 -350 -150 {lab=VSS}
+N -420 -220 -350 -220 {lab=VSS}
+N -420 -220 -420 -170 {lab=VSS}
+N -420 -170 -350 -170 {lab=VSS}
+N -350 -150 -350 -130 {lab=VSS}
+N -350 -340 -350 -310 {lab=IBIAS}
+N -280 -220 -220 -220 {lab=IBIAS}
+N 320 370 320 400 {lab=IBIAS}
+N 980 410 980 450 {lab=IBIAS}
 N 300 680 300 720 {lab=VSS}
 N 180 660 250 660 {lab=INN_TELESCOPIC}
 N 170 560 250 560 {lab=INP_TELESCOPIC}
@@ -122,10 +111,10 @@ C {iopin.sym} 430 310 2 1 {name=p35 lab=OUT_FOLDED}
 C {iopin.sym} 1100 330 2 1 {name=p1 lab=OUT_5T}
 C {iopin.sym} 440 610 2 1 {name=p2 lab=OUT_TELESCOPIC}
 C {iopin.sym} 1080 620 2 1 {name=p3 lab=OUT_CS}
-C {lab_pin.sym} 400 -290 0 0 {name=p36 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} 280 -290 0 0 {name=p37 sig_type=std_logic lab=VSS}
-C {iopin.sym} 280 -230 1 0 {name=p38 lab=VSS}
-C {iopin.sym} 400 -230 1 0 {name=p39 lab=VDD}
+C {lab_pin.sym} 160 -290 0 0 {name=p36 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} 40 -290 0 0 {name=p37 sig_type=std_logic lab=VSS}
+C {iopin.sym} 40 -230 1 0 {name=p38 lab=VSS}
+C {iopin.sym} 160 -230 1 0 {name=p39 lab=VDD}
 C {lab_pin.sym} 290 210 0 0 {name=p4 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 930 210 0 0 {name=p5 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 300 510 0 0 {name=p6 sig_type=std_logic lab=VDD}
@@ -134,7 +123,7 @@ C {lab_pin.sym} 290 410 0 0 {name=p8 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 300 720 0 0 {name=p9 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 980 710 0 1 {name=p10 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 930 450 0 0 {name=p11 sig_type=std_logic lab=VSS}
-C {symbols/nfet_03v3.sym} -90 -220 0 1 {name=M1
+C {symbols/nfet_03v3.sym} -330 -220 0 1 {name=M1
 L=1u
 W=27.1u
 nf=1
@@ -148,22 +137,8 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {lab_pin.sym} 20 -220 0 1 {name=p12 sig_type=std_logic lab=IBIAS2}
-C {symbols/nfet_03v3.sym} -440 -220 0 1 {name=M2
-L=.5u
-W=23u
-nf=1
-m=1
-ad="'int((nf+1)/2) * W/nf * 0.18u'"
-pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
-as="'int((nf+2)/2) * W/nf * 0.18u'"
-ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
-nrd="'0.18u / W'" nrs="'0.18u / W'"
-sa=0 sb=0 sd=0
-model=nfet_03v3
-spiceprefix=X
-}
-C {lab_pin.sym} 330 710 0 1 {name=p13 sig_type=std_logic lab=IBIAS1}
+C {lab_pin.sym} -220 -220 0 1 {name=p12 sig_type=std_logic lab=IBIAS}
+C {lab_pin.sym} 330 710 0 1 {name=p13 sig_type=std_logic lab=IBIAS}
 C {iopin.sym} 180 660 2 0 {name=p21 lab=INN_TELESCOPIC}
 C {iopin.sym} 170 560 2 0 {name=p22 lab=INP_TELESCOPIC}
 C {iopin.sym} 170 340 2 0 {name=p23 lab=INP_FOLDED}
@@ -208,12 +183,9 @@ C {lab_pin.sym} -510 510 3 0 {name=p65 sig_type=std_logic lab=EN_0_CS}
 C {lab_pin.sym} -490 510 3 0 {name=p66 sig_type=std_logic lab=!EN_0_CS}
 C {lab_pin.sym} -470 510 3 0 {name=p67 sig_type=std_logic lab=EN_1_CS}
 C {lab_pin.sym} -450 510 3 0 {name=p68 sig_type=std_logic lab=!EN_1_CS}
-C {iopin.sym} -460 -340 1 1 {name=p69 lab=IBIAS1}
-C {iopin.sym} -110 -340 1 1 {name=p70 lab=IBIAS2}
+C {iopin.sym} -350 -340 1 1 {name=p70 lab=IBIAS}
 C {libs/core_amps/ota_5t/prgram_schem/programmable_5tOTA.sym} 970 330 0 0 {name=x3}
-C {lab_pin.sym} 920 740 0 0 {name=p20 sig_type=std_logic lab=IBIAS1}
-C {lab_pin.sym} 980 450 0 1 {name=p19 sig_type=std_logic lab=IBIAS1}
-C {lab_pin.sym} 320 400 0 1 {name=p17 sig_type=std_logic lab=IBIAS2}
-C {lab_pin.sym} -330 -220 0 1 {name=p18 sig_type=std_logic lab=IBIAS1}
-C {lab_pin.sym} -110 -130 0 0 {name=p16 sig_type=std_logic lab=VSS}
-C {lab_pin.sym} -460 -130 0 0 {name=p14 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 920 740 0 0 {name=p20 sig_type=std_logic lab=IBIAS}
+C {lab_pin.sym} 980 450 0 1 {name=p19 sig_type=std_logic lab=IBIAS}
+C {lab_pin.sym} 320 400 0 1 {name=p17 sig_type=std_logic lab=IBIAS}
+C {lab_pin.sym} -350 -130 0 0 {name=p16 sig_type=std_logic lab=VSS}
