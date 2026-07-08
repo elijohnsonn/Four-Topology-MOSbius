@@ -31,7 +31,7 @@ T {VDD, GND, SCAN INPUT} 500 70 0 0 1 1 {}
 T {Scan chain input artificially generated to enable 
 folded cascode 1x and common source 1x sizing} 540 140 0 0 0.4 0.4 {}
 T {CL = 120p} -100 130 0 0 0.75 0.75 {}
-T {IBIAS1=IBIAS2=100u} -1100 140 0 0 0.4 0.4 {}
+T {IBIAS = 100u} -1100 140 0 0 0.4 0.4 {}
 T {IMPLEMENTATION} -1070 -700 0 0 1 1 {}
 T {Configure the folded cascode in 1× mode and the common source stage 
 in 1x mode as a two-stage inverting amplifier to amplify a sine wave 
@@ -74,56 +74,53 @@ N 740 -150 740 -130 {lab=GND}
 N 730 -280 730 -250 {lab=VDD}
 N -1030 -80 -940 -80 {lab=#net4}
 N -1030 -80 -1030 20 {lab=#net4}
-N -980 -50 -940 -50 {lab=#net5}
-N -980 -50 -980 20 {lab=#net5}
 N -1030 80 -1030 110 {lab=VDD}
-N -980 80 -980 110 {lab=VDD}
-N -1050 -260 -940 -260 {lab=#net6}
+N -1050 -260 -940 -260 {lab=#net5}
 N -110 -40 -50 -40 {lab=OUT_CS}
 N -90 -40 -90 -10 {lab=OUT_CS}
 N -90 50 -90 90 {lab=GND}
-N -1130 -260 -1050 -260 {lab=#net6}
-N -1210 -260 -1130 -260 {lab=#net6}
-N -1430 -260 -1380 -260 {lab=#net6}
-N -1470 -260 -1470 -210 {lab=#net6}
+N -1130 -260 -1050 -260 {lab=#net5}
+N -1210 -260 -1130 -260 {lab=#net5}
+N -1430 -260 -1380 -260 {lab=#net5}
+N -1470 -260 -1470 -210 {lab=#net5}
 N -1470 40 -1470 70 {lab=GND}
 N -540 360 -330 360 {lab=OUT_CS}
-N -1130 360 -730 360 {lab=#net7}
-N -1470 -260 -1430 -260 {lab=#net6}
-N -1470 -210 -1470 -20 {lab=#net6}
+N -1130 360 -730 360 {lab=#net6}
+N -1470 -260 -1430 -260 {lab=#net5}
+N -1470 -210 -1470 -20 {lab=#net5}
 N -460 -40 -280 -40 {lab=OUT_CS}
-N -460 -220 -370 -220 {lab=#net8}
-N -370 -220 -370 160 {lab=#net8}
-N -370 -220 -330 -220 {lab=#net8}
+N -460 -220 -370 -220 {lab=#net7}
+N -370 -220 -370 160 {lab=#net7}
+N -370 -220 -330 -220 {lab=#net7}
 N -160 -220 -130 -220 {lab=OUT_CS}
 N -130 -220 -130 -40 {lab=OUT_CS}
 N -130 -40 -110 -40 {lab=OUT_CS}
 N -280 -40 -130 -40 {lab=OUT_CS}
-N -1320 -260 -1210 -260 {lab=#net6}
-N -1200 360 -1130 360 {lab=#net7}
+N -1320 -260 -1210 -260 {lab=#net5}
+N -1200 360 -1130 360 {lab=#net6}
 N -330 360 -170 360 {lab=OUT_CS}
 N -170 -40 -170 360 {lab=OUT_CS}
-N -1150 -110 -940 -110 {lab=#net8}
-N -1150 -110 -1150 220 {lab=#net8}
-N -1150 220 -370 220 {lab=#net8}
-N -370 160 -370 220 {lab=#net8}
-N -1190 -200 -1080 -290 {lab=#net7}
-N -1200 -190 -1190 -200 {lab=#net7}
-N -1200 -190 -1200 350 {lab=#net7}
-N -1200 350 -1200 360 {lab=#net7}
-N -1380 -260 -1320 -260 {lab=#net6}
-N -730 360 -670 360 {lab=#net7}
-N -1080 -290 -940 -290 {lab=#net7}
-N -270 -220 -220 -220 {lab=#net9}
+N -1150 -110 -940 -110 {lab=#net7}
+N -1150 -110 -1150 220 {lab=#net7}
+N -1150 220 -370 220 {lab=#net7}
+N -370 160 -370 220 {lab=#net7}
+N -1190 -200 -1080 -290 {lab=#net6}
+N -1200 -190 -1190 -200 {lab=#net6}
+N -1200 -190 -1200 350 {lab=#net6}
+N -1200 350 -1200 360 {lab=#net6}
+N -1380 -260 -1320 -260 {lab=#net5}
+N -730 360 -670 360 {lab=#net6}
+N -1080 -290 -940 -290 {lab=#net6}
+N -270 -220 -220 -220 {lab=#net8}
 N -610 360 -540 360 {lab=OUT_CS}
 N -1600 -30 -1600 70 {lab=GND}
-N -1600 -170 -1600 -90 {lab=#net10}
-N -1600 -230 -1600 -170 {lab=#net10}
-N -1350 -290 -1080 -290 {lab=#net7}
-N -1370 -290 -1350 -290 {lab=#net7}
-N -1580 -290 -1430 -290 {lab=#net10}
-N -1600 -290 -1580 -290 {lab=#net10}
-N -1600 -290 -1600 -230 {lab=#net10}
+N -1600 -170 -1600 -90 {lab=INN_FOLDED}
+N -1600 -230 -1600 -170 {lab=INN_FOLDED}
+N -1350 -290 -1080 -290 {lab=#net6}
+N -1370 -290 -1350 -290 {lab=#net6}
+N -1580 -290 -1430 -290 {lab=INN_FOLDED}
+N -1600 -290 -1580 -290 {lab=INN_FOLDED}
+N -1600 -290 -1600 -230 {lab=INN_FOLDED}
 C {vsource.sym} 650 350 0 0 {name=V3 value="PWL(0 0 0.0999m 0 0.1m 3.3 0.1499m 3.3 0.15m 0 0.39999m 0 0.4m 3.3 0.499999m 3.3 0.5m 0)" savecurrent=false}
 C {gnd.sym} 650 420 0 0 {name=l1 lab=GND}
 C {gnd.sym} -850 -390 0 0 {name=l2 lab=GND}
@@ -144,10 +141,8 @@ C {vsource.sym} 830 -80 0 0 {name=V5 value="PWL(0 3.3 0.42501m 3.3 0.42502m 0)" 
 C {gnd.sym} 830 -30 0 0 {name=l6 lab=GND}
 C {gnd.sym} 740 -130 0 0 {name=l7 lab=GND}
 C {lab_pin.sym} 730 -280 0 0 {name=p6 sig_type=std_logic lab=VDD}
-C {isource.sym} -1030 50 2 0 {name=IBIAS1 value=100u}
-C {isource.sym} -980 50 2 1 {name=IBIAS2 value=100u}
+C {isource.sym} -1030 50 2 0 {name=IBIAS value=100u}
 C {lab_pin.sym} -1030 110 0 0 {name=p9 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} -980 110 0 1 {name=p10 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} -50 -40 0 1 {name=p11 sig_type=std_logic lab=OUT_CS}
 C {devices/code_shown.sym} 1270 -80 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
@@ -189,7 +184,6 @@ value=20p
 footprint=1206
 device="ceramic capacitor"}
 C {vsource.sym} -1470 10 0 0 {name=V7 value=1.65 savecurrent=false}
-C {libs/core_tb/schem/DUT.sym} -710 -160 0 0 {name=x1}
 C {res.sym} -1400 -290 3 0 {name=R2
 value=100k
 footprint=1206
@@ -203,3 +197,4 @@ m=1}
 C {vsource.sym} -1600 -60 0 1 {name=V6 value= "dc 1.65 ac 0 sin(1.65 50m 500 1m)" savecurrent=false}
 C {gnd.sym} -1600 70 0 0 {name=l9 lab=GND}
 C {lab_pin.sym} -1600 -290 0 0 {name=p13 sig_type=std_logic lab=INN_FOLDED}
+C {libs/core_tb/schem/DUT.sym} -710 -160 0 0 {name=x1}

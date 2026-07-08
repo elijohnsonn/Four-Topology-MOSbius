@@ -32,7 +32,7 @@ T {DC = 1.65V
 50mV Amplitude
 1ms Delay} -1590 200 0 0 0.5 0.5 {}
 T {DC = 1.65V} -1780 200 0 0 0.5 0.5 {}
-T {IBIAS1=IBIAS2=100u} -1200 220 0 0 0.4 0.4 {}
+T {IBIAS = 100u} -1200 220 0 0 0.4 0.4 {}
 T {IMPLEMENTATION} -1170 -620 0 0 1 1 {}
 T {Configure the folded cascode in 2× mode 
 as an inverting amplifier to amplify a 
@@ -67,17 +67,14 @@ N 390 -70 390 -50 {lab=GND}
 N 380 -200 380 -170 {lab=VDD}
 N -1130 0 -1040 0 {lab=#net4}
 N -1130 0 -1130 100 {lab=#net4}
-N -1080 30 -1040 30 {lab=#net5}
-N -1080 30 -1080 100 {lab=#net5}
 N -1130 160 -1130 190 {lab=VDD}
-N -1080 160 -1080 190 {lab=VDD}
 N -1210 -210 -1040 -210 {lab=INP_FOLDED}
-N -1150 -180 -1040 -180 {lab=#net6}
+N -1150 -180 -1040 -180 {lab=#net5}
 N -560 -140 -510 -140 {lab=OUT_FOLDED}
 N -510 -140 -380 -140 {lab=OUT_FOLDED}
 N -430 -140 -430 340 {lab=OUT_FOLDED}
-N -1230 0 -1230 340 {lab=#net6}
-N -1230 -130 -1230 -60 {lab=#net6}
+N -1230 0 -1230 340 {lab=#net5}
+N -1230 -130 -1230 -60 {lab=#net5}
 N -1710 120 -1710 150 {lab=GND}
 N -380 -140 -320 -140 {lab=OUT_FOLDED}
 N -1710 -210 -1710 -10 {lab=INP_FOLDED}
@@ -86,18 +83,18 @@ N -1710 -10 -1710 20 {lab=INP_FOLDED}
 N -360 -140 -360 -110 {lab=OUT_FOLDED}
 N -360 -50 -360 -10 {lab=GND}
 N -1710 20 -1710 60 {lab=INP_FOLDED}
-N -1230 -60 -1230 0 {lab=#net6}
-N -1230 -180 -1150 -180 {lab=#net6}
-N -1230 -180 -1230 -130 {lab=#net6}
-N -1310 -180 -1230 -180 {lab=#net6}
+N -1230 -60 -1230 0 {lab=#net5}
+N -1230 -180 -1150 -180 {lab=#net5}
+N -1230 -180 -1230 -130 {lab=#net5}
+N -1310 -180 -1230 -180 {lab=#net5}
 N -1420 -180 -1370 -180 {lab=INN_FOLDED}
 N -1570 -180 -1570 -130 {lab=INN_FOLDED}
 N -1570 120 -1570 150 {lab=GND}
 N -640 440 -430 440 {lab=OUT_FOLDED}
 N -430 340 -430 440 {lab=OUT_FOLDED}
 N -770 440 -640 440 {lab=OUT_FOLDED}
-N -1230 440 -830 440 {lab=#net6}
-N -1230 340 -1230 440 {lab=#net6}
+N -1230 440 -830 440 {lab=#net5}
+N -1230 340 -1230 440 {lab=#net5}
 N -1710 -210 -1660 -210 {lab=INP_FOLDED}
 N -1570 -180 -1530 -180 {lab=INN_FOLDED}
 N -1660 -210 -1570 -210 {lab=INP_FOLDED}
@@ -124,9 +121,7 @@ C {gnd.sym} 480 50 0 0 {name=l6 lab=GND}
 C {gnd.sym} 390 -50 0 0 {name=l7 lab=GND}
 C {lab_pin.sym} 380 -200 0 0 {name=p6 sig_type=std_logic lab=VDD}
 C {isource.sym} -1130 130 2 0 {name=IBIAS1 value=100u}
-C {isource.sym} -1080 130 2 1 {name=IBIAS2 value=100u}
 C {lab_pin.sym} -1130 190 0 0 {name=p9 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} -1080 190 0 1 {name=p10 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} -320 -140 0 1 {name=p11 sig_type=std_logic lab=OUT_FOLDED}
 C {devices/code_shown.sym} 880 -60 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
