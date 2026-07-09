@@ -32,7 +32,7 @@ T {DC = 1.65V
 50mV Amplitude
 1ms Delay} -1620 200 0 0 0.5 0.5 {}
 T {DC = 1.65V} -1810 200 0 0 0.5 0.5 {}
-T {IBIAS1=IBIAS2=100u} -1230 110 0 0 0.4 0.4 {}
+T {IBIAS1=100u} -1230 110 0 0 0.4 0.4 {}
 T {IMPLEMENTATION} -1200 -740 0 0 1 1 {}
 T {Configure the telescopic cascode in 2× mode 
 as an inverting amplifier to amplify a 
@@ -67,10 +67,7 @@ N 360 -190 360 -170 {lab=GND}
 N 350 -320 350 -290 {lab=VDD}
 N -1160 -120 -1070 -120 {lab=#net4}
 N -1160 -120 -1160 -20 {lab=#net4}
-N -1110 -90 -1070 -90 {lab=#net5}
-N -1110 -90 -1110 -20 {lab=#net5}
 N -1160 40 -1160 70 {lab=VDD}
-N -1110 40 -1110 70 {lab=VDD}
 N -1240 -210 -1070 -210 {lab=INP_TELESCOPIC}
 N -590 -140 -540 -140 {lab=OUT_TELESCOPIC}
 N -540 -140 -410 -140 {lab=OUT_TELESCOPIC}
@@ -123,9 +120,7 @@ C {gnd.sym} 450 -70 0 0 {name=l6 lab=GND}
 C {gnd.sym} 360 -170 0 0 {name=l7 lab=GND}
 C {lab_pin.sym} 350 -320 0 0 {name=p6 sig_type=std_logic lab=VDD}
 C {isource.sym} -1160 10 2 0 {name=IBIAS1 value=100u}
-C {isource.sym} -1110 10 2 1 {name=IBIAS2 value=100u}
 C {lab_pin.sym} -1160 70 0 0 {name=p9 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} -1110 70 0 1 {name=p10 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} -350 -140 0 1 {name=p11 sig_type=std_logic lab=OUT_TELESCOPIC}
 C {devices/code_shown.sym} 850 -180 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
