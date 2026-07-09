@@ -32,7 +32,7 @@ T {DC = 1.65V
 50mV Amplitude
 1ms Delay} -1620 200 0 0 0.5 0.5 {}
 T {DC = 1.65V} -1810 200 0 0 0.5 0.5 {}
-T {IBIAS1=IBIAS2=100u} -1230 110 0 0 0.4 0.4 {}
+T {IBIAS1=100u} -1230 110 0 0 0.4 0.4 {}
 T {IMPLEMENTATION} -1200 -740 0 0 1 1 {}
 T {Configure the telescopic cascode in 1× mode 
 as an inverting amplifier to amplify a 
@@ -67,14 +67,11 @@ N 360 -190 360 -170 {lab=GND}
 N 350 -320 350 -290 {lab=VDD}
 N -1160 -120 -1070 -120 {lab=#net4}
 N -1160 -120 -1160 -20 {lab=#net4}
-N -1110 -90 -1070 -90 {lab=#net5}
-N -1110 -90 -1110 -20 {lab=#net5}
 N -1160 40 -1160 70 {lab=VDD}
-N -1110 40 -1110 70 {lab=VDD}
 N -1240 -210 -1070 -210 {lab=INP_TELESCOPIC}
 N -590 -140 -540 -140 {lab=OUT_TELESCOPIC}
 N -540 -140 -410 -140 {lab=OUT_TELESCOPIC}
-N -1260 -130 -1260 -60 {lab=#net6}
+N -1260 -130 -1260 -60 {lab=#net5}
 N -1740 120 -1740 150 {lab=GND}
 N -410 -140 -350 -140 {lab=OUT_TELESCOPIC}
 N -1740 -210 -1740 -10 {lab=INP_TELESCOPIC}
@@ -83,25 +80,25 @@ N -1740 -10 -1740 20 {lab=INP_TELESCOPIC}
 N -390 -140 -390 -110 {lab=OUT_TELESCOPIC}
 N -390 -50 -390 -10 {lab=GND}
 N -1740 20 -1740 60 {lab=INP_TELESCOPIC}
-N -1260 -60 -1260 0 {lab=#net6}
-N -1260 -180 -1180 -180 {lab=#net6}
-N -1260 -180 -1260 -130 {lab=#net6}
-N -1340 -180 -1260 -180 {lab=#net6}
+N -1260 -60 -1260 0 {lab=#net5}
+N -1260 -180 -1180 -180 {lab=#net5}
+N -1260 -180 -1260 -130 {lab=#net5}
+N -1340 -180 -1260 -180 {lab=#net5}
 N -1450 -180 -1400 -180 {lab=INN_TELESCOPIC}
 N -1600 -180 -1600 -130 {lab=INN_TELESCOPIC}
 N -1600 120 -1600 150 {lab=GND}
 N -670 320 -460 320 {lab=OUT_TELESCOPIC}
 N -460 220 -460 320 {lab=OUT_TELESCOPIC}
 N -800 320 -670 320 {lab=OUT_TELESCOPIC}
-N -1260 320 -860 320 {lab=#net6}
+N -1260 320 -860 320 {lab=#net5}
 N -1740 -210 -1690 -210 {lab=INP_TELESCOPIC}
 N -1600 -180 -1560 -180 {lab=INN_TELESCOPIC}
 N -1690 -210 -1600 -210 {lab=INP_TELESCOPIC}
 N -1560 -180 -1450 -180 {lab=INN_TELESCOPIC}
 N -1600 -130 -1600 60 {lab=INN_TELESCOPIC}
 N -460 -140 -460 220 {lab=OUT_TELESCOPIC}
-N -1260 0 -1260 320 {lab=#net6}
-N -1180 -180 -1070 -180 {lab=#net6}
+N -1260 0 -1260 320 {lab=#net5}
+N -1180 -180 -1070 -180 {lab=#net5}
 C {vsource.sym} 390 310 0 0 {name=V3 value= "PWL(0 0 0.2999m 0 0.3m 3.3 0.349999m 3.3 0.35m 0)" savecurrent=false}
 C {gnd.sym} 390 380 0 0 {name=l1 lab=GND}
 C {gnd.sym} -980 -430 0 0 {name=l2 lab=GND}
@@ -123,9 +120,7 @@ C {gnd.sym} 450 -70 0 0 {name=l6 lab=GND}
 C {gnd.sym} 360 -170 0 0 {name=l7 lab=GND}
 C {lab_pin.sym} 350 -320 0 0 {name=p6 sig_type=std_logic lab=VDD}
 C {isource.sym} -1160 10 2 0 {name=IBIAS1 value=100u}
-C {isource.sym} -1110 10 2 1 {name=IBIAS2 value=100u}
 C {lab_pin.sym} -1160 70 0 0 {name=p9 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} -1110 70 0 1 {name=p10 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} -350 -140 0 1 {name=p11 sig_type=std_logic lab=OUT_TELESCOPIC}
 C {devices/code_shown.sym} 850 -180 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
