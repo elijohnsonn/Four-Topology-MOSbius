@@ -78,7 +78,7 @@ value="
 C {lab_pin.sym} -1260 -450 0 1 {name=p5 sig_type=std_logic lab=GND}
 C {capa.sym} -980 -560 0 0 {name=CLOAD
 m=1
-value=100p
+value=120p
 footprint=1206
 device="ceramic capacitor"}
 C {lab_pin.sym} -980 -500 0 0 {name=p7 sig_type=std_logic lab=GND}
@@ -101,8 +101,8 @@ C {lab_pin.sym} -1330 -210 0 0 {name=p11 sig_type=std_logic lab=GND}
 C {vcvs.sym} -1050 -230 0 1 {name=E1 value=1}
 C {lab_pin.sym} -1050 -160 0 0 {name=p10 sig_type=std_logic lab=GND}
 C {symbols/nfet_03v3.sym} -1840 -380 0 1 {name=M10
-L=.5u
-W=20u
+L=1u
+W=27.1u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
