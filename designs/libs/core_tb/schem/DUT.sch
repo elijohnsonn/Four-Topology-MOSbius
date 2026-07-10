@@ -31,7 +31,7 @@ N 930 210 930 240 {lab=VDD}
 N 160 -290 160 -230 {lab=VDD}
 N 40 -290 40 -230 {lab=VSS}
 N 330 670 330 710 {lab=IBIAS}
-N 920 690 920 740 {lab=IBIAS1}
+N 920 690 920 740 {lab=IBIAS}
 N 290 380 290 410 {lab=VSS}
 N 930 420 930 450 {lab=VSS}
 N 980 660 980 710 {lab=VSS}
@@ -51,7 +51,7 @@ N 320 370 320 400 {lab=IBIAS}
 N 980 410 980 450 {lab=IBIAS}
 N 300 680 300 720 {lab=VSS}
 N 180 660 250 660 {lab=INN_TELESCOPIC}
-N 170 560 250 560 {lab=INP_TELESCOPIC}
+N 170 560 250 560 {lab=EN_0_TELESCOPIC}
 N 170 360 240 360 {lab=INN_FOLDED}
 N 170 340 240 340 {lab=INP_FOLDED}
 N 780 410 820 410 {lab=INN_5T}
@@ -67,10 +67,10 @@ N 170 260 240 260 {lab=EN_0_FOLDED}
 N 170 280 240 280 {lab=!EN_0_FOLDED}
 N 170 300 240 300 {lab=EN_1_FOLDED}
 N 170 320 240 320 {lab=!EN_1_FOLDED}
-N 170 580 250 580 {lab=EN_0_TELESCOPIC}
-N 170 600 250 600 {lab=!EN_0_TELESCOPIC}
-N 170 620 250 620 {lab=EN_1_TELESCOPIC}
-N 170 640 250 640 {lab=!EN_1_TELESCOPIC}
+N 170 580 250 580 {lab=!EN_0_TELESCOPIC}
+N 170 600 250 600 {lab=EN_1_TELESCOPIC}
+N 170 620 250 620 {lab=!EN_1_TELESCOPIC}
+N 170 640 250 640 {lab=INP_TELESCOPIC}
 N 800 250 820 250 {lab=EN_0_5T}
 N 800 270 820 270 {lab=!EN_0_5T}
 N 800 290 820 290 {lab=EN_1_5T}
@@ -140,7 +140,7 @@ spiceprefix=X
 C {lab_pin.sym} -220 -220 0 1 {name=p12 sig_type=std_logic lab=IBIAS}
 C {lab_pin.sym} 330 710 0 1 {name=p13 sig_type=std_logic lab=IBIAS}
 C {iopin.sym} 180 660 2 0 {name=p21 lab=INN_TELESCOPIC}
-C {iopin.sym} 170 560 2 0 {name=p22 lab=INP_TELESCOPIC}
+C {iopin.sym} 170 640 2 0 {name=p22 lab=INP_TELESCOPIC}
 C {iopin.sym} 170 340 2 0 {name=p23 lab=INP_FOLDED}
 C {iopin.sym} 170 360 2 0 {name=p24 lab=INN_FOLDED}
 C {iopin.sym} 860 650 2 0 {name=p25 lab=IN_CS}
@@ -157,10 +157,10 @@ C {lab_pin.sym} -710 510 3 0 {name=p34 sig_type=std_logic lab=EN_1_FOLDED}
 C {lab_pin.sym} 170 300 0 0 {name=p40 sig_type=std_logic lab=EN_1_FOLDED}
 C {lab_pin.sym} -690 510 3 0 {name=p41 sig_type=std_logic lab=!EN_1_FOLDED}
 C {lab_pin.sym} 170 320 0 0 {name=p42 sig_type=std_logic lab=!EN_1_FOLDED}
-C {lab_pin.sym} 170 580 2 1 {name=p43 sig_type=std_logic lab=EN_0_TELESCOPIC}
-C {lab_pin.sym} 170 600 2 1 {name=p44 sig_type=std_logic lab=!EN_0_TELESCOPIC}
-C {lab_pin.sym} 170 620 0 0 {name=p45 sig_type=std_logic lab=EN_1_TELESCOPIC}
-C {lab_pin.sym} 170 640 0 0 {name=p46 sig_type=std_logic lab=!EN_1_TELESCOPIC}
+C {lab_pin.sym} 170 560 2 1 {name=p43 sig_type=std_logic lab=EN_0_TELESCOPIC}
+C {lab_pin.sym} 170 580 2 1 {name=p44 sig_type=std_logic lab=!EN_0_TELESCOPIC}
+C {lab_pin.sym} 170 600 0 0 {name=p45 sig_type=std_logic lab=EN_1_TELESCOPIC}
+C {lab_pin.sym} 170 620 0 0 {name=p46 sig_type=std_logic lab=!EN_1_TELESCOPIC}
 C {lab_pin.sym} 800 250 2 1 {name=p47 sig_type=std_logic lab=EN_0_5T}
 C {lab_pin.sym} 800 270 2 1 {name=p48 sig_type=std_logic lab=!EN_0_5T}
 C {lab_pin.sym} 800 290 0 0 {name=p49 sig_type=std_logic lab=EN_1_5T}
