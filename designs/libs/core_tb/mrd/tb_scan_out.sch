@@ -6,7 +6,7 @@ S {}
 E {}
 L 4 110 -320 110 120 {}
 L 4 110 120 780 120 {}
-L 4 780 -320 780 120 {}
+L 4 1140 -320 1140 120 {}
 L 4 110 -320 780 -320 {}
 L 4 -1850 -390 -1850 560 {}
 L 4 -1850 560 -40 560 {}
@@ -17,6 +17,8 @@ L 4 120 280 120 560 {}
 L 4 120 560 810 560 {}
 L 4 810 280 810 560 {}
 L 4 120 280 810 280 {}
+L 4 780 -320 1140 -320 {}
+L 4 780 120 1140 120 {}
 T {CLOCK GENERATION} 160 -480 0 0 1 1 {}
 T {Artificially generate a clock signal and ensure it 
 turns off after around .425ms, which is when the 
@@ -47,24 +49,33 @@ N 240 0 240 40 {lab=GND}
 N 240 -120 340 -120 {lab=#net1}
 N 240 -120 240 -110 {lab=#net1}
 N 510 -120 590 -120 {lab=CLK}
-N 430 -250 430 -170 {lab=#net2}
-N 430 -270 530 -270 {lab=#net2}
-N 530 -270 530 -250 {lab=#net2}
+N 430 -250 430 -170 {lab=!CLK_ENA}
+N 430 -270 530 -270 {lab=!CLK_ENA}
+N 530 -270 530 -250 {lab=!CLK_ENA}
 N 530 -190 530 -170 {lab=GND}
-N 430 -270 430 -250 {lab=#net2}
-N 430 -100 430 -60 {lab=#net3}
-N 430 -60 480 -60 {lab=#net3}
-N 480 -60 480 -30 {lab=#net3}
+N 430 -270 430 -250 {lab=!CLK_ENA}
+N 430 -100 430 -60 {lab=CLK_ENA}
+N 430 -60 480 -60 {lab=CLK_ENA}
+N 480 -60 480 -30 {lab=CLK_ENA}
 N 480 30 480 50 {lab=GND}
 N 390 -70 390 -50 {lab=GND}
 N 380 -200 380 -170 {lab=VDD}
-N -1130 0 -1040 0 {lab=#net4}
-N -1130 0 -1130 100 {lab=#net4}
+N -1130 0 -1040 0 {lab=#net2}
+N -1130 0 -1130 100 {lab=#net2}
 N -1130 160 -1130 190 {lab=VDD}
 N -360 -140 -360 -110 {lab=SCAN_OUT}
 N -360 -50 -360 -10 {lab=GND}
 N -560 -200 -360 -200 {lab=SCAN_OUT}
 N -360 -200 -360 -140 {lab=SCAN_OUT}
+N 730 -130 730 -80 {lab=GND}
+N 730 -80 730 -40 {lab=GND}
+N 730 -140 830 -140 {lab=GND}
+N 730 -140 730 -130 {lab=GND}
+N 1000 -140 1080 -140 {lab=CLK}
+N 920 -120 920 -80 {lab=!CLK_ENA}
+N 880 -90 880 -70 {lab=GND}
+N 870 -220 870 -190 {lab=VDD}
+N 920 -230 920 -190 {lab=CLK_ENA}
 C {vsource.sym} 420 430 0 0 {name=V3 value="PULSE(0 3.3 0 1n 1n 0.05m 0.1m)" savecurrent=false}
 C {gnd.sym} 420 500 0 0 {name=l1 lab=GND}
 C {gnd.sym} -950 -310 0 0 {name=l2 lab=GND}
@@ -87,19 +98,19 @@ C {gnd.sym} 390 -50 0 0 {name=l7 lab=GND}
 C {lab_pin.sym} 380 -200 0 0 {name=p6 sig_type=std_logic lab=VDD}
 C {isource.sym} -1130 130 2 0 {name=IBIAS value=100u}
 C {lab_pin.sym} -1130 190 0 0 {name=p9 sig_type=std_logic lab=VDD}
-C {devices/code_shown.sym} 880 -60 0 0 {name=MODELS only_toplevel=true
+C {devices/code_shown.sym} 950 330 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 "}
-C {code_shown.sym} 880 50 0 0 {name=Simulation1 only_toplevel=false 
+C {code_shown.sym} 950 440 0 0 {name=Simulation1 only_toplevel=false 
 
 value=
 
 "
 .control
-tran 1u 2m
+tran 1u 20m
 plot v(SCAN_IN) 
 plot v(SCAN_OUT)
 .endc
@@ -112,3 +123,12 @@ device="ceramic capacitor"}
 C {gnd.sym} -360 -10 0 0 {name=l8 lab=GND}
 C {libs/core_tb/schem/DUT.sym} -810 -80 0 0 {name=x1}
 C {lab_pin.sym} -360 -200 0 1 {name=p7 sig_type=std_logic lab=SCAN_OUT}
+C {lab_pin.sym} 530 -270 0 1 {name=p10 sig_type=std_logic lab=!CLK_ENA}
+C {gnd.sym} 730 -40 0 0 {name=l9 lab=GND}
+C {lab_pin.sym} 1080 -140 0 1 {name=p11 sig_type=std_logic lab=CLK}
+C {libs/core_digital/schem/transmission_gate.sym} 920 -140 0 0 {name=x3}
+C {gnd.sym} 880 -70 0 0 {name=l12 lab=GND}
+C {lab_pin.sym} 870 -220 0 0 {name=p12 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} 480 -60 0 1 {name=p13 sig_type=std_logic lab=CLK_ENA}
+C {lab_pin.sym} 920 -220 0 1 {name=p14 sig_type=std_logic lab=CLK_ENA}
+C {lab_pin.sym} 920 -80 0 1 {name=p15 sig_type=std_logic lab=!CLK_ENA}
