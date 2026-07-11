@@ -92,18 +92,28 @@ N -390 -310 -390 -170 {lab=#net1}
 N -390 -310 -360 -310 {lab=#net1}
 N -310 -260 -310 -230 {lab=GND}
 N -320 -410 -320 -360 {lab=VDD}
-N -500 -450 -500 -290 {lab=#net2}
-N -500 -450 -270 -450 {lab=#net2}
-N -270 -450 -270 -360 {lab=#net2}
+N -500 -450 -500 -290 {lab=!CLK_ENA}
+N -500 -450 -270 -450 {lab=!CLK_ENA}
+N -270 -450 -270 -360 {lab=!CLK_ENA}
 N -500 -230 -500 -200 {lab=GND}
 N -500 -200 -450 -200 {lab=GND}
 N -450 -230 -450 -200 {lab=GND}
-N -450 -290 -410 -290 {lab=#net3}
-N -410 -290 -410 -210 {lab=#net3}
-N -410 -210 -280 -210 {lab=#net3}
-N -280 -280 -280 -210 {lab=#net3}
-N -280 -280 -270 -280 {lab=#net3}
-N -270 -290 -270 -280 {lab=#net3}
+N -450 -290 -410 -290 {lab=CLK_ENA}
+N -410 -290 -410 -210 {lab=CLK_ENA}
+N -410 -210 -280 -210 {lab=CLK_ENA}
+N -280 -280 -280 -210 {lab=CLK_ENA}
+N -280 -280 -270 -280 {lab=CLK_ENA}
+N -270 -290 -270 -280 {lab=CLK_ENA}
+N -20 -560 -20 -540 {lab=CLK_ENA}
+N -20 -570 -20 -560 {lab=CLK_ENA}
+N -20 -470 -20 -430 {lab=!CLK_ENA}
+N 60 -490 60 -310 {lab=CLK}
+N -140 -310 60 -310 {lab=CLK}
+N -140 -490 -110 -490 {lab=GND}
+N -140 -490 -140 -420 {lab=GND}
+N -140 -420 -60 -420 {lab=GND}
+N -60 -440 -60 -420 {lab=GND}
+N -70 -570 -70 -540 {lab=VDD}
 C {vsource.sym} -390 -20 0 0 {name=V1 value=3.3 savecurrent=false}
 C {gnd.sym} -390 70 0 0 {name=l1 lab=GND}
 C {lab_wire.sym} -390 40 0 0 {name=p1 sig_type=std_logic lab=GND
@@ -219,20 +229,21 @@ C {lab_wire.sym} -200 0 0 0 {name=p10 sig_type=std_logic lab=!EN_0_FOLDED
 C {devices/code_shown.sym} 470 -240 0 0 {name=NGSPICE only_toplevel=true
 format="tcleval( @value )"
 value="* Transient Analysis - 10ms
-.tran 1u 1m
+.tran 1u 20m
 
 * NGSpice interactive plot command
 .control
   run
   plot V(scan_in) title 'Scan In' xlabel 'Time (s)' ylabel 'Voltage (V)'
+  plot V(CLK)
   plot V(EN_0_FOLDED) V(!EN_0_FOLDED) title 'Folded Enable 0' xlabel 'Time (s)' ylabel 'Voltage (V)'
-  plot V(EN_1_FOLDED) V(!EN_1_FOLDED) title 'Folded Enable 1' xlabel 'Time (s)' ylabel 'Voltage (V)'
-  plot V(EN_0_TELESCOPIC) V(!EN_0_TELESCOPIC) title 'Telescopic Enable 0' xlabel 'Time (s)' ylabel 'Voltage (V)'
-  plot V(EN_1_TELESCOPIC) V(!EN_1_TELESCOPIC) title 'Telescopic Enable 1' xlabel 'Time (s)' ylabel 'Voltage (V)'
-  plot V(EN_0_5T) V(!EN_0_5T) title '5T Enable 0' xlabel 'Time (s)' ylabel 'Voltage (V)'
-  plot V(EN_1_5T) V(!EN_1_5T) title '5T Enable 1' xlabel 'Time (s)' ylabel 'Voltage (V)' 
-  plot V(EN_0_CS) V(!EN_0_CS) title 'CS Enable 0' xlabel 'Time (s)' ylabel 'Voltage (V)'
-  plot V(EN_1_CS) V(!EN_1_CS) title 'CS Enable 1' xlabel 'Time (s)' ylabel 'Voltage (V)'
+  *plot V(EN_1_FOLDED) V(!EN_1_FOLDED) title 'Folded Enable 1' xlabel 'Time (s)' ylabel 'Voltage (V)'
+  *plot V(EN_0_TELESCOPIC) V(!EN_0_TELESCOPIC) title 'Telescopic Enable 0' xlabel 'Time (s)' ylabel 'Voltage (V)'
+ * plot V(EN_1_TELESCOPIC) V(!EN_1_TELESCOPIC) title 'Telescopic Enable 1' xlabel 'Time (s)' ylabel 'Voltage (V)'
+  *plot V(EN_0_5T) V(!EN_0_5T) title '5T Enable 0' xlabel 'Time (s)' ylabel 'Voltage (V)'
+ * plot V(EN_1_5T) V(!EN_1_5T) title '5T Enable 1' xlabel 'Time (s)' ylabel 'Voltage (V)' 
+ * plot V(EN_0_CS) V(!EN_0_CS) title 'CS Enable 0' xlabel 'Time (s)' ylabel 'Voltage (V)'
+ * plot V(EN_1_CS) V(!EN_1_CS) title 'CS Enable 1' xlabel 'Time (s)' ylabel 'Voltage (V)'
 .endc
 
 .end"}
@@ -272,4 +283,16 @@ C {lab_wire.sym} 110 20 0 0 {name=p25 sig_type=std_logic lab=!EN_0_5T
 C {lab_wire.sym} 140 10 0 0 {name=p26 sig_type=std_logic lab=EN_1_5T
 }
 C {lab_wire.sym} 130 -20 0 0 {name=p27 sig_type=std_logic lab=!EN_1_5T
+}
+C {libs/core_digital/schem/transmission_gate.sym} -20 -490 0 0 {name=x3}
+C {lab_wire.sym} -70 -560 0 0 {name=p28 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} -140 -440 0 0 {name=p29 sig_type=std_logic lab=GND
+}
+C {lab_wire.sym} -20 -440 0 0 {name=p30 sig_type=std_logic lab=!CLK_ENA
+}
+C {lab_wire.sym} -350 -450 0 0 {name=p31 sig_type=std_logic lab=!CLK_ENA
+}
+C {lab_wire.sym} -20 -550 0 0 {name=p32 sig_type=std_logic lab=CLK_ENA
+}
+C {lab_wire.sym} -300 -210 0 0 {name=p33 sig_type=std_logic lab=CLK_ENA
 }
