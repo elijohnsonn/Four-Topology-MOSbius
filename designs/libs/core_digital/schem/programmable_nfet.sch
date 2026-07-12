@@ -91,7 +91,7 @@ C {iopin.sym} 340 60 0 0 {name=p18 lab=s}
 C {ipin.sym} 380 -10 0 0 {name=p19 lab=b}
 C {symbols/nfet_03v3.sym} 460 110 0 0 {name=M2
 L=0.28u
-W=0.22u
+W=0.42u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -105,7 +105,7 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} -40 70 0 0 {name=M4
 L=0.28u
-W=0.22u
+W=0.42u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
