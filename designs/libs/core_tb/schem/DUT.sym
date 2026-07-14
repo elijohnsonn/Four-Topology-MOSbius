@@ -41,8 +41,8 @@ B 5 247.5 57.5 252.5 62.5 {name=OUT_TELESCOPIC dir=inout}
 B 5 247.5 117.5 252.5 122.5 {name=OUT_CS dir=inout}
 B 5 -232.5 47.5 -227.5 52.5 {name=IN_CS dir=inout}
 B 5 -232.5 17.5 -227.5 22.5 {name=INN_TELESCOPIC dir=inout}
-T {@DUT} -31.5 -26 0 0 0.5 0.5 {}
-T {@DUT} -5 8 0 0 0.2 0.2 {}
+T {@C1_FourTopMOS} -111.5 -46 0 0 0.5 0.5 {}
+T {@C1_FourTopMOS} -45 -2 0 0 0.2 0.2 {}
 T {CLK} 56 -185 3 1 0.2 0.2 {}
 T {SCAN_OUT} 225 -124 0 1 0.2 0.2 {}
 T {SCAN_IN} 86 -185 3 1 0.2 0.2 {}
