@@ -171,7 +171,7 @@ value=
 .control
 set color0 = white
 set color1 = black
-tran 1u 3m
+tran .01u 3m
 
 meas tran en0_folded find v(x1.en_0_folded) at=5m
 meas tran enb0_folded find v(x1.!en_0_folded) at=5m
@@ -190,7 +190,7 @@ meas tran vin_pp pp v(inn_folded) from=5m to=10m
 let gain = vout_pp / vin_pp
 print gain
 
-wrdata /foss/designs/libs/core_tb/etj/ota_folded/two_stage/txt_results/two_stage_tran.txt v(out_cs) v(inn_folded)
+wrdata /foss/designs/libs/core_tb/etj/ota_folded/two_stage/txt_results/two_stage_tran_fine.txt v(out_cs) v(inn_folded)
 
 .endc
 "}
