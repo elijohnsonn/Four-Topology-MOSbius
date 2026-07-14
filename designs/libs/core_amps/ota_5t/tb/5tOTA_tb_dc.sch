@@ -54,6 +54,8 @@ C {devices/lab_wire.sym} 550 -740 0 0 {name=p5 sig_type=std_logic lab=VDD}
 C {devices/gnd.sym} 700 -540 0 0 {name=l3 lab=GND}
 C {devices/code_shown.sym} 830 -640 0 0 {name=Simulation only_toplevel=false value="
 .control
+set color0 = white
+set color1 = black
 
 *DC Unity
 dc vin 0 4 0.001
