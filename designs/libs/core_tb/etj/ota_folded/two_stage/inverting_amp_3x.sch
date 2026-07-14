@@ -39,7 +39,7 @@ T {Configure the folded cascode in 3× mode and the common source stage
 in 3x mode as a two-stage inverting amplifier to amplify a sine wave 
 input by 5 while driving a 120pF capacitive load.} -1470 -610 0 0 0.4 0.4 {}
 T {DC = 1.65V
-500Hz Frequency 
+100kHz Frequency 
 200mV Amplitude
 1ms Delay} -2020 130 0 0 0.5 0.5 {}
 T {DC = 1.65V} -1770 130 0 0 0.5 0.5 {}
@@ -171,7 +171,7 @@ value=
 .control
 set color0 = white
 set color1 = black
-tran 1u 30m
+tran 1u 3m
 
 meas tran en0_folded find v(x1.en_0_folded) at=5m
 meas tran enb0_folded find v(x1.!en_0_folded) at=5m
@@ -189,6 +189,8 @@ meas tran vout_pp pp v(out_cs) from=5m to=10m
 meas tran vin_pp pp v(inn_folded) from=5m to=10m
 let gain = vout_pp / vin_pp
 print gain
+
+wrdata /foss/designs/libs/core_tb/etj/ota_folded/two_stage/txt_results/two_stage_tran.txt v(out_cs) v(inn_folded)
 
 .endc
 "}
@@ -220,7 +222,7 @@ value=500k
 footprint=1206
 device=resistor
 m=1}
-C {vsource.sym} -1880 -40 0 1 {name=V6 value= "dc 1.65 ac 0 sin(1.65 200m 500 1m)" savecurrent=false}
+C {vsource.sym} -1880 -40 0 1 {name=V6 value= "dc 1.65 ac 0 sin(1.65 200m 100k 1m)" savecurrent=false}
 C {gnd.sym} -1880 90 0 0 {name=l9 lab=GND}
 C {lab_pin.sym} -1880 -270 0 0 {name=p13 sig_type=std_logic lab=INN_FOLDED}
 C {gnd.sym} 560 -100 0 0 {name=l11 lab=GND}
