@@ -68,7 +68,7 @@ let gmid_xm4  = @m.x1.xm4.m0[gm]/@m.x1.xm4.m0[id]
 let gmid_xm5  = @m.x1.xm5.m0[gm]/@m.x1.xm5.m0[id]
 let gmid_xm6  = @m.x1.xm6.m0[gm]/@m.x1.xm6.m0[id]
 
-print gmid_xm1 gmid_xm2 gmid_xm3 gmid_xm4 gmid_xm5
+print gmid_xm1 gmid_xm2 gmid_xm3 gmid_xm4 gmid_xm5 gmid_xm6
 
 .endc
 "}
