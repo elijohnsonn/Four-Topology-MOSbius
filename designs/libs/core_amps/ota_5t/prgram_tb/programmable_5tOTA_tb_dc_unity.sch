@@ -113,7 +113,8 @@ value=
 
 "
 .control
-
+set color0 = white
+set color1 = black
 dc VINP 0 4 0.001
 let gain = deriv(v(output))
 meas dc icmr_low when gain = 0.95 rise = 1

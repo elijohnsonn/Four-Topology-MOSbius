@@ -119,6 +119,9 @@ value=
 
 "
 .control
+set color0 = white
+set color1 = black
+
 tran 1n 100u
 meas tran v_before find v(output) at=24u
 meas tran v_after find v(output) at=90u
