@@ -71,7 +71,7 @@ N -830 -680 -830 -650 {lab=VDD}
 N -910 -930 -740 -930 {lab=INP_TELESCOPIC}
 N -260 -860 -210 -860 {lab=OUT_TELESCOPIC}
 N -210 -860 -80 -860 {lab=OUT_TELESCOPIC}
-N -930 -850 -930 -780 {lab=#net6}
+N -930 -850 -930 -780 {lab=#net5}
 N -1410 -600 -1410 -570 {lab=GND}
 N -80 -860 -20 -860 {lab=OUT_TELESCOPIC}
 N -1410 -930 -1410 -730 {lab=INP_TELESCOPIC}
@@ -80,25 +80,25 @@ N -1410 -730 -1410 -700 {lab=INP_TELESCOPIC}
 N -60 -860 -60 -830 {lab=OUT_TELESCOPIC}
 N -60 -770 -60 -730 {lab=GND}
 N -1410 -700 -1410 -660 {lab=INP_TELESCOPIC}
-N -930 -780 -930 -720 {lab=#net6}
-N -930 -900 -850 -900 {lab=#net6}
-N -930 -900 -930 -850 {lab=#net6}
-N -1010 -900 -930 -900 {lab=#net6}
+N -930 -780 -930 -720 {lab=#net5}
+N -930 -900 -850 -900 {lab=#net5}
+N -930 -900 -930 -850 {lab=#net5}
+N -1010 -900 -930 -900 {lab=#net5}
 N -1120 -900 -1070 -900 {lab=INN_TELESCOPIC}
 N -1270 -900 -1270 -850 {lab=INN_TELESCOPIC}
 N -1270 -600 -1270 -570 {lab=GND}
 N -340 -400 -130 -400 {lab=OUT_TELESCOPIC}
 N -130 -500 -130 -400 {lab=OUT_TELESCOPIC}
 N -470 -400 -340 -400 {lab=OUT_TELESCOPIC}
-N -930 -400 -530 -400 {lab=#net6}
+N -930 -400 -530 -400 {lab=#net5}
 N -1410 -930 -1360 -930 {lab=INP_TELESCOPIC}
 N -1270 -900 -1230 -900 {lab=INN_TELESCOPIC}
 N -1360 -930 -1270 -930 {lab=INP_TELESCOPIC}
 N -1230 -900 -1120 -900 {lab=INN_TELESCOPIC}
 N -1270 -850 -1270 -660 {lab=INN_TELESCOPIC}
 N -130 -860 -130 -500 {lab=OUT_TELESCOPIC}
-N -930 -720 -930 -400 {lab=#net6}
-N -850 -900 -740 -900 {lab=#net6}
+N -930 -720 -930 -400 {lab=#net5}
+N -850 -900 -740 -900 {lab=#net5}
 C {vsource.sym} 720 -410 0 0 {name=V3 value= "PWL(0 0 0.2499m 0 0.25m 3.3 0.34999m 3.3 0.35m 0)" savecurrent=false}
 C {gnd.sym} 720 -340 0 0 {name=l1 lab=GND}
 C {gnd.sym} -650 -1150 0 0 {name=l2 lab=GND}
@@ -134,12 +134,15 @@ value=
 
 "
 .control
-tran 1u 10m
+set color0 = white
+set color1 = black
+tran 100u 18m
 plot v(OUT_TELESCOPIC) v(INN_TELESCOPIC)
 meas tran vout_pp pp v(out_telescopic) from=5m to=10m
 meas tran vin_pp pp v(inn_telescopic) from=5m to=10m
 let gain = vout_pp / vin_pp
 print gain
+
 .endc
 "}
 C {gnd.sym} -1410 -570 0 0 {name=l9 lab=GND}

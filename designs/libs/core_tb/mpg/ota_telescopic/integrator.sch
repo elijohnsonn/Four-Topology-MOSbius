@@ -25,11 +25,18 @@ T {VDD, GND, SCAN INPUT} 190 40 0 0 1 1 {}
 T {Scan chain input artificially generated to 
 enable telescopic cascode 1x sizing} 270 110 0 0 0.4 0.4 {}
 T {CL = 100p} -240 290 0 0 0.75 0.75 {}
-T {IBIAS1=IBIAS2=100u} -1130 120 0 0 0.4 0.4 {}
 T {IMPLEMENTATION} -1130 -730 0 0 1 1 {}
-T {Configure the telescopic cascode in 1× mode cascaded 
-with the common-source amplifier in 1x mode,
-while driving a 100pF capacitive load, measure gain and PM} -1120 -670 0 0 0.4 0.4 {}
+T {Configure the telescopic cascode in 1× mode, select C1 and R1 such that 
+output waveform is normalized to the input waveform} -1120 -670 0 0 0.4 0.4 {}
+T {C1 = 10n} -1020 120 0 0 0.75 0.75 {}
+T {R1 = 500k} -1510 220 0 0 0.75 0.75 {}
+T {DC = 1.65V
+100Hz Frequency 
+50mV Amplitude
+1ms Delay} -1120 290 0 0 0.5 0.5 {}
+T {IBIAS1=100u} -1080 30 0 0 0.4 0.4 {}
+T {DC = 1.65V
+} -1750 360 0 0 0.5 0.5 {}
 N -710 -440 -710 -400 {lab=CLK}
 N -680 -440 -680 -400 {lab=SCAN_IN}
 N 460 240 460 290 {lab=SCAN_IN}
@@ -59,10 +66,7 @@ N 430 -180 430 -160 {lab=GND}
 N 420 -310 420 -280 {lab=VDD}
 N -1090 -110 -1000 -110 {lab=#net4}
 N -1090 -110 -1090 -10 {lab=#net4}
-N -1040 -80 -1000 -80 {lab=#net5}
-N -1040 -80 -1040 -10 {lab=#net5}
 N -1090 50 -1090 80 {lab=VDD}
-N -1040 50 -1040 80 {lab=VDD}
 N -1170 -200 -1000 -200 {lab=INP_TELESCOPIC}
 N -1530 -200 -1170 -200 {lab=INP_TELESCOPIC}
 N -320 240 -320 270 {lab=OUT_TELESCOPIC}
@@ -108,9 +112,7 @@ C {gnd.sym} 520 -60 0 0 {name=l6 lab=GND}
 C {gnd.sym} 430 -160 0 0 {name=l7 lab=GND}
 C {lab_pin.sym} 420 -310 0 0 {name=p6 sig_type=std_logic lab=VDD}
 C {isource.sym} -1090 20 2 0 {name=IBIAS1 value=100u}
-C {isource.sym} -1040 20 2 1 {name=IBIAS2 value=100u}
 C {lab_pin.sym} -1090 80 0 0 {name=p9 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} -1040 80 0 1 {name=p10 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} -320 -130 0 1 {name=p11 sig_type=std_logic lab=OUT_TELESCOPIC}
 C {devices/code_shown.sym} 920 -170 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
@@ -127,15 +129,15 @@ C {gnd.sym} -320 370 0 0 {name=l8 lab=GND}
 C {lab_pin.sym} -1670 -200 0 0 {name=p12 sig_type=std_logic lab=INP_TELESCOPIC}
 C {libs/core_tb/schem/DUT.sym} -770 -190 0 0 {name=x1}
 C {lab_pin.sym} -1190 -170 0 0 {name=p13 sig_type=std_logic lab=INN_TELESCOPIC}
-C {vsource.sym} -1190 350 0 1 {name=VINP1 value= "dc 1.65 ac 0 sin(1.65 50m 3000 2m)" savecurrent=false}
+C {vsource.sym} -1190 350 0 1 {name=VINP1 value= "dc 1.65 ac 0 sin(1.65 50m 100 1m)" savecurrent=false}
 C {lab_pin.sym} -1190 410 0 0 {name=p7 sig_type=std_logic lab=GND}
 C {capa.sym} -920 200 3 1 {name=C1
 m=1
-value=.10n
+value=10n
 footprint=1206
 device="ceramic capacitor"}
 C {res.sym} -1190 250 0 1 {name=R1
-value=3333k
+value=500k
 footprint=1206
 device=resistor
 m=1}
@@ -146,10 +148,9 @@ value=
 "
 .control
 
-let FREQU = 3k
-let V_MID = 1.65
-
-tran 1u 10m
+set color0 = white
+set color1 = black
+tran 1u 30m
 
 plot v(OUT_TELESCOPIC) v(VIN)
 

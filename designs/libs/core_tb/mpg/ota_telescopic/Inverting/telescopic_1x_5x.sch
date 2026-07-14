@@ -134,7 +134,9 @@ value=
 
 "
 .control
-tran 1u 10m
+set color0 = white
+set color1 = black
+tran 1u 18m
 plot v(OUT_TELESCOPIC) v(INN_TELESCOPIC)
 meas tran vout_pp pp v(out_telescopic) from=5m to=10m
 meas tran vin_pp pp v(inn_telescopic) from=5m to=10m

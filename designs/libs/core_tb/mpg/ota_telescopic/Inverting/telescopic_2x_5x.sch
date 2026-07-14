@@ -71,7 +71,7 @@ N -1160 40 -1160 70 {lab=VDD}
 N -1240 -210 -1070 -210 {lab=INP_TELESCOPIC}
 N -590 -140 -540 -140 {lab=OUT_TELESCOPIC}
 N -540 -140 -410 -140 {lab=OUT_TELESCOPIC}
-N -1260 -130 -1260 -60 {lab=#net6}
+N -1260 -130 -1260 -60 {lab=#net5}
 N -1740 120 -1740 150 {lab=GND}
 N -410 -140 -350 -140 {lab=OUT_TELESCOPIC}
 N -1740 -210 -1740 -10 {lab=INP_TELESCOPIC}
@@ -80,25 +80,25 @@ N -1740 -10 -1740 20 {lab=INP_TELESCOPIC}
 N -390 -140 -390 -110 {lab=OUT_TELESCOPIC}
 N -390 -50 -390 -10 {lab=GND}
 N -1740 20 -1740 60 {lab=INP_TELESCOPIC}
-N -1260 -60 -1260 0 {lab=#net6}
-N -1260 -180 -1180 -180 {lab=#net6}
-N -1260 -180 -1260 -130 {lab=#net6}
-N -1340 -180 -1260 -180 {lab=#net6}
+N -1260 -60 -1260 0 {lab=#net5}
+N -1260 -180 -1180 -180 {lab=#net5}
+N -1260 -180 -1260 -130 {lab=#net5}
+N -1340 -180 -1260 -180 {lab=#net5}
 N -1450 -180 -1400 -180 {lab=INN_TELESCOPIC}
 N -1600 -180 -1600 -130 {lab=INN_TELESCOPIC}
 N -1600 120 -1600 150 {lab=GND}
 N -670 320 -460 320 {lab=OUT_TELESCOPIC}
 N -460 220 -460 320 {lab=OUT_TELESCOPIC}
 N -800 320 -670 320 {lab=OUT_TELESCOPIC}
-N -1260 320 -860 320 {lab=#net6}
+N -1260 320 -860 320 {lab=#net5}
 N -1740 -210 -1690 -210 {lab=INP_TELESCOPIC}
 N -1600 -180 -1560 -180 {lab=INN_TELESCOPIC}
 N -1690 -210 -1600 -210 {lab=INP_TELESCOPIC}
 N -1560 -180 -1450 -180 {lab=INN_TELESCOPIC}
 N -1600 -130 -1600 60 {lab=INN_TELESCOPIC}
 N -460 -140 -460 220 {lab=OUT_TELESCOPIC}
-N -1260 0 -1260 320 {lab=#net6}
-N -1180 -180 -1070 -180 {lab=#net6}
+N -1260 0 -1260 320 {lab=#net5}
+N -1180 -180 -1070 -180 {lab=#net5}
 C {vsource.sym} 390 310 0 0 {name=V3 value=  "PWL(0 0 0.2499m 0 0.25m 3.3 0.29999m 3.3 0.3m 0)" savecurrent=false}
 C {gnd.sym} 390 380 0 0 {name=l1 lab=GND}
 C {gnd.sym} -980 -430 0 0 {name=l2 lab=GND}
@@ -134,7 +134,9 @@ value=
 
 "
 .control
-tran 1u 10m
+set color0 = white
+set color1 = black
+tran 10u 18m
 plot v(OUT_TELESCOPIC) v(INN_TELESCOPIC)
 meas tran vout_pp pp v(out_telescopic) from=5m to=10m
 meas tran vin_pp pp v(inn_telescopic) from=5m to=10m
