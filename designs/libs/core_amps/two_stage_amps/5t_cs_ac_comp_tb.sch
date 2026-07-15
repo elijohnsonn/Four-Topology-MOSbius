@@ -59,7 +59,6 @@ N -350 30 -350 80 {lab=#net6}
 N -350 30 -340 30 {lab=#net6}
 N -480 -30 -340 -30 {lab=#net2}
 N -480 -30 -480 80 {lab=#net2}
-C {libs/core_amps/cs_stage/cs_schematic.sym} 220 0 0 0 {name=x2}
 C {lab_pin.sym} 850 -160 0 0 {name=p1 sig_type=std_logic lab=VDD}
 C {vsource.sym} 850 -70 0 0 {name=V2 value= 3.3 savecurrent=false}
 C {lab_pin.sym} 730 -160 0 0 {name=p3 sig_type=std_logic lab=GND}
@@ -148,3 +147,4 @@ plot phase
 
 "}
 C {libs/core_amps/ota_5t/schem/5tOTA.sym} -270 -10 0 0 {name=x1}
+C {libs/core_amps/cs_stage/schem/cs_schematic.sym} 220 0 0 0 {name=x2}
