@@ -1,1 +1,4 @@
-{}
+{
+  "core_digital_transmission_gate": "/foss/designs/libs/core_digital/layout/transmission_gate.gds",
+  "core_digital_inv1": "/foss/designs/libs/core_digital/layout/inv1.gds"
+}
