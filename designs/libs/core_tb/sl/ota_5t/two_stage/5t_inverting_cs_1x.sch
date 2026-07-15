@@ -29,12 +29,12 @@ turns off after around .425ms, which is when the
 scan in signal has fully propogated through the scan chain} 210 -470 0 0 0.4 0.4 {}
 T {VDD, GND, SCAN INPUT} 220 90 0 0 1 1 {}
 T {Scan chain input artificially generated to enable 
-5t 3x and common source 3x sizing} 260 160 0 0 0.4 0.4 {}
+5t 1x and common source 1x sizing} 260 160 0 0 0.4 0.4 {}
 T {CL = 120p} -380 150 0 0 0.75 0.75 {}
 T {IBIAS = 100u} -1380 160 0 0 0.4 0.4 {}
 T {IMPLEMENTATION} -1350 -680 0 0 1 1 {}
-T {Configure the 5t OTA in 3× mode and the common source stage 
-in 3x mode as a two-stage inverting amplifier to amplify a sine wave 
+T {Configure the 5t OTA in 1× mode and the common source stage 
+in 1x mode as a two-stage inverting amplifier to amplify a sine wave 
 input by 5 while driving a 120pF capacitive load.} -1470 -610 0 0 0.4 0.4 {}
 T {DC = 1.65V
 500Hz Frequency 
@@ -114,7 +114,7 @@ N -1550 -180 -1220 -180 {lab=#net5}
 N -1600 -210 -1220 -210 {lab=#net6}
 N -1480 -210 -1480 -170 {lab=#net6}
 N -410 -140 -410 -20 {lab=OUT_CS}
-C {vsource.sym} 360 370 0 0 {name=V3 value="PWL(0 0 0.0499m 0 0.05m 3.3 0.1499m 3.3 0.15m 0 0.1499m 0 0.15m 3.3 0.24999m 3.3 0.25m 0)" savecurrent=false}
+C {vsource.sym} 360 370 0 0 {name=V3 value="PWL(0 0 0.0999m 0 0.1m 3.3 0.1499m 3.3 0.15m 0.1999m 3.3 0.2m 0)" savecurrent=false}
 C {gnd.sym} 360 440 0 0 {name=l1 lab=GND}
 C {gnd.sym} -1130 -370 0 0 {name=l2 lab=GND}
 C {vsource.sym} 220 370 0 0 {name=V1 value=3.3 savecurrent=false}
@@ -197,7 +197,7 @@ footprint=1206
 device=resistor
 m=1}
 C {res.sym} -920 380 1 0 {name=R1
-value=500k
+value=250k
 footprint=1206
 device=resistor
 m=1}
