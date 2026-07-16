@@ -82,7 +82,7 @@ N 11490 20270 11490 20330 {lab=VDD}
 N 11490 20270 11770 20270 {lab=VDD}
 N 11580 20270 11580 20300 {lab=VDD}
 C {symbols/pfet_03v3.sym} 12530 20230 0 0 {name=M8
-L=0.4u
+L=0.5u
 W=47u
 nf=1
 m=5
@@ -96,7 +96,7 @@ model=pfet_03v3
 spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 12530 20350 0 0 {name=M4
-L=0.5u
+L=0.4u
 W=45u
 nf=1
 m=6
@@ -111,7 +111,7 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 12290 20440 0 0 {name=M1
 L=0.5u
-W=38u
+W=30u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -124,7 +124,7 @@ model=nfet_03v3
 spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 12330 20350 0 1 {name=M2
-L=0.5u
+L=0.4u
 W=45u
 nf=1
 m=6
@@ -139,7 +139,7 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 12570 20440 0 1 {name=M3
 L=0.5u
-W=38u
+W=30u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -166,7 +166,7 @@ model=pfet_03v3
 spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 12330 20230 0 1 {name=M6
-L=0.4u
+L=0.5u
 W=47u
 nf=1
 m=5

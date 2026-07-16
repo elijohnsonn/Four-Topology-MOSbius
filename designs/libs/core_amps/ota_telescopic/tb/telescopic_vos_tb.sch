@@ -4,7 +4,7 @@ K {}
 V {}
 S {}
 E {}
-N 380 -80 380 -20 {lab=GND}
+N 340 -70 340 -10 {lab=GND}
 N -70 -310 -70 -250 {lab=VDD}
 N -190 -310 -190 -250 {lab=GND}
 N -190 -190 -190 -140 {lab=GND}
@@ -12,29 +12,31 @@ N -70 -190 -70 -140 {lab=GND}
 N -70 -140 -70 -130 {lab=GND}
 N -190 -250 -190 -190 {lab=GND}
 N 400 -340 400 -280 {lab=VDD}
-N 430 -30 430 -10 {lab=#net1}
-N 430 50 430 90 {lab=VDD}
+N 420 -20 420 0 {lab=#net1}
+N 420 60 420 100 {lab=VDD}
 N 510 -190 630 -190 {lab=output}
 N 580 -190 580 -140 {lab=output}
 N 580 -80 580 -50 {lab=GND}
 N 190 -250 260 -250 {lab=input}
 N 100 -160 100 -120 {lab=GND}
 N 100 120 100 150 {lab=GND}
-N 430 -100 430 -30 {lab=#net1}
+N 420 -90 420 -20 {lab=#net1}
 N 100 -250 190 -250 {lab=input}
 N 100 -250 100 -220 {lab=input}
 N 100 -120 100 20 {lab=GND}
-N 260 -120 260 -60 {lab=#net2}
+N 220 -110 220 -50 {lab=#net2}
 N 510 -190 510 180 {lab=output}
 N 100 20 100 60 {lab=GND}
-N 260 -250 340 -210 {lab=input}
 N 390 -240 400 -280 {lab=VDD}
-N 390 -140 430 -100 {lab=#net1}
+N 380 -130 420 -90 {lab=#net1}
 N 440 -190 510 -190 {lab=output}
-N 320 -60 380 -80 {lab=GND}
-N 260 -120 340 -170 {lab=#net2}
+N 280 -50 340 -70 {lab=GND}
+N 220 -110 300 -160 {lab=#net2}
 N 100 50 100 120 {lab=GND}
-C {isource.sym} 430 20 2 0 {name=IBIAS value=100u}
+N 260 -250 310 -240 {lab=input}
+N 300 -220 310 -240 {lab=input}
+N 370 -250 390 -240 {lab=VDD}
+C {isource.sym} 420 30 2 0 {name=IBIAS value=100u}
 C {lab_pin.sym} -70 -310 0 0 {name=p1 sig_type=std_logic lab=VDD}
 C {vsource.sym} -70 -220 0 0 {name=V2 value= 3.3 savecurrent=false}
 C {lab_pin.sym} -190 -310 0 0 {name=p3 sig_type=std_logic lab=GND}
@@ -67,7 +69,7 @@ plot v(output)
 .endc
 "}
 C {lab_pin.sym} 400 -340 0 0 {name=p2 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} 380 -20 0 0 {name=p5 sig_type=std_logic lab=GND}
+C {lab_pin.sym} 340 -10 0 0 {name=p5 sig_type=std_logic lab=GND}
 C {capa.sym} 580 -110 0 0 {name=CLOAD
 m=1
 value=10p
@@ -75,9 +77,10 @@ footprint=1206
 device="ceramic capacitor"}
 C {lab_pin.sym} 580 -50 0 0 {name=p7 sig_type=std_logic lab=GND}
 C {lab_pin.sym} 630 -190 0 1 {name=p8 sig_type=std_logic lab=output}
-C {lab_pin.sym} 430 90 0 0 {name=p6 sig_type=std_logic lab=VDD}
-C {vsource.sym} 100 -190 0 0 {name=VINP value= "PULSE(0 .1 25u 1p 100n 2m 1)" savecurrent=false}
-C {vsource.sym} 290 -60 3 1 {name=VCM value= 1.65 savecurrent=false}
+C {lab_pin.sym} 420 100 0 0 {name=p6 sig_type=std_logic lab=VDD}
+C {vsource.sym} 100 -190 0 0 {name=VINP value= "PULSE(1.6 .1 25u 1p 100n 2m 1)" savecurrent=false}
+C {vsource.sym} 250 -50 3 1 {name=VCM value= 1.65 savecurrent=false}
 C {lab_pin.sym} 100 150 0 0 {name=p9 sig_type=std_logic lab=GND}
 C {lab_pin.sym} 150 -250 1 0 {name=p10 sig_type=std_logic lab=input}
-C {libs/core_amps/ota_telescopic/telescopic_cascode.sym} 270 -200 0 0 {name=X1}
+C {libs/core_amps/ota_telescopic/ota_telescopic schematics/telescopic_cascode.sym} 360 -120 0 0 {name=x1}
+C {lab_pin.sym} 360 -130 0 0 {name=p11 sig_type=std_logic lab=GND}

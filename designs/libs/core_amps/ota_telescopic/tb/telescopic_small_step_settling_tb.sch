@@ -35,6 +35,11 @@ N 70 -160 150 -160 {lab=input}
 N 70 -160 70 -140 {lab=input}
 N 160 -90 220 -90 {lab=output}
 N 160 -90 160 -30 {lab=output}
+N 220 -100 220 -90 {lab=output}
+N 280 -200 290 -190 {lab=VDD}
+N 360 -130 400 -120 {lab=output}
+N 280 -40 300 -70 {lab=#net1}
+N 280 -70 300 -40 {lab=GND}
 C {isource.sym} 280 80 2 0 {name=IBIAS value=100u}
 C {lab_pin.sym} -140 -240 0 0 {name=p1 sig_type=std_logic lab=VDD}
 C {vsource.sym} -140 -150 0 0 {name=V2 value= 3.3 savecurrent=false}
@@ -87,4 +92,4 @@ C {vsource.sym} 70 -110 0 1 {name=VINP value= "PULSE(0 .1 25u 1p 100n 2m 1)" sav
 C {vsource.sym} 70 170 0 0 {name=VCM value= 1.65 savecurrent=false}
 C {lab_pin.sym} 70 230 0 0 {name=p9 sig_type=std_logic lab=GND}
 C {lab_pin.sym} 120 -160 1 0 {name=p10 sig_type=std_logic lab=input}
-C {libs/core_amps/ota_telescopic/telescopic_cascode.sym} 280 -120 0 0 {name=X1}
+C {libs/core_amps/ota_telescopic/ota_telescopic schematics/telescopic_cascode.sym} 280 -60 0 0 {name=x1}
