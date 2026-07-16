@@ -100,8 +100,8 @@ C {lab_pin.sym} 150 -230 1 0 {name=p10 sig_type=std_logic lab=input}
 C {isource.sym} -160 -120 0 0 {name=IBIAS value=100u}
 C {lab_pin.sym} -160 -190 2 0 {name=p6 sig_type=std_logic lab=VDD}
 C {symbols/nfet_03v3.sym} -90 20 0 1 {name=M10
-L=.5u
-W=20u
+L=1u
+W=27.1u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"

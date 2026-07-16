@@ -68,9 +68,18 @@ let gmid_m7  = @m.x1.m.xm7.m0[gm]/@m.x1.m.xm7.m0[id]
 let gmid_m8  = @m.x1.m.xm8.m0[gm]/@m.x1.m.xm8.m0[id]
 let gmid_m9  = @m.x1.m.xm9.m0[gm]/@m.x1.m.xm9.m0[id]
 let gmid_m10 = @m.x1.m.xm10.m0[gm]/@m.x1.m.xm10.m0[id]
+let gmid_m11 = @m.x1.m.xm11.m0[gm]/@m.x1.m.xm11.m0[id]
+let gmid_m12 = @m.x1.m.xm12.m0[gm]/@m.x1.m.xm12.m0[id]
+let gmid_m13 = @m.x1.m.xm13.m0[gm]/@m.x1.m.xm13.m0[id]
+let gmid_m14 = @m.x1.m.xm14.m0[gm]/@m.x1.m.xm14.m0[id]
 print gmid_m1 gmid_m2 gmid_m3 gmid_m4 gmid_m5
 print gmid_m6 gmid_m7 gmid_m8 gmid_m9 gmid_m10
-
+print gmid_m11 gmid_m12 gmid_m13 gmid_m14
+print i(V2)
+print @m.x1.m.xm9.m0[id]
+print @m.x1.m.xm10.m0[id]
+print @m.x1.m.xm11.m0[id]
+print @m.x1.m.xm12.m0[id]
 print @m.x1.m.xm1.m0[gm]
 print @m.x1.m.xm1.m0[gds]
 print @m.x1.m.xm2.m0[gm]
