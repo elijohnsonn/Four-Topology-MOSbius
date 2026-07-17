@@ -18,9 +18,18 @@ L 4 -480 -80 240 -80 {}
 L 4 -480 -490 -480 -80 {}
 L 4 -480 -500 240 -500 {}
 L 4 -480 -500 -480 -490 {}
+L 4 -230 180 -230 690 {}
+L 4 -1030 180 -1030 690 {}
+L 4 -1030 180 -230 180 {}
+L 4 -1030 690 -230 690 {}
+L 4 -230 820 -230 1330 {}
+L 4 -1030 820 -1030 1330 {}
+L 4 -1030 820 -230 820 {}
+L 4 -1030 1330 -230 1330 {}
 T {SCAN CHAIN} -790 110 0 0 1 1 {}
 T {CORE AMPLIFIERS} 360 20 0 0 1 1 {}
 T {BIAS AND POWER PINS} -400 -590 0 0 1 1 {}
+T {PULL DOWNS} -800 1360 0 0 1 1 {}
 N 400 310 430 310 {lab=OUT_FOLDED}
 N 1050 330 1100 330 {lab=OUT_5T}
 N 1030 620 1080 620 {lab=OUT_CS}
@@ -103,6 +112,24 @@ N -470 470 -470 510 {lab=EN_1_CS}
 N -450 470 -450 510 {lab=!EN_1_CS}
 N 410 610 440 610 {lab=OUT_TELESCOPIC}
 N 860 650 870 650 {lab=IN_CS}
+N -330 1040 -330 1080 {lab=EN_0_FOLDED}
+N -420 1040 -420 1080 {lab=EN_1_FOLDED}
+N -500 1040 -500 1080 {lab=EN_0_TELESCOPIC}
+N -580 1040 -580 1080 {lab=EN_1_TELESCOPIC}
+N -670 1040 -670 1080 {lab=EN_0_5T}
+N -760 1040 -760 1080 {lab=EN_1_5T}
+N -860 1040 -860 1080 {lab=EN_0_CS}
+N -950 1040 -950 1080 {lab=EN_1_CS}
+N -950 1140 -950 1190 {lab=#net1}
+N -950 1190 -330 1190 {lab=#net1}
+N -330 1140 -330 1190 {lab=#net1}
+N -420 1140 -420 1180 {lab=#net1}
+N -420 1180 -420 1190 {lab=#net1}
+N -500 1140 -500 1190 {lab=#net1}
+N -580 1140 -580 1190 {lab=#net1}
+N -670 1140 -670 1190 {lab=#net1}
+N -760 1140 -760 1190 {lab=#net1}
+N -860 1140 -860 1190 {lab=#net1}
 C {libs/core_digital/schem/scan_chain.sym} -610 430 0 0 {name=x1}
 C {libs/core_amps/ota_folded_cascode/prgrm_schem/programmable_folded_cascode.sym} 260 310 0 0 {name=x2}
 C {libs/core_amps/ota_telescopic/programmable_ota_telescopic schematics/programmable_telescopic_cascode.sym} 270 610 0 0 {name=x4}
@@ -189,3 +216,52 @@ C {lab_pin.sym} 920 740 0 0 {name=p20 sig_type=std_logic lab=IBIAS}
 C {lab_pin.sym} 980 450 0 1 {name=p19 sig_type=std_logic lab=IBIAS}
 C {lab_pin.sym} 320 400 0 1 {name=p17 sig_type=std_logic lab=IBIAS}
 C {lab_pin.sym} -350 -130 0 0 {name=p16 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} -330 1040 1 0 {name=p14 sig_type=std_logic lab=EN_0_FOLDED}
+C {lab_pin.sym} -420 1040 1 0 {name=p18 sig_type=std_logic lab=EN_1_FOLDED}
+C {lab_pin.sym} -500 1040 1 0 {name=p69 sig_type=std_logic lab=EN_0_TELESCOPIC}
+C {lab_pin.sym} -580 1040 1 0 {name=p71 sig_type=std_logic lab=EN_1_TELESCOPIC}
+C {lab_pin.sym} -670 1040 1 0 {name=p72 sig_type=std_logic lab=EN_0_5T}
+C {lab_pin.sym} -760 1040 1 0 {name=p73 sig_type=std_logic lab=EN_1_5T}
+C {lab_pin.sym} -860 1040 1 0 {name=p74 sig_type=std_logic lab=EN_0_CS}
+C {lab_pin.sym} -950 1040 1 0 {name=p75 sig_type=std_logic lab=EN_1_CS}
+C {res.sym} -950 1110 0 0 {name=R1
+value=10k
+footprint=1206
+device=resistor
+m=1}
+C {res.sym} -860 1110 0 0 {name=R2
+value=10k
+footprint=1206
+device=resistor
+m=1}
+C {res.sym} -760 1110 0 0 {name=R3
+value=10k
+footprint=1206
+device=resistor
+m=1}
+C {res.sym} -670 1110 0 0 {name=R4
+value=10k
+footprint=1206
+device=resistor
+m=1}
+C {res.sym} -580 1110 0 0 {name=R5
+value=10k
+footprint=1206
+device=resistor
+m=1}
+C {res.sym} -500 1110 0 0 {name=R6
+value=10k
+footprint=1206
+device=resistor
+m=1}
+C {res.sym} -420 1110 0 0 {name=R7
+value=10k
+footprint=1206
+device=resistor
+m=1}
+C {res.sym} -330 1110 0 0 {name=R8
+value=10k
+footprint=1206
+device=resistor
+m=1}
+C {lab_pin.sym} -620 1190 3 0 {name=p76 sig_type=std_logic lab=VSS}
