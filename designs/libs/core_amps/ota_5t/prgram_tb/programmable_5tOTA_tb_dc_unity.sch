@@ -43,10 +43,10 @@ N 210 -300 210 -290 {lab=GND}
 N 90 -410 90 -350 {lab=GND}
 N 870 -720 870 -690 {lab=VDD}
 N 870 -510 870 -480 {lab=GND}
-N 700 -640 760 -640 {lab=GND}
-N 700 -620 760 -620 {lab=VDD}
-N 700 -660 760 -660 {lab=GND}
-N 700 -680 760 -680 {lab=VDD}
+N 700 -640 760 -640 {lab=VDD}
+N 700 -620 760 -620 {lab=GND}
+N 700 -660 760 -660 {lab=VDD}
+N 700 -680 760 -680 {lab=GND}
 N 1130 -500 1130 -470 {lab=GND}
 N 1130 -600 1130 -570 {lab=output}
 N 1130 -570 1130 -560 {lab=output}
@@ -65,10 +65,10 @@ N 1230 -600 1230 -340 {lab=output}
 N 990 -600 1010 -600 {lab=output}
 C {title.sym} 190 -70 0 0 {name=l1 author="Songhang Li"}
 C {symbols/nfet_03v3.sym} 430 -320 0 1 {name=M2
-L=.5u
+L=1u
 W=23u
 nf=1
-m=1*0.589
+m=1*0.589*2
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -90,8 +90,8 @@ C {lab_pin.sym} 410 -230 0 0 {name=p20 sig_type=std_logic lab=GND}
 C {lab_pin.sym} 410 -550 0 0 {name=p21 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 870 -720 0 1 {name=p22 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 870 -490 0 0 {name=p23 sig_type=std_logic lab=GND}
-C {lab_pin.sym} 700 -680 0 0 {name=p24 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} 700 -660 0 0 {name=p25 sig_type=std_logic lab=GND}
+C {lab_pin.sym} 700 -660 0 0 {name=p24 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} 700 -680 0 0 {name=p25 sig_type=std_logic lab=GND}
 C {lab_pin.sym} 1290 -600 0 1 {name=p26 sig_type=std_logic lab=output}
 C {capa.sym} 1130 -530 0 0 {name=CLOAD
 m=1
@@ -105,15 +105,16 @@ value="
 .include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 "}
-C {lab_pin.sym} 700 -640 0 0 {name=p28 sig_type=std_logic lab=GND}
-C {lab_pin.sym} 700 -620 0 0 {name=p29 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} 700 -620 0 0 {name=p28 sig_type=std_logic lab=GND}
+C {lab_pin.sym} 700 -640 0 0 {name=p29 sig_type=std_logic lab=VDD}
 C {code_shown.sym} 50 -840 0 0 {name=Simulation1 only_toplevel=false 
 
 value=
 
 "
 .control
-
+set color0 = white
+set color1 = black
 dc VINP 0 4 0.001
 let gain = deriv(v(output))
 meas dc icmr_low when gain = 0.95 rise = 1

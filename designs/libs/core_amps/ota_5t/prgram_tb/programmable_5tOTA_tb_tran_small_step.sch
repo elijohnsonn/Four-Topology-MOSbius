@@ -30,8 +30,8 @@ N 100 -230 100 -200 {lab=VDD}
 N 100 -20 100 10 {lab=GND}
 N -70 -150 -10 -150 {lab=VDD}
 N -70 -130 -10 -130 {lab=GND}
-N -70 -170 -10 -170 {lab=GND}
-N -70 -190 -10 -190 {lab=VDD}
+N -70 -170 -10 -170 {lab=VDD}
+N -70 -190 -10 -190 {lab=GND}
 N -170 -90 -10 -90 {lab=input}
 N -50 220 90 220 {lab=output}
 N 150 220 270 220 {lab=output}
@@ -76,8 +76,8 @@ C {lab_pin.sym} -550 20 0 0 {name=p5 sig_type=std_logic lab=GND}
 C {lab_pin.sym} -550 -300 0 0 {name=p7 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 100 -230 0 1 {name=p8 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 100 10 0 0 {name=p9 sig_type=std_logic lab=GND}
-C {lab_pin.sym} -70 -150 0 0 {name=p10 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} -70 -130 0 0 {name=p11 sig_type=std_logic lab=GND}
+C {lab_pin.sym} -70 -170 0 0 {name=p10 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} -70 -190 0 0 {name=p11 sig_type=std_logic lab=GND}
 C {lab_pin.sym} 510 -110 0 1 {name=p17 sig_type=std_logic lab=output}
 C {capa.sym} 350 -40 0 0 {name=CLOAD
 m=1
@@ -91,8 +91,8 @@ value="
 .include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 "}
-C {lab_pin.sym} -70 -170 0 0 {name=p12 sig_type=std_logic lab=GND}
-C {lab_pin.sym} -70 -190 0 0 {name=p13 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} -70 -130 0 0 {name=p12 sig_type=std_logic lab=GND}
+C {lab_pin.sym} -70 -150 0 0 {name=p13 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} -210 -90 1 0 {name=p15 sig_type=std_logic lab=input}
 C {vsource.sym} -260 -30 0 0 {name=VINP value= "PULSE(0 .1 25u 1p 100n 2m 1)" savecurrent=false}
 C {vsource.sym} -260 250 0 0 {name=VCM value= 1.65 savecurrent=false}
@@ -103,6 +103,9 @@ value=
 
 "
 .control
+
+set color0 = white
+set color1 = black
 tran 1n 50u
 meas tran v_input find v(input) at=40u
 meas tran v_output find v(output) at=40u
@@ -123,4 +126,4 @@ plot v(input) v(output)
 plot v(output) - v(input)
 .endc
 "}
-C {libs/core_amps/ota_5t/programmable_5tOTA.sym} 140 -110 0 0 {name=x1}
+C {libs/core_amps/ota_5t/prgram_schem/programmable_5tOTA.sym} 140 -110 0 0 {name=x1}

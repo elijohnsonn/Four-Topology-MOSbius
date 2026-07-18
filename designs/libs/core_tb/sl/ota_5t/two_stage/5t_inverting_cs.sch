@@ -149,6 +149,9 @@ value=
 
 "
 .control
+set color0 = white
+set color1 = black
+
 tran 1u 10m
 
 meas tran en0_5t find v(x1.en_0_5t) at=5m

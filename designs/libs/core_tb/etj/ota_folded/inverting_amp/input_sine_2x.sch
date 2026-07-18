@@ -123,19 +123,19 @@ C {lab_pin.sym} 380 -200 0 0 {name=p6 sig_type=std_logic lab=VDD}
 C {isource.sym} -1130 130 2 0 {name=IBIAS1 value=100u}
 C {lab_pin.sym} -1130 190 0 0 {name=p9 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} -320 -140 0 1 {name=p11 sig_type=std_logic lab=OUT_FOLDED}
-C {devices/code_shown.sym} 880 -60 0 0 {name=MODELS only_toplevel=true
+C {devices/code_shown.sym} 1240 40 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 "}
-C {code_shown.sym} 880 50 0 0 {name=Simulation1 only_toplevel=false 
+C {code_shown.sym} 1240 150 0 0 {name=Simulation1 only_toplevel=false 
 
 value=
 
 "
 .control
-tran 1u 10m
+tran 1u 1.25m
 plot v(OUT_FOLDED) v(INN_FOLDED)
 meas tran vout_pp pp v(out_folded) from=5m to=10m
 meas tran vin_pp pp v(inn_folded) from=5m to=10m
@@ -156,7 +156,7 @@ value=100k
 footprint=1206
 device=resistor
 m=1}
-C {vsource.sym} -1570 90 0 0 {name=V6 value= "dc 1.65 ac 0 sin(1.65 50m 500 1m)" savecurrent=false}
+C {vsource.sym} -1570 90 0 0 {name=V6 value= "dc 1.65 ac 0 sin(1.65 50m 50k 1m)" savecurrent=false}
 C {gnd.sym} -1570 150 0 0 {name=l10 lab=GND}
 C {lab_pin.sym} -1570 -180 0 0 {name=p13 sig_type=std_logic lab=INN_FOLDED}
 C {lab_pin.sym} -1710 -210 0 0 {name=p12 sig_type=std_logic lab=INP_FOLDED}

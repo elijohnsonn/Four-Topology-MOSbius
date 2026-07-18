@@ -50,10 +50,10 @@ N 240 -200 240 -190 {lab=GND}
 N 120 -310 120 -250 {lab=GND}
 N 950 -680 950 -650 {lab=VDD}
 N 950 -470 950 -440 {lab=GND}
-N 780 -600 840 -600 {lab=GND}
-N 780 -580 840 -580 {lab=VDD}
-N 780 -620 840 -620 {lab=GND}
-N 780 -640 840 -640 {lab=VDD}
+N 780 -600 840 -600 {lab=VDD}
+N 780 -580 840 -580 {lab=GND}
+N 780 -620 840 -620 {lab=VDD}
+N 780 -640 840 -640 {lab=GND}
 N 680 -450 680 -410 {lab=#net1}
 N 680 -170 680 -140 {lab=GND}
 N 680 -540 680 -510 {lab=#net2}
@@ -101,8 +101,8 @@ C {lab_pin.sym} 390 -140 0 0 {name=p5 sig_type=std_logic lab=GND}
 C {lab_pin.sym} 390 -460 0 0 {name=p7 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 950 -680 0 1 {name=p8 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 950 -440 0 0 {name=p9 sig_type=std_logic lab=GND}
-C {lab_pin.sym} 780 -640 0 0 {name=p10 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} 780 -620 0 0 {name=p11 sig_type=std_logic lab=GND}
+C {lab_pin.sym} 780 -620 0 0 {name=p10 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} 780 -640 0 0 {name=p11 sig_type=std_logic lab=GND}
 C {vsource.sym} 680 -480 0 0 {name=VINP value= AC 1 savecurrent=false}
 C {vsource.sym} 680 -200 0 0 {name=VCM value= 1.65 savecurrent=false}
 C {lab_pin.sym} 680 -140 0 0 {name=p14 sig_type=std_logic lab=GND}
@@ -138,6 +138,8 @@ value=
 
 "
 .control
+set color0 = white
+set color1 = black
 ac dec 100 1 1G
 
 plot vdb(output) ph(v(output))*180/3.14159
@@ -152,6 +154,6 @@ let gain_db = vdb(output)
 .endc
 
 "}
-C {lab_pin.sym} 780 -600 0 0 {name=p12 sig_type=std_logic lab=GND}
-C {lab_pin.sym} 780 -580 0 0 {name=p13 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} 780 -580 0 0 {name=p12 sig_type=std_logic lab=GND}
+C {lab_pin.sym} 780 -600 0 0 {name=p13 sig_type=std_logic lab=VDD}
 C {libs/core_amps/ota_5t/prgram_schem/programmable_5tOTA.sym} 990 -560 0 0 {name=x1}

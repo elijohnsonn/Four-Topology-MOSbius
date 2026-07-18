@@ -134,12 +134,15 @@ value=
 
 "
 .control
-tran 1u 10m
+set color0 = white
+set color1 = black
+tran 100u 18m
 plot v(OUT_TELESCOPIC) v(INN_TELESCOPIC)
 meas tran vout_pp pp v(out_telescopic) from=5m to=10m
 meas tran vin_pp pp v(inn_telescopic) from=5m to=10m
 let gain = vout_pp / vin_pp
 print gain
+
 .endc
 "}
 C {gnd.sym} -1410 -570 0 0 {name=l9 lab=GND}

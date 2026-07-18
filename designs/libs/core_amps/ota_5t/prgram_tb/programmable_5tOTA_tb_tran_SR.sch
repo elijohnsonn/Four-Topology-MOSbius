@@ -45,8 +45,8 @@ N 100 -210 100 -180 {lab=VDD}
 N 100 0 100 30 {lab=GND}
 N -70 -130 -10 -130 {lab=VDD}
 N -70 -110 -10 -110 {lab=GND}
-N -70 -150 -10 -150 {lab=GND}
-N -70 -170 -10 -170 {lab=VDD}
+N -70 -150 -10 -150 {lab=VDD}
+N -70 -170 -10 -170 {lab=GND}
 N -170 -70 -10 -70 {lab=input}
 N -50 240 90 240 {lab=output}
 N 150 240 270 240 {lab=output}
@@ -92,8 +92,8 @@ C {lab_pin.sym} -520 360 0 0 {name=p5 sig_type=std_logic lab=GND}
 C {lab_pin.sym} -520 40 0 0 {name=p7 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 100 -210 0 1 {name=p8 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 100 30 0 0 {name=p9 sig_type=std_logic lab=GND}
-C {lab_pin.sym} -70 -170 0 0 {name=p10 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} -70 -150 0 0 {name=p11 sig_type=std_logic lab=GND}
+C {lab_pin.sym} -70 -130 0 0 {name=p10 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} -70 -110 0 0 {name=p11 sig_type=std_logic lab=GND}
 C {lab_pin.sym} 540 -90 0 1 {name=p17 sig_type=std_logic lab=output}
 C {capa.sym} 380 -20 0 0 {name=CLOAD
 m=1
@@ -107,8 +107,8 @@ value="
 .include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 "}
-C {lab_pin.sym} -70 -110 0 0 {name=p12 sig_type=std_logic lab=GND}
-C {lab_pin.sym} -70 -130 0 0 {name=p13 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} -70 -170 0 0 {name=p12 sig_type=std_logic lab=GND}
+C {lab_pin.sym} -70 -150 0 0 {name=p13 sig_type=std_logic lab=VDD}
 C {vsource.sym} -260 20 0 0 {name=VINP value= "PULSE(0 1 25u 1p 100n 2m 1)" savecurrent=false}
 C {vsource.sym} -260 300 0 0 {name=VCM value= 1.65 savecurrent=false}
 C {lab_pin.sym} -260 360 0 0 {name=p14 sig_type=std_logic lab=GND}
@@ -119,6 +119,9 @@ value=
 
 "
 .control
+set color0 = white
+set color1 = black
+
 tran 1n 100u
 meas tran v_before find v(output) at=24u
 meas tran v_after find v(output) at=90u

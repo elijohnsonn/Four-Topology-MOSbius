@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * Extracted by KLayout with GF180MCU LVS runset on : 16/07/2026 01:01
 
 .SUBCKT transmission_gate VDD out ena_bar in gf180mcu_gnd
@@ -5,4 +6,13 @@ M$1 in ena_bar out VDD pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P PS=2.18U
 + PD=2.18U
 M$2 in \$4 out gf180mcu_gnd nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P
 + PS=2.1U PD=2.1U
+=======
+* Extracted by KLayout with GF180MCU LVS runset on : 16/07/2026 03:38
+
+.SUBCKT transmission_gate VSS VDD out ena ena_bar in
+M$1 in ena_bar out VDD pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P PS=2.18U
++ PD=2.18U
+M$2 in ena out VSS nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P PS=2.1U
++ PD=2.1U
+>>>>>>> main
 .ENDS transmission_gate
