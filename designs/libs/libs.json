@@ -1,5 +1,4 @@
 {
-  "core_analog_unit_nmos": "/foss/designs/libs/core_analog/unit_nmos/unit_nmos.gds",
-  "core_analog_ota_5t": "/foss/designs/libs/core_analog/ota_5t/ota_5t.gds",
-  "core_analog_unit_pmos": "/foss/designs/libs/core_analog/unit_pmos/unit_pmos.gds"
+  "core_digital_transmission_gate": "/foss/designs/libs/core_digital/layout/transmission_gate.gds",
+  "core_digital_inv1": "/foss/designs/libs/core_digital/layout/inv1.gds"
 }
