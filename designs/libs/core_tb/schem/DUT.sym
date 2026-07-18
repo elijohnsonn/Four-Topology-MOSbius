@@ -24,6 +24,7 @@ L 7 230 60 250 60 {}
 L 7 230 120 250 120 {}
 L 7 -230 50 -210 50 {}
 L 7 -230 20 -210 20 {}
+L 7 -230 130 -210 130 {}
 B 5 57.5 -212.5 62.5 -207.5 {name=CLK dir=inout}
 B 5 247.5 -122.5 252.5 -117.5 {name=SCAN_OUT dir=inout}
 B 5 87.5 -212.5 92.5 -207.5 {name=SCAN_IN dir=inout}
@@ -41,6 +42,7 @@ B 5 247.5 57.5 252.5 62.5 {name=OUT_TELESCOPIC dir=inout}
 B 5 247.5 117.5 252.5 122.5 {name=OUT_CS dir=inout}
 B 5 -232.5 47.5 -227.5 52.5 {name=IN_CS dir=inout}
 B 5 -232.5 17.5 -227.5 22.5 {name=INN_TELESCOPIC dir=inout}
+B 5 -232.5 127.5 -227.5 132.5 {name=PROG_ENA dir=inout}
 T {@C1_FourTopMOS} -111.5 -46 0 0 0.5 0.5 {}
 T {@C1_FourTopMOS} -45 -2 0 0 0.2 0.2 {}
 T {CLK} 56 -185 3 1 0.2 0.2 {}
@@ -60,6 +62,7 @@ T {OUT_TELESCOPIC} 225 56 0 1 0.2 0.2 {}
 T {OUT_CS} 225 116 0 1 0.2 0.2 {}
 T {IN_CS} -205 46 0 0 0.2 0.2 {}
 T {INN_TELESCOPIC} -205 16 0 0 0.2 0.2 {}
+T {PROG_ENA} -205 126 0 0 0.2 0.2 {}
 N -210 10 -210 210 {lab=#net1}
 N -210 -190 -210 10 {lab=#net1}
 N -210 -190 10 -190 {lab=#net1}

@@ -15,15 +15,17 @@ L 4 -1850 -450 -40 -450 {}
 L 4 -1850 -450 -1850 -380 {}
 L 4 120 280 120 560 {}
 L 4 120 560 810 560 {}
-L 4 810 280 810 560 {}
+L 4 900 280 900 560 {}
 L 4 120 280 810 280 {}
+L 4 810 280 900 280 {}
+L 4 810 560 900 560 {}
 T {CLOCK GENERATION} 160 -480 0 0 1 1 {}
 T {Artificially generate a clock signal and ensure it 
 turns off after around .425ms, which is when the 
 scan in signal has fully propogated through the scan chain} 140 -410 0 0 0.4 0.4 {}
-T {VDD, GND, SCAN INPUT} 150 150 0 0 1 1 {}
-T {Scan chain input artificially generated to 
-enable folded cascode 1x sizing} 230 220 0 0 0.4 0.4 {}
+T {VDD, GND, SCAN INPUT, PROG_ENA} 100 150 0 0 1 1 {}
+T {Scan chain input artificially generated to enable folded cascode 1x sizing
+prog_ena sets default (low) or program (high)} 220 220 0 0 0.4 0.4 {}
 T {R2 = 500K} -880 360 0 0 0.75 0.75 {}
 T {R1 = 100K} -1460 -110 0 0 0.75 0.75 {}
 T {CL = 120p} -280 -60 0 0 0.75 0.75 {}
@@ -100,6 +102,10 @@ N -1570 -180 -1530 -180 {lab=INN_FOLDED}
 N -1660 -210 -1570 -210 {lab=INP_FOLDED}
 N -1530 -180 -1420 -180 {lab=INN_FOLDED}
 N -1570 -130 -1570 60 {lab=INN_FOLDED}
+N -1100 50 -1040 50 {lab=PROG_ENA}
+N 790 350 790 400 {lab=PROG_ENA}
+N 790 460 790 500 {lab=GND}
+N 790 340 790 350 {lab=PROG_ENA}
 C {vsource.sym} 420 430 0 0 {name=V3 value="PWL(0 0 0.39999m 0 0.4m 3.3 0.499999m 3.3 0.5m 0)" savecurrent=false}
 C {gnd.sym} 420 500 0 0 {name=l1 lab=GND}
 C {gnd.sym} -950 -310 0 0 {name=l2 lab=GND}
@@ -123,13 +129,13 @@ C {lab_pin.sym} 380 -200 0 0 {name=p6 sig_type=std_logic lab=VDD}
 C {isource.sym} -1130 130 2 0 {name=IBIAS value=100u}
 C {lab_pin.sym} -1130 190 0 0 {name=p9 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} -320 -140 0 1 {name=p11 sig_type=std_logic lab=OUT_FOLDED}
-C {devices/code_shown.sym} 880 -60 0 0 {name=MODELS only_toplevel=true
+C {devices/code_shown.sym} 970 310 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 "}
-C {code_shown.sym} 880 50 0 0 {name=Simulation1 only_toplevel=false 
+C {code_shown.sym} 970 420 0 0 {name=Simulation1 only_toplevel=false 
 
 value=
 
@@ -166,3 +172,7 @@ footprint=1206
 device=resistor
 m=1}
 C {libs/core_tb/schem/DUT.sym} -810 -80 0 0 {name=x1}
+C {lab_pin.sym} -1100 50 3 0 {name=p7 sig_type=std_logic lab=PROG_ENA}
+C {vsource.sym} 790 430 0 0 {name=V8 value=0 savecurrent=false}
+C {gnd.sym} 790 500 0 0 {name=l11 lab=GND}
+C {lab_pin.sym} 790 340 0 1 {name=p10 sig_type=std_logic lab=PROG_ENA}

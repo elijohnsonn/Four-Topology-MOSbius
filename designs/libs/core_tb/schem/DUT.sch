@@ -7,7 +7,6 @@ E {}
 L 4 -230 180 -230 690 {}
 L 4 -1030 180 -1030 690 {}
 L 4 -1030 180 -230 180 {}
-L 4 -1030 690 -230 690 {}
 L 4 -70 180 -70 830 {}
 L 4 -70 830 1260 830 {}
 L 4 1260 110 1260 830 {}
@@ -21,10 +20,17 @@ L 4 -480 -500 -480 -490 {}
 L 4 -230 180 -230 690 {}
 L 4 -1030 180 -1030 690 {}
 L 4 -1030 180 -230 180 {}
-L 4 -1030 690 -230 690 {}
-T {SCAN CHAIN} -790 110 0 0 1 1 {}
+L 4 -1030 690 -240 690 {}
+L 4 -240 690 -230 690 {}
+L 4 -80 870 -80 880 {}
+L 4 -1240 2080 -80 2080 {}
+L 4 -1240 870 -1240 2080 {}
+L 4 -1240 870 -80 870 {}
+L 4 -80 880 -80 2080 {}
+T {PROGRAMMING ENABLE} -990 770 0 0 1 1 {}
 T {CORE AMPLIFIERS} 360 20 0 0 1 1 {}
 T {BIAS AND POWER PINS} -400 -590 0 0 1 1 {}
+T {SCAN CHAIN} -770 90 0 0 1 1 {}
 N 400 310 430 310 {lab=OUT_FOLDED}
 N 1050 330 1100 330 {lab=OUT_5T}
 N 1030 620 1080 620 {lab=OUT_CS}
@@ -61,7 +67,6 @@ N 170 340 240 340 {lab=INP_FOLDED}
 N 780 410 820 410 {lab=INN_5T}
 N 780 350 820 350 {lab=INP_5T}
 N -860 340 -800 340 {lab=CLK}
-N -860 360 -800 360 {lab=SCAN_IN}
 N -420 340 -380 340 {lab=SCAN_OUT}
 N -750 470 -750 510 {lab=EN_0_FOLDED}
 N -730 470 -730 510 {lab=!EN_0_FOLDED}
@@ -107,6 +112,60 @@ N -470 470 -470 510 {lab=EN_1_CS}
 N -450 470 -450 510 {lab=!EN_1_CS}
 N 410 610 440 610 {lab=OUT_TELESCOPIC}
 N 860 650 870 650 {lab=IN_CS}
+N -870 360 -810 360 {lab=SCAN_IN}
+N -810 360 -800 360 {lab=SCAN_IN}
+N -880 990 -830 990 {lab=PROG_ENA}
+N -660 980 -590 980 {lab=!PROG_ENA}
+N -780 1030 -780 1070 {lab=VSS}
+N -780 920 -780 950 {lab=VDD}
+N -980 1150 -980 1190 {lab=PROG_ENA}
+N -980 1260 -980 1300 {lab=!PROG_ENA}
+N -1030 1160 -1030 1190 {lab=VDD}
+N -1020 1290 -1020 1330 {lab=VSS}
+N -900 1240 -810 1240 {lab=EN_0_FOLDED}
+N -1150 1240 -1070 1240 {lab=VSS}
+N -440 1150 -440 1190 {lab=PROG_ENA}
+N -440 1260 -440 1300 {lab=!PROG_ENA}
+N -490 1160 -490 1190 {lab=VDD}
+N -480 1290 -480 1330 {lab=VSS}
+N -360 1240 -270 1240 {lab=EN_1_FOLDED}
+N -610 1240 -530 1240 {lab=VSS}
+N -980 1410 -980 1450 {lab=PROG_ENA}
+N -980 1520 -980 1560 {lab=!PROG_ENA}
+N -1030 1420 -1030 1450 {lab=VDD}
+N -1020 1550 -1020 1590 {lab=VSS}
+N -900 1500 -810 1500 {lab=EN_0_TELESCOPIC}
+N -1150 1500 -1070 1500 {lab=VSS}
+N -440 1410 -440 1450 {lab=PROG_ENA}
+N -440 1520 -440 1560 {lab=!PROG_ENA}
+N -490 1420 -490 1450 {lab=VDD}
+N -480 1550 -480 1590 {lab=VSS}
+N -360 1500 -270 1500 {lab=EN_1_TELESCOPIC}
+N -610 1500 -530 1500 {lab=VSS}
+N -980 1640 -980 1680 {lab=PROG_ENA}
+N -980 1750 -980 1790 {lab=!PROG_ENA}
+N -1030 1650 -1030 1680 {lab=VDD}
+N -1020 1780 -1020 1820 {lab=VSS}
+N -900 1730 -810 1730 {lab=EN_0_5T}
+N -1150 1730 -1070 1730 {lab=VSS}
+N -440 1640 -440 1680 {lab=PROG_ENA}
+N -440 1750 -440 1790 {lab=!PROG_ENA}
+N -490 1650 -490 1680 {lab=VDD}
+N -480 1780 -480 1820 {lab=VSS}
+N -360 1730 -270 1730 {lab=EN_1_5T}
+N -610 1730 -530 1730 {lab=VSS}
+N -980 1860 -980 1900 {lab=PROG_ENA}
+N -980 1970 -980 2010 {lab=!PROG_ENA}
+N -1030 1870 -1030 1900 {lab=VDD}
+N -1020 2000 -1020 2040 {lab=VSS}
+N -900 1950 -810 1950 {lab=EN_0_FOLDED}
+N -1150 1950 -1070 1950 {lab=VSS}
+N -440 1860 -440 1900 {lab=PROG_ENA}
+N -440 1970 -440 2010 {lab=!PROG_ENA}
+N -490 1870 -490 1900 {lab=VDD}
+N -480 2000 -480 2040 {lab=VSS}
+N -360 1950 -270 1950 {lab=EN_1_CS}
+N -610 1950 -530 1950 {lab=VSS}
 C {libs/core_digital/schem/scan_chain.sym} -610 430 0 0 {name=x1}
 C {libs/core_amps/ota_folded_cascode/prgrm_schem/programmable_folded_cascode.sym} 260 310 0 0 {name=x2}
 C {libs/core_amps/ota_telescopic/programmable_ota_telescopic schematics/programmable_telescopic_cascode.sym} 270 610 0 0 {name=x4}
@@ -151,7 +210,7 @@ C {iopin.sym} 860 650 2 0 {name=p25 lab=IN_CS}
 C {iopin.sym} 780 410 2 0 {name=p26 lab=INN_5T}
 C {iopin.sym} 780 350 2 0 {name=p27 lab=INP_5T}
 C {iopin.sym} -860 340 2 0 {name=p28 lab=CLK}
-C {iopin.sym} -860 360 2 0 {name=p29 lab=SCAN_IN}
+C {iopin.sym} -870 360 2 0 {name=p29 lab=SCAN_IN}
 C {iopin.sym} -380 340 2 1 {name=p30 lab=SCAN_OUT}
 C {lab_pin.sym} -750 510 3 0 {name=p15 sig_type=std_logic lab=EN_0_FOLDED}
 C {lab_pin.sym} 170 260 2 1 {name=p31 sig_type=std_logic lab=EN_0_FOLDED}
@@ -193,3 +252,89 @@ C {lab_pin.sym} 920 740 0 0 {name=p20 sig_type=std_logic lab=IBIAS}
 C {lab_pin.sym} 980 450 0 1 {name=p19 sig_type=std_logic lab=IBIAS}
 C {lab_pin.sym} 320 400 0 1 {name=p17 sig_type=std_logic lab=IBIAS}
 C {lab_pin.sym} -350 -130 0 0 {name=p16 sig_type=std_logic lab=VSS}
+C {iopin.sym} -880 990 2 0 {name=p14 lab=PROG_ENA}
+C {libs/core_digital/schem/inv1.sym} -770 1000 0 0 {name=x6}
+C {lab_pin.sym} -780 920 0 0 {name=p18 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} -780 1070 0 0 {name=p69 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} -590 980 0 1 {name=p71 sig_type=std_logic lab=!PROG_ENA
+}
+C {libs/core_digital/schem/transmission_gate.sym} -980 1240 0 0 {name=x7}
+C {lab_pin.sym} -1030 1160 0 0 {name=p72 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} -1020 1330 0 0 {name=p73 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} -1150 1240 0 0 {name=p74 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} -980 1300 0 1 {name=p75 sig_type=std_logic lab=!PROG_ENA
+}
+C {lab_pin.sym} -980 1150 0 1 {name=p76 sig_type=std_logic lab=PROG_ENA
+}
+C {lab_pin.sym} -810 1240 0 1 {name=p77 sig_type=std_logic lab=EN_0_FOLDED
+}
+C {libs/core_digital/schem/transmission_gate.sym} -440 1240 0 0 {name=x8}
+C {lab_pin.sym} -490 1160 0 0 {name=p78 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} -480 1330 0 0 {name=p79 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} -610 1240 0 0 {name=p80 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} -440 1300 0 1 {name=p81 sig_type=std_logic lab=!PROG_ENA
+}
+C {lab_pin.sym} -440 1150 0 1 {name=p82 sig_type=std_logic lab=PROG_ENA
+}
+C {lab_pin.sym} -270 1240 0 1 {name=p83 sig_type=std_logic lab=EN_1_FOLDED
+}
+C {libs/core_digital/schem/transmission_gate.sym} -980 1500 0 0 {name=x9}
+C {lab_pin.sym} -1030 1420 0 0 {name=p84 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} -1020 1590 0 0 {name=p85 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} -1150 1500 0 0 {name=p86 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} -980 1560 0 1 {name=p87 sig_type=std_logic lab=!PROG_ENA
+}
+C {lab_pin.sym} -980 1410 0 1 {name=p88 sig_type=std_logic lab=PROG_ENA
+}
+C {lab_pin.sym} -810 1500 0 1 {name=p89 sig_type=std_logic lab=EN_0_TELESCOPIC
+}
+C {libs/core_digital/schem/transmission_gate.sym} -440 1500 0 0 {name=x10}
+C {lab_pin.sym} -490 1420 0 0 {name=p90 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} -480 1590 0 0 {name=p91 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} -610 1500 0 0 {name=p92 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} -440 1560 0 1 {name=p93 sig_type=std_logic lab=!PROG_ENA
+}
+C {lab_pin.sym} -440 1410 0 1 {name=p94 sig_type=std_logic lab=PROG_ENA
+}
+C {lab_pin.sym} -270 1500 0 1 {name=p95 sig_type=std_logic lab=EN_1_TELESCOPIC
+}
+C {libs/core_digital/schem/transmission_gate.sym} -980 1730 0 0 {name=x11}
+C {lab_pin.sym} -1030 1650 0 0 {name=p96 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} -1020 1820 0 0 {name=p97 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} -1150 1730 0 0 {name=p98 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} -980 1790 0 1 {name=p99 sig_type=std_logic lab=!PROG_ENA
+}
+C {lab_pin.sym} -980 1640 0 1 {name=p100 sig_type=std_logic lab=PROG_ENA
+}
+C {lab_pin.sym} -810 1730 0 1 {name=p101 sig_type=std_logic lab=EN_0_5T
+}
+C {libs/core_digital/schem/transmission_gate.sym} -440 1730 0 0 {name=x12}
+C {lab_pin.sym} -490 1650 0 0 {name=p102 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} -480 1820 0 0 {name=p103 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} -610 1730 0 0 {name=p104 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} -440 1790 0 1 {name=p105 sig_type=std_logic lab=!PROG_ENA
+}
+C {lab_pin.sym} -440 1640 0 1 {name=p106 sig_type=std_logic lab=PROG_ENA
+}
+C {lab_pin.sym} -270 1730 0 1 {name=p107 sig_type=std_logic lab=EN_1_5T
+}
+C {libs/core_digital/schem/transmission_gate.sym} -980 1950 0 0 {name=x13}
+C {lab_pin.sym} -1030 1870 0 0 {name=p108 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} -1020 2040 0 0 {name=p109 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} -1150 1950 0 0 {name=p110 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} -980 2010 0 1 {name=p111 sig_type=std_logic lab=!PROG_ENA
+}
+C {lab_pin.sym} -980 1860 0 1 {name=p112 sig_type=std_logic lab=PROG_ENA
+}
+C {lab_pin.sym} -810 1950 0 1 {name=p113 sig_type=std_logic lab=EN_0_CS
+}
+C {libs/core_digital/schem/transmission_gate.sym} -440 1950 0 0 {name=x14}
+C {lab_pin.sym} -490 1870 0 0 {name=p114 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} -480 2040 0 0 {name=p115 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} -610 1950 0 0 {name=p116 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} -440 2010 0 1 {name=p117 sig_type=std_logic lab=!PROG_ENA
+}
+C {lab_pin.sym} -440 1860 0 1 {name=p118 sig_type=std_logic lab=PROG_ENA
+}
+C {lab_pin.sym} -270 1950 0 1 {name=p119 sig_type=std_logic lab=EN_1_CS
+}
