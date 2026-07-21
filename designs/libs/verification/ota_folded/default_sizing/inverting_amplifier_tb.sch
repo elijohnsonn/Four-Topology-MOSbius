@@ -16,8 +16,8 @@ N 50 -300 50 -270 {lab=GND}
 N 80 -300 80 -270 {lab=GND}
 N 80 -300 110 -300 {lab=GND}
 N 110 -300 110 -280 {lab=GND}
-N 700 40 700 80 {lab=GND}
-N 700 -70 700 -20 {lab=VDD}
+N 730 -40 730 0 {lab=GND}
+N 730 -150 730 -100 {lab=VDD}
 N 240 -120 370 -120 {lab=OUT_FOLDED}
 N 370 -120 370 -90 {lab=OUT_FOLDED}
 N 370 -120 440 -120 {lab=OUT_FOLDED}
@@ -46,27 +46,43 @@ C {gnd.sym} -140 -280 0 1 {name=l1 lab=GND}
 C {lab_pin.sym} -80 -300 0 1 {name=p1 sig_type=std_logic lab=VDD}
 C {gnd.sym} 20 -280 0 1 {name=l3 lab=GND}
 C {gnd.sym} 110 -280 0 0 {name=l4 lab=GND}
-C {vsource.sym} 700 10 0 0 {name=V1 value=3.3 savecurrent=false}
-C {gnd.sym} 700 80 0 0 {name=l5 lab=GND}
-C {lab_pin.sym} 700 -70 0 0 {name=p8 sig_type=std_logic lab=VDD}
-C {devices/code_shown.sym} 780 -90 0 0 {name=MODELS only_toplevel=true
+C {vsource.sym} 730 -70 0 0 {name=V1 value=3.3 savecurrent=false}
+C {gnd.sym} 730 0 0 0 {name=l5 lab=GND}
+C {lab_pin.sym} 730 -150 0 0 {name=p8 sig_type=std_logic lab=VDD}
+C {devices/code_shown.sym} 930 -260 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 "}
-C {code_shown.sym} 780 20 0 0 {name=Simulation1 only_toplevel=false 
+C {code_shown.sym} 930 -150 0 0 {name=Simulation1 only_toplevel=false 
 
 value=
 
 "
 .control
 tran 1u 5m
-plot v(OUT_FOLDED) v(INN_FOLDED)
-meas tran vout_pp pp v(out_folded) from=5m to=10m
-meas tran vin_pp pp v(inn_folded) from=5m to=10m
+
+plot v(out_folded) v(inn_folded)
+
+meas tran vout_pp pp v(out_folded) from=2m to=5m
+meas tran vin_pp pp v(inn_folded) from=2m to=5m
 let gain = vout_pp / vin_pp
 print gain
+
+meas tran vout_dc avg v(out_folded) from=2m to=5m
+meas tran vin_dc avg v(inn_folded) from=2m to=5m
+let dc_offset = vout_dc - vin_dc
+let input_offset = dc_offset / 6
+print vout_dc vin_dc dc_offset input_offset
+
+let ideal_gain = 5
+let gain_error_pct = (ideal_gain - gain) / ideal_gain * 100
+print gain_error_pct
+
+meas tran idd avg i(v1) from=2m to=5m
+let power = abs(idd) * 3.3
+print idd power
 .endc
 "}
 C {capa.sym} 370 -60 0 0 {name=CLOAD
@@ -86,7 +102,7 @@ value=100k
 footprint=1206
 device=resistor
 m=1}
-C {vsource.sym} -600 -70 0 0 {name=V6 value= "dc 1.65 ac 0 sin(1.65 200m 500 1m)" savecurrent=false}
+C {vsource.sym} -600 -70 0 0 {name=V6 value= "dc 1.65 ac 0 sin(1.65 10m 500 1m)" savecurrent=false}
 C {gnd.sym} -600 40 0 0 {name=l6 lab=GND}
 C {vsource.sym} -770 -70 0 1 {name=V7 value=1.65 savecurrent=false}
 C {gnd.sym} -770 40 0 1 {name=l7 lab=GND}
