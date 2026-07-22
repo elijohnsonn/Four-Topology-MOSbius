@@ -76,6 +76,10 @@ N 920 -120 920 -80 {lab=!CLK_ENA}
 N 880 -90 880 -70 {lab=GND}
 N 870 -220 870 -190 {lab=VDD}
 N 920 -230 920 -190 {lab=CLK_ENA}
+N 670 350 670 400 {lab=PROG_ENA}
+N 670 460 670 500 {lab=GND}
+N 670 340 670 350 {lab=PROG_ENA}
+N -1100 50 -1040 50 {lab=PROG_ENA}
 C {vsource.sym} 420 430 0 0 {name=V3 value="PULSE(0 3.3 0 1n 1n 0.05m 0.1m)" savecurrent=false}
 C {gnd.sym} 420 500 0 0 {name=l1 lab=GND}
 C {gnd.sym} -950 -310 0 0 {name=l2 lab=GND}
@@ -132,3 +136,9 @@ C {lab_pin.sym} 870 -220 0 0 {name=p12 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 480 -60 0 1 {name=p13 sig_type=std_logic lab=CLK_ENA}
 C {lab_pin.sym} 920 -220 0 1 {name=p14 sig_type=std_logic lab=CLK_ENA}
 C {lab_pin.sym} 920 -80 0 1 {name=p15 sig_type=std_logic lab=!CLK_ENA}
+C {vsource.sym} 670 430 0 0 {name=V8 value=3.3 savecurrent=false}
+C {gnd.sym} 670 500 0 0 {name=l11 lab=GND
+value=3.3}
+C {lab_pin.sym} 670 340 0 1 {name=p16 sig_type=std_logic lab=PROG_ENA
+value=3.3}
+C {lab_pin.sym} -1100 50 3 0 {name=p17 sig_type=std_logic lab=PROG_ENA}
