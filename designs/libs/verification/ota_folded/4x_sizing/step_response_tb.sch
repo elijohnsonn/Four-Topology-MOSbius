@@ -195,3 +195,4 @@ print v_before v_after delta
 .endc
 "}
 C {vsource.sym} 560 420 0 0 {name=V2 value="PWL(0 0 0.34999m 0 0.35m 3.3 0.499999m 3.3 0.5m 0)" savecurrent=false}
+C {vsource.sym} 500 -350 0 1 {name=V7 value="dc 1.65 ac 0 pulse(1.65 3.3 1m 2m 2m 0.01u 4m)" savecurrent=false}
