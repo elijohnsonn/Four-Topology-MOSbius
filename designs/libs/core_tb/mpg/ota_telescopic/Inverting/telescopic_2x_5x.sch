@@ -99,13 +99,13 @@ N -1600 -130 -1600 60 {lab=INN_TELESCOPIC}
 N -460 -140 -460 220 {lab=OUT_TELESCOPIC}
 N -1260 0 -1260 320 {lab=#net5}
 N -1180 -180 -1070 -180 {lab=#net5}
-C {vsource.sym} 390 310 0 0 {name=V3 value=  "PWL(0 0 0.2499m 0 0.25m 3.3 0.29999m 3.3 0.3m 0)" savecurrent=false}
+N -1070 -70 -1070 -30 {lab=VDD}
+C {vsource.sym} 390 310 0 0 {name=V3 value= "PWL(0 0 0.2999m 0 0.3m 3.3 0.349999m 3.3 0.35m 0)" savecurrent=false}
 C {gnd.sym} 390 380 0 0 {name=l1 lab=GND}
 C {gnd.sym} -980 -430 0 0 {name=l2 lab=GND}
 C {vsource.sym} 240 310 0 0 {name=V1 value=3.3 savecurrent=false}
 C {gnd.sym} 240 380 0 0 {name=l3 lab=GND}
 C {lab_pin.sym} 240 230 0 0 {name=p8 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} -910 -450 0 1 {name=p1 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 390 230 0 1 {name=p2 sig_type=std_logic lab=SCAN_IN}
 C {lab_pin.sym} -750 -450 0 1 {name=p3 sig_type=std_logic lab=SCAN_IN}
 C {vsource.sym} 210 -150 0 0 {name=V2 value="PULSE(0 3.3 0 1n 1n 0.025m 0.05m)" savecurrent=false}
@@ -136,7 +136,7 @@ value=
 .control
 set color0 = white
 set color1 = black
-tran 10u 18m
+tran 1u 18m
 plot v(OUT_TELESCOPIC) v(INN_TELESCOPIC)
 meas tran vout_pp pp v(out_telescopic) from=5m to=10m
 meas tran vin_pp pp v(inn_telescopic) from=5m to=10m
@@ -167,3 +167,5 @@ footprint=1206
 device=resistor
 m=1}
 C {libs/core_tb/schem/DUT.sym} -840 -200 0 0 {name=x1}
+C {lab_pin.sym} -910 -450 0 1 {name=p7 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} -1070 -30 2 1 {name=p14 sig_type=std_logic lab=VDD}

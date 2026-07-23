@@ -99,8 +99,8 @@ N -1760 300 -1760 310 {lab=GND}
 N -1420 -150 -1240 -150 {lab=OUT_CS}
 N -1510 -120 -1100 -120 {lab=INN_TELESCOPIC}
 N -1420 -150 -1420 310 {lab=OUT_CS}
-C {vsource.sym} 490 370 0 0 {name=V3 value= "PWL(0 0 0.0499m 0 0.05m 3.3 0.0999m 3.3 0.1m 0 0.2499m 0 0.25m 3.3 0.29999m 3.3 0.3m 0)"
- savecurrent=false}
+N -1100 -10 -1100 30 {lab=VDD}
+C {vsource.sym} 490 370 0 0 {name=V3 value= "PWL(0 0 0.0999m 0 0.1m 3.3 0.1499m 3.3 0.15m 0 0.2999m 0 0.3m 3.3 0.349999m 3.3 0.35m 0)" savecurrent=false}
 C {gnd.sym} 490 440 0 0 {name=l1 lab=GND}
 C {gnd.sym} -1010 -370 0 0 {name=l2 lab=GND}
 C {vsource.sym} 340 370 0 0 {name=V1 value=3.3 savecurrent=false}
@@ -205,3 +205,4 @@ C {lab_pin.sym} -1760 -120 0 0 {name=p13 sig_type=std_logic lab=INN_TELESCOPIC}
 C {libs/core_tb/schem/DUT.sym} -870 -140 0 0 {name=x1}
 C {vsource.sym} -1760 110 0 1 {name=VINP value= "PULSE(0 1 500u 1p 100n 25m 1)" savecurrent=false}
 C {vsource.sym} -1760 270 0 0 {name=VINP2 value= "dc 1.65" savecurrent=false}
+C {lab_pin.sym} -1100 30 2 1 {name=p7 sig_type=std_logic lab=VDD}

@@ -29,17 +29,19 @@ turns off after around .425ms, which is when the
 scan in signal has fully propogated through the scan chain} 330 -470 0 0 0.4 0.4 {}
 T {VDD, GND, SCAN INPUT} 340 90 0 0 1 1 {}
 T {Scan chain input artificially generated to enable 
-telescopic cascode 1x and common source 1x sizing} 380 160 0 0 0.4 0.4 {}
+telescopic cascode 2x and common source 2x sizing} 380 160 0 0 0.4 0.4 {}
 T {CL = 120p} -260 150 0 0 0.75 0.75 {}
 T {IBIAS = 100u} -1260 160 0 0 0.4 0.4 {}
 T {IMPLEMENTATION} -1230 -680 0 0 1 1 {}
-T {Configure the telescopic cascode in 1× mode and the common source stage 
-in 1x mode as a unity gain amplifier, stepping the input the input by 
+T {Configure the telescopic cascode in 2× mode and the common source stage 
+in 2x mode as a unity gain amplifier, stepping the input the input by 
 1 V while driving a 120pF capacitive load without a compensation network.} -1350 -610 0 0 0.4 0.4 {}
 T {VCM = 1.65 V DC} -1690 260 0 0 0.5 0.5 {}
 T {1 V Pulse} -1710 80 0 0 0.5 0.5 {}
 N -810 -390 -810 -350 {lab=CLK}
-N -780 -390 -780 -350 {lab=GND}
+N -780 -390 -780 -350 {lab=SCAN_IN}
+N 490 290 490 340 {lab=SCAN_IN}
+N 490 400 490 440 {lab=GND}
 N -960 -380 -960 -350 {lab=GND}
 N -1010 -390 -1010 -370 {lab=GND}
 N -1010 -390 -960 -390 {lab=GND}
@@ -92,12 +94,15 @@ N -1760 300 -1760 310 {lab=GND}
 N -1420 -150 -1240 -150 {lab=OUT_CS}
 N -1510 -120 -1100 -120 {lab=INP_TELESCOPIC}
 N -1420 -150 -1420 310 {lab=OUT_CS}
-N -1100 -10 -1100 30 {lab=GND}
+C {vsource.sym} 490 370 0 0 {name=V3 value="PWL(0 0 0.0999m 0 0.1m 3.3 0.1499m 3.3 0.15m 0 0.2999m 0 0.3m 3.3 0.349999m 3.3 0.35m 0)" savecurrent=false}
+C {gnd.sym} 490 440 0 0 {name=l1 lab=GND}
 C {gnd.sym} -1010 -370 0 0 {name=l2 lab=GND}
 C {vsource.sym} 340 370 0 0 {name=V1 value=3.3 savecurrent=false}
 C {gnd.sym} 340 440 0 0 {name=l3 lab=GND}
 C {lab_pin.sym} 340 290 0 0 {name=p8 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} -940 -390 0 1 {name=p1 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} 490 290 0 1 {name=p2 sig_type=std_logic lab=SCAN_IN}
+C {lab_pin.sym} -780 -390 0 1 {name=p3 sig_type=std_logic lab=SCAN_IN}
 C {vsource.sym} 430 -90 0 0 {name=V2 value="PULSE(0 3.3 0 1n 1n 0.025m 0.05m)" savecurrent=false}
 C {gnd.sym} 430 -20 0 0 {name=l4 lab=GND}
 C {lab_pin.sym} 780 -180 0 1 {name=p4 sig_type=std_logic lab=CLK}
@@ -184,5 +189,3 @@ C {lab_pin.sym} -1760 -120 0 0 {name=p13 sig_type=std_logic lab=INP_TELESCOPIC}
 C {libs/core_tb/schem/DUT.sym} -870 -140 0 0 {name=x1}
 C {vsource.sym} -1760 110 0 1 {name=VINP value= "PULSE(0 1 500u 1p 100n 25m 1)" savecurrent=false}
 C {vsource.sym} -1760 270 0 0 {name=VINP2 value= "dc 1.65" savecurrent=false}
-C {gnd.sym} -1100 30 0 1 {name=l10 lab=GND}
-C {gnd.sym} -780 -390 3 1 {name=l1 lab=GND}
