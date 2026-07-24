@@ -137,4 +137,4 @@ C {libs/core_digital/schem/programmable_nfet.sym} 2197770 -1679070 0 1 {name=x1 
 C {libs/core_digital/schem/programmable_nfet.sym} 2198230 -1679070 0 0 {name=x2 width=3*11.43u length=0.5u nf=1 mult=1}
 C {libs/core_digital/schem/programmable_pfet.sym} 2198220 -1679380 0 0 {name=x4 width=50u length=0.5u nf=1 mult=2}
 C {libs/core_digital/schem/programmable_pfet.sym} 2197780 -1679380 0 1 {name=x3 width=50u length=0.5u nf=1 mult=2}
-C {libs/core_digital/schem/programmable_nfet.sym} 2198060 -1678680 0 0 {name=x5 width=22.86u length=1u nf=1 mult=5.3*2}
+C {libs/core_digital/schem/programmable_nfet.sym} 2198060 -1678680 0 0 {name=x5 width=22.86u length=1u nf=1 mult=3}
