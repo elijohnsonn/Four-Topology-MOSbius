@@ -22,7 +22,7 @@ L 4 90 -410 760 -410 {}
 L 4 760 30 1130 30 {}
 L 4 760 -410 1130 -410 {}
 T {VDD, GND, SCAN INPUT, PROGRAMMABLE ENABLE} 30 120 0 0 1 1 {}
-T {Scan chain input artificially generated to enable folded cascode 1x sizing
+T {Scan chain input artificially generated to enable folded cascode 4x sizing
 prog_ena sets default (low) or program (high)} 310 190 0 0 0.4 0.4 {}
 T {R2 = 500K} -870 330 0 0 0.75 0.75 {}
 T {R1 = 100K} -1450 -140 0 0 0.75 0.75 {}
@@ -34,7 +34,7 @@ T {DC = 1.65V
 T {DC = 1.65V} -1770 170 0 0 0.5 0.5 {}
 T {IBIAS = 100u} -1190 190 0 0 0.4 0.4 {}
 T {IMPLEMENTATION} -1100 -660 0 0 1 1 {}
-T {Configure the folded cascode in 3× mode 
+T {Configure the folded cascode in 4× mode 
 as an inverting amplifier to amplify a 
 sine wave input by 5 while driving a 
 120pF capacitive load.} -1090 -600 0 0 0.4 0.4 {}
@@ -131,19 +131,21 @@ C {lab_pin.sym} -740 -360 0 0 {name=p5 sig_type=std_logic lab=CLK}
 C {isource.sym} -1120 100 2 0 {name=IBIAS value=100u}
 C {lab_pin.sym} -1120 160 0 0 {name=p9 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} -310 -170 0 1 {name=p11 sig_type=std_logic lab=OUT_FOLDED}
-C {devices/code_shown.sym} 1400 -270 0 0 {name=MODELS only_toplevel=true
+C {devices/code_shown.sym} 1740 -270 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 "}
-C {code_shown.sym} 1400 -160 0 0 {name=Simulation1 only_toplevel=false 
+C {code_shown.sym} 1740 -160 0 0 {name=Simulation1 only_toplevel=false 
 
 value=
 
 "
 .control
-tran 1u 5m
+set color0 = white 
+set color1 = black
+tran 1u 20m
 
 plot v(out_folded) v(inn_folded)
 
