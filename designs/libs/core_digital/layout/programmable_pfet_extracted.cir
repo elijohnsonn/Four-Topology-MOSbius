@@ -1,0 +1,19 @@
+* Extracted by KLayout with GF180MCU LVS runset on : 26/07/2026 15:42
+
+.SUBCKT programmable_pfet b s out d ena|ena<1> VDD VSS g|in ena_bar|ena_bar<1>
++ ena|ena<0> ena_bar|ena_bar<0>
+M$1 d out s b pfet_03v3 L=1U W=460U AS=227.24P AD=227.24P PS=767.2U PD=767.2U
+M$19 VDD ena|ena<1> out VDD pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P
++ PS=2.18U PD=2.18U
+M$22 g|in ena_bar|ena_bar<1> out VDD pfet_03v3 L=0.28U W=0.42U AS=0.2822P
++ AD=0.2822P PS=2.18U PD=2.18U
+M$23 d g|in s b pfet_03v3 L=1U W=92U AS=59.8P AD=59.8P PS=197U PD=197U
+M$33 out ena_bar|ena_bar<0> g|in VDD pfet_03v3 L=0.28U W=0.42U AS=0.2822P
++ AD=0.2822P PS=2.18U PD=2.18U
+M$35 out ena|ena<0> VDD VDD pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P
++ PS=2.18U PD=2.18U
+M$45 g|in ena|ena<1> out VSS nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P
++ PS=2.1U PD=2.1U
+M$46 out ena|ena<0> g|in VSS nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P
++ PS=2.1U PD=2.1U
+.ENDS programmable_pfet
