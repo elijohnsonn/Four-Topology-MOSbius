@@ -61,7 +61,10 @@ value=
 
 "
 .control
-tran 1u 5m
+tran 1u 10m
+
+set color0 = white
+set color1 = black
 
 plot v(out_5t) v(inn_5t)
 
@@ -83,6 +86,7 @@ print gain_error_pct
 meas tran idd avg i(v1) from=2m to=5m
 let power = abs(idd) * 3.3
 print idd power
+
 .endc
 "}
 C {capa.sym} 370 -60 0 0 {name=CLOAD
