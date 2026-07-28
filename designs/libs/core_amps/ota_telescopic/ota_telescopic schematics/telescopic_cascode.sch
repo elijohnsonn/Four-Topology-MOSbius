@@ -236,7 +236,7 @@ C {lab_pin.sym} 12430 20350 1 0 {name=p6 sig_type=std_logic lab=VBN
 }
 C {symbols/nfet_03v3.sym} 11560 20430 0 0 {name=M11
 L=0.5u
-W=30u
+W=22u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -278,7 +278,7 @@ spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 11600 20330 0 1 {name=M14
 L=0.50u
-W=70u
+W=65u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
