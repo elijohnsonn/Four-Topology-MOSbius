@@ -1,19 +1,19 @@
-* Extracted by KLayout with GF180MCU LVS runset on : 27/07/2026 03:21
+* Extracted by KLayout with GF180MCU LVS runset on : 28/07/2026 02:00
 
-.SUBCKT programmable_pfet b s d ena<1> VDD VSS ena_bar<1> g ena_bar<0> ena<0>
-M$1 VDD ena<1> \$5 VDD pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P PS=2.18U
+.SUBCKT programmable_pfet b s d g VSS ena<1> ena<0> ena_bar<1> ena_bar<0>
+M$1 \$9 ena<0> \$4 \$9 pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P PS=2.18U
 + PD=2.18U
-M$2 d \$5 s b pfet_03v3 L=1U W=184U AS=83.72P AD=83.72P PS=294.2U PD=294.2U
-M$22 VDD ena<0> \$25 VDD pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P
-+ PS=2.18U PD=2.18U
+M$2 \$9 ena<1> \$8 \$9 pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P PS=2.18U
++ PD=2.18U
+M$3 d \$8 s b pfet_03v3 L=1U W=184U AS=83.72P AD=83.72P PS=294.2U PD=294.2U
 M$23 s g d b pfet_03v3 L=1U W=92U AS=59.8P AD=59.8P PS=197U PD=197U
-M$26 s \$25 d b pfet_03v3 L=1U W=92U AS=59.8P AD=59.8P PS=197U PD=197U
-M$43 \$5 ena_bar<1> g VDD pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P
+M$26 s \$4 d b pfet_03v3 L=1U W=92U AS=59.8P AD=59.8P PS=197U PD=197U
+M$43 \$4 ena_bar<0> g \$9 pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P
 + PS=2.18U PD=2.18U
-M$44 \$25 ena_bar<0> g VDD pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P
+M$44 \$8 ena_bar<1> g \$9 pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P
 + PS=2.18U PD=2.18U
-M$45 \$5 ena<1> g VSS nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P PS=2.1U
+M$45 \$4 ena<0> g VSS nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P PS=2.1U
 + PD=2.1U
-M$46 \$25 ena<0> g VSS nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P PS=2.1U
+M$46 \$8 ena<1> g VSS nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P PS=2.1U
 + PD=2.1U
 .ENDS programmable_pfet
