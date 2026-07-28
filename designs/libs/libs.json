@@ -1,4 +1,5 @@
 {
+  "cs_stage_programmable_common_source": "/foss/designs/libs/core_amps/cs_stage/layout/programmable_common_source.gds",
   "core_digital_programmable_nfet_w27P1_l1_f1_m1": "/foss/designs/libs/core_digital/layout/programmable_nfet_w27P1_l1_f1_m1.gds",
   "core_digital_transmission_gate": "/foss/designs/libs/core_digital/layout/transmission_gate.gds",
   "core_digital_inv1": "/foss/designs/libs/core_digital/layout/inv1.gds",
