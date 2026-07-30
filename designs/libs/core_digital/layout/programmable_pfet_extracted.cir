@@ -1,50 +1,13 @@
-* Extracted by KLayout with GF180MCU LVS runset on : 30/07/2026 01:48
+* Extracted by KLayout with GF180MCU LVS runset on : 30/07/2026 03:48
 
-.SUBCKT programmable_pfet
+.SUBCKT programmable_pfet b s d g VSS ena<1> ena<0> ena_bar<1> ena_bar<0>
 M$1 \$9 ena<0> \$4 \$9 pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P PS=2.18U
 + PD=2.18U
 M$2 \$9 ena<1> \$8 \$9 pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P PS=2.18U
 + PD=2.18U
-M$3 d \$8 s b pfet_03v3 L=1U W=9.2U AS=5.98P AD=2.392P PS=19.7U PD=9.72U
-M$4 s \$8 d b pfet_03v3 L=1U W=9.2U AS=2.392P AD=5.98P PS=9.72U PD=19.7U
-M$5 d \$8 s b pfet_03v3 L=1U W=9.2U AS=5.98P AD=2.392P PS=19.7U PD=9.72U
-M$6 s \$8 d b pfet_03v3 L=1U W=9.2U AS=2.392P AD=5.98P PS=9.72U PD=19.7U
-M$7 d \$8 s b pfet_03v3 L=1U W=9.2U AS=5.98P AD=2.392P PS=19.7U PD=9.72U
-M$8 s \$8 d b pfet_03v3 L=1U W=9.2U AS=2.392P AD=5.98P PS=9.72U PD=19.7U
-M$9 d \$8 s b pfet_03v3 L=1U W=9.2U AS=5.98P AD=2.392P PS=19.7U PD=9.72U
-M$10 s \$8 d b pfet_03v3 L=1U W=9.2U AS=2.392P AD=5.98P PS=9.72U PD=19.7U
-M$11 d \$8 s b pfet_03v3 L=1U W=9.2U AS=5.98P AD=2.392P PS=19.7U PD=9.72U
-M$12 s \$8 d b pfet_03v3 L=1U W=9.2U AS=2.392P AD=5.98P PS=9.72U PD=19.7U
-M$13 d \$8 s b pfet_03v3 L=1U W=9.2U AS=5.98P AD=2.392P PS=19.7U PD=9.72U
-M$14 s \$8 d b pfet_03v3 L=1U W=9.2U AS=2.392P AD=5.98P PS=9.72U PD=19.7U
-M$15 d \$8 s b pfet_03v3 L=1U W=9.2U AS=5.98P AD=2.392P PS=19.7U PD=9.72U
-M$16 s \$8 d b pfet_03v3 L=1U W=9.2U AS=2.392P AD=5.98P PS=9.72U PD=19.7U
-M$17 d \$8 s b pfet_03v3 L=1U W=9.2U AS=5.98P AD=2.392P PS=19.7U PD=9.72U
-M$18 s \$8 d b pfet_03v3 L=1U W=9.2U AS=2.392P AD=5.98P PS=9.72U PD=19.7U
-M$19 d \$8 s b pfet_03v3 L=1U W=9.2U AS=5.98P AD=2.392P PS=19.7U PD=9.72U
-M$20 s \$8 d b pfet_03v3 L=1U W=9.2U AS=2.392P AD=5.98P PS=9.72U PD=19.7U
-M$21 d \$8 s b pfet_03v3 L=1U W=9.2U AS=5.98P AD=2.392P PS=19.7U PD=9.72U
-M$22 s \$8 d b pfet_03v3 L=1U W=9.2U AS=2.392P AD=5.98P PS=9.72U PD=19.7U
-M$23 s g d b pfet_03v3 L=1U W=9.2U AS=5.98P AD=5.98P PS=19.7U PD=19.7U
-M$24 s g d b pfet_03v3 L=1U W=9.2U AS=5.98P AD=5.98P PS=19.7U PD=19.7U
-M$25 s g d b pfet_03v3 L=1U W=9.2U AS=5.98P AD=5.98P PS=19.7U PD=19.7U
-M$26 s \$4 d b pfet_03v3 L=1U W=9.2U AS=5.98P AD=5.98P PS=19.7U PD=19.7U
-M$27 s \$4 d b pfet_03v3 L=1U W=9.2U AS=5.98P AD=5.98P PS=19.7U PD=19.7U
-M$28 s \$4 d b pfet_03v3 L=1U W=9.2U AS=5.98P AD=5.98P PS=19.7U PD=19.7U
-M$29 s g d b pfet_03v3 L=1U W=9.2U AS=5.98P AD=5.98P PS=19.7U PD=19.7U
-M$30 s g d b pfet_03v3 L=1U W=9.2U AS=5.98P AD=5.98P PS=19.7U PD=19.7U
-M$31 s g d b pfet_03v3 L=1U W=9.2U AS=5.98P AD=5.98P PS=19.7U PD=19.7U
-M$32 s \$4 d b pfet_03v3 L=1U W=9.2U AS=5.98P AD=5.98P PS=19.7U PD=19.7U
-M$33 s \$4 d b pfet_03v3 L=1U W=9.2U AS=5.98P AD=5.98P PS=19.7U PD=19.7U
-M$34 s \$4 d b pfet_03v3 L=1U W=9.2U AS=5.98P AD=5.98P PS=19.7U PD=19.7U
-M$35 s g d b pfet_03v3 L=1U W=9.2U AS=5.98P AD=5.98P PS=19.7U PD=19.7U
-M$36 s g d b pfet_03v3 L=1U W=9.2U AS=5.98P AD=5.98P PS=19.7U PD=19.7U
-M$37 s g d b pfet_03v3 L=1U W=9.2U AS=5.98P AD=5.98P PS=19.7U PD=19.7U
-M$38 s g d b pfet_03v3 L=1U W=9.2U AS=5.98P AD=5.98P PS=19.7U PD=19.7U
-M$39 s \$4 d b pfet_03v3 L=1U W=9.2U AS=5.98P AD=5.98P PS=19.7U PD=19.7U
-M$40 s \$4 d b pfet_03v3 L=1U W=9.2U AS=5.98P AD=5.98P PS=19.7U PD=19.7U
-M$41 s \$4 d b pfet_03v3 L=1U W=9.2U AS=5.98P AD=5.98P PS=19.7U PD=19.7U
-M$42 s \$4 d b pfet_03v3 L=1U W=9.2U AS=5.98P AD=5.98P PS=19.7U PD=19.7U
+M$3 d \$8 s b pfet_03v3 L=1U W=184U AS=83.72P AD=83.72P PS=294.2U PD=294.2U
+M$23 s g d b pfet_03v3 L=1U W=92U AS=59.8P AD=59.8P PS=197U PD=197U
+M$26 s \$4 d b pfet_03v3 L=1U W=92U AS=59.8P AD=59.8P PS=197U PD=197U
 M$43 \$4 ena_bar<0> g \$9 pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P
 + PS=2.18U PD=2.18U
 M$44 \$8 ena_bar<1> g \$9 pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P
