@@ -1,14 +1,14 @@
-* Extracted by KLayout with GF180MCU LVS runset on : 28/07/2026 01:36
+* Extracted by KLayout with GF180MCU LVS runset on : 01/08/2026 15:17
 
-.SUBCKT programmable_nfet g ena_bar<0> ena_bar<1> VSS VDD s d ena<0> ena<1>
+.SUBCKT programmable_nfet ena_bar<0> g ena_bar<1> VDD VSS s d ena<0> ena<1>
 X$1 g \$1 VDD VSS ena_bar<1> ena<1> transmission_gate
-X$6 g \$2 VDD VSS ena_bar<0> ena<0> transmission_gate
-M$1 VSS ena_bar<0> \$2 VSS nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P
+X$4 g \$3 VDD VSS ena_bar<0> ena<0> transmission_gate
+M$1 VSS ena_bar<0> \$3 VSS nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P
 + PS=2.1U PD=2.1U
 M$2 VSS ena_bar<1> \$1 VSS nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P
 + PS=2.1U PD=2.1U
 M$3 d \$1 s VSS nfet_03v3 L=1U W=54.2U AS=23.577P AD=23.577P PS=83.04U PD=83.04U
-M$5 s \$2 d VSS nfet_03v3 L=1U W=27.1U AS=16.531P AD=16.531P PS=55.42U PD=55.42U
+M$5 s \$3 d VSS nfet_03v3 L=1U W=27.1U AS=16.531P AD=16.531P PS=55.42U PD=55.42U
 M$6 s g d VSS nfet_03v3 L=1U W=27.1U AS=16.531P AD=16.531P PS=55.42U PD=55.42U
 .ENDS programmable_nfet
 
