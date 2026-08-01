@@ -1,0 +1,21 @@
+** sch_path: /foss/designs/libs/core_digital/schem/programmable_pfet.sch
+.subckt programmable_pfet d b g s ena_bar<0> VDD ena_bar<1> ena<0> ena<1> VSS
+*.PININFO VSS:I VDD:I g:I ena_bar<1>:I ena_bar<0>:I ena<0>:I s:B d:B b:I ena<1>:I
+M1 d net2 s b pfet_03v3 L=.5u W=29.6u nf=1 m=5
+M3 d net1 s b pfet_03v3 L=.5u W=59.2u nf=2 m=5
+M2 net1 ena<1> VDD VDD pfet_03v3 L=0.28u W=0.42u nf=1 m=1
+M4 net2 ena<0> VDD VDD pfet_03v3 L=0.28u W=0.42u nf=1 m=1
+x1 ena_bar<0> VDD net2 g VSS ena<0> transmission_gate
+x2 ena_bar<1> VDD net1 g VSS ena<1> transmission_gate
+M5 d g s b pfet_03v3 L=.5u W=29.6u nf=1 m=5
+.ends
+
+* expanding   symbol:  libs/core_digital/schem/transmission_gate.sym # of pins=6
+** sym_path: /foss/designs/libs/core_digital/schem/transmission_gate.sym
+** sch_path: /foss/designs/libs/core_digital/schem/transmission_gate.sch
+.subckt transmission_gate ena_bar VDD out in VSS ena
+*.PININFO in:I ena_bar:I ena:I VSS:I VDD:I out:O
+M1 in ena_bar out VDD pfet_03v3 L=0.28u W=0.42u nf=1 m=1
+M2 in ena out VSS nfet_03v3 L=0.28u W=0.42u nf=1 m=1
+.ends
+
