@@ -1,0 +1,41 @@
+* Extracted by KLayout with GF180MCU LVS runset on : 01/08/2026 16:35
+
+.SUBCKT D-latch1
+X$1 clk \$7 Vss \$1 Vdd Vss \$I6 NAND2
+X$2 \$1 Q Vss Q_bar Vdd Vss \$I6 NAND2
+X$3 \$I12 \$2 Vss Q Vdd Vss \$I4 NAND2
+X$4 clk D Vss \$2 Vdd Vss \$I4 NAND2
+X$5 D \$7 Vss Vdd \$I6 inv1
+.ENDS D-latch1
+
+.SUBCKT inv1 A Y Vss Vdd \$I1
+X$1 Y Vss A Vss Vss nfet
+X$2 Y Vdd A Vdd \$I1 pfet
+.ENDS inv1
+
+.SUBCKT NAND2 B A VSS Y VDD Vss \$I2
+X$1 VSS \$4 B VSS Vss nfet$1
+X$2 Y VDD B VDD \$I2 pfet$1
+X$3 Y VDD A VDD \$I2 pfet$1
+X$4 \$4 Y A VSS Vss nfet$1
+.ENDS NAND2
+
+.SUBCKT pfet \$2 \$3 \$4 \$5 \$6
+M$1 \$3 \$4 \$2 \$5 pfet_03v3 L=0.28U W=0.84U AS=0.546P AD=0.546P PS=2.98U
++ PD=2.98U
+.ENDS pfet
+
+.SUBCKT nfet \$2 \$3 \$4 \$5 Vss
+M$1 \$3 \$4 \$2 Vss nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P PS=2.1U
++ PD=2.1U
+.ENDS nfet
+
+.SUBCKT pfet$1 \$2 \$3 \$4 \$5 \$6
+M$1 \$3 \$4 \$2 \$5 pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P PS=2.18U
++ PD=2.18U
+.ENDS pfet$1
+
+.SUBCKT nfet$1 \$2 \$3 \$4 \$5 Vss
+M$1 \$3 \$4 \$2 Vss nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P PS=2.1U
++ PD=2.1U
+.ENDS nfet$1
