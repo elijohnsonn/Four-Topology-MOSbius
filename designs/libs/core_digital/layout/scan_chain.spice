@@ -1,0 +1,61 @@
+** sch_path: /foss/designs/libs/core_digital/schem/scan_chain.sch
+.subckt scan_chain VDD scan_out EN_1_5T EN_0_5T EN_0_CS EN_1_CS EN_0_TELESCOPIC EN_1_FOLDED EN_0_FOLDED EN_1_TELESCOPIC scan_in
++ !EN_1_FOLDED !EN_1_CS !EN_0_TELESCOPIC !EN_0_CS !EN_1_5T !EN_0_5T !EN_1_TELESCOPIC !EN_0_FOLDED CLK VSS
+*.PININFO scan_in:I CLK:I VSS:I VDD:I !EN_0_FOLDED:O !EN_0_TELESCOPIC:O !EN_1_FOLDED:O !EN_1_TELESCOPIC:O !EN_0_5T:O !EN_1_5T:O
+*+ !EN_0_CS:O !EN_1_CS:O scan_out:O EN_1_CS:O EN_0_CS:O EN_1_5T:O EN_0_5T:O EN_1_TELESCOPIC:O EN_0_TELESCOPIC:O EN_1_FOLDED:O EN_0_FOLDED:O
+x1 VDD scan_in EN_0_FOLDED !EN_0_FOLDED CLK VSS D_ff1
+x2 VDD EN_0_FOLDED EN_1_FOLDED !EN_1_FOLDED CLK VSS D_ff1
+x3 VDD EN_1_FOLDED EN_0_TELESCOPIC !EN_0_TELESCOPIC CLK VSS D_ff1
+x4 VDD EN_0_TELESCOPIC EN_1_TELESCOPIC !EN_1_TELESCOPIC CLK VSS D_ff1
+x5 VDD EN_1_TELESCOPIC EN_0_5T !EN_0_5T CLK VSS D_ff1
+x6 VDD EN_0_5T EN_1_5T !EN_1_5T CLK VSS D_ff1
+x7 VDD EN_1_5T EN_0_CS !EN_0_CS CLK VSS D_ff1
+x8 VDD EN_0_CS EN_1_CS !EN_1_CS CLK VSS D_ff1
+x9 VDD EN_1_CS scan_out net1 CLK VSS D_ff1
+.ends
+
+* expanding   symbol:  libs/core_digital/schem/D_ff1.sym # of pins=6
+** sym_path: /foss/designs/libs/core_digital/schem/D_ff1.sym
+** sch_path: /foss/designs/libs/core_digital/schem/D_ff1.sch
+.subckt D_ff1 VDD D Q Q_bar CLK VSS
+*.PININFO D:I CLK:I VDD:I VSS:I Q:O Q_bar:O
+x1 VDD D net2 net3 CLK VSS D_latch1
+x2 VDD net2 Q Q_bar net1 VSS D_latch1
+x3 VDD CLK net1 VSS inv1
+.ends
+
+
+* expanding   symbol:  libs/core_digital/schem/D_latch1.sym # of pins=6
+** sym_path: /foss/designs/libs/core_digital/schem/D_latch1.sym
+** sch_path: /foss/designs/libs/core_digital/schem/D_latch1.sch
+.subckt D_latch1 Vdd D Q Q_bar clk Vss
+*.PININFO D:I Vdd:I Vss:I clk:I Q:O Q_bar:O
+x1 Vdd net3 D clk Vss NAND2
+x2 Vdd net2 net1 clk Vss NAND2
+x3 Vdd Q_bar Q net2 Vss NAND2
+x4 Vdd Q net3 Q_bar Vss NAND2
+x5 Vdd D net1 Vss inv1
+.ends
+
+
+* expanding   symbol:  libs/core_digital/schem/inv1.sym # of pins=4
+** sym_path: /foss/designs/libs/core_digital/schem/inv1.sym
+** sch_path: /foss/designs/libs/core_digital/schem/inv1.sch
+.subckt inv1 Vdd A Y Vss
+*.PININFO Vdd:I A:I Vss:I Y:O
+M1 Y A Vss Vss nfet_03v3 L=0.28u W=0.42u nf=1 m=1
+M2 Y A Vdd Vdd pfet_03v3 L=0.28u W=0.84u nf=1 m=1
+.ends
+
+
+* expanding   symbol:  libs/core_digital/schem/NAND2.sym # of pins=5
+** sym_path: /foss/designs/libs/core_digital/schem/NAND2.sym
+** sch_path: /foss/designs/libs/core_digital/schem/NAND2.sch
+.subckt NAND2 Vdd Y A B Vss
+*.PININFO A:I B:I Vss:I Vdd:I Y:O
+M1 Y A net1 Vss nfet_03v3 L=0.28u W=0.42u nf=1 m=1
+M2 net1 B Vss Vss nfet_03v3 L=0.28u W=0.42u nf=1 m=1
+M3 Y A Vdd Vdd pfet_03v3 L=0.28u W=0.42u nf=1 m=1
+M4 Y B Vdd Vdd pfet_03v3 L=0.28u W=0.42u nf=1 m=1
+.ends
+
