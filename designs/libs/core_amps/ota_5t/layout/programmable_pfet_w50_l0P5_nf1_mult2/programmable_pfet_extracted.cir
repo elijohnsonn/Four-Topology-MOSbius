@@ -1,0 +1,20 @@
+* Extracted by KLayout with GF180MCU LVS runset on : 02/08/2026 04:17
+
+.SUBCKT programmable_pfet ena<1> VSS g ena_bar<1> ena<0> ena_bar<0>
+X$3 g \$1 \$5 VSS ena_bar<1> ena<1> transmission_gate
+X$10 g \$22 \$5 VSS ena_bar<0> ena<0> transmission_gate
+M$1 \$5 ena<0> \$22 \$5 pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P
++ PS=2.18U PD=2.18U
+M$2 \$5 ena<1> \$1 \$5 pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P PS=2.18U
++ PD=2.18U
+M$3 \$8 \$1 \$4 \$2 pfet_03v3 L=0.5U W=200U AS=91P AD=91P PS=303.64U PD=303.64U
+M$7 \$4 g \$8 \$2 pfet_03v3 L=0.5U W=100U AS=65P AD=65P PS=202.6U PD=202.6U
+M$8 \$4 \$22 \$8 \$2 pfet_03v3 L=0.5U W=100U AS=65P AD=65P PS=202.6U PD=202.6U
+.ENDS programmable_pfet
+
+.SUBCKT transmission_gate in out VDD VSS ena_bar ena
+M$1 out ena_bar in VDD pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P PS=2.18U
++ PD=2.18U
+M$2 out ena in VSS nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P PS=2.1U
++ PD=2.1U
+.ENDS transmission_gate
