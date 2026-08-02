@@ -1,6 +1,7 @@
-* Extracted by KLayout with GF180MCU LVS runset on : 28/07/2026 02:00
+* Extracted by KLayout with GF180MCU LVS runset on : 30/07/2026 01:30
 
-.SUBCKT programmable_pfet b s d g VSS ena<1> ena<0> ena_bar<1> ena_bar<0>
+.SUBCKT programmable_pfet b s d g ena<1> ena<0> ena_bar<1> ena_bar<0>
++ gf180mcu_gnd
 M$1 \$9 ena<0> \$4 \$9 pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P PS=2.18U
 + PD=2.18U
 M$2 \$9 ena<1> \$8 \$9 pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P PS=2.18U
@@ -12,8 +13,8 @@ M$43 \$4 ena_bar<0> g \$9 pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P
 + PS=2.18U PD=2.18U
 M$44 \$8 ena_bar<1> g \$9 pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P
 + PS=2.18U PD=2.18U
-M$45 \$4 ena<0> g VSS nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P PS=2.1U
-+ PD=2.1U
-M$46 \$8 ena<1> g VSS nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P PS=2.1U
-+ PD=2.1U
+M$45 \$4 ena<0> g gf180mcu_gnd nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P
++ PS=2.1U PD=2.1U
+M$46 \$8 ena<1> g gf180mcu_gnd nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P
++ PS=2.1U PD=2.1U
 .ENDS programmable_pfet
