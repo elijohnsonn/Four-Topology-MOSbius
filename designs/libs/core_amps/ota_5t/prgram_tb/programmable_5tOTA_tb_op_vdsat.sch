@@ -49,10 +49,10 @@ value="
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 "}
 C {symbols/nfet_03v3.sym} 600 -290 0 1 {name=M2
-L=.5u
-W=23u
+L=1u
+W=27.1u
 nf=1
-m=1*0.589
+m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"

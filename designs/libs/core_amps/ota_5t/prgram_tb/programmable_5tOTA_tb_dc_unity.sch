@@ -66,9 +66,9 @@ N 990 -600 1010 -600 {lab=output}
 C {title.sym} 190 -70 0 0 {name=l1 author="Songhang Li"}
 C {symbols/nfet_03v3.sym} 430 -320 0 1 {name=M2
 L=1u
-W=23u
+W=27.1u
 nf=1
-m=1*0.589*2
+m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
