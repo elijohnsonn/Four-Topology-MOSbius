@@ -1,8 +1,12 @@
 {
   "cs_stage_programmable_common_source": "/foss/designs/libs/core_amps/cs_stage/layout/programmable_common_source.gds",
   "layout_programmable_pfet_w50_l0P5_nf1_mult2": "/foss/designs/libs/core_amps/ota_5t/layout/programmable_pfet_w50_l0P5_nf1_mult2/programmable_pfet_w50_l0P5_nf1_mult2.gds",
+  "core_digital_scan_chain": "/foss/designs/libs/core_digital/layout/scan_chain.gds",
   "core_digital_transmission_gate": "/foss/designs/libs/core_digital/layout/transmission_gate.gds",
   "core_digital_inv1": "/foss/designs/libs/core_digital/layout/inv1.gds",
+  "core_digital_D_ff1": "/foss/designs/libs/core_digital/layout/D_ff1.gds",
+  "core_digital_NAND2": "/foss/designs/libs/core_digital/layout/NAND2.gds",
+  "core_digital_D_latch1": "/foss/designs/libs/core_digital/layout/D_latch1.gds",
   "layout_programmable_nfet_w27P1_l1_f1_m1": "/foss/designs/libs/core_digital/layout/n_w27P1_l1_f1_m1/programmable_nfet_w27P1_l1_f1_m1.gds",
   "layout_programmable_pfet_w9P2_l1_f1_m10": "/foss/designs/libs/core_digital/layout/p_w9P2_l1_f1_m10/programmable_pfet_w9P2_l1_f1_m10.gds"
 }
