@@ -1,0 +1,64 @@
+** sch_path: /foss/designs/libs/core_amps/ota_telescopic/programmable_ota_telescopic schematics/programmable_telescopic_cascode.sch
+.subckt programmable_telescopic_cascode VDD output EN0 !EN0 EN1 !EN1 INN INP VSS VG_BIAS
+*.PININFO output:O VDD:B !EN0:B EN1:B EN0:B !EN1:B INP:I INN:I VSS:B VG_BIAS:B
+M1 VBN VG_BIAS VSS VSS nfet_03v3 L=0.5u W=30u nf=1 m=1
+M2 VBP VBP VSS VSS nfet_03v3 L=0.5u W=1.5u nf=1 m=1
+M4 VBP VBN VDD VDD pfet_03v3 L=0.50u W=70u nf=1 m=1
+M3 VBN VBN VDD VDD pfet_03v3 L=0.50u W=70u nf=1 m=1
+x9 net6 VDD net4 VDD !EN0 VDD !EN1 EN0 EN1 VSS programmable_pfet width=40u length=0.5u nf=1 mult=6
+x8 net5 VDD net4 VDD !EN0 VDD !EN1 EN0 EN1 VSS programmable_pfet width=40u length=0.5u nf=1 mult=6
+x6 net4 VDD VBP net5 !EN0 VDD !EN1 EN0 EN1 VSS programmable_pfet width=47u length=0.5u nf=1 mult=5
+x7 output VDD VBP net6 !EN0 VDD !EN1 EN0 EN1 VSS programmable_pfet width=47u length=0.5u nf=1 mult=5
+x5 output VSS VBN net2 !EN0 VDD !EN1 EN0 EN1 VSS programmable_nfet width=45u length=0.4u nf=1 mult=6
+x4 net4 VSS VBN net3 !EN0 VDD !EN1 EN0 EN1 VSS programmable_nfet width=45u length=0.4u nf=1 mult=6
+x2 net3 VSS INP net1 !EN0 VDD !EN1 EN0 EN1 VSS programmable_nfet width=30u length=0.5u nf=1 mult=1
+x3 net2 VSS INN net1 !EN0 VDD !EN1 EN0 EN1 VSS programmable_nfet width=30u length=0.5u nf=1 mult=1
+x1 net1 VSS VG_BIAS VSS !EN0 VDD !EN1 EN0 EN1 VSS programmable_nfet width=27.1u length=1u nf=1 mult=2
+**** begin user architecture code
+
+
+.include /foss/pdks/gf180mcuD/libs.tech/ngspice/design.ngspice
+.lib /foss/pdks/gf180mcuD/libs.tech/ngspice/sm141064.ngspice typical
+
+**** end user architecture code
+.ends
+
+* expanding   symbol:  libs/core_digital/schem/programmable_pfet.sym # of pins=10
+** sym_path: /foss/designs/libs/core_digital/schem/programmable_pfet.sym
+** sch_path: /foss/designs/libs/core_digital/schem/programmable_pfet.sch
+.subckt programmable_pfet d b g s ena_bar<0> VDD ena_bar<1> ena<0> ena<1> VSS  width=0.22u length=0.28u nf=1 mult=1
+*.PININFO VSS:I VDD:I g:I ena_bar<1>:I ena_bar<0>:I ena<0>:I s:B d:B b:I ena<1>:I
+M1 d net2 s b pfet_03v3 L={length} W={width} nf={nf} m={mult}
+M3 d net1 s b pfet_03v3 L={length} W={2*width} nf={2*nf} m={mult}
+M2 net1 ena<1> VDD VDD pfet_03v3 L=0.28u W=0.42u nf=1 m=1
+M4 net2 ena<0> VDD VDD pfet_03v3 L=0.28u W=0.42u nf=1 m=1
+x1 ena_bar<0> VDD net2 g VSS ena<0> transmission_gate
+x2 ena_bar<1> VDD net1 g VSS ena<1> transmission_gate
+M5 d g s b pfet_03v3 L={length} W={width} nf={nf} m={mult}
+.ends
+
+
+* expanding   symbol:  libs/core_digital/schem/programmable_nfet.sym # of pins=10
+** sym_path: /foss/designs/libs/core_digital/schem/programmable_nfet.sym
+** sch_path: /foss/designs/libs/core_digital/schem/programmable_nfet.sch
+.subckt programmable_nfet d b g s ena_bar<0> VDD ena_bar<1> ena<0> ena<1> VSS  width=0.22u length=0.28u nf=1 mult=1
+*.PININFO VSS:I VDD:I g:I ena_bar<1>:I ena_bar<0>:I ena<1>:I ena<0>:I d:B s:B b:I
+M1 d net2 s b nfet_03v3 L={length} W={width} nf={nf} m={mult}
+M3 d net1 s b nfet_03v3 L={length} W={2*width} nf={2*nf} m={mult}
+M2 net1 ena_bar<1> VSS VSS nfet_03v3 L=0.28u W=0.42u nf=1 m=1
+M4 net2 ena_bar<0> VSS VSS nfet_03v3 L=0.28u W=0.42u nf=1 m=1
+x1 ena_bar<0> VDD net2 g VSS ena<0> transmission_gate
+x2 ena_bar<1> VDD net1 g VSS ena<1> transmission_gate
+M5 d g s b nfet_03v3 L={length} W={width} nf={nf} m={mult}
+.ends
+
+
+* expanding   symbol:  libs/core_digital/schem/transmission_gate.sym # of pins=6
+** sym_path: /foss/designs/libs/core_digital/schem/transmission_gate.sym
+** sch_path: /foss/designs/libs/core_digital/schem/transmission_gate.sch
+.subckt transmission_gate ena_bar VDD out in VSS ena
+*.PININFO in:I ena_bar:I ena:I VSS:I VDD:I out:O
+M1 in ena_bar out VDD pfet_03v3 L=0.28u W=0.42u nf=1 m=1
+M2 in ena out VSS nfet_03v3 L=0.28u W=0.42u nf=1 m=1
+.ends
+
