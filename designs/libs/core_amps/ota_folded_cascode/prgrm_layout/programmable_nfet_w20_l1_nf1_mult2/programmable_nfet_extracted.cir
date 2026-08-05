@@ -1,8 +1,8 @@
-* Extracted by KLayout with GF180MCU LVS runset on : 30/07/2026 04:59
+* Extracted by KLayout with GF180MCU LVS runset on : 05/08/2026 01:07
 
 .SUBCKT programmable_nfet VSS VDD ena_bar<1> ena_bar<0> g ena<1> ena<0>
-X$9 g \$6 VDD VSS ena_bar<0> ena<0> transmission_gate
-X$10 g \$5 VDD VSS ena_bar<1> ena<1> transmission_gate
+X$9 g \$5 VDD VSS ena_bar<1> ena<1> transmission_gate
+X$10 g \$6 VDD VSS ena_bar<0> ena<0> transmission_gate
 M$1 VSS ena_bar<0> \$6 VSS nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P
 + PS=2.1U PD=2.1U
 M$2 VSS ena_bar<1> \$5 VSS nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P

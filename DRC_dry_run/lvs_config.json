@@ -1,0 +1,29 @@
+{
+	"STD_CELL_LIBRARY": "GF180MCU Pcells",
+	"INCLUDE_CONFIGS": [
+	],
+	"TOP_SOURCE": "DUT",
+	"TOP_LAYOUT": "DUT",
+	"EXTRACT_FLATGLOB": [
+		""
+	],
+	"EXTRACT_ABSTRACT": [
+		""
+	],
+	"LVS_FLATTEN": [
+		""
+	],
+	"LVS_NOFLATTEN": [
+		""
+	],
+	"LVS_IGNORE": [
+		""
+	],
+	"LVS_SPICE_FILES": [
+		""
+	],
+	"LVS_VERILOG_FILES": [
+		""
+	],
+	"LAYOUT_FILE": "designs/libs/core_tb/layout/DUT.gds"
+}
