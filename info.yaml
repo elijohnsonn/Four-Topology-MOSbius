@@ -1,0 +1,19 @@
+# ----- ------ ----- ----- ------ ----- ----- ------ -----
+# Chipathon 2026: Project configuration
+# LICENSE: Apache License Version 2.0
+# http://www.apache.org/licenses/
+# ----- ------ ----- ----- ------ ----- ----- ------ -----
+
+# data will be pulled from main branch of the repo.
+# please be sure that the main branch contains the data you want to submit.
+# This file will be updated with more information later
+
+# ======================================================
+# Project metadata (used for documentation / review)
+# ======================================================
+project:
+  title: "Four Topology MOSbius"             # Project title (e.g. "Simple CPU", "PLL", "ADC")
+  team: "Four Topology MOSbius"                      # Your Team name
+  discord: ""                   # Optional: Discord username (for support / communication)
+  description: "PDK test data"  # Short one-line description
+  lvs_config: "./DRC_dry_run/lvs_config.json"
