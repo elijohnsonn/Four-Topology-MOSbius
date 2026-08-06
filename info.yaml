@@ -14,6 +14,6 @@
 project:
   title: "Four Topology MOSbius"             # Project title (e.g. "Simple CPU", "PLL", "ADC")
   team: "Four Topology MOSbius"                      # Your Team name
-  discord: ""                   # Optional: Discord username (for support / communication)
+  discord: "elij0100"                   # Optional: Discord username (for support / communication)
   description: "PDK test data"  # Short one-line description
   lvs_config: "./DRC_dry_run/lvs_config.json"
