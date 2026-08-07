@@ -1,46 +1,41 @@
+** sch_path: /foss/designs/libs/core_amps/ota_5t/prgram_schem/programmable_5tOTA.sch
+.subckt programmable_5tOTA VDD EN0 !EN0 vout EN1 !EN1 vin- vin+ V_bias VSS
+*.PININFO VDD:I vout:O vin+:I vin-:I V_bias:I VSS:I EN0:I !EN0:I EN1:I !EN1:I
+x1 net1 VSS vin+ net2 !EN0 VDD !EN1 EN0 EN1 VSS programmable_nfet width=11.4u length=0.5u nf=1 mult=3
+x2 vout VSS vin- net2 !EN0 VDD !EN1 EN0 EN1 VSS programmable_nfet width=11.4u length=0.5u nf=1 mult=3
+x4 vout VDD net1 VDD !EN0 VDD !EN1 EN0 EN1 VSS programmable_pfet width=50u length=0.5u nf=1 mult=2
+x3 net1 VDD net1 VDD !EN0 VDD !EN1 EN0 EN1 VSS programmable_pfet width=50u length=0.5u nf=1 mult=2
+x5 net2 VSS V_bias VSS !EN0 VDD !EN1 EN0 EN1 VSS programmable_nfet width=22.8u length=1u nf=1 mult=3
+.ends
 
-
-* expanding   symbol:  libs/core_digital/schem/programmable_nfet.sym # of pins=9 (removing body pin)
+* expanding   symbol:  libs/core_digital/schem/programmable_nfet.sym # of pins=10
 ** sym_path: /foss/designs/libs/core_digital/schem/programmable_nfet.sym
 ** sch_path: /foss/designs/libs/core_digital/schem/programmable_nfet.sch
-.subckt programmable_nfet_w11P4_l0P5_nf1_mult3 d g s ena_bar<0> VDD ena_bar<1> ena<0> ena<1> VSS
+.subckt programmable_nfet d b g s ena_bar<0> VDD ena_bar<1> ena<0> ena<1> VSS  width=0.22u length=0.28u nf=1 mult=1
 *.PININFO VSS:I VDD:I g:I ena_bar<1>:I ena_bar<0>:I ena<1>:I ena<0>:I d:B s:B b:I
-M1 d net2 s VSS nfet_03v3 L=0.5u W=11.4u nf=1 m=3
-M3 d net1 s VSS nfet_03v3 L=0.5u W=22.8u nf=2 m=3
+M1 d net2 s b nfet_03v3 L={length} W={width} nf={nf} m={mult}
+M3 d net1 s b nfet_03v3 L={length} W={2*width} nf={2*nf} m={mult}
 M2 net1 ena_bar<1> VSS VSS nfet_03v3 L=0.28u W=0.42u nf=1 m=1
 M4 net2 ena_bar<0> VSS VSS nfet_03v3 L=0.28u W=0.42u nf=1 m=1
 x1 ena_bar<0> VDD net2 g VSS ena<0> transmission_gate
 x2 ena_bar<1> VDD net1 g VSS ena<1> transmission_gate
-M5 d g s VSS nfet_03v3 L=0.5u W=11.4u nf=1 m=3
-.ends
-
-** sch_path: /foss/designs/libs/core_digital/schem/programmable_nfet.sch
-.subckt programmable_nfet_w22P8_l1_nf1_mult3 d g s ena_bar<0> VDD ena_bar<1> ena<0> ena<1> VSS
-*.PININFO VSS:I VDD:I g:I ena_bar<1>:I ena_bar<0>:I ena<1>:I ena<0>:I d:B s:B b:I
-M1 d net2 s VSS nfet_03v3 L=1u W=22.8u nf=1 m=3
-M3 d net1 s VSS nfet_03v3 L=1u W=45.6u nf=2 m=3
-M2 net1 ena_bar<1> VSS VSS nfet_03v3 L=0.28u W=0.42u nf=1 m=1
-M4 net2 ena_bar<0> VSS VSS nfet_03v3 L=0.28u W=0.42u nf=1 m=1
-x1 ena_bar<0> VDD net2 g VSS ena<0> transmission_gate
-x2 ena_bar<1> VDD net1 g VSS ena<1> transmission_gate
-M5 d g s VSS nfet_03v3 L=1u W=22.8u nf=1 m=3
+M5 d g s b nfet_03v3 L={length} W={width} nf={nf} m={mult}
 .ends
 
 
-* expanding   symbol:  libs/core_digital/schem/programmable_pfet.sym # of pins=9
+* expanding   symbol:  libs/core_digital/schem/programmable_pfet.sym # of pins=10
 ** sym_path: /foss/designs/libs/core_digital/schem/programmable_pfet.sym
 ** sch_path: /foss/designs/libs/core_digital/schem/programmable_pfet.sch
-.subckt programmable_pfet_w50_l0P5_nf1_mult2 d b g s ena_bar<0> VDD ena_bar<1> ena<0> ena<1> VSS
+.subckt programmable_pfet d b g s ena_bar<0> VDD ena_bar<1> ena<0> ena<1> VSS  width=0.22u length=0.28u nf=1 mult=1
 *.PININFO VSS:I VDD:I g:I ena_bar<1>:I ena_bar<0>:I ena<0>:I s:B d:B b:I ena<1>:I
-M1 d net2 s b pfet_03v3 L=0.5u W=50u nf=1 m=2
-M3 d net1 s b pfet_03v3 L=0.5u W=100u nf=2 m=2
+M1 d net2 s b pfet_03v3 L={length} W={width} nf={nf} m={mult}
+M3 d net1 s b pfet_03v3 L={length} W={2*width} nf={2*nf} m={mult}
 M2 net1 ena<1> VDD VDD pfet_03v3 L=0.28u W=0.42u nf=1 m=1
 M4 net2 ena<0> VDD VDD pfet_03v3 L=0.28u W=0.42u nf=1 m=1
 x1 ena_bar<0> VDD net2 g VSS ena<0> transmission_gate
 x2 ena_bar<1> VDD net1 g VSS ena<1> transmission_gate
-M5 d g s b pfet_03v3 L=0.5u W=50u nf=1 m=2
+M5 d g s b pfet_03v3 L={length} W={width} nf={nf} m={mult}
 .ends
-
 
 
 * expanding   symbol:  libs/core_digital/schem/transmission_gate.sym # of pins=6
@@ -52,12 +47,3 @@ M1 in ena_bar out VDD pfet_03v3 L=0.28u W=0.42u nf=1 m=1
 M2 in ena out VSS nfet_03v3 L=0.28u W=0.42u nf=1 m=1
 .ends
 
-** sch_path: /foss/designs/libs/core_amps/ota_5t/prgram_schem/programmable_5tOTA.sch
-.subckt programmable_5tOTA VDD ena<0> ena_bar<0> vout ena<1> ena_bar<1> vin- vin+ V_bias VSS
-*.PININFO VDD:I vout:O vin+:I vin-:I V_bias:I VSS:I ena<0>:I ena_bar<0>:I ena<1>:I ena_bar<1>:I
-x1 net1 vin+ net2 ena_bar<0> VDD ena_bar<1> ena<0> ena<1> VSS programmable_nfet_w11P4_l0P5_nf1_mult3
-x2 vout vin- net2 ena_bar<0> VDD ena_bar<1> ena<0> ena<1> VSS programmable_nfet_w11P4_l0P5_nf1_mult3
-x4 vout VDD net1 VDD ena_bar<0> VDD ena_bar<1> ena<0> ena<1> VSS programmable_pfet_w50_l0P5_nf1_mult2
-x3 net1 VDD net1 VDD ena_bar<0> VDD ena_bar<1> ena<0> ena<1> VSS programmable_pfet_w50_l0P5_nf1_mult2
-x5 net2 V_bias VSS ena_bar<0> VDD ena_bar<1> ena<0> ena<1> VSS programmable_nfet_w22P8_l1_nf1_mult3
-.ends
