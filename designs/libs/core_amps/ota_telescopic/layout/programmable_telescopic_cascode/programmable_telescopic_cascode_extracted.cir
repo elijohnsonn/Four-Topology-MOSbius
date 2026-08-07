@@ -1,299 +1,175 @@
-* Extracted by KLayout with GF180MCU LVS runset on : 05/08/2026 22:27
+* Extracted by KLayout with GF180MCU LVS runset on : 07/08/2026 03:45
 
-.SUBCKT pfet$14
-.ENDS pfet$14
-
-.SUBCKT pfet$12
-.ENDS pfet$12
-
-.SUBCKT pfet$10
-.ENDS pfet$10
-
-.SUBCKT pfet$7
-.ENDS pfet$7
-
-.SUBCKT pfet$2
-.ENDS pfet$2
-
-.SUBCKT programmable_telescopic_cascode
-X$1 \$12 \$21 VDD VDD VDD EN0 \$I21 \$I33 VSS|vss VDD \!EN0 \!EN1 VSS|vss \$I2
-+ programmable_pfet
-X$2 VDD \$22 EN1 VDD \$18 VSS|vss VBP \!EN1 EN0 \!EN0 VSS|vss \$I2
-+ programmable_pfet$1
-X$3 \$14 \$18 \!EN0 \!EN1 VSS|vss \$15 VDD VSS|vss EN1 EN0 programmable_nfet
-X$4 INN \$15 \$13 VSS|vss \!EN0 \!EN1 VSS|vss VDD EN0 EN1 programmable_nfet$1
-X$5 VG_BIAS \!EN0 \!EN1 VSS|vss VDD \$13 programmable_nfet$2
-X$6 INP \$16 \$13 VSS|vss \!EN0 \!EN1 VSS|vss VDD EN0 EN1 programmable_nfet$1
-X$7 \$14 \$12 \!EN0 \!EN1 VSS|vss \$16 VDD VSS|vss EN1 EN0 programmable_nfet
-X$8 VDD \$21 EN1 VDD \$12 VSS|vss VBP \!EN1 EN0 \!EN0 VSS|vss \$I2
-+ programmable_pfet$1
-X$9 \$12 \$22 VDD VDD \$I20 EN0 VDD EN1 VSS|vss VDD \!EN0 \!EN1 VSS|vss \$I2
-+ programmable_pfet
-X$10 VDD \$I47 VDD VBN \$I6 pfet$17
-X$11 VDD VBP VDD VBN \$I6 pfet$17
-X$12 VSS|vss VBP VSS|vss VSS|vss nfet$15
-X$13 VSS|vss VSS|vss VG_BIAS VSS|vss nfet$14
-.ENDS programmable_telescopic_cascode
-
-.SUBCKT nfet$14 \$3 \$4 \$5 vss
-M$1 \$3 \$5 \$2 vss nfet_03v3 L=0.5U W=30U AS=18.3P AD=18.3P PS=61.22U PD=61.22U
-.ENDS nfet$14
-
-.SUBCKT nfet$15 \$3 \$4 \$5 vss
-M$1 \$3 \$4 \$2 vss nfet_03v3 L=0.5U W=1.5U AS=0.915P AD=0.915P PS=4.22U
+.SUBCKT programmable_telescopic_cascode \!EN0 \!EN1 VDD VSS VG_BIAS EN1 EN0
++ output INP INN
+M$1 VSS VG_BIAS \$25 VSS nfet_03v3 L=0.5U W=30U AS=18.3P AD=18.3P PS=61.22U
++ PD=61.22U
+M$2 VSS \$28 \$28 VSS nfet_03v3 L=0.5U W=1.5U AS=0.915P AD=0.915P PS=4.22U
 + PD=4.22U
-.ENDS nfet$15
-
-.SUBCKT pfet$17 \$2 \$3 \$4 \$5 \$6
-M$1 \$4 \$5 \$3 \$2 pfet_03v3 L=0.5U W=70U AS=45.5P AD=45.5P PS=141.3U PD=141.3U
-.ENDS pfet$17
-
-.SUBCKT programmable_nfet$2 g ena_bar<0> ena_bar<1> vss \$6 d
-X$1 d s b g vss nfet$10
-X$2 g \$2 \$6 vss ena_bar<0> ena<0> vss \$I2 transmission_gate$4
-X$3 g \$7 \$6 vss ena_bar<1> ena<1> vss \$I2 transmission_gate$4
-X$4 d s b g vss nfet$10
-X$5 \$2 vss ena_bar<0> vss vss nfet$13
-X$6 d s b \$2 vss nfet$10
-X$7 d s b \$2 vss nfet$10
-X$8 \$7 vss ena_bar<1> vss vss nfet$13
-X$9 s d s b \$7 \$7 vss nfet$11
-X$10 s d s b \$7 \$7 vss nfet$11
-.ENDS programmable_nfet$2
-
-.SUBCKT programmable_nfet$1 g d s b ena_bar<0> ena_bar<1> vss \$10 ena<0> ena<1>
-X$1 d s b g vss nfet$6
-X$2 g \$5 \$10 vss ena_bar<0> ena<0> vss \$I2 transmission_gate$3
-X$3 g \$7 \$10 vss ena_bar<1> ena<1> vss \$I2 transmission_gate$3
-X$4 d s b \$5 vss nfet$6
-X$5 s d s b \$7 \$7 vss nfet$7
-X$6 \$5 vss ena_bar<0> vss vss nfet$9
-X$7 \$7 vss ena_bar<1> vss vss nfet$9
-.ENDS programmable_nfet$1
-
-.SUBCKT programmable_nfet g d ena_bar<0> ena_bar<1> b s \$14 vss ena<1> ena<0>
-X$1 d s b g vss nfet$3
-X$2 g \$7 \$14 vss ena_bar<0> ena<0> vss \$I2 transmission_gate$2
-X$3 g \$9 \$14 vss ena_bar<1> ena<1> vss \$I2 transmission_gate$2
-X$4 d s b g vss nfet$3
-X$5 d s b g vss nfet$3
-X$6 d s b g vss nfet$3
-X$7 d s b g vss nfet$3
-X$8 d s b g vss nfet$3
-X$9 s d s b \$9 \$9 vss nfet$2
-X$10 d s b \$7 vss nfet$3
-X$11 d s b \$7 vss nfet$3
-X$12 d s b \$7 vss nfet$3
-X$13 d s b \$7 vss nfet$3
-X$14 d s b \$7 vss nfet$3
-X$15 d s b \$7 vss nfet$3
-X$16 s d s b \$9 \$9 vss nfet$2
-X$17 s d s b \$9 \$9 vss nfet$2
-X$18 s d s b \$9 \$9 vss nfet$2
-X$19 s d s b \$9 \$9 vss nfet$2
-X$20 s d s b \$9 \$9 vss nfet$2
-X$21 \$7 vss ena_bar<0> vss vss nfet$5
-X$22 \$9 vss ena_bar<1> vss vss nfet$5
-.ENDS programmable_nfet
-
-.SUBCKT programmable_pfet$1 b s ena<1> \$7 d \$12 g ena_bar<1> ena<0>
-+ ena_bar<0> vss \$I34
-X$1 b d s \$25 \$I12 pfet$5
-X$2 b d s \$25 \$I12 pfet$5
-X$3 b d s g \$I12 pfet$5
-X$4 b d s g \$I12 pfet$5
-X$5 b d s \$25 \$I12 pfet$5
-X$6 b d s g \$I12 pfet$5
-X$7 b d s \$25 \$I12 pfet$5
-X$8 b d s g \$I12 pfet$5
-X$9 b d s \$25 \$I12 pfet$5
-X$10 b d s g \$I12 pfet$5
-X$11 b d s \$25 \$I12 pfet$5
-X$12 b d s g \$I12 pfet$5
-X$13 b s d s \$5 \$5 \$I12 pfet$6
-X$14 b s d s \$5 \$5 \$I12 pfet$6
-X$15 b s d s \$5 \$5 \$I12 pfet$6
-X$16 b s d s \$5 \$5 \$I12 pfet$6
-X$17 b s d s \$5 \$5 \$I12 pfet$6
-X$18 b s d s \$5 \$5 \$I12 pfet$6
-X$19 g \$5 \$7 \$12 ena_bar<1> ena<1> vss \$I34 transmission_gate$1
-X$20 \$5 \$7 ena<1> \$7 \$I34 pfet$9
-X$21 \$25 \$7 ena<0> \$7 \$I34 pfet$9
-X$22 g \$25 \$7 \$12 ena_bar<0> ena<0> vss \$I34 transmission_gate$1
-.ENDS programmable_pfet$1
-
-.SUBCKT programmable_pfet g d b s \$6 ena<0> \$8 ena<1> \$10 \$11 ena_bar<0>
-+ ena_bar<1> vss \$I28
-X$1 b d s g \$I18 pfet
-X$2 g \$6 \$11 \$10 ena_bar<0> ena<0> vss \$I28 transmission_gate
-X$3 g \$8 \$11 \$10 ena_bar<1> ena<1> vss \$I28 transmission_gate
-X$4 b d s g \$I18 pfet
-X$5 b d s g \$I18 pfet
-X$6 b d s g \$I18 pfet
-X$7 b d s g \$I18 pfet
-X$8 b s d s \$8 \$8 \$I18 pfet$1
-X$9 b d s \$6 \$I18 pfet
-X$10 b d s \$6 \$I18 pfet
-X$11 b d s \$6 \$I18 pfet
-X$12 b d s \$6 \$I18 pfet
-X$13 b d s \$6 \$I18 pfet
-X$14 b s d s \$8 \$8 \$I18 pfet$1
-X$15 b s d s \$8 \$8 \$I18 pfet$1
-X$16 b s d s \$8 \$8 \$I18 pfet$1
-X$17 b s d s \$8 \$8 \$I18 pfet$1
-X$18 \$6 \$11 ena<0> \$11 \$I28 pfet$4
-X$19 \$8 \$11 ena<1> \$11 \$I28 pfet$4
-.ENDS programmable_pfet
-
-.SUBCKT nfet$13 \$2 \$3 \$4 \$5 vss
-M$1 \$3 \$4 \$2 vss nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P PS=2.1U
+M$3 VDD \$25 \$25 VDD pfet_03v3 L=0.5U W=70U AS=45.5P AD=45.5P PS=141.3U
++ PD=141.3U
+M$4 VDD \$25 \$28 VDD pfet_03v3 L=0.5U W=70U AS=45.5P AD=45.5P PS=141.3U
++ PD=141.3U
+M$5 VSS \!EN0 \$I52 VSS nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P PS=2.1U
 + PD=2.1U
-.ENDS nfet$13
-
-.SUBCKT transmission_gate$4 in out VDD VSS ena_bar ena vss \$I1
-X$1 in out ena VSS vss nfet$12
-X$2 in out ena_bar VDD \$I1 pfet$15
-.ENDS transmission_gate$4
-
-.SUBCKT nfet$11 \$2 \$3 \$4 \$5 \$6 \$7 vss
-M$1 \$3 \$6 \$2 vss nfet_03v3 L=1U W=27.1U AS=16.531P AD=7.046P PS=55.42U
-+ PD=27.62U
-M$2 \$4 \$7 \$3 vss nfet_03v3 L=1U W=27.1U AS=7.046P AD=16.531P PS=27.62U
-+ PD=55.42U
-.ENDS nfet$11
-
-.SUBCKT nfet$10 \$2 \$3 \$4 \$5 vss
-M$1 \$3 \$5 \$2 vss nfet_03v3 L=1U W=27.1U AS=16.531P AD=16.531P PS=55.42U
-+ PD=55.42U
-.ENDS nfet$10
-
-.SUBCKT nfet$9 \$2 \$3 \$4 \$5 vss
-M$1 \$3 \$4 \$2 vss nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P PS=2.1U
+M$6 VSS \!EN1 \$I53 VSS nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P PS=2.1U
 + PD=2.1U
-.ENDS nfet$9
-
-.SUBCKT transmission_gate$3 in out VDD VSS ena_bar ena vss \$I1
-X$1 in out ena VSS vss nfet$8
-X$2 in out ena_bar VDD \$I1 pfet$13
-.ENDS transmission_gate$3
-
-.SUBCKT nfet$7 \$2 \$3 \$4 \$5 \$6 \$7 vss
-M$1 \$3 \$6 \$2 vss nfet_03v3 L=0.5U W=30U AS=18.3P AD=7.8P PS=61.22U PD=30.52U
-M$2 \$4 \$7 \$3 vss nfet_03v3 L=0.5U W=30U AS=7.8P AD=18.3P PS=30.52U PD=61.22U
-.ENDS nfet$7
-
-.SUBCKT nfet$6 \$2 \$3 \$4 \$5 vss
-M$1 \$3 \$5 \$2 vss nfet_03v3 L=0.5U W=30U AS=18.3P AD=18.3P PS=61.22U PD=61.22U
-.ENDS nfet$6
-
-.SUBCKT nfet$5 \$2 \$3 \$4 \$5 vss
-M$1 \$3 \$4 \$2 vss nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P PS=2.1U
-+ PD=2.1U
-.ENDS nfet$5
-
-.SUBCKT transmission_gate$2 in out VDD VSS ena_bar ena vss \$I1
-X$1 in out ena VSS vss nfet$4
-X$2 in out ena_bar VDD \$I1 pfet$11
-.ENDS transmission_gate$2
-
-.SUBCKT nfet$3 \$2 \$3 \$4 \$5 vss
-M$1 \$3 \$5 \$2 vss nfet_03v3 L=0.4U W=45U AS=27.45P AD=27.45P PS=91.22U
-+ PD=91.22U
-.ENDS nfet$3
-
-.SUBCKT nfet$2 \$2 \$3 \$4 \$5 \$6 \$7 vss
-M$1 \$3 \$6 \$2 vss nfet_03v3 L=0.4U W=45U AS=27.45P AD=11.7P PS=91.22U
-+ PD=45.52U
-M$2 \$4 \$7 \$3 vss nfet_03v3 L=0.4U W=45U AS=11.7P AD=27.45P PS=45.52U
-+ PD=91.22U
-.ENDS nfet$2
-
-.SUBCKT pfet$9 \$2 \$3 \$4 \$5 \$6
-M$1 \$3 \$4 \$2 \$5 pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P PS=2.18U
+M$7 \$12 \$I53 VSS VSS nfet_03v3 L=1U W=108.4U AS=47.154P AD=47.154P PS=166.08U
++ PD=166.08U
+M$11 VSS VG_BIAS \$12 VSS nfet_03v3 L=1U W=54.2U AS=33.062P AD=33.062P
++ PS=110.84U PD=110.84U
+M$13 VSS \$I52 \$12 VSS nfet_03v3 L=1U W=54.2U AS=33.062P AD=33.062P PS=110.84U
++ PD=110.84U
+M$15 VSS \!EN0 \$I55 VSS nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P
++ PS=2.1U PD=2.1U
+M$16 VSS \!EN1 \$I56 VSS nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P
++ PS=2.1U PD=2.1U
+M$17 VSS \!EN0 \$I58 VSS nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P
++ PS=2.1U PD=2.1U
+M$18 VSS \!EN1 \$I59 VSS nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P
++ PS=2.1U PD=2.1U
+M$19 \$14 \$I56 \$12 VSS nfet_03v3 L=0.5U W=60U AS=26.1P AD=26.1P PS=91.74U
++ PD=91.74U
+M$21 \$13 \$I59 \$12 VSS nfet_03v3 L=0.5U W=60U AS=26.1P AD=26.1P PS=91.74U
++ PD=91.74U
+M$23 \$12 INN \$14 VSS nfet_03v3 L=0.5U W=30U AS=18.3P AD=18.3P PS=61.22U
++ PD=61.22U
+M$24 \$12 \$I55 \$14 VSS nfet_03v3 L=0.5U W=30U AS=18.3P AD=18.3P PS=61.22U
++ PD=61.22U
+M$25 \$12 INP \$13 VSS nfet_03v3 L=0.5U W=30U AS=18.3P AD=18.3P PS=61.22U
++ PD=61.22U
+M$26 \$12 \$I58 \$13 VSS nfet_03v3 L=0.5U W=30U AS=18.3P AD=18.3P PS=61.22U
++ PD=61.22U
+M$27 VSS \!EN0 \$I61 VSS nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P
++ PS=2.1U PD=2.1U
+M$28 VSS \!EN1 \$I62 VSS nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P
++ PS=2.1U PD=2.1U
+M$29 VSS \!EN0 \$I64 VSS nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P
++ PS=2.1U PD=2.1U
+M$30 VSS \!EN1 \$I65 VSS nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P
++ PS=2.1U PD=2.1U
+M$31 \$14 \$25 output VSS nfet_03v3 L=0.4U W=270U AS=164.7P AD=164.7P
++ PS=547.32U PD=547.32U
+M$37 \$14 \$I61 output VSS nfet_03v3 L=0.4U W=270U AS=164.7P AD=164.7P
++ PS=547.32U PD=547.32U
+M$43 \$13 \$25 \$15 VSS nfet_03v3 L=0.4U W=270U AS=164.7P AD=164.7P PS=547.32U
++ PD=547.32U
+M$49 \$13 \$I64 \$15 VSS nfet_03v3 L=0.4U W=270U AS=164.7P AD=164.7P PS=547.32U
++ PD=547.32U
+M$55 output \$I62 \$14 VSS nfet_03v3 L=0.4U W=540U AS=234.9P AD=234.9P
++ PS=820.44U PD=820.44U
+M$67 \$15 \$I65 \$13 VSS nfet_03v3 L=0.4U W=540U AS=234.9P AD=234.9P PS=820.44U
++ PD=820.44U
+M$79 VDD EN1 \$I67 VDD pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P PS=2.18U
 + PD=2.18U
-.ENDS pfet$9
-
-.SUBCKT transmission_gate$1 in out VDD VSS ena_bar ena vss \$I1
-X$1 in out ena VSS vss nfet$1
-X$2 in out ena_bar VDD \$I1 pfet$8
-.ENDS transmission_gate$1
-
-.SUBCKT pfet$6 \$2 \$3 \$4 \$5 \$6 \$7 \$8
-M$1 \$4 \$6 \$3 \$2 pfet_03v3 L=0.5U W=40U AS=26P AD=10.4P PS=81.3U PD=40.52U
-M$2 \$5 \$7 \$4 \$2 pfet_03v3 L=0.5U W=40U AS=10.4P AD=26P PS=40.52U PD=81.3U
-.ENDS pfet$6
-
-.SUBCKT pfet$5 \$2 \$3 \$4 \$5 \$6
-M$1 \$4 \$5 \$3 \$2 pfet_03v3 L=0.5U W=40U AS=26P AD=26P PS=81.3U PD=81.3U
-.ENDS pfet$5
-
-.SUBCKT pfet$4 \$2 \$3 \$4 \$5 \$6
-M$1 \$3 \$4 \$2 \$5 pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P PS=2.18U
+M$80 VDD EN0 \$I68 VDD pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P PS=2.18U
 + PD=2.18U
-.ENDS pfet$4
-
-.SUBCKT transmission_gate in out VDD VSS ena_bar ena vss \$I1
-X$1 in out ena VSS vss nfet
-X$2 in out ena_bar VDD \$I1 pfet$3
-.ENDS transmission_gate
-
-.SUBCKT pfet$1 \$2 \$3 \$4 \$5 \$6 \$7 \$8
-M$1 \$4 \$6 \$3 \$2 pfet_03v3 L=0.5U W=47U AS=30.55P AD=12.22P PS=95.3U
-+ PD=47.52U
-M$2 \$5 \$7 \$4 \$2 pfet_03v3 L=0.5U W=47U AS=12.22P AD=30.55P PS=47.52U
-+ PD=95.3U
-.ENDS pfet$1
-
-.SUBCKT pfet \$2 \$3 \$4 \$5 \$6
-M$1 \$4 \$5 \$3 \$2 pfet_03v3 L=0.5U W=47U AS=30.55P AD=30.55P PS=95.3U PD=95.3U
-.ENDS pfet
-
-.SUBCKT pfet$15 \$2 \$3 \$4 \$5 \$6
-M$1 \$3 \$4 \$2 \$5 pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P PS=2.18U
+M$81 VDD EN1 \$I70 VDD pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P PS=2.18U
 + PD=2.18U
-.ENDS pfet$15
-
-.SUBCKT nfet$12 \$2 \$3 \$4 \$5 vss
-M$1 \$3 \$4 \$2 vss nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P PS=2.1U
+M$82 VDD EN0 \$I71 VDD pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P PS=2.18U
++ PD=2.18U
+M$83 \$21 \$I67 VDD VDD pfet_03v3 L=0.5U W=480U AS=218.4P AD=218.4P PS=730.92U
++ PD=730.92U
+M$95 \$20 \$I70 VDD VDD pfet_03v3 L=0.5U W=480U AS=218.4P AD=218.4P PS=730.92U
++ PD=730.92U
+M$107 VDD \$I68 \$21 VDD pfet_03v3 L=0.5U W=240U AS=156P AD=156P PS=487.8U
++ PD=487.8U
+M$109 VDD \$15 \$21 VDD pfet_03v3 L=0.5U W=240U AS=156P AD=156P PS=487.8U
++ PD=487.8U
+M$119 VDD \$I71 \$20 VDD pfet_03v3 L=0.5U W=240U AS=156P AD=156P PS=487.8U
++ PD=487.8U
+M$121 VDD \$15 \$20 VDD pfet_03v3 L=0.5U W=240U AS=156P AD=156P PS=487.8U
++ PD=487.8U
+M$131 VDD EN0 \$I73 VDD pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P
++ PS=2.18U PD=2.18U
+M$132 VDD EN1 \$I74 VDD pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P
++ PS=2.18U PD=2.18U
+M$133 VDD EN0 \$I76 VDD pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P
++ PS=2.18U PD=2.18U
+M$134 VDD EN1 \$I77 VDD pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P
++ PS=2.18U PD=2.18U
+M$135 output \$I74 \$21 VDD pfet_03v3 L=0.5U W=470U AS=213.85P AD=213.85P
++ PS=714.1U PD=714.1U
+M$145 \$15 \$I77 \$20 VDD pfet_03v3 L=0.5U W=470U AS=213.85P AD=213.85P
++ PS=714.1U PD=714.1U
+M$155 \$21 \$28 output VDD pfet_03v3 L=0.5U W=235U AS=152.75P AD=152.75P
++ PS=476.5U PD=476.5U
+M$160 \$21 \$I73 output VDD pfet_03v3 L=0.5U W=235U AS=152.75P AD=152.75P
++ PS=476.5U PD=476.5U
+M$165 \$20 \$28 \$15 VDD pfet_03v3 L=0.5U W=235U AS=152.75P AD=152.75P
++ PS=476.5U PD=476.5U
+M$170 \$20 \$I76 \$15 VDD pfet_03v3 L=0.5U W=235U AS=152.75P AD=152.75P
++ PS=476.5U PD=476.5U
+M$175 \$I52 \!EN0 VG_BIAS VDD pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P
++ PS=2.18U PD=2.18U
+M$176 \$I53 \!EN1 VG_BIAS VDD pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P
++ PS=2.18U PD=2.18U
+M$177 \$I52 EN0 VG_BIAS VSS nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P
++ PS=2.1U PD=2.1U
+M$178 \$I53 EN1 VG_BIAS VSS nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P
++ PS=2.1U PD=2.1U
+M$179 \$I55 \!EN0 INN VDD pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P
++ PS=2.18U PD=2.18U
+M$180 \$I56 \!EN1 INN VDD pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P
++ PS=2.18U PD=2.18U
+M$181 \$I58 \!EN0 INP VDD pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P
++ PS=2.18U PD=2.18U
+M$182 \$I59 \!EN1 INP VDD pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P
++ PS=2.18U PD=2.18U
+M$183 \$I55 EN0 INN VSS nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P PS=2.1U
 + PD=2.1U
-.ENDS nfet$12
-
-.SUBCKT pfet$13 \$2 \$3 \$4 \$5 \$6
-M$1 \$3 \$4 \$2 \$5 pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P PS=2.18U
-+ PD=2.18U
-.ENDS pfet$13
-
-.SUBCKT nfet$8 \$2 \$3 \$4 \$5 vss
-M$1 \$3 \$4 \$2 vss nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P PS=2.1U
+M$184 \$I56 EN1 INN VSS nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P PS=2.1U
 + PD=2.1U
-.ENDS nfet$8
-
-.SUBCKT pfet$11 \$2 \$3 \$4 \$5 \$6
-M$1 \$3 \$4 \$2 \$5 pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P PS=2.18U
-+ PD=2.18U
-.ENDS pfet$11
-
-.SUBCKT nfet$4 \$2 \$3 \$4 \$5 vss
-M$1 \$3 \$4 \$2 vss nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P PS=2.1U
+M$185 \$I58 EN0 INP VSS nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P PS=2.1U
 + PD=2.1U
-.ENDS nfet$4
-
-.SUBCKT pfet$8 \$2 \$3 \$4 \$5 \$6
-M$1 \$3 \$4 \$2 \$5 pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P PS=2.18U
-+ PD=2.18U
-.ENDS pfet$8
-
-.SUBCKT nfet$1 \$2 \$3 \$4 \$5 vss
-M$1 \$3 \$4 \$2 vss nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P PS=2.1U
+M$186 \$I59 EN1 INP VSS nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P PS=2.1U
 + PD=2.1U
-.ENDS nfet$1
-
-.SUBCKT pfet$3 \$2 \$3 \$4 \$5 \$6
-M$1 \$3 \$4 \$2 \$5 pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P PS=2.18U
-+ PD=2.18U
-.ENDS pfet$3
-
-.SUBCKT nfet \$2 \$3 \$4 \$5 vss
-M$1 \$3 \$4 \$2 vss nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P PS=2.1U
-+ PD=2.1U
-.ENDS nfet
+M$187 \$I61 \!EN0 \$25 VDD pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P
++ PS=2.18U PD=2.18U
+M$188 \$I62 \!EN1 \$25 VDD pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P
++ PS=2.18U PD=2.18U
+M$189 \$I64 \!EN0 \$25 VDD pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P
++ PS=2.18U PD=2.18U
+M$190 \$I65 \!EN1 \$25 VDD pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P
++ PS=2.18U PD=2.18U
+M$191 \$I61 EN0 \$25 VSS nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P
++ PS=2.1U PD=2.1U
+M$192 \$I62 EN1 \$25 VSS nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P
++ PS=2.1U PD=2.1U
+M$193 \$I64 EN0 \$25 VSS nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P
++ PS=2.1U PD=2.1U
+M$194 \$I65 EN1 \$25 VSS nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P
++ PS=2.1U PD=2.1U
+M$195 \$I67 \!EN1 \$15 VDD pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P
++ PS=2.18U PD=2.18U
+M$196 \$I68 \!EN0 \$15 VDD pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P
++ PS=2.18U PD=2.18U
+M$197 \$I70 \!EN1 \$15 VDD pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P
++ PS=2.18U PD=2.18U
+M$198 \$I71 \!EN0 \$15 VDD pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P
++ PS=2.18U PD=2.18U
+M$199 \$I67 EN1 \$15 VSS nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P
++ PS=2.1U PD=2.1U
+M$200 \$I68 EN0 \$15 VSS nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P
++ PS=2.1U PD=2.1U
+M$201 \$I70 EN1 \$15 VSS nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P
++ PS=2.1U PD=2.1U
+M$202 \$I71 EN0 \$15 VSS nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P
++ PS=2.1U PD=2.1U
+M$203 \$I73 \!EN0 \$28 VDD pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P
++ PS=2.18U PD=2.18U
+M$204 \$I74 \!EN1 \$28 VDD pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P
++ PS=2.18U PD=2.18U
+M$205 \$I76 \!EN0 \$28 VDD pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P
++ PS=2.18U PD=2.18U
+M$206 \$I77 \!EN1 \$28 VDD pfet_03v3 L=0.28U W=0.42U AS=0.2822P AD=0.2822P
++ PS=2.18U PD=2.18U
+M$207 \$I73 EN0 \$28 VSS nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P
++ PS=2.1U PD=2.1U
+M$208 \$I74 EN1 \$28 VSS nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P
++ PS=2.1U PD=2.1U
+M$209 \$I76 EN0 \$28 VSS nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P
++ PS=2.1U PD=2.1U
+M$210 \$I77 EN1 \$28 VSS nfet_03v3 L=0.28U W=0.42U AS=0.2646P AD=0.2646P
++ PS=2.1U PD=2.1U
+.ENDS programmable_telescopic_cascode
