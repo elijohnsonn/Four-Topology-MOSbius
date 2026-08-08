@@ -1,6 +1,6 @@
-* Extracted by KLayout with GF180MCU LVS runset on : 07/08/2026 03:45
+* Extracted by KLayout with GF180MCU LVS runset on : 08/08/2026 14:57
 
-.SUBCKT programmable_telescopic_cascode \!EN0 \!EN1 VDD VSS VG_BIAS EN1 EN0
+.SUBCKT programmable_telescopic_cascode \!EN1 \!EN0 VDD VSS VG_BIAS EN1 EN0
 + output INP INN
 M$1 VSS VG_BIAS \$25 VSS nfet_03v3 L=0.5U W=30U AS=18.3P AD=18.3P PS=61.22U
 + PD=61.22U
