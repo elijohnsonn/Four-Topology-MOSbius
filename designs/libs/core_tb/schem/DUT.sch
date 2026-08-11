@@ -158,7 +158,7 @@ N -980 1860 -980 1900 {lab=PROG_ENA}
 N -980 1970 -980 2010 {lab=!PROG_ENA}
 N -1030 1870 -1030 1900 {lab=VDD}
 N -1020 2000 -1020 2040 {lab=VSS}
-N -900 1950 -810 1950 {lab=EN_0_FOLDED}
+N -900 1950 -810 1950 {lab=EN_0_CS}
 N -1150 1950 -1070 1950 {lab=VSS}
 N -440 1860 -440 1900 {lab=PROG_ENA}
 N -440 1970 -440 2010 {lab=!PROG_ENA}
@@ -168,7 +168,6 @@ N -360 1950 -270 1950 {lab=EN_1_CS}
 N -610 1950 -530 1950 {lab=VSS}
 C {libs/core_digital/schem/scan_chain.sym} -610 430 0 0 {name=x1}
 C {libs/core_amps/ota_folded_cascode/prgrm_schem/programmable_folded_cascode.sym} 430 1070 0 0 {name=x2}
-C {libs/core_amps/ota_telescopic/programmable_ota_telescopic schematics/programmable_telescopic_cascode.sym} 440 1370 0 0 {name=x4}
 C {libs/core_amps/cs_stage/prgrm_schem/programmable_common_source.sym} 1060 1380 0 0 {name=x5}
 C {iopin.sym} 600 1070 2 1 {name=p35 lab=OUT_FOLDED}
 C {iopin.sym} 1270 1090 2 1 {name=p1 lab=OUT_5T}
@@ -338,3 +337,4 @@ C {lab_pin.sym} -440 1860 0 1 {name=p118 sig_type=std_logic lab=PROG_ENA
 }
 C {lab_pin.sym} -270 1950 0 1 {name=p119 sig_type=std_logic lab=EN_1_CS
 }
+C {libs/core_amps/ota_telescopic/programmable_ota_telescopic_schematics/programmable_telescopic_cascode.sym} 440 1370 0 0 {name=x4}
