@@ -20,7 +20,7 @@
 		""
 	],
 	"LVS_SPICE_FILES": [
-		""
+		"/foss/designs/libs/core_tb/layout/DUT.spice"
 	],
 	"LVS_VERILOG_FILES": [
 		""
