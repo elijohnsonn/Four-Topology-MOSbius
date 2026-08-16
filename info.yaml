@@ -33,36 +33,38 @@ pins:
   - name: INN_FOLDED
     io_type: analog
     secondary_esd: false
-    - name: INP_FOLDED
+  - name: INP_FOLDED
     io_type: analog
     secondary_esd: false
   - name: OUT_FOLDED
     io_type: analog
     secondary_esd: false
-    - name: INN_TELESCOPIC
+  - name: INN_TELESCOPIC
     io_type: analog
     secondary_esd: false
-    - name: INP_TELESCOPIC
+  - name: INP_TELESCOPIC
     io_type: analog
     secondary_esd: false
   - name: OUT_TELESCOPIC
     io_type: analog
     secondary_esd: false
-    - name: INN_5T
+  - name: INN_5T
     io_type: analog
     secondary_esd: false
-    - name: INP_5T
+  - name: INP_5T
     io_type: analog
     secondary_esd: false
   - name: OUT_5T
     io_type: analog
     secondary_esd: false
-    - name: IN_CS
+  - name: IN_CS
     io_type: analog
     secondary_esd: false
   - name: OUT_CS
     io_type: analog
     secondary_esd: false
+  - name: IBIAS
+    io_type: bidirectional
   - name: VDD
     io_type: power
   - name: VSS
