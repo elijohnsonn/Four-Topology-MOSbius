@@ -19,50 +19,50 @@ project:
   lvs_config: "./DRC_dry_run/lvs_config.json"
 
 pins: 
-  - name: SCAN_IN
-    io_type: input_cmos
-  - name: CLK 
-    io_type: input_cmos
-  - name: PROG_ENA
-    io_type: input_cmos
-  - name: SCAN_OUT
-    io_type: output_cmos
-  - name: INN_FOLDED
+  - name: INP_TELESCOPIC
     io_type: analog
     secondary_esd: false
   - name: INP_FOLDED
     io_type: analog
     secondary_esd: false
-  - name: OUT_FOLDED
-    io_type: analog
-    secondary_esd: false
-  - name: INN_TELESCOPIC
-    io_type: analog
-    secondary_esd: false
-  - name: INP_TELESCOPIC
-    io_type: analog
-    secondary_esd: false
   - name: OUT_TELESCOPIC
     io_type: analog
     secondary_esd: false
-  - name: INN_5T
+  - name: OUT_FOLDED
     io_type: analog
     secondary_esd: false
   - name: INP_5T
     io_type: analog
     secondary_esd: false
-  - name: OUT_5T
+  - name: INN_TELESCOPIC
     io_type: analog
     secondary_esd: false
+  - name: INN_FOLDED
+    io_type: analog
+    secondary_esd: false
+  - name: PROG_ENA
+    io_type: input_cmos
+  - name: SCAN_IN
+    io_type: input_cmos
+  - name: VDD
+    io_type: power
+  - name: VSS
+    io_type: ground  # note: due to a common ground connection, ground pads are generally not needed.
+  - name: CLK 
+    io_type: input_cmos
+  - name: IBIAS
+    io_type: bidirectional
+  - name: SCAN_OUT
+    io_type: output_cmos
   - name: IN_CS
     io_type: analog
     secondary_esd: false
   - name: OUT_CS
     io_type: analog
     secondary_esd: false
-  - name: IBIAS
-    io_type: bidirectional
-  - name: VDD
-    io_type: power
-  - name: VSS
-    io_type: ground  # note: due to a common ground connection, ground pads are generally not needed.
+  - name: INN_5T
+    io_type: analog
+    secondary_esd: false
+  - name: OUT_5T
+    io_type: analog
+    secondary_esd: false
