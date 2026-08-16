@@ -17,3 +17,53 @@ project:
   discord: "elij0100"                   # Optional: Discord username (for support / communication)
   description: "PDK test data"  # Short one-line description
   lvs_config: "./DRC_dry_run/lvs_config.json"
+
+pins: 
+  - name: SCAN_IN
+    io_type: input_cmos
+  - name: CLK 
+    io_type: input_cmos
+  - name: PROG_ENA
+    io_type: input_cmos
+  - name: SCAN_OUT
+    io_type: output_cmos
+  - name: INP_FOLDED
+    io_type: analog
+    secondary_esd: false
+  - name: INN_FOLDED
+    io_type: analog
+    secondary_esd: false
+    - name: INP_FOLDED
+    io_type: analog
+    secondary_esd: false
+  - name: OUT_FOLDED
+    io_type: analog
+    secondary_esd: false
+    - name: INN_TELESCOPIC
+    io_type: analog
+    secondary_esd: false
+    - name: INP_TELESCOPIC
+    io_type: analog
+    secondary_esd: false
+  - name: OUT_TELESCOPIC
+    io_type: analog
+    secondary_esd: false
+    - name: INN_5T
+    io_type: analog
+    secondary_esd: false
+    - name: INP_5T
+    io_type: analog
+    secondary_esd: false
+  - name: OUT_5T
+    io_type: analog
+    secondary_esd: false
+    - name: IN_CS
+    io_type: analog
+    secondary_esd: false
+  - name: OUT_CS
+    io_type: analog
+    secondary_esd: false
+  - name: VDD
+    io_type: power
+  - name: VSS
+    io_type: ground  # note: due to a common ground connection, ground pads are generally not needed.
