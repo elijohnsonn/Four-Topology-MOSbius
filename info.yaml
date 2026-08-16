@@ -27,9 +27,6 @@ pins:
     io_type: input_cmos
   - name: SCAN_OUT
     io_type: output_cmos
-  - name: INP_FOLDED
-    io_type: analog
-    secondary_esd: false
   - name: INN_FOLDED
     io_type: analog
     secondary_esd: false
