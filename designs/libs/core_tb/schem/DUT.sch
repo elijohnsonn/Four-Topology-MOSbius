@@ -50,18 +50,18 @@ N 1090 1450 1090 1500 {lab=IBIAS_PROT}
 N 460 1140 460 1170 {lab=VSS}
 N 1100 1180 1100 1210 {lab=VSS}
 N 1150 1420 1150 1470 {lab=VSS}
-N 150 360 150 400 {lab=IBIAS}
-N 150 400 150 420 {lab=IBIAS}
-N 150 390 220 390 {lab=IBIAS}
-N 220 390 220 450 {lab=IBIAS}
-N 190 450 220 450 {lab=IBIAS}
+N 150 360 150 400 {lab=IBIAS_PROT}
+N 150 400 150 420 {lab=IBIAS_PROT}
+N 150 390 220 390 {lab=IBIAS_PROT}
+N 220 390 220 450 {lab=IBIAS_PROT}
+N 190 450 220 450 {lab=IBIAS_PROT}
 N 150 480 150 520 {lab=VSS}
 N 80 450 150 450 {lab=VSS}
 N 80 450 80 500 {lab=VSS}
 N 80 500 150 500 {lab=VSS}
 N 150 520 150 540 {lab=VSS}
-N 150 330 150 360 {lab=IBIAS}
-N 220 450 280 450 {lab=IBIAS}
+N 150 330 150 360 {lab=IBIAS_PROT}
+N 220 450 280 450 {lab=IBIAS_PROT}
 N 490 1130 490 1160 {lab=IBIAS_PROT}
 N 1150 1170 1150 1210 {lab=IBIAS_PROT}
 N 470 1440 470 1480 {lab=VSS}
@@ -204,7 +204,7 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {lab_pin.sym} 280 450 0 1 {name=p12 sig_type=std_logic lab=IBIAS}
+C {lab_pin.sym} 280 450 0 1 {name=p12 sig_type=std_logic lab=IBIAS_PROT}
 C {lab_pin.sym} 500 1470 0 1 {name=p13 sig_type=std_logic lab=IBIAS_PROT}
 C {iopin.sym} -860 340 2 0 {name=p28 lab=CLK}
 C {iopin.sym} -870 360 2 0 {name=p29 lab=SCAN_IN}
@@ -367,7 +367,6 @@ C {lab_pin.sym} 2000 1360 0 1 {name=p129 sig_type=std_logic lab=INP_5T_PROT}
 C {lab_pin.sym} 2630 1360 0 1 {name=p131 sig_type=std_logic lab=INN_5T_PROT}
 C {lab_pin.sym} 2630 1590 0 1 {name=p133 sig_type=std_logic lab=IBIAS_PROT}
 C {lab_pin.sym} 2000 1590 0 1 {name=p135 sig_type=std_logic lab=IN_CS_PROT}
-C {iopin.sym} 150 330 1 1 {name=p23 lab=IBIAS}
 C {iopin.sym} 1800 900 2 0 {name=p121 lab=INP_FOLDED}
 C {iopin.sym} 2430 900 2 0 {name=p124 lab=INN_FOLDED}
 C {iopin.sym} 1800 1130 2 0 {name=p126 lab=INP_TELESCOPIC}
@@ -383,14 +382,13 @@ C {lab_pin.sym} 2550 1280 0 0 {name=p27 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 1920 1510 0 0 {name=p120 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 2550 1510 0 0 {name=p136 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 1920 980 0 0 {name=p137 sig_type=std_logic lab=VSS}
-C {lab_pin.sym} 1920 1220 0 0 {name=p138 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 1920 1210 0 0 {name=p138 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 2550 980 0 0 {name=p139 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 2550 1210 0 0 {name=p140 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 2550 1440 0 0 {name=p141 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 1920 1440 0 0 {name=p142 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 1920 1670 0 0 {name=p143 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 2550 1670 0 0 {name=p144 sig_type=std_logic lab=VSS}
-C {lab_pin.sym} 2430 1590 0 0 {name=p145 sig_type=std_logic lab=IBIAS}
 C {lab_pin.sym} 340 1100 0 0 {name=p146 sig_type=std_logic lab=INP_FOLDED_PROT}
 C {lab_pin.sym} 340 1120 0 0 {name=p147 sig_type=std_logic lab=INN_FOLDED_PROT}
 C {lab_pin.sym} 950 1110 0 0 {name=p148 sig_type=std_logic lab=INP_TELESCOPIC_PROT}
@@ -399,3 +397,5 @@ C {lab_pin.sym} 950 1170 0 0 {name=p128 sig_type=std_logic lab=INN_TELESCOPIC_PR
 C {lab_pin.sym} 340 1400 0 0 {name=p150 sig_type=std_logic lab=INP_5T_PROT}
 C {lab_pin.sym} 350 1420 0 0 {name=p151 sig_type=std_logic lab=INN_5T_PROT}
 C {lab_pin.sym} 1030 1410 0 0 {name=p152 sig_type=std_logic lab=IN_CS_PROT}
+C {iopin.sym} 2430 1590 0 1 {name=p23 lab=IBIAS
+}
