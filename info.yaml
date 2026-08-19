@@ -21,10 +21,10 @@ project:
 pins: 
   - name: INP_TELESCOPIC
     io_type: analog
-    secondary_esd: false
+    secondary_esd: true
   - name: INP_FOLDED
     io_type: analog
-    secondary_esd: false
+    secondary_esd: true
   - name: OUT_TELESCOPIC
     io_type: analog
     secondary_esd: false
@@ -33,13 +33,13 @@ pins:
     secondary_esd: false
   - name: INP_5T
     io_type: analog
-    secondary_esd: false
+    secondary_esd: true
   - name: INN_TELESCOPIC
     io_type: analog
-    secondary_esd: false
+    secondary_esd: true
   - name: INN_FOLDED
     io_type: analog
-    secondary_esd: false
+    secondary_esd: true
   - name: PROG_ENA
     io_type: input_cmos
   - name: SCAN_IN
@@ -51,18 +51,19 @@ pins:
   - name: CLK 
     io_type: input_cmos
   - name: IBIAS
-    io_type: bidirectional
+    io_type: analog
+    secondary_esd: true
   - name: SCAN_OUT
     io_type: output_cmos
   - name: IN_CS
     io_type: analog
-    secondary_esd: false
+    secondary_esd: true
   - name: OUT_CS
     io_type: analog
     secondary_esd: false
   - name: INN_5T
     io_type: analog
-    secondary_esd: false
+    secondary_esd: true
   - name: OUT_5T
     io_type: analog
     secondary_esd: false
