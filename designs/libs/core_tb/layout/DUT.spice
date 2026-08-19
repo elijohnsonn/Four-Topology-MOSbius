@@ -1,14 +1,15 @@
 ** sch_path: /foss/designs/libs/core_tb/schem/DUT.sch
 .subckt DUT CLK SCAN_OUT SCAN_IN VSS VDD OUT_FOLDED INP_FOLDED OUT_5T IBIAS INN_FOLDED INP_5T INN_5T INP_TELESCOPIC OUT_TELESCOPIC
 + OUT_CS IN_CS INN_TELESCOPIC PROG_ENA
-*.PININFO OUT_FOLDED:B OUT_5T:B OUT_TELESCOPIC:B OUT_CS:B VSS:B VDD:B INN_TELESCOPIC:B INP_TELESCOPIC:B INP_FOLDED:B INN_FOLDED:B
-*+ IN_CS:B INN_5T:B INP_5T:B CLK:B SCAN_IN:B SCAN_OUT:B IBIAS:B PROG_ENA:B
+*.PININFO OUT_FOLDED:B OUT_5T:B OUT_TELESCOPIC:B OUT_CS:B VSS:B VDD:B CLK:B SCAN_IN:B SCAN_OUT:B PROG_ENA:B IBIAS:B INP_FOLDED:B
+*+ INN_FOLDED:B INP_TELESCOPIC:B INP_5T:B INN_5T:B IN_CS:B INN_TELESCOPIC:B
 x1 VDD SCAN_OUT EN_1_5T EN_0_5T EN_0_CS EN_1_CS EN_0_TELESCOPIC EN_1_FOLDED EN_0_FOLDED EN_1_TELESCOPIC SCAN_IN !EN_1_FOLDED
 + !EN_1_CS !EN_0_TELESCOPIC !EN_0_CS !EN_1_5T !EN_0_5T !EN_1_TELESCOPIC !EN_0_FOLDED CLK VSS scan_chain
-x2 EN_0_FOLDED VDD !EN_0_FOLDED VSS EN_1_FOLDED !EN_1_FOLDED INN_FOLDED INP_FOLDED OUT_FOLDED IBIAS programmable_folded_cascode
-x5 !EN_0_CS VSS VDD EN_1_CS !EN_1_CS EN_0_CS IN_CS OUT_CS IBIAS programmable_common_source
+x2 EN_0_FOLDED VDD !EN_0_FOLDED VSS EN_1_FOLDED !EN_1_FOLDED INN_FOLDED_PROT INP_FOLDED_PROT OUT_FOLDED IBIAS_PROT
++ programmable_folded_cascode
+x5 !EN_0_CS VSS VDD EN_1_CS !EN_1_CS EN_0_CS IN_CS_PROT OUT_CS IBIAS_PROT programmable_common_source
 M1 IBIAS IBIAS VSS VSS nfet_03v3 L=1u W=27.1u nf=1 m=1
-x3 VDD EN_0_5T !EN_0_5T OUT_5T EN_1_5T !EN_1_5T INN_5T INP_5T IBIAS VSS programmable_5tOTA
+x3 VDD EN_0_5T !EN_0_5T OUT_5T EN_1_5T !EN_1_5T INN_TELESCOPIC_PROT INP_TELESCOPIC_PROT IBIAS_PROT VSS programmable_5tOTA
 x6 VDD PROG_ENA !PROG_ENA VSS inv1
 x7 PROG_ENA VDD EN_0_FOLDED VSS VSS !PROG_ENA transmission_gate
 x8 PROG_ENA VDD EN_1_FOLDED VSS VSS !PROG_ENA transmission_gate
@@ -18,8 +19,16 @@ x11 PROG_ENA VDD EN_0_5T VSS VSS !PROG_ENA transmission_gate
 x12 PROG_ENA VDD EN_1_5T VSS VSS !PROG_ENA transmission_gate
 x13 PROG_ENA VDD EN_0_CS VSS VSS !PROG_ENA transmission_gate
 x14 PROG_ENA VDD EN_1_CS VSS VSS !PROG_ENA transmission_gate
-x4 VDD OUT_TELESCOPIC EN_0_TELESCOPIC !EN_0_TELESCOPIC EN_1_TELESCOPIC !EN_1_TELESCOPIC INN_TELESCOPIC INP_TELESCOPIC VSS IBIAS
+x4 VDD OUT_TELESCOPIC EN_0_TELESCOPIC !EN_0_TELESCOPIC EN_1_TELESCOPIC !EN_1_TELESCOPIC INN_5T_PROT INP_5T_PROT VSS IBIAS_PROT
 + programmable_telescopic_cascode
+XIO1 VDD INP_FOLDED_PROT INP_FOLDED VSS io_secondary_5p0
+XIO2 VDD INN_FOLDED_PROT INN_FOLDED VSS io_secondary_5p0
+XIO3 VDD INP_TELESCOPIC_PROT INP_TELESCOPIC net1 io_secondary_5p0
+XIO4 VDD INN_TELESCOPIC_PROT INN_TELESCOPIC VSS io_secondary_5p0
+XIO5 VDD INP_5T_PROT INP_5T VSS io_secondary_5p0
+XIO6 VDD INN_5T_PROT INN_5T VSS io_secondary_5p0
+XIO7 VDD IN_CS_PROT IN_CS VSS io_secondary_5p0
+XIO8 VDD IBIAS_PROT IBIAS VSS io_secondary_5p0
 .ends
 
 * expanding   symbol:  libs/core_digital/schem/scan_chain.sym # of pins=21
@@ -136,6 +145,19 @@ x4 net4 VSS VBN net3 !EN0 VDD !EN1 EN0 EN1 VSS programmable_nfet width=45u lengt
 x2 net3 VSS INP net1 !EN0 VDD !EN1 EN0 EN1 VSS programmable_nfet width=30u length=0.5u nf=1 mult=1
 x3 net2 VSS INN net1 !EN0 VDD !EN1 EN0 EN1 VSS programmable_nfet width=30u length=0.5u nf=1 mult=1
 x1 net1 VSS VG_BIAS VSS !EN0 VDD !EN1 EN0 EN1 VSS programmable_nfet width=27.1u length=1u nf=1 mult=2
+.ends
+
+
+* expanding   symbol:  libs/secondary_esd/io_secondary_5p0.sym # of pins=4
+** sym_path: /foss/designs/libs/secondary_esd/io_secondary_5p0.sym
+** sch_path: /foss/designs/libs/secondary_esd/io_secondary_5p0.sch
+.subckt io_secondary_5p0 VDD to_gate ASIG5V VSS
+
+
+*.PININFO VSS:B VDD:B to_gate:B ASIG5V:B
+D1 to_gate VDD diode_pd2nw_06v0 area='10u * 10u ' pj='2*10u + 2*10u ' m=4
+XR1 to_gate ASIG5V VDD ppolyf_u r_width=40e-6 r_length=10e-6 m=1
+D2 VSS to_gate diode_nd2ps_06v0 area='10u * 10u ' pj='2*10u + 2*10u ' m=4
 .ends
 
 
