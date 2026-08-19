@@ -27,10 +27,15 @@ L 4 -1240 2080 -80 2080 {}
 L 4 -1240 870 -1240 2080 {}
 L 4 -1240 870 -80 870 {}
 L 4 -80 880 -80 2080 {}
+L 4 1630 760 1630 1710 {}
+L 4 1630 760 2890 760 {}
+L 4 2890 760 2890 1710 {}
+L 4 1630 1710 2890 1710 {}
 T {PROGRAMMING ENABLE} -990 770 0 0 1 1 {}
 T {CORE AMPLIFIERS} 530 780 0 0 1 1 {}
 T {BIAS AND POWER PINS} 100 80 0 0 1 1 {}
 T {SCAN CHAIN} -770 90 0 0 1 1 {}
+T {SECONDARY ESD} 2030 670 0 0 1 1 {}
 N 570 1070 600 1070 {lab=OUT_FOLDED}
 N 1220 1090 1270 1090 {lab=OUT_5T}
 N 1200 1380 1250 1380 {lab=OUT_CS}
@@ -40,8 +45,8 @@ N 460 970 460 1000 {lab=VDD}
 N 1100 970 1100 1000 {lab=VDD}
 N 660 380 660 440 {lab=VDD}
 N 540 380 540 440 {lab=VSS}
-N 500 1430 500 1470 {lab=IBIAS}
-N 1090 1450 1090 1500 {lab=IBIAS}
+N 500 1430 500 1470 {lab=IBIAS_PROT}
+N 1090 1450 1090 1500 {lab=IBIAS_PROT}
 N 460 1140 460 1170 {lab=VSS}
 N 1100 1180 1100 1210 {lab=VSS}
 N 1150 1420 1150 1470 {lab=VSS}
@@ -57,15 +62,15 @@ N 80 500 150 500 {lab=VSS}
 N 150 520 150 540 {lab=VSS}
 N 150 330 150 360 {lab=IBIAS}
 N 220 450 280 450 {lab=IBIAS}
-N 490 1130 490 1160 {lab=IBIAS}
-N 1150 1170 1150 1210 {lab=IBIAS}
+N 490 1130 490 1160 {lab=IBIAS_PROT}
+N 1150 1170 1150 1210 {lab=IBIAS_PROT}
 N 470 1440 470 1480 {lab=VSS}
-N 350 1420 420 1420 {lab=INN_TELESCOPIC}
+N 350 1420 420 1420 {lab=INN_5T_PROT}
 N 340 1320 420 1320 {lab=EN_0_TELESCOPIC}
-N 340 1120 410 1120 {lab=INN_FOLDED}
-N 340 1100 410 1100 {lab=INP_FOLDED}
-N 950 1170 990 1170 {lab=INN_5T}
-N 950 1110 990 1110 {lab=INP_5T}
+N 340 1120 410 1120 {lab=INN_FOLDED_PROT}
+N 340 1100 410 1100 {lab=INP_FOLDED_PROT}
+N 950 1170 990 1170 {lab=INN_TELESCOPIC_PROT}
+N 950 1110 990 1110 {lab=INP_TELESCOPIC_PROT}
 N -860 340 -800 340 {lab=CLK}
 N -420 340 -380 340 {lab=SCAN_OUT}
 N -750 470 -750 510 {lab=EN_0_FOLDED}
@@ -79,7 +84,7 @@ N 340 1080 410 1080 {lab=!EN_1_FOLDED}
 N 340 1340 420 1340 {lab=!EN_0_TELESCOPIC}
 N 340 1360 420 1360 {lab=EN_1_TELESCOPIC}
 N 340 1380 420 1380 {lab=!EN_1_TELESCOPIC}
-N 340 1400 420 1400 {lab=INP_TELESCOPIC}
+N 340 1400 420 1400 {lab=INP_5T_PROT}
 N 970 1010 990 1010 {lab=EN_0_5T}
 N 970 1030 990 1030 {lab=!EN_0_5T}
 N 970 1050 990 1050 {lab=EN_1_5T}
@@ -111,7 +116,7 @@ N -490 470 -490 510 {lab=!EN_0_CS}
 N -470 470 -470 510 {lab=EN_1_CS}
 N -450 470 -450 510 {lab=!EN_1_CS}
 N 580 1370 610 1370 {lab=OUT_TELESCOPIC}
-N 1030 1410 1040 1410 {lab=IN_CS}
+N 1030 1410 1040 1410 {lab=IN_CS_PROT}
 N -870 360 -810 360 {lab=SCAN_IN}
 N -810 360 -800 360 {lab=SCAN_IN}
 N -880 990 -830 990 {lab=PROG_ENA}
@@ -200,14 +205,7 @@ model=nfet_03v3
 spiceprefix=X
 }
 C {lab_pin.sym} 280 450 0 1 {name=p12 sig_type=std_logic lab=IBIAS}
-C {lab_pin.sym} 500 1470 0 1 {name=p13 sig_type=std_logic lab=IBIAS}
-C {iopin.sym} 350 1420 2 0 {name=p21 lab=INN_TELESCOPIC}
-C {iopin.sym} 340 1400 2 0 {name=p22 lab=INP_TELESCOPIC}
-C {iopin.sym} 340 1100 2 0 {name=p23 lab=INP_FOLDED}
-C {iopin.sym} 340 1120 2 0 {name=p24 lab=INN_FOLDED}
-C {iopin.sym} 1030 1410 2 0 {name=p25 lab=IN_CS}
-C {iopin.sym} 950 1170 2 0 {name=p26 lab=INN_5T}
-C {iopin.sym} 950 1110 2 0 {name=p27 lab=INP_5T}
+C {lab_pin.sym} 500 1470 0 1 {name=p13 sig_type=std_logic lab=IBIAS_PROT}
 C {iopin.sym} -860 340 2 0 {name=p28 lab=CLK}
 C {iopin.sym} -870 360 2 0 {name=p29 lab=SCAN_IN}
 C {iopin.sym} -380 340 2 1 {name=p30 lab=SCAN_OUT}
@@ -245,11 +243,10 @@ C {lab_pin.sym} -510 510 3 0 {name=p65 sig_type=std_logic lab=EN_0_CS}
 C {lab_pin.sym} -490 510 3 0 {name=p66 sig_type=std_logic lab=!EN_0_CS}
 C {lab_pin.sym} -470 510 3 0 {name=p67 sig_type=std_logic lab=EN_1_CS}
 C {lab_pin.sym} -450 510 3 0 {name=p68 sig_type=std_logic lab=!EN_1_CS}
-C {iopin.sym} 150 330 1 1 {name=p70 lab=IBIAS}
 C {libs/core_amps/ota_5t/prgram_schem/programmable_5tOTA.sym} 1140 1090 0 0 {name=x3}
-C {lab_pin.sym} 1090 1500 0 0 {name=p20 sig_type=std_logic lab=IBIAS}
-C {lab_pin.sym} 1150 1210 0 1 {name=p19 sig_type=std_logic lab=IBIAS}
-C {lab_pin.sym} 490 1160 0 1 {name=p17 sig_type=std_logic lab=IBIAS}
+C {lab_pin.sym} 1090 1500 0 0 {name=p20 sig_type=std_logic lab=IBIAS_PROT}
+C {lab_pin.sym} 1150 1210 0 1 {name=p19 sig_type=std_logic lab=IBIAS_PROT}
+C {lab_pin.sym} 490 1160 0 1 {name=p17 sig_type=std_logic lab=IBIAS_PROT}
 C {lab_pin.sym} 150 540 0 0 {name=p16 sig_type=std_logic lab=VSS}
 C {iopin.sym} -880 990 2 0 {name=p14 lab=PROG_ENA}
 C {libs/core_digital/schem/inv1.sym} -770 1000 0 0 {name=x6}
@@ -338,3 +335,67 @@ C {lab_pin.sym} -440 1860 0 1 {name=p118 sig_type=std_logic lab=PROG_ENA
 C {lab_pin.sym} -270 1950 0 1 {name=p119 sig_type=std_logic lab=EN_1_CS
 }
 C {libs/core_amps/ota_telescopic/programmable_ota_telescopic_schematics/programmable_telescopic_cascode.sym} 440 1370 0 0 {name=x4}
+C {libs/secondary_esd/io_secondary_5p0.sym} 2000 980 0 1 {name=IO1
+spiceprefix=X
+}
+C {libs/secondary_esd/io_secondary_5p0.sym} 2630 980 0 1 {name=IO2
+spiceprefix=X
+}
+C {libs/secondary_esd/io_secondary_5p0.sym} 2000 1210 0 1 {name=IO3
+spiceprefix=X
+}
+C {libs/secondary_esd/io_secondary_5p0.sym} 2630 1210 0 1 {name=IO4
+spiceprefix=X
+}
+C {libs/secondary_esd/io_secondary_5p0.sym} 2000 1440 0 1 {name=IO5
+spiceprefix=X
+}
+C {libs/secondary_esd/io_secondary_5p0.sym} 2630 1440 0 1 {name=IO6
+spiceprefix=X
+}
+C {libs/secondary_esd/io_secondary_5p0.sym} 2000 1670 0 1 {name=IO7
+spiceprefix=X
+}
+C {libs/secondary_esd/io_secondary_5p0.sym} 2630 1670 0 1 {name=IO8
+spiceprefix=X
+}
+C {lab_pin.sym} 2000 900 0 1 {name=p122 sig_type=std_logic lab=INP_FOLDED_PROT}
+C {lab_pin.sym} 2630 900 0 1 {name=p123 sig_type=std_logic lab=INN_FOLDED_PROT}
+C {lab_pin.sym} 2000 1130 0 1 {name=p125 sig_type=std_logic lab=INP_TELESCOPIC_PROT}
+C {lab_pin.sym} 2630 1130 0 1 {name=p127 sig_type=std_logic lab=INN_TELESCOPIC_PROT}
+C {lab_pin.sym} 2000 1360 0 1 {name=p129 sig_type=std_logic lab=INP_5T_PROT}
+C {lab_pin.sym} 2630 1360 0 1 {name=p131 sig_type=std_logic lab=INN_5T_PROT}
+C {lab_pin.sym} 2630 1590 0 1 {name=p133 sig_type=std_logic lab=IBIAS_PROT}
+C {lab_pin.sym} 2000 1590 0 1 {name=p135 sig_type=std_logic lab=IN_CS_PROT}
+C {iopin.sym} 150 330 1 1 {name=p23 lab=IBIAS}
+C {iopin.sym} 1800 900 2 0 {name=p121 lab=INP_FOLDED}
+C {iopin.sym} 2430 900 2 0 {name=p124 lab=INN_FOLDED}
+C {iopin.sym} 1800 1130 2 0 {name=p126 lab=INP_TELESCOPIC}
+C {iopin.sym} 1800 1360 2 0 {name=p130 lab=INP_5T}
+C {iopin.sym} 2430 1360 2 0 {name=p132 lab=INN_5T}
+C {iopin.sym} 1800 1590 2 0 {name=p134 lab=IN_CS}
+C {lab_pin.sym} 1920 820 0 0 {name=p21 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} 2550 820 0 0 {name=p22 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} 1920 1050 0 0 {name=p24 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} 2550 1050 0 0 {name=p25 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} 1920 1280 0 0 {name=p26 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} 2550 1280 0 0 {name=p27 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} 1920 1510 0 0 {name=p120 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} 2550 1510 0 0 {name=p136 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} 1920 980 0 0 {name=p137 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 1920 1220 0 0 {name=p138 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 2550 980 0 0 {name=p139 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 2550 1210 0 0 {name=p140 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 2550 1440 0 0 {name=p141 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 1920 1440 0 0 {name=p142 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 1920 1670 0 0 {name=p143 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 2550 1670 0 0 {name=p144 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 2430 1590 0 0 {name=p145 sig_type=std_logic lab=IBIAS}
+C {lab_pin.sym} 340 1100 0 0 {name=p146 sig_type=std_logic lab=INP_FOLDED_PROT}
+C {lab_pin.sym} 340 1120 0 0 {name=p147 sig_type=std_logic lab=INN_FOLDED_PROT}
+C {lab_pin.sym} 950 1110 0 0 {name=p148 sig_type=std_logic lab=INP_TELESCOPIC_PROT}
+C {iopin.sym} 2430 1130 2 0 {name=p149 lab=INN_TELESCOPIC}
+C {lab_pin.sym} 950 1170 0 0 {name=p128 sig_type=std_logic lab=INN_TELESCOPIC_PROT}
+C {lab_pin.sym} 340 1400 0 0 {name=p150 sig_type=std_logic lab=INP_5T_PROT}
+C {lab_pin.sym} 350 1420 0 0 {name=p151 sig_type=std_logic lab=INN_5T_PROT}
+C {lab_pin.sym} 1030 1410 0 0 {name=p152 sig_type=std_logic lab=IN_CS_PROT}
