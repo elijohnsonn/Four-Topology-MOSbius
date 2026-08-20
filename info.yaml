@@ -19,6 +19,8 @@ project:
   lvs_config: "./DRC_dry_run/lvs_config.json"
 
 pins: 
+  - name: VSS
+    io_type: ground
   - name: INP_TELESCOPIC
     io_type: analog
     secondary_esd: true
@@ -46,8 +48,6 @@ pins:
     io_type: input_cmos
   - name: VDD
     io_type: power
-  - name: VSS
-    io_type: ground  # note: due to a common ground connection, ground pads are generally not needed.
   - name: CLK 
     io_type: input_cmos
   - name: IBIAS
