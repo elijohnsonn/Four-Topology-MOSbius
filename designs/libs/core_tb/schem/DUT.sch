@@ -36,6 +36,7 @@ T {CORE AMPLIFIERS} 530 780 0 0 1 1 {}
 T {BIAS AND POWER PINS} 100 80 0 0 1 1 {}
 T {SCAN CHAIN} -770 90 0 0 1 1 {}
 T {SECONDARY ESD} 2030 670 0 0 1 1 {}
+T {DECAP} 310 240 0 0 0.5 0.5 {}
 N 570 1070 600 1070 {lab=OUT_FOLDED}
 N 1220 1090 1270 1090 {lab=OUT_5T}
 N 1200 1380 1250 1380 {lab=OUT_CS}
@@ -171,6 +172,8 @@ N -490 1870 -490 1900 {lab=VDD}
 N -480 2000 -480 2040 {lab=VSS}
 N -360 1950 -270 1950 {lab=EN_1_CS}
 N -610 1950 -530 1950 {lab=VSS}
+N 450 280 450 300 {lab=VSS}
+N 450 210 450 220 {lab=VDD}
 C {libs/core_digital/schem/scan_chain.sym} -610 430 0 0 {name=x1}
 C {libs/core_amps/ota_folded_cascode/prgrm_schem/programmable_folded_cascode.sym} 430 1070 0 0 {name=x2}
 C {libs/core_amps/cs_stage/prgrm_schem/programmable_common_source.sym} 1060 1380 0 0 {name=x5}
@@ -399,3 +402,11 @@ C {lab_pin.sym} 350 1420 0 0 {name=p151 sig_type=std_logic lab=INN_5T_PROT}
 C {lab_pin.sym} 1030 1410 0 0 {name=p152 sig_type=std_logic lab=IN_CS_PROT}
 C {iopin.sym} 2430 1590 0 1 {name=p23 lab=IBIAS
 }
+C {symbols/cap_nmos_03v3_b.sym} 450 250 0 0 {name=C1
+W=19.15094e-6
+L=20e-6
+model=cap_nmos_03v3_b
+spiceprefix=X
+m=53}
+C {lab_pin.sym} 450 210 0 0 {name=p70 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} 450 300 0 0 {name=p145 sig_type=std_logic lab=VSS}
