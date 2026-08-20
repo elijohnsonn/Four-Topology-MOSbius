@@ -54,7 +54,7 @@ pins:
     io_type: analog
     secondary_esd: true
   - name: SCAN_OUT
-    io_type: output_cmos
+    io_type: bidrectional
   - name: IN_CS
     io_type: analog
     secondary_esd: true
