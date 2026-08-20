@@ -29,6 +29,7 @@ XIO5 VDD INP_5T_PROT INP_5T VSS io_secondary_5p0
 XIO6 VDD INN_5T_PROT INN_5T VSS io_secondary_5p0
 XIO7 VDD IN_CS_PROT IN_CS VSS io_secondary_5p0
 XIO8 VDD IBIAS_PROT IBIAS VSS io_secondary_5p0
+C1 VDD VSS cap_nmos_03v3_b W=19.15094e-6 L=20e-6 m=53
 .ends
 
 * expanding   symbol:  libs/core_digital/schem/scan_chain.sym # of pins=21
