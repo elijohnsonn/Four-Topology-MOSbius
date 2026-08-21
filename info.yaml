@@ -23,10 +23,10 @@ pins:
     io_type: ground
   - name: INP_TELESCOPIC
     io_type: analog
-    secondary_esd: false #we have already implemented manually in schematic/ayout
+    secondary_esd: false #we have already implemented manually in schematic/layout
   - name: INP_FOLDED
     io_type: analog
-    secondary_esd: false #we have already implemented manually in schematic/ayout
+    secondary_esd: false #we have already implemented manually in schematic/layout
   - name: OUT_TELESCOPIC
     io_type: analog
     secondary_esd: false
@@ -35,13 +35,13 @@ pins:
     secondary_esd: false
   - name: INP_5T
     io_type: analog
-    secondary_esd: false #we have already implemented manually in schematic/ayout
+    secondary_esd: false #we have already implemented manually in schematic/layout
   - name: INN_TELESCOPIC
     io_type: analog
-    secondary_esd: false #we have already implemented manually in schematic/ayout
+    secondary_esd: false #we have already implemented manually in schematic/layout
   - name: INN_FOLDED
     io_type: analog
-    secondary_esd: false #we have already implemented manually in schematic/ayout
+    secondary_esd: false #we have already implemented manually in schematic/layout
   - name: PROG_ENA
     io_type: input_cmos
   - name: SCAN_IN
@@ -52,18 +52,18 @@ pins:
     io_type: input_cmos
   - name: IBIAS
     io_type: analog
-    secondary_esd: false #we have already implemented manually in schematic/ayout
+    secondary_esd: false #we have already implemented manually in schematic/layout
   - name: SCAN_OUT
     io_type: bidirectional
   - name: IN_CS
     io_type: analog
-    secondary_esd: false #we have already implemented manually in schematic/ayout
+    secondary_esd: false #we have already implemented manually in schematic/layout
   - name: OUT_CS
     io_type: analog
     secondary_esd: false
   - name: INN_5T
     io_type: analog
-    secondary_esd: false #we have already implemented manually in schematic/ayout
+    secondary_esd: false #we have already implemented manually in schematic/layout
   - name: OUT_5T
     io_type: analog
     secondary_esd: false
