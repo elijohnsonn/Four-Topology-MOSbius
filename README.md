@@ -5,10 +5,10 @@ Analog circuit design intuition is best developed through hands-on measurement o
 
 ## Team
 All team members are undergraduate students at Columbia University in the City of New York
-- Eli Johnson — Team Lead, Schematic and Design Integration/Troubleshooting, Owner of Folded Cascode, Common-Source Blocks
+- Eli Johnson — Team Lead, Schematic and Design Integration/Troubleshooting, Owner of Folded Cascode Design and Layout, Common-Source Design
 - Maxwell Drucker — Layout Integration/Troubleshooting, Owner of Scan Chain, Transmission Gates, Programmable Transistor Block (Digital)
-- Manuel Garcia — Owner of Telescopic Cascode Block
-- Songhang Li — Owner of 5-Transistor Block
+- Manuel Garcia — Owner of Telescopic Cascode Design
+- Songhang Li — Owner of 5-Transistor Design and Layout
 
 ## Repository Navigation
 All schematics, layouts, can be found in /designs/libs. Slide decks and images can be found in other directories in the main branch
