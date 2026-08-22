@@ -1,0 +1,21 @@
+{
+  "project_size": {
+    "source_gds": "gds/C01/DUT.gds",
+    "top_cell": "DUT",
+    "layer": 0,
+    "datatype": 0,
+    "layout_dbu_microns": 0.005,
+    "rectangle_dbu": [
+      0,
+      0,
+      100000,
+      80000
+    ],
+    "width_microns": "500",
+    "height_microns": "400"
+  },
+  "participant_pin_count": 18,
+  "selected_variants": [
+    "A"
+  ]
+}
