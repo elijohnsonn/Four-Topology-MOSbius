@@ -31,7 +31,7 @@ T {DC = 1.65V
 500Hz Frequency 
 50mV Amplitude
 1ms Delay} -1590 250 0 0 0.5 0.5 {}
-T {DC = 1.65V} -1780 250 0 0 0.5 0.5 {}
+T {DC = 1.6425V} -1790 250 0 0 0.5 0.5 {}
 T {IBIAS = 100u} -1200 210 0 0 0.4 0.4 {}
 T {IMPLEMENTATION} -1110 -640 0 0 1 1 {}
 T {Configure the 5T OTA in 2× mode 
@@ -170,7 +170,7 @@ print idd power
 .endc
 "}
 C {gnd.sym} -1710 200 0 0 {name=l9 lab=GND}
-C {vsource.sym} -1710 140 0 0 {name=V7 value=1.65 savecurrent=false}
+C {vsource.sym} -1710 140 0 0 {name=V7 value=1.6425 savecurrent=false}
 C {capa.sym} -360 -30 0 0 {name=CLOAD
 m=1
 value=120p

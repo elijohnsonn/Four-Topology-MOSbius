@@ -126,6 +126,7 @@ print swing_high - swing_low
 
 plot v(output) gain
 
+
 .endc
 "}
 C {vsource.sym} 630 -525 0 0 {name=VINP value= 0 savecurrent=false}
