@@ -140,7 +140,7 @@ value="
 .include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 "}
-C {code_shown.sym} 1390 -140 0 0 {name=Simulation1 only_toplevel=false 
+C {code_shown.sym} 1380 -140 0 0 {name=Simulation1 only_toplevel=false 
 
 value=
 
@@ -152,7 +152,7 @@ tran 1u 5m
 set color0 = white
 set color1 = black
 plot v(out_5T) v(inn_5T)
-wrdata /foss/designs/libs/pex/5t/inverting_amplifier/with_start_cir/2x.csv v(out_5T) v(inn_5T)
+wrdata /foss/designs/libs/pex/start_up_cir/5t/2x.csv v(out_5T) v(inn_5T)
 
 meas tran vout_pp pp v(out_5T) from=2m to=5m
 meas tran vin_pp pp v(inn_5T) from=2m to=5m
@@ -221,9 +221,9 @@ value=120p
 footprint=1206
 device="ceramic capacitor"}
 C {gnd.sym} -220 40 0 0 {name=l4 lab=GND}
-C {libs/core_amps/start_up_cir/start_up_cir.sym} -310 -80 0 0 {name=x2}
 C {lab_pin.sym} -330 -30 1 1 {name=p6 sig_type=std_logic lab=CLK_ENA}
 C {lab_pin.sym} -310 -10 3 0 {name=p22 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} -290 -30 1 1 {name=p23 sig_type=std_logic lab=!CLK_ENA}
 C {gnd.sym} -380 60 0 0 {name=l5 lab=GND}
 C {vsource.sym} -380 0 0 0 {name=V2 value=1.653 savecurrent=false}
+C {libs/core_amps/start_up_cir/start_up_cir_cap.sym} -360 -110 0 0 {name=x2}
