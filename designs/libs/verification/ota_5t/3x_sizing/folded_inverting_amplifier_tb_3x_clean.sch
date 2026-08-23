@@ -119,8 +119,8 @@ N 900 -290 900 -250 {lab=CLK_ENA}
 N 450 -130 520 -130 {lab=CLK_ENA}
 N 500 -340 570 -340 {lab=!CLK_ENA}
 N -510 -150 -430 -150 {lab=#net3}
-N -470 -280 -430 -150 {lab=#net3}
-N -360 -150 -320 -270 {lab=OUT_FOLDED}
+N -460 -270 -430 -150 {lab=#net3}
+N -360 -150 -320 -260 {lab=OUT_FOLDED}
 C {gnd.sym} 560 490 0 0 {name=l1 lab=GND}
 C {gnd.sym} -950 -320 0 0 {name=l2 lab=GND}
 C {vsource.sym} 410 420 0 0 {name=V1 value=3.3 savecurrent=false}
@@ -182,7 +182,7 @@ value=100k
 footprint=1206
 device=resistor
 m=1}
-C {vsource.sym} -1570 80 0 0 {name=V6 value= "dc 1.65 ac 0 sin(1.65 10m 500 1m)" savecurrent=false}
+C {vsource.sym} -1570 80 0 0 {name=V6 value= "dc 1.65 ac 0 sin(1.65 10m 500 0.45m)" savecurrent=false}
 C {gnd.sym} -1570 140 0 0 {name=l10 lab=GND}
 C {lab_pin.sym} -1570 -190 0 0 {name=p13 sig_type=std_logic lab=INN_FOLDED}
 C {lab_pin.sym} -1710 -220 0 0 {name=p12 sig_type=std_logic lab=INP_FOLDED}
@@ -216,8 +216,8 @@ C {lab_pin.sym} 900 -140 0 1 {name=p19 sig_type=std_logic lab=!CLK_ENA}
 C {lab_pin.sym} 520 -130 0 1 {name=p20 sig_type=std_logic lab=CLK_ENA}
 C {lab_pin.sym} 570 -340 0 1 {name=p21 sig_type=std_logic lab=!CLK_ENA}
 C {vsource.sym} 560 420 0 0 {name=V2 value="PWL(0 0 0.34999m 0 0.35m 3.3 0.399999m 3.3 0.4m 0)" savecurrent=false}
-C {libs/core_amps/glitch_filter/glitch_filter.sym} -440 -290 0 0 {name=x2}
 C {lab_pin.sym} -410 -220 1 1 {name=p6 sig_type=std_logic lab=CLK_ENA}
 C {lab_pin.sym} -390 -220 3 0 {name=p22 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} -370 -220 1 1 {name=p23 sig_type=std_logic lab=!CLK_ENA}
-C {lab_pin.sym} -470 -260 0 0 {name=p4 sig_type=std_logic lab=INP_FOLDED}
+C {lab_pin.sym} -460 -250 0 0 {name=p4 sig_type=std_logic lab=INP_FOLDED}
+C {libs/core_amps/switch/switch.sym} -440 -290 0 0 {name=x2}

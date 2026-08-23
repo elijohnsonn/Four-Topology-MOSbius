@@ -220,8 +220,8 @@ C {lab_pin.sym} 900 -290 0 1 {name=p18 sig_type=std_logic lab=CLK_ENA}
 C {lab_pin.sym} 900 -140 0 1 {name=p19 sig_type=std_logic lab=!CLK_ENA}
 C {lab_pin.sym} 520 -130 0 1 {name=p20 sig_type=std_logic lab=CLK_ENA}
 C {lab_pin.sym} 570 -340 0 1 {name=p21 sig_type=std_logic lab=!CLK_ENA}
-C {libs/core_amps/glitch_filter/glitch_filter.sym} -350 -210 0 0 {name=x2}
 C {lab_pin.sym} -370 -170 0 0 {name=p4 sig_type=std_logic lab=INP_5T}
 C {lab_pin.sym} -320 -100 1 1 {name=p6 sig_type=std_logic lab=CLK_ENA}
 C {lab_pin.sym} -300 -110 3 0 {name=p22 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} -280 -130 1 1 {name=p23 sig_type=std_logic lab=!CLK_ENA}
+C {libs/core_amps/switch/switch.sym} -350 -210 0 0 {name=x2}
