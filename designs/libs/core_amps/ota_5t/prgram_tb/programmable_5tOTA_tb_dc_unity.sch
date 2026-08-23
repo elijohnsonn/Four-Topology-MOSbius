@@ -125,6 +125,9 @@ print icmr_low icmr_high
 print swing_high - swing_low
 
 plot v(output) gain
+set wr_singlescale
+set wr_vecnames
+wrdata output.csv v(output) gain
 
 .endc
 "}

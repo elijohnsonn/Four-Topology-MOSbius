@@ -26,7 +26,7 @@ T {Scan chain input artificially generated to enable 5T OTA 2x sizing
 prog_ena sets default (low) or program (high)} 300 210 0 0 0.4 0.4 {}
 T {R2 = 500K} -880 350 0 0 0.75 0.75 {}
 T {R1 = 100K} -1460 -60 0 0 0.75 0.75 {}
-T {CL = 120p} -130 -10 0 0 0.75 0.75 {}
+T {CL = 120p} -130 -20 0 0 0.75 0.75 {}
 T {DC = 1.65V
 500Hz Frequency 
 50mV Amplitude
@@ -62,12 +62,12 @@ N -560 -90 -510 -90 {lab=#net3}
 N -1230 -10 -1230 330 {lab=#net2}
 N -1230 -80 -1230 -10 {lab=#net2}
 N -1710 170 -1710 200 {lab=GND}
-N -230 -90 -170 -90 {lab=OUT_5T}
+N -230 -100 -170 -100 {lab=OUT_5T}
 N -1710 -160 -1710 40 {lab=INP_5T}
 N -1570 -160 -1210 -160 {lab=INP_5T}
 N -1710 40 -1710 70 {lab=INP_5T}
-N -210 -90 -210 -60 {lab=OUT_5T}
-N -210 0 -210 40 {lab=GND}
+N -210 -100 -210 -70 {lab=OUT_5T}
+N -210 -10 -210 30 {lab=GND}
 N -1710 70 -1710 110 {lab=INP_5T}
 N -1230 -130 -1150 -130 {lab=#net2}
 N -1230 -130 -1230 -80 {lab=#net2}
@@ -119,7 +119,7 @@ N -430 -90 -430 430 {lab=#net3}
 N -320 -140 -320 -100 {lab=CLK_ENA}
 N -300 -140 -300 -110 {lab=VDD}
 N -280 -140 -280 -130 {lab=!CLK_ENA}
-N -230 -180 -230 -90 {lab=OUT_5T}
+N -230 -190 -230 -100 {lab=OUT_5T}
 N -400 -90 -370 -190 {lab=#net3}
 N -510 -90 -400 -90 {lab=#net3}
 C {vsource.sym} 560 420 0 0 {name=V3 value="PWL(0 0 0.1499m 0 0.15m 3.3 0.1999m 3.3 0.2m 0)" savecurrent=false}
@@ -134,7 +134,7 @@ C {lab_pin.sym} -720 -340 0 1 {name=p3 sig_type=std_logic lab=SCAN_IN}
 C {lab_pin.sym} -750 -340 0 0 {name=p5 sig_type=std_logic lab=CLK}
 C {isource.sym} -1130 120 2 0 {name=IBIAS value=100u}
 C {lab_pin.sym} -1130 180 0 0 {name=p9 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} -170 -90 0 1 {name=p11 sig_type=std_logic lab=OUT_5T}
+C {lab_pin.sym} -170 -100 0 1 {name=p11 sig_type=std_logic lab=OUT_5T}
 C {devices/code_shown.sym} 1390 -250 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
@@ -153,6 +153,10 @@ set color0 = white
 set color1 = black
 
 plot v(out_5T) v(inn_5T)
+
+set wr_singlescale
+set wr_vecnames
+wrdata /foss/designs/libs/verification/ota_5t/3x_sizing/output.csv v(out_5T) v(inn_5T)
 
 meas tran vout_pp pp v(out_5T) from=2m to=5m
 meas tran vin_pp pp v(inn_5T) from=2m to=5m
@@ -176,12 +180,12 @@ print idd power
 "}
 C {gnd.sym} -1710 200 0 0 {name=l9 lab=GND}
 C {vsource.sym} -1710 140 0 0 {name=V7 value=1.65 savecurrent=false}
-C {capa.sym} -210 -30 0 0 {name=CLOAD
+C {capa.sym} -210 -40 0 0 {name=CLOAD
 m=1
 value=120p
 footprint=1206
 device="ceramic capacitor"}
-C {gnd.sym} -210 40 0 0 {name=l8 lab=GND}
+C {gnd.sym} -210 30 0 0 {name=l8 lab=GND}
 C {res.sym} -1340 -130 1 0 {name=R2
 value=100k
 footprint=1206
@@ -224,4 +228,4 @@ C {lab_pin.sym} -370 -170 0 0 {name=p4 sig_type=std_logic lab=INP_5T}
 C {lab_pin.sym} -320 -100 1 1 {name=p6 sig_type=std_logic lab=CLK_ENA}
 C {lab_pin.sym} -300 -110 3 0 {name=p22 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} -280 -130 1 1 {name=p23 sig_type=std_logic lab=!CLK_ENA}
-C {libs/core_amps/switch/switch.sym} -350 -210 0 0 {name=x2}
+C {libs/core_amps/start_up_cir/start_up_cir.sym} -300 -180 0 0 {name=x2}
