@@ -1,0 +1,113 @@
+{
+  "project_size": {
+    "source_gds": "/Users/kanobailey/chipathon/2026/gds/C01/DUT.gds",
+    "top_cell": "DUT",
+    "layer": 0,
+    "datatype": 0,
+    "layout_dbu_microns": 0.005,
+    "rectangle_dbu": [
+      0,
+      0,
+      100000,
+      80000
+    ],
+    "width_microns": "500",
+    "height_microns": "400",
+    "top_cell_text": [
+      {
+        "text": "IN_CS",
+        "layer": 81,
+        "datatype": 10
+      },
+      {
+        "text": "INP_TELESCOPIC",
+        "layer": 81,
+        "datatype": 10
+      },
+      {
+        "text": "INP_FOLDED",
+        "layer": 81,
+        "datatype": 10
+      },
+      {
+        "text": "VSS",
+        "layer": 81,
+        "datatype": 10
+      },
+      {
+        "text": "OUT_FOLDED",
+        "layer": 81,
+        "datatype": 10
+      },
+      {
+        "text": "IBIAS",
+        "layer": 81,
+        "datatype": 10
+      },
+      {
+        "text": "INN_FOLDED",
+        "layer": 81,
+        "datatype": 10
+      },
+      {
+        "text": "INP_5T",
+        "layer": 81,
+        "datatype": 10
+      },
+      {
+        "text": "OUT_5T",
+        "layer": 81,
+        "datatype": 10
+      },
+      {
+        "text": "VDD",
+        "layer": 81,
+        "datatype": 10
+      },
+      {
+        "text": "OUT_CS",
+        "layer": 81,
+        "datatype": 10
+      },
+      {
+        "text": "INN_5T",
+        "layer": 81,
+        "datatype": 10
+      },
+      {
+        "text": "SCAN_OUT",
+        "layer": 81,
+        "datatype": 10
+      },
+      {
+        "text": "SCAN_IN",
+        "layer": 81,
+        "datatype": 10
+      },
+      {
+        "text": "CLK",
+        "layer": 81,
+        "datatype": 10
+      },
+      {
+        "text": "INN_TELESCOPIC",
+        "layer": 81,
+        "datatype": 10
+      },
+      {
+        "text": "OUT_TELESCOPIC",
+        "layer": 81,
+        "datatype": 10
+      },
+      {
+        "text": "PROG_ENA",
+        "layer": 81,
+        "datatype": 10
+      }
+    ]
+  },
+  "participant_pin_count": 18,
+  "selected_variants": [
+    "A"
+  ]
+}
