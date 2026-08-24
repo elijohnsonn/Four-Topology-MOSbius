@@ -1,0 +1,2458 @@
+spec_blob_sha: 7398a4da36e4d6ad9f9b76c06813b073c9c0ed2f
+source_mapping: build/padframes/C01/project_defs/A/C01_A_pad_map.yaml
+source_padring_def: build/padframes/C01/project_defs/A/C01_A_padring.def
+variant: A
+origin_microns:
+- '350'
+- '1475'
+origin_dbu:
+- 70000
+- 295000
+size_microns:
+- '1110'
+- '1110'
+diearea_dbu:
+- 0
+- 0
+- 222000
+- 222000
+usable_area: 1232100
+blockages: []
+routing_blockage_layers:
+- Metal1
+- Metal2
+- Metal3
+- Metal4
+- Metal5
+pins:
+- user_pin_name: VSS
+  default_project_pin: VSS
+  project_pin: VSS
+  cell_terminal: DVSS
+  padring_instance: W12
+  physical_pad_slot: W12
+  cell: gf180mcu_fd_io__dvss
+  direction: INOUT
+  use: GROUND
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 69800
+    - 308828
+    - 70000
+    - 310728
+    extended_top_level:
+    - 70000
+    - 308828
+    - 70200
+    - 310728
+    translated_user:
+    - 0
+    - 13828
+    - 200
+    - 15728
+  - routing_layer: Metal2
+    top_level:
+    - 69800
+    - 306198
+    - 70000
+    - 308248
+    extended_top_level:
+    - 70000
+    - 306198
+    - 70200
+    - 308248
+    translated_user:
+    - 0
+    - 11198
+    - 200
+    - 13248
+  - routing_layer: Metal2
+    top_level:
+    - 69800
+    - 303828
+    - 70000
+    - 305878
+    extended_top_level:
+    - 70000
+    - 303828
+    - 70200
+    - 305878
+    translated_user:
+    - 0
+    - 8828
+    - 200
+    - 10878
+  - routing_layer: Metal2
+    top_level:
+    - 69800
+    - 301122
+    - 70000
+    - 303172
+    extended_top_level:
+    - 70000
+    - 301122
+    - 70200
+    - 303172
+    translated_user:
+    - 0
+    - 6122
+    - 200
+    - 8172
+  - routing_layer: Metal2
+    top_level:
+    - 69800
+    - 298752
+    - 70000
+    - 300802
+    extended_top_level:
+    - 70000
+    - 298752
+    - 70200
+    - 300802
+    translated_user:
+    - 0
+    - 3752
+    - 200
+    - 5802
+  - routing_layer: Metal2
+    top_level:
+    - 69800
+    - 296272
+    - 70000
+    - 298172
+    extended_top_level:
+    - 70000
+    - 296272
+    - 70200
+    - 298172
+    translated_user:
+    - 0
+    - 1272
+    - 200
+    - 3172
+- user_pin_name: INP_TELESCOPIC
+  default_project_pin: INP_TELESCOPIC
+  project_pin: INP_TELESCOPIC
+  cell_terminal: ASIG5V
+  padring_instance: W13
+  physical_pad_slot: W13
+  cell: gf180mcu_fd_io__asig_5p0
+  direction: INOUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 327424
+    - 70000
+    - 327932
+    extended_top_level:
+    - 70000
+    - 327424
+    - 70200
+    - 327932
+    translated_user:
+    - 0
+    - 32424
+    - 200
+    - 32932
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 326288
+    - 70000
+    - 326796
+    extended_top_level:
+    - 70000
+    - 326288
+    - 70200
+    - 326796
+    translated_user:
+    - 0
+    - 31288
+    - 200
+    - 31796
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 325152
+    - 70000
+    - 325660
+    extended_top_level:
+    - 70000
+    - 325152
+    - 70200
+    - 325660
+    translated_user:
+    - 0
+    - 30152
+    - 200
+    - 30660
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 324016
+    - 70000
+    - 324524
+    extended_top_level:
+    - 70000
+    - 324016
+    - 70200
+    - 324524
+    translated_user:
+    - 0
+    - 29016
+    - 200
+    - 29524
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 322476
+    - 70000
+    - 322984
+    extended_top_level:
+    - 70000
+    - 322476
+    - 70200
+    - 322984
+    translated_user:
+    - 0
+    - 27476
+    - 200
+    - 27984
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 321340
+    - 70000
+    - 321848
+    extended_top_level:
+    - 70000
+    - 321340
+    - 70200
+    - 321848
+    translated_user:
+    - 0
+    - 26340
+    - 200
+    - 26848
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 320204
+    - 70000
+    - 320712
+    extended_top_level:
+    - 70000
+    - 320204
+    - 70200
+    - 320712
+    translated_user:
+    - 0
+    - 25204
+    - 200
+    - 25712
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 319068
+    - 70000
+    - 319576
+    extended_top_level:
+    - 70000
+    - 319068
+    - 70200
+    - 319576
+    translated_user:
+    - 0
+    - 24068
+    - 200
+    - 24576
+- user_pin_name: INP_FOLDED
+  default_project_pin: INP_FOLDED
+  project_pin: INP_FOLDED
+  cell_terminal: ASIG5V
+  padring_instance: W14
+  physical_pad_slot: W14
+  cell: gf180mcu_fd_io__asig_5p0
+  direction: INOUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 347424
+    - 70000
+    - 347932
+    extended_top_level:
+    - 70000
+    - 347424
+    - 70200
+    - 347932
+    translated_user:
+    - 0
+    - 52424
+    - 200
+    - 52932
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 346288
+    - 70000
+    - 346796
+    extended_top_level:
+    - 70000
+    - 346288
+    - 70200
+    - 346796
+    translated_user:
+    - 0
+    - 51288
+    - 200
+    - 51796
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 345152
+    - 70000
+    - 345660
+    extended_top_level:
+    - 70000
+    - 345152
+    - 70200
+    - 345660
+    translated_user:
+    - 0
+    - 50152
+    - 200
+    - 50660
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 344016
+    - 70000
+    - 344524
+    extended_top_level:
+    - 70000
+    - 344016
+    - 70200
+    - 344524
+    translated_user:
+    - 0
+    - 49016
+    - 200
+    - 49524
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 342476
+    - 70000
+    - 342984
+    extended_top_level:
+    - 70000
+    - 342476
+    - 70200
+    - 342984
+    translated_user:
+    - 0
+    - 47476
+    - 200
+    - 47984
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 341340
+    - 70000
+    - 341848
+    extended_top_level:
+    - 70000
+    - 341340
+    - 70200
+    - 341848
+    translated_user:
+    - 0
+    - 46340
+    - 200
+    - 46848
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 340204
+    - 70000
+    - 340712
+    extended_top_level:
+    - 70000
+    - 340204
+    - 70200
+    - 340712
+    translated_user:
+    - 0
+    - 45204
+    - 200
+    - 45712
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 339068
+    - 70000
+    - 339576
+    extended_top_level:
+    - 70000
+    - 339068
+    - 70200
+    - 339576
+    translated_user:
+    - 0
+    - 44068
+    - 200
+    - 44576
+- user_pin_name: OUT_TELESCOPIC
+  default_project_pin: OUT_TELESCOPIC
+  project_pin: OUT_TELESCOPIC
+  cell_terminal: ASIG5V
+  padring_instance: W15
+  physical_pad_slot: W15
+  cell: gf180mcu_fd_io__asig_5p0
+  direction: INOUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 367424
+    - 70000
+    - 367932
+    extended_top_level:
+    - 70000
+    - 367424
+    - 70200
+    - 367932
+    translated_user:
+    - 0
+    - 72424
+    - 200
+    - 72932
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 366288
+    - 70000
+    - 366796
+    extended_top_level:
+    - 70000
+    - 366288
+    - 70200
+    - 366796
+    translated_user:
+    - 0
+    - 71288
+    - 200
+    - 71796
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 365152
+    - 70000
+    - 365660
+    extended_top_level:
+    - 70000
+    - 365152
+    - 70200
+    - 365660
+    translated_user:
+    - 0
+    - 70152
+    - 200
+    - 70660
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 364016
+    - 70000
+    - 364524
+    extended_top_level:
+    - 70000
+    - 364016
+    - 70200
+    - 364524
+    translated_user:
+    - 0
+    - 69016
+    - 200
+    - 69524
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 362476
+    - 70000
+    - 362984
+    extended_top_level:
+    - 70000
+    - 362476
+    - 70200
+    - 362984
+    translated_user:
+    - 0
+    - 67476
+    - 200
+    - 67984
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 361340
+    - 70000
+    - 361848
+    extended_top_level:
+    - 70000
+    - 361340
+    - 70200
+    - 361848
+    translated_user:
+    - 0
+    - 66340
+    - 200
+    - 66848
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 360204
+    - 70000
+    - 360712
+    extended_top_level:
+    - 70000
+    - 360204
+    - 70200
+    - 360712
+    translated_user:
+    - 0
+    - 65204
+    - 200
+    - 65712
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 359068
+    - 70000
+    - 359576
+    extended_top_level:
+    - 70000
+    - 359068
+    - 70200
+    - 359576
+    translated_user:
+    - 0
+    - 64068
+    - 200
+    - 64576
+- user_pin_name: OUT_FOLDED
+  default_project_pin: OUT_FOLDED
+  project_pin: OUT_FOLDED
+  cell_terminal: ASIG5V
+  padring_instance: W16
+  physical_pad_slot: W16
+  cell: gf180mcu_fd_io__asig_5p0
+  direction: INOUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 387424
+    - 70000
+    - 387932
+    extended_top_level:
+    - 70000
+    - 387424
+    - 70200
+    - 387932
+    translated_user:
+    - 0
+    - 92424
+    - 200
+    - 92932
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 386288
+    - 70000
+    - 386796
+    extended_top_level:
+    - 70000
+    - 386288
+    - 70200
+    - 386796
+    translated_user:
+    - 0
+    - 91288
+    - 200
+    - 91796
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 385152
+    - 70000
+    - 385660
+    extended_top_level:
+    - 70000
+    - 385152
+    - 70200
+    - 385660
+    translated_user:
+    - 0
+    - 90152
+    - 200
+    - 90660
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 384016
+    - 70000
+    - 384524
+    extended_top_level:
+    - 70000
+    - 384016
+    - 70200
+    - 384524
+    translated_user:
+    - 0
+    - 89016
+    - 200
+    - 89524
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 382476
+    - 70000
+    - 382984
+    extended_top_level:
+    - 70000
+    - 382476
+    - 70200
+    - 382984
+    translated_user:
+    - 0
+    - 87476
+    - 200
+    - 87984
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 381340
+    - 70000
+    - 381848
+    extended_top_level:
+    - 70000
+    - 381340
+    - 70200
+    - 381848
+    translated_user:
+    - 0
+    - 86340
+    - 200
+    - 86848
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 380204
+    - 70000
+    - 380712
+    extended_top_level:
+    - 70000
+    - 380204
+    - 70200
+    - 380712
+    translated_user:
+    - 0
+    - 85204
+    - 200
+    - 85712
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 379068
+    - 70000
+    - 379576
+    extended_top_level:
+    - 70000
+    - 379068
+    - 70200
+    - 379576
+    translated_user:
+    - 0
+    - 84068
+    - 200
+    - 84576
+- user_pin_name: INP_5T
+  default_project_pin: INP_5T
+  project_pin: INP_5T
+  cell_terminal: ASIG5V
+  padring_instance: W17
+  physical_pad_slot: W17
+  cell: gf180mcu_fd_io__asig_5p0
+  direction: INOUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 407424
+    - 70000
+    - 407932
+    extended_top_level:
+    - 70000
+    - 407424
+    - 70200
+    - 407932
+    translated_user:
+    - 0
+    - 112424
+    - 200
+    - 112932
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 406288
+    - 70000
+    - 406796
+    extended_top_level:
+    - 70000
+    - 406288
+    - 70200
+    - 406796
+    translated_user:
+    - 0
+    - 111288
+    - 200
+    - 111796
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 405152
+    - 70000
+    - 405660
+    extended_top_level:
+    - 70000
+    - 405152
+    - 70200
+    - 405660
+    translated_user:
+    - 0
+    - 110152
+    - 200
+    - 110660
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 404016
+    - 70000
+    - 404524
+    extended_top_level:
+    - 70000
+    - 404016
+    - 70200
+    - 404524
+    translated_user:
+    - 0
+    - 109016
+    - 200
+    - 109524
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 402476
+    - 70000
+    - 402984
+    extended_top_level:
+    - 70000
+    - 402476
+    - 70200
+    - 402984
+    translated_user:
+    - 0
+    - 107476
+    - 200
+    - 107984
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 401340
+    - 70000
+    - 401848
+    extended_top_level:
+    - 70000
+    - 401340
+    - 70200
+    - 401848
+    translated_user:
+    - 0
+    - 106340
+    - 200
+    - 106848
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 400204
+    - 70000
+    - 400712
+    extended_top_level:
+    - 70000
+    - 400204
+    - 70200
+    - 400712
+    translated_user:
+    - 0
+    - 105204
+    - 200
+    - 105712
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 399068
+    - 70000
+    - 399576
+    extended_top_level:
+    - 70000
+    - 399068
+    - 70200
+    - 399576
+    translated_user:
+    - 0
+    - 104068
+    - 200
+    - 104576
+- user_pin_name: INN_TELESCOPIC
+  default_project_pin: INN_TELESCOPIC
+  project_pin: INN_TELESCOPIC
+  cell_terminal: ASIG5V
+  padring_instance: W18
+  physical_pad_slot: W18
+  cell: gf180mcu_fd_io__asig_5p0
+  direction: INOUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 427424
+    - 70000
+    - 427932
+    extended_top_level:
+    - 70000
+    - 427424
+    - 70200
+    - 427932
+    translated_user:
+    - 0
+    - 132424
+    - 200
+    - 132932
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 426288
+    - 70000
+    - 426796
+    extended_top_level:
+    - 70000
+    - 426288
+    - 70200
+    - 426796
+    translated_user:
+    - 0
+    - 131288
+    - 200
+    - 131796
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 425152
+    - 70000
+    - 425660
+    extended_top_level:
+    - 70000
+    - 425152
+    - 70200
+    - 425660
+    translated_user:
+    - 0
+    - 130152
+    - 200
+    - 130660
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 424016
+    - 70000
+    - 424524
+    extended_top_level:
+    - 70000
+    - 424016
+    - 70200
+    - 424524
+    translated_user:
+    - 0
+    - 129016
+    - 200
+    - 129524
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 422476
+    - 70000
+    - 422984
+    extended_top_level:
+    - 70000
+    - 422476
+    - 70200
+    - 422984
+    translated_user:
+    - 0
+    - 127476
+    - 200
+    - 127984
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 421340
+    - 70000
+    - 421848
+    extended_top_level:
+    - 70000
+    - 421340
+    - 70200
+    - 421848
+    translated_user:
+    - 0
+    - 126340
+    - 200
+    - 126848
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 420204
+    - 70000
+    - 420712
+    extended_top_level:
+    - 70000
+    - 420204
+    - 70200
+    - 420712
+    translated_user:
+    - 0
+    - 125204
+    - 200
+    - 125712
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 419068
+    - 70000
+    - 419576
+    extended_top_level:
+    - 70000
+    - 419068
+    - 70200
+    - 419576
+    translated_user:
+    - 0
+    - 124068
+    - 200
+    - 124576
+- user_pin_name: INN_FOLDED
+  default_project_pin: INN_FOLDED
+  project_pin: INN_FOLDED
+  cell_terminal: ASIG5V
+  padring_instance: W19
+  physical_pad_slot: W19
+  cell: gf180mcu_fd_io__asig_5p0
+  direction: INOUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 447424
+    - 70000
+    - 447932
+    extended_top_level:
+    - 70000
+    - 447424
+    - 70200
+    - 447932
+    translated_user:
+    - 0
+    - 152424
+    - 200
+    - 152932
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 446288
+    - 70000
+    - 446796
+    extended_top_level:
+    - 70000
+    - 446288
+    - 70200
+    - 446796
+    translated_user:
+    - 0
+    - 151288
+    - 200
+    - 151796
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 445152
+    - 70000
+    - 445660
+    extended_top_level:
+    - 70000
+    - 445152
+    - 70200
+    - 445660
+    translated_user:
+    - 0
+    - 150152
+    - 200
+    - 150660
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 444016
+    - 70000
+    - 444524
+    extended_top_level:
+    - 70000
+    - 444016
+    - 70200
+    - 444524
+    translated_user:
+    - 0
+    - 149016
+    - 200
+    - 149524
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 442476
+    - 70000
+    - 442984
+    extended_top_level:
+    - 70000
+    - 442476
+    - 70200
+    - 442984
+    translated_user:
+    - 0
+    - 147476
+    - 200
+    - 147984
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 441340
+    - 70000
+    - 441848
+    extended_top_level:
+    - 70000
+    - 441340
+    - 70200
+    - 441848
+    translated_user:
+    - 0
+    - 146340
+    - 200
+    - 146848
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 440204
+    - 70000
+    - 440712
+    extended_top_level:
+    - 70000
+    - 440204
+    - 70200
+    - 440712
+    translated_user:
+    - 0
+    - 145204
+    - 200
+    - 145712
+  - routing_layer: Metal2
+    top_level:
+    - 26874
+    - 439068
+    - 70000
+    - 439576
+    extended_top_level:
+    - 70000
+    - 439068
+    - 70200
+    - 439576
+    translated_user:
+    - 0
+    - 144068
+    - 200
+    - 144576
+- user_pin_name: PROG_ENA
+  default_project_pin: PROG_ENA_PU
+  project_pin: PROG_ENA_PU
+  cell_terminal: PU
+  padring_instance: W20
+  physical_pad_slot: W20
+  cell: gf180mcu_fd_io__in_c
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 66054
+    - 469731
+    - 70000
+    - 469807
+    extended_top_level:
+    - 70000
+    - 469731
+    - 70200
+    - 469807
+    translated_user:
+    - 0
+    - 174731
+    - 200
+    - 174807
+- user_pin_name: PROG_ENA
+  default_project_pin: PROG_ENA_PD
+  project_pin: PROG_ENA_PD
+  cell_terminal: PD
+  padring_instance: W20
+  physical_pad_slot: W20
+  cell: gf180mcu_fd_io__in_c
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 65990
+    - 468858
+    - 70000
+    - 468934
+    extended_top_level:
+    - 70000
+    - 468858
+    - 70200
+    - 468934
+    translated_user:
+    - 0
+    - 173858
+    - 200
+    - 173934
+- user_pin_name: PROG_ENA
+  default_project_pin: PROG_ENA
+  project_pin: PROG_ENA
+  cell_terminal: Y
+  padring_instance: W20
+  physical_pad_slot: W20
+  cell: gf180mcu_fd_io__in_c
+  direction: INPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 63950
+    - 456752
+    - 70000
+    - 456828
+    extended_top_level:
+    - 70000
+    - 456752
+    - 70200
+    - 456828
+    translated_user:
+    - 0
+    - 161752
+    - 200
+    - 161828
+- user_pin_name: SCAN_IN
+  default_project_pin: SCAN_IN_PU
+  project_pin: SCAN_IN_PU
+  cell_terminal: PU
+  padring_instance: W21
+  physical_pad_slot: W21
+  cell: gf180mcu_fd_io__in_c
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 66054
+    - 489731
+    - 70000
+    - 489807
+    extended_top_level:
+    - 70000
+    - 489731
+    - 70200
+    - 489807
+    translated_user:
+    - 0
+    - 194731
+    - 200
+    - 194807
+- user_pin_name: SCAN_IN
+  default_project_pin: SCAN_IN_PD
+  project_pin: SCAN_IN_PD
+  cell_terminal: PD
+  padring_instance: W21
+  physical_pad_slot: W21
+  cell: gf180mcu_fd_io__in_c
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 65990
+    - 488858
+    - 70000
+    - 488934
+    extended_top_level:
+    - 70000
+    - 488858
+    - 70200
+    - 488934
+    translated_user:
+    - 0
+    - 193858
+    - 200
+    - 193934
+- user_pin_name: SCAN_IN
+  default_project_pin: SCAN_IN
+  project_pin: SCAN_IN
+  cell_terminal: Y
+  padring_instance: W21
+  physical_pad_slot: W21
+  cell: gf180mcu_fd_io__in_c
+  direction: INPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 63950
+    - 476752
+    - 70000
+    - 476828
+    extended_top_level:
+    - 70000
+    - 476752
+    - 70200
+    - 476828
+    translated_user:
+    - 0
+    - 181752
+    - 200
+    - 181828
+- user_pin_name: VDD
+  default_project_pin: VDD
+  project_pin: VDD
+  cell_terminal: DVDD
+  padring_instance: W22
+  physical_pad_slot: W22
+  cell: gf180mcu_fd_io__dvdd
+  direction: INOUT
+  use: POWER
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 69069
+    - 508828
+    - 70000
+    - 510728
+    extended_top_level:
+    - 70000
+    - 508828
+    - 70200
+    - 510728
+    translated_user:
+    - 0
+    - 213828
+    - 200
+    - 215728
+  - routing_layer: Metal2
+    top_level:
+    - 69069
+    - 506198
+    - 70000
+    - 508248
+    extended_top_level:
+    - 70000
+    - 506198
+    - 70200
+    - 508248
+    translated_user:
+    - 0
+    - 211198
+    - 200
+    - 213248
+  - routing_layer: Metal2
+    top_level:
+    - 69069
+    - 503828
+    - 70000
+    - 505878
+    extended_top_level:
+    - 70000
+    - 503828
+    - 70200
+    - 505878
+    translated_user:
+    - 0
+    - 208828
+    - 200
+    - 210878
+  - routing_layer: Metal2
+    top_level:
+    - 69069
+    - 501122
+    - 70000
+    - 503172
+    extended_top_level:
+    - 70000
+    - 501122
+    - 70200
+    - 503172
+    translated_user:
+    - 0
+    - 206122
+    - 200
+    - 208172
+  - routing_layer: Metal2
+    top_level:
+    - 69069
+    - 498752
+    - 70000
+    - 500802
+    extended_top_level:
+    - 70000
+    - 498752
+    - 70200
+    - 500802
+    translated_user:
+    - 0
+    - 203752
+    - 200
+    - 205802
+  - routing_layer: Metal2
+    top_level:
+    - 69069
+    - 496272
+    - 70000
+    - 498172
+    extended_top_level:
+    - 70000
+    - 496272
+    - 70200
+    - 498172
+    translated_user:
+    - 0
+    - 201272
+    - 200
+    - 203172
+- user_pin_name: CLK
+  default_project_pin: CLK_PU
+  project_pin: CLK_PU
+  cell_terminal: PU
+  padring_instance: N01
+  physical_pad_slot: N01
+  cell: gf180mcu_fd_io__in_c
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 89731
+    - 517000
+    - 89807
+    - 520946
+    extended_top_level:
+    - 89731
+    - 516800
+    - 89807
+    - 517000
+    translated_user:
+    - 19731
+    - 221800
+    - 19807
+    - 222000
+- user_pin_name: CLK
+  default_project_pin: CLK_PD
+  project_pin: CLK_PD
+  cell_terminal: PD
+  padring_instance: N01
+  physical_pad_slot: N01
+  cell: gf180mcu_fd_io__in_c
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 88858
+    - 517000
+    - 88934
+    - 521010
+    extended_top_level:
+    - 88858
+    - 516800
+    - 88934
+    - 517000
+    translated_user:
+    - 18858
+    - 221800
+    - 18934
+    - 222000
+- user_pin_name: CLK
+  default_project_pin: CLK
+  project_pin: CLK
+  cell_terminal: Y
+  padring_instance: N01
+  physical_pad_slot: N01
+  cell: gf180mcu_fd_io__in_c
+  direction: INPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 76752
+    - 517000
+    - 76828
+    - 523050
+    extended_top_level:
+    - 76752
+    - 516800
+    - 76828
+    - 517000
+    translated_user:
+    - 6752
+    - 221800
+    - 6828
+    - 222000
+- user_pin_name: IBIAS
+  default_project_pin: IBIAS
+  project_pin: IBIAS
+  cell_terminal: ASIG5V
+  padring_instance: N02
+  physical_pad_slot: N02
+  cell: gf180mcu_fd_io__asig_5p0
+  direction: INOUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 107424
+    - 517000
+    - 107932
+    - 560126
+    extended_top_level:
+    - 107424
+    - 516800
+    - 107932
+    - 517000
+    translated_user:
+    - 37424
+    - 221800
+    - 37932
+    - 222000
+  - routing_layer: Metal2
+    top_level:
+    - 106288
+    - 517000
+    - 106796
+    - 560126
+    extended_top_level:
+    - 106288
+    - 516800
+    - 106796
+    - 517000
+    translated_user:
+    - 36288
+    - 221800
+    - 36796
+    - 222000
+  - routing_layer: Metal2
+    top_level:
+    - 105152
+    - 517000
+    - 105660
+    - 560126
+    extended_top_level:
+    - 105152
+    - 516800
+    - 105660
+    - 517000
+    translated_user:
+    - 35152
+    - 221800
+    - 35660
+    - 222000
+  - routing_layer: Metal2
+    top_level:
+    - 104016
+    - 517000
+    - 104524
+    - 560126
+    extended_top_level:
+    - 104016
+    - 516800
+    - 104524
+    - 517000
+    translated_user:
+    - 34016
+    - 221800
+    - 34524
+    - 222000
+  - routing_layer: Metal2
+    top_level:
+    - 102476
+    - 517000
+    - 102984
+    - 560126
+    extended_top_level:
+    - 102476
+    - 516800
+    - 102984
+    - 517000
+    translated_user:
+    - 32476
+    - 221800
+    - 32984
+    - 222000
+  - routing_layer: Metal2
+    top_level:
+    - 101340
+    - 517000
+    - 101848
+    - 560126
+    extended_top_level:
+    - 101340
+    - 516800
+    - 101848
+    - 517000
+    translated_user:
+    - 31340
+    - 221800
+    - 31848
+    - 222000
+  - routing_layer: Metal2
+    top_level:
+    - 100204
+    - 517000
+    - 100712
+    - 560126
+    extended_top_level:
+    - 100204
+    - 516800
+    - 100712
+    - 517000
+    translated_user:
+    - 30204
+    - 221800
+    - 30712
+    - 222000
+  - routing_layer: Metal2
+    top_level:
+    - 99068
+    - 517000
+    - 99576
+    - 560126
+    extended_top_level:
+    - 99068
+    - 516800
+    - 99576
+    - 517000
+    translated_user:
+    - 29068
+    - 221800
+    - 29576
+    - 222000
+- user_pin_name: SCAN_OUT
+  default_project_pin: SCAN_OUT_CS
+  project_pin: SCAN_OUT_CS
+  cell_terminal: CS
+  padring_instance: N03
+  physical_pad_slot: N03
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 130252
+    - 517000
+    - 130328
+    - 521291
+    extended_top_level:
+    - 130252
+    - 516800
+    - 130328
+    - 517000
+    translated_user:
+    - 60252
+    - 221800
+    - 60328
+    - 222000
+- user_pin_name: SCAN_OUT
+  default_project_pin: SCAN_OUT_SL
+  project_pin: SCAN_OUT_SL
+  cell_terminal: SL
+  padring_instance: N03
+  physical_pad_slot: N03
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 117190
+    - 517000
+    - 117266
+    - 533972
+    extended_top_level:
+    - 117190
+    - 516800
+    - 117266
+    - 517000
+    translated_user:
+    - 47190
+    - 221800
+    - 47266
+    - 222000
+- user_pin_name: SCAN_OUT
+  default_project_pin: SCAN_OUT_IE
+  project_pin: SCAN_OUT_IE
+  cell_terminal: IE
+  padring_instance: N03
+  physical_pad_slot: N03
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 128647
+    - 517000
+    - 128723
+    - 520016
+    extended_top_level:
+    - 128647
+    - 516800
+    - 128723
+    - 517000
+    translated_user:
+    - 58647
+    - 221800
+    - 58723
+    - 222000
+- user_pin_name: SCAN_OUT
+  default_project_pin: SCAN_OUT_OE
+  project_pin: SCAN_OUT_OE
+  cell_terminal: OE
+  padring_instance: N03
+  physical_pad_slot: N03
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 116898
+    - 517000
+    - 116974
+    - 533732
+    extended_top_level:
+    - 116898
+    - 516800
+    - 116974
+    - 517000
+    translated_user:
+    - 46898
+    - 221800
+    - 46974
+    - 222000
+- user_pin_name: SCAN_OUT
+  default_project_pin: SCAN_OUT_PU
+  project_pin: SCAN_OUT_PU
+  cell_terminal: PU
+  padring_instance: N03
+  physical_pad_slot: N03
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 129731
+    - 517000
+    - 129807
+    - 520916
+    extended_top_level:
+    - 129731
+    - 516800
+    - 129807
+    - 517000
+    translated_user:
+    - 59731
+    - 221800
+    - 59807
+    - 222000
+- user_pin_name: SCAN_OUT
+  default_project_pin: SCAN_OUT_PD
+  project_pin: SCAN_OUT_PD
+  cell_terminal: PD
+  padring_instance: N03
+  physical_pad_slot: N03
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 128858
+    - 517000
+    - 128934
+    - 520980
+    extended_top_level:
+    - 128858
+    - 516800
+    - 128934
+    - 517000
+    translated_user:
+    - 58858
+    - 221800
+    - 58934
+    - 222000
+- user_pin_name: SCAN_OUT
+  default_project_pin: SCAN_OUT_OUT
+  project_pin: SCAN_OUT_OUT
+  cell_terminal: A
+  padring_instance: N03
+  physical_pad_slot: N03
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 117044
+    - 517000
+    - 117120
+    - 534108
+    extended_top_level:
+    - 117044
+    - 516800
+    - 117120
+    - 517000
+    translated_user:
+    - 47044
+    - 221800
+    - 47120
+    - 222000
+- user_pin_name: SCAN_OUT
+  default_project_pin: SCAN_OUT_PDRV0
+  project_pin: SCAN_OUT_PDRV0
+  cell_terminal: PDRV0
+  padring_instance: N03
+  physical_pad_slot: N03
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 129502
+    - 517000
+    - 129578
+    - 534067
+    extended_top_level:
+    - 129502
+    - 516800
+    - 129578
+    - 517000
+    translated_user:
+    - 59502
+    - 221800
+    - 59578
+    - 222000
+- user_pin_name: SCAN_OUT
+  default_project_pin: SCAN_OUT_PDRV1
+  project_pin: SCAN_OUT_PDRV1
+  cell_terminal: PDRV1
+  padring_instance: N03
+  physical_pad_slot: N03
+  cell: gf180mcu_fd_io__bi_t
+  direction: OUTPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 129360
+    - 517000
+    - 129436
+    - 534002
+    extended_top_level:
+    - 129360
+    - 516800
+    - 129436
+    - 517000
+    translated_user:
+    - 59360
+    - 221800
+    - 59436
+    - 222000
+- user_pin_name: SCAN_OUT
+  default_project_pin: SCAN_OUT_IN
+  project_pin: SCAN_OUT_IN
+  cell_terminal: Y
+  padring_instance: N03
+  physical_pad_slot: N03
+  cell: gf180mcu_fd_io__bi_t
+  direction: INPUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 116752
+    - 517000
+    - 116828
+    - 523020
+    extended_top_level:
+    - 116752
+    - 516800
+    - 116828
+    - 517000
+    translated_user:
+    - 46752
+    - 221800
+    - 46828
+    - 222000
+- user_pin_name: IN_CS
+  default_project_pin: IN_CS
+  project_pin: IN_CS
+  cell_terminal: ASIG5V
+  padring_instance: N04
+  physical_pad_slot: N04
+  cell: gf180mcu_fd_io__asig_5p0
+  direction: INOUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 147424
+    - 517000
+    - 147932
+    - 560126
+    extended_top_level:
+    - 147424
+    - 516800
+    - 147932
+    - 517000
+    translated_user:
+    - 77424
+    - 221800
+    - 77932
+    - 222000
+  - routing_layer: Metal2
+    top_level:
+    - 146288
+    - 517000
+    - 146796
+    - 560126
+    extended_top_level:
+    - 146288
+    - 516800
+    - 146796
+    - 517000
+    translated_user:
+    - 76288
+    - 221800
+    - 76796
+    - 222000
+  - routing_layer: Metal2
+    top_level:
+    - 145152
+    - 517000
+    - 145660
+    - 560126
+    extended_top_level:
+    - 145152
+    - 516800
+    - 145660
+    - 517000
+    translated_user:
+    - 75152
+    - 221800
+    - 75660
+    - 222000
+  - routing_layer: Metal2
+    top_level:
+    - 144016
+    - 517000
+    - 144524
+    - 560126
+    extended_top_level:
+    - 144016
+    - 516800
+    - 144524
+    - 517000
+    translated_user:
+    - 74016
+    - 221800
+    - 74524
+    - 222000
+  - routing_layer: Metal2
+    top_level:
+    - 142476
+    - 517000
+    - 142984
+    - 560126
+    extended_top_level:
+    - 142476
+    - 516800
+    - 142984
+    - 517000
+    translated_user:
+    - 72476
+    - 221800
+    - 72984
+    - 222000
+  - routing_layer: Metal2
+    top_level:
+    - 141340
+    - 517000
+    - 141848
+    - 560126
+    extended_top_level:
+    - 141340
+    - 516800
+    - 141848
+    - 517000
+    translated_user:
+    - 71340
+    - 221800
+    - 71848
+    - 222000
+  - routing_layer: Metal2
+    top_level:
+    - 140204
+    - 517000
+    - 140712
+    - 560126
+    extended_top_level:
+    - 140204
+    - 516800
+    - 140712
+    - 517000
+    translated_user:
+    - 70204
+    - 221800
+    - 70712
+    - 222000
+  - routing_layer: Metal2
+    top_level:
+    - 139068
+    - 517000
+    - 139576
+    - 560126
+    extended_top_level:
+    - 139068
+    - 516800
+    - 139576
+    - 517000
+    translated_user:
+    - 69068
+    - 221800
+    - 69576
+    - 222000
+- user_pin_name: OUT_CS
+  default_project_pin: OUT_CS
+  project_pin: OUT_CS
+  cell_terminal: ASIG5V
+  padring_instance: N05
+  physical_pad_slot: N05
+  cell: gf180mcu_fd_io__asig_5p0
+  direction: INOUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 167424
+    - 517000
+    - 167932
+    - 560126
+    extended_top_level:
+    - 167424
+    - 516800
+    - 167932
+    - 517000
+    translated_user:
+    - 97424
+    - 221800
+    - 97932
+    - 222000
+  - routing_layer: Metal2
+    top_level:
+    - 166288
+    - 517000
+    - 166796
+    - 560126
+    extended_top_level:
+    - 166288
+    - 516800
+    - 166796
+    - 517000
+    translated_user:
+    - 96288
+    - 221800
+    - 96796
+    - 222000
+  - routing_layer: Metal2
+    top_level:
+    - 165152
+    - 517000
+    - 165660
+    - 560126
+    extended_top_level:
+    - 165152
+    - 516800
+    - 165660
+    - 517000
+    translated_user:
+    - 95152
+    - 221800
+    - 95660
+    - 222000
+  - routing_layer: Metal2
+    top_level:
+    - 164016
+    - 517000
+    - 164524
+    - 560126
+    extended_top_level:
+    - 164016
+    - 516800
+    - 164524
+    - 517000
+    translated_user:
+    - 94016
+    - 221800
+    - 94524
+    - 222000
+  - routing_layer: Metal2
+    top_level:
+    - 162476
+    - 517000
+    - 162984
+    - 560126
+    extended_top_level:
+    - 162476
+    - 516800
+    - 162984
+    - 517000
+    translated_user:
+    - 92476
+    - 221800
+    - 92984
+    - 222000
+  - routing_layer: Metal2
+    top_level:
+    - 161340
+    - 517000
+    - 161848
+    - 560126
+    extended_top_level:
+    - 161340
+    - 516800
+    - 161848
+    - 517000
+    translated_user:
+    - 91340
+    - 221800
+    - 91848
+    - 222000
+  - routing_layer: Metal2
+    top_level:
+    - 160204
+    - 517000
+    - 160712
+    - 560126
+    extended_top_level:
+    - 160204
+    - 516800
+    - 160712
+    - 517000
+    translated_user:
+    - 90204
+    - 221800
+    - 90712
+    - 222000
+  - routing_layer: Metal2
+    top_level:
+    - 159068
+    - 517000
+    - 159576
+    - 560126
+    extended_top_level:
+    - 159068
+    - 516800
+    - 159576
+    - 517000
+    translated_user:
+    - 89068
+    - 221800
+    - 89576
+    - 222000
+- user_pin_name: INN_5T
+  default_project_pin: INN_5T
+  project_pin: INN_5T
+  cell_terminal: ASIG5V
+  padring_instance: N06
+  physical_pad_slot: N06
+  cell: gf180mcu_fd_io__asig_5p0
+  direction: INOUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 187424
+    - 517000
+    - 187932
+    - 560126
+    extended_top_level:
+    - 187424
+    - 516800
+    - 187932
+    - 517000
+    translated_user:
+    - 117424
+    - 221800
+    - 117932
+    - 222000
+  - routing_layer: Metal2
+    top_level:
+    - 186288
+    - 517000
+    - 186796
+    - 560126
+    extended_top_level:
+    - 186288
+    - 516800
+    - 186796
+    - 517000
+    translated_user:
+    - 116288
+    - 221800
+    - 116796
+    - 222000
+  - routing_layer: Metal2
+    top_level:
+    - 185152
+    - 517000
+    - 185660
+    - 560126
+    extended_top_level:
+    - 185152
+    - 516800
+    - 185660
+    - 517000
+    translated_user:
+    - 115152
+    - 221800
+    - 115660
+    - 222000
+  - routing_layer: Metal2
+    top_level:
+    - 184016
+    - 517000
+    - 184524
+    - 560126
+    extended_top_level:
+    - 184016
+    - 516800
+    - 184524
+    - 517000
+    translated_user:
+    - 114016
+    - 221800
+    - 114524
+    - 222000
+  - routing_layer: Metal2
+    top_level:
+    - 182476
+    - 517000
+    - 182984
+    - 560126
+    extended_top_level:
+    - 182476
+    - 516800
+    - 182984
+    - 517000
+    translated_user:
+    - 112476
+    - 221800
+    - 112984
+    - 222000
+  - routing_layer: Metal2
+    top_level:
+    - 181340
+    - 517000
+    - 181848
+    - 560126
+    extended_top_level:
+    - 181340
+    - 516800
+    - 181848
+    - 517000
+    translated_user:
+    - 111340
+    - 221800
+    - 111848
+    - 222000
+  - routing_layer: Metal2
+    top_level:
+    - 180204
+    - 517000
+    - 180712
+    - 560126
+    extended_top_level:
+    - 180204
+    - 516800
+    - 180712
+    - 517000
+    translated_user:
+    - 110204
+    - 221800
+    - 110712
+    - 222000
+  - routing_layer: Metal2
+    top_level:
+    - 179068
+    - 517000
+    - 179576
+    - 560126
+    extended_top_level:
+    - 179068
+    - 516800
+    - 179576
+    - 517000
+    translated_user:
+    - 109068
+    - 221800
+    - 109576
+    - 222000
+- user_pin_name: OUT_5T
+  default_project_pin: OUT_5T
+  project_pin: OUT_5T
+  cell_terminal: ASIG5V
+  padring_instance: N07
+  physical_pad_slot: N07
+  cell: gf180mcu_fd_io__asig_5p0
+  direction: INOUT
+  use: SIGNAL
+  rectangles:
+  - routing_layer: Metal2
+    top_level:
+    - 207424
+    - 517000
+    - 207932
+    - 560126
+    extended_top_level:
+    - 207424
+    - 516800
+    - 207932
+    - 517000
+    translated_user:
+    - 137424
+    - 221800
+    - 137932
+    - 222000
+  - routing_layer: Metal2
+    top_level:
+    - 206288
+    - 517000
+    - 206796
+    - 560126
+    extended_top_level:
+    - 206288
+    - 516800
+    - 206796
+    - 517000
+    translated_user:
+    - 136288
+    - 221800
+    - 136796
+    - 222000
+  - routing_layer: Metal2
+    top_level:
+    - 205152
+    - 517000
+    - 205660
+    - 560126
+    extended_top_level:
+    - 205152
+    - 516800
+    - 205660
+    - 517000
+    translated_user:
+    - 135152
+    - 221800
+    - 135660
+    - 222000
+  - routing_layer: Metal2
+    top_level:
+    - 204016
+    - 517000
+    - 204524
+    - 560126
+    extended_top_level:
+    - 204016
+    - 516800
+    - 204524
+    - 517000
+    translated_user:
+    - 134016
+    - 221800
+    - 134524
+    - 222000
+  - routing_layer: Metal2
+    top_level:
+    - 202476
+    - 517000
+    - 202984
+    - 560126
+    extended_top_level:
+    - 202476
+    - 516800
+    - 202984
+    - 517000
+    translated_user:
+    - 132476
+    - 221800
+    - 132984
+    - 222000
+  - routing_layer: Metal2
+    top_level:
+    - 201340
+    - 517000
+    - 201848
+    - 560126
+    extended_top_level:
+    - 201340
+    - 516800
+    - 201848
+    - 517000
+    translated_user:
+    - 131340
+    - 221800
+    - 131848
+    - 222000
+  - routing_layer: Metal2
+    top_level:
+    - 200204
+    - 517000
+    - 200712
+    - 560126
+    extended_top_level:
+    - 200204
+    - 516800
+    - 200712
+    - 517000
+    translated_user:
+    - 130204
+    - 221800
+    - 130712
+    - 222000
+  - routing_layer: Metal2
+    top_level:
+    - 199068
+    - 517000
+    - 199576
+    - 560126
+    extended_top_level:
+    - 199068
+    - 516800
+    - 199576
+    - 517000
+    translated_user:
+    - 129068
+    - 221800
+    - 129576
+    - 222000
+project_gds_size:
+  source_gds: /Users/kanobailey/chipathon/2026/gds/C01/DUT.gds
+  top_cell: DUT
+  layer: 0
+  datatype: 0
+  layout_dbu_microns: 0.005
+  rectangle_dbu:
+  - 0
+  - 0
+  - 100000
+  - 80000
+  width_microns: '500'
+  height_microns: '400'
+  top_cell_text:
+  - text: IN_CS
+    layer: 81
+    datatype: 10
+  - text: INP_TELESCOPIC
+    layer: 81
+    datatype: 10
+  - text: INP_FOLDED
+    layer: 81
+    datatype: 10
+  - text: VSS
+    layer: 81
+    datatype: 10
+  - text: OUT_FOLDED
+    layer: 81
+    datatype: 10
+  - text: IBIAS
+    layer: 81
+    datatype: 10
+  - text: INN_FOLDED
+    layer: 81
+    datatype: 10
+  - text: INP_5T
+    layer: 81
+    datatype: 10
+  - text: OUT_5T
+    layer: 81
+    datatype: 10
+  - text: VDD
+    layer: 81
+    datatype: 10
+  - text: OUT_CS
+    layer: 81
+    datatype: 10
+  - text: INN_5T
+    layer: 81
+    datatype: 10
+  - text: SCAN_OUT
+    layer: 81
+    datatype: 10
+  - text: SCAN_IN
+    layer: 81
+    datatype: 10
+  - text: CLK
+    layer: 81
+    datatype: 10
+  - text: INN_TELESCOPIC
+    layer: 81
+    datatype: 10
+  - text: OUT_TELESCOPIC
+    layer: 81
+    datatype: 10
+  - text: PROG_ENA
+    layer: 81
+    datatype: 10
+participant_pin_count: 18

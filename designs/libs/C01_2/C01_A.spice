@@ -1,0 +1,269 @@
+** sch_path: /foss/designs/libs/C01_2/C01_A.sch
+.subckt C01_A PROG_ENA OUT_CS OUT_TELESCOPIC OUT_5T OUT_FOLDED SCAN_OUT_OUT IBIAS IN_CS INN_TELESCOPIC INP_TELESCOPIC INN_5T INP_5T INN_FOLDED INP_FOLDED CLK SCAN_IN
+*.PININFO PROG_ENA:B OUT_CS:B OUT_TELESCOPIC:B OUT_5T:B OUT_FOLDED:B SCAN_OUT_OUT:B IBIAS:B IN_CS:B INN_TELESCOPIC:B
+*+ INP_TELESCOPIC:B INN_5T:B INP_5T:B INN_FOLDED:B INP_FOLDED:B CLK:B SCAN_IN:B
+x1 CLK SCAN_OUT_OUT SCAN_IN VSS VDD OUT_FOLDED INP_FOLDED OUT_5T IBIAS INN_FOLDED INP_5T INN_5T INP_TELESCOPIC OUT_TELESCOPIC OUT_CS IN_CS INN_TELESCOPIC PROG_ENA DUT
+.ends
+
+* expanding   symbol:  libs/core_tb/schem/DUT.sym # of pins=18
+** sym_path: /foss/designs/libs/core_tb/schem/DUT.sym
+** sch_path: /foss/designs/libs/core_tb/schem/DUT.sch
+.subckt DUT CLK SCAN_OUT SCAN_IN VSS VDD OUT_FOLDED INP_FOLDED OUT_5T IBIAS INN_FOLDED INP_5T INN_5T INP_TELESCOPIC OUT_TELESCOPIC OUT_CS IN_CS INN_TELESCOPIC PROG_ENA
+*.PININFO OUT_FOLDED:B OUT_5T:B OUT_TELESCOPIC:B OUT_CS:B VSS:B VDD:B CLK:B SCAN_IN:B SCAN_OUT:B PROG_ENA:B INP_FOLDED:B
+*+ INN_FOLDED:B INP_TELESCOPIC:B INP_5T:B INN_5T:B IN_CS:B INN_TELESCOPIC:B IBIAS:B
+x1 VDD SCAN_OUT EN_1_5T EN_0_5T EN_0_CS EN_1_CS EN_0_TELESCOPIC EN_1_FOLDED EN_0_FOLDED EN_1_TELESCOPIC SCAN_IN !EN_1_FOLDED !EN_1_CS !EN_0_TELESCOPIC !EN_0_CS !EN_1_5T !EN_0_5T !EN_1_TELESCOPIC !EN_0_FOLDED CLK VSS scan_chain
+x2 EN_0_FOLDED VDD !EN_0_FOLDED VSS EN_1_FOLDED !EN_1_FOLDED INN_FOLDED_PROT INP_FOLDED_PROT OUT_FOLDED IBIAS_PROT programmable_folded_cascode
+x5 !EN_0_CS VSS VDD EN_1_CS !EN_1_CS EN_0_CS IN_CS_PROT OUT_CS IBIAS_PROT programmable_common_source
+M1 IBIAS_PROT IBIAS_PROT VSS VSS nfet_03v3 L=1u W=27.1u nf=1 m=1
+x3 VDD EN_0_5T !EN_0_5T OUT_5T EN_1_5T !EN_1_5T INN_TELESCOPIC_PROT INP_TELESCOPIC_PROT IBIAS_PROT VSS programmable_5tOTA
+* -- flattened x6 (inv1) --
+M1_6 !PROG_ENA PROG_ENA VSS VSS nfet_03v3 L=0.28u W=0.42u nf=1 m=1
+M2_6 !PROG_ENA PROG_ENA VDD VDD pfet_03v3 L=0.28u W=0.84u nf=1 m=1
+* -- end flattened x6 --
+* -- flattened x7 (transmission_gate) --
+M1_7 VSS PROG_ENA EN_0_FOLDED VDD pfet_03v3 L=0.28u W=0.42u nf=1 m=1
+M2_7 VSS !PROG_ENA EN_0_FOLDED VSS nfet_03v3 L=0.28u W=0.42u nf=1 m=1
+* -- end flattened x7 --
+* -- flattened x8 (transmission_gate) --
+M1_8 VSS PROG_ENA EN_1_FOLDED VDD pfet_03v3 L=0.28u W=0.42u nf=1 m=1
+M2_8 VSS !PROG_ENA EN_1_FOLDED VSS nfet_03v3 L=0.28u W=0.42u nf=1 m=1
+* -- end flattened x8 --
+* -- flattened x9 (transmission_gate) --
+M1_9 VSS PROG_ENA EN_0_TELESCOPIC VDD pfet_03v3 L=0.28u W=0.42u nf=1 m=1
+M2_9 VSS !PROG_ENA EN_0_TELESCOPIC VSS nfet_03v3 L=0.28u W=0.42u nf=1 m=1
+* -- end flattened x9 --
+* -- flattened x10 (transmission_gate) --
+M1_10 VSS PROG_ENA EN_1_TELESCOPIC VDD pfet_03v3 L=0.28u W=0.42u nf=1 m=1
+M2_10 VSS !PROG_ENA EN_1_TELESCOPIC VSS nfet_03v3 L=0.28u W=0.42u nf=1 m=1
+* -- end flattened x10 --
+* -- flattened x11 (transmission_gate) --
+M1_11 VSS PROG_ENA EN_0_5T VDD pfet_03v3 L=0.28u W=0.42u nf=1 m=1
+M2_11 VSS !PROG_ENA EN_0_5T VSS nfet_03v3 L=0.28u W=0.42u nf=1 m=1
+* -- end flattened x11 --
+* -- flattened x12 (transmission_gate) --
+M1_12 VSS PROG_ENA EN_1_5T VDD pfet_03v3 L=0.28u W=0.42u nf=1 m=1
+M2_12 VSS !PROG_ENA EN_1_5T VSS nfet_03v3 L=0.28u W=0.42u nf=1 m=1
+* -- end flattened x12 --
+* -- flattened x13 (transmission_gate) --
+M1_13 VSS PROG_ENA EN_0_CS VDD pfet_03v3 L=0.28u W=0.42u nf=1 m=1
+M2_13 VSS !PROG_ENA EN_0_CS VSS nfet_03v3 L=0.28u W=0.42u nf=1 m=1
+* -- end flattened x13 --
+* -- flattened x14 (transmission_gate) --
+M1_14 VSS PROG_ENA EN_1_CS VDD pfet_03v3 L=0.28u W=0.42u nf=1 m=1
+M2_14 VSS !PROG_ENA EN_1_CS VSS nfet_03v3 L=0.28u W=0.42u nf=1 m=1
+* -- end flattened x14 --
+x4 VDD OUT_TELESCOPIC EN_0_TELESCOPIC !EN_0_TELESCOPIC EN_1_TELESCOPIC !EN_1_TELESCOPIC INN_5T_PROT INP_5T_PROT VSS IBIAS_PROT programmable_telescopic_cascode
+XIO1 VDD INP_FOLDED_PROT INP_FOLDED VSS io_secondary_5p0
+XIO2 VDD INN_FOLDED_PROT INN_FOLDED VSS io_secondary_5p0
+XIO3 VDD INP_TELESCOPIC_PROT INP_TELESCOPIC VSS io_secondary_5p0
+XIO4 VDD INN_TELESCOPIC_PROT INN_TELESCOPIC VSS io_secondary_5p0
+XIO5 VDD INP_5T_PROT INP_5T VSS io_secondary_5p0
+XIO6 VDD INN_5T_PROT INN_5T VSS io_secondary_5p0
+XIO7 VDD IN_CS_PROT IN_CS VSS io_secondary_5p0
+XIO8 VDD IBIAS_PROT IBIAS VSS io_secondary_5p0
+C1 VDD VSS cap_nmos_03v3_b W=19.15094e-6 L=20e-6 m=53
+.ends
+
+
+* expanding   symbol:  libs/core_digital/schem/scan_chain.sym # of pins=21
+** sym_path: /foss/designs/libs/core_digital/schem/scan_chain.sym
+** sch_path: /foss/designs/libs/core_digital/schem/scan_chain.sch
+.subckt scan_chain VDD scan_out EN_1_5T EN_0_5T EN_0_CS EN_1_CS EN_0_TELESCOPIC EN_1_FOLDED EN_0_FOLDED EN_1_TELESCOPIC scan_in !EN_1_FOLDED !EN_1_CS !EN_0_TELESCOPIC !EN_0_CS !EN_1_5T !EN_0_5T !EN_1_TELESCOPIC !EN_0_FOLDED CLK VSS
+*.PININFO scan_in:I CLK:I VSS:I VDD:I !EN_0_FOLDED:O !EN_0_TELESCOPIC:O !EN_1_FOLDED:O !EN_1_TELESCOPIC:O !EN_0_5T:O !EN_1_5T:O
+*+ !EN_0_CS:O !EN_1_CS:O scan_out:O EN_1_CS:O EN_0_CS:O EN_1_5T:O EN_0_5T:O EN_1_TELESCOPIC:O EN_0_TELESCOPIC:O EN_1_FOLDED:O EN_0_FOLDED:O
+x1 VDD scan_in EN_0_FOLDED !EN_0_FOLDED CLK VSS D_ff1
+x2 VDD EN_0_FOLDED EN_1_FOLDED !EN_1_FOLDED CLK VSS D_ff1
+x3 VDD EN_1_FOLDED EN_0_TELESCOPIC !EN_0_TELESCOPIC CLK VSS D_ff1
+x4 VDD EN_0_TELESCOPIC EN_1_TELESCOPIC !EN_1_TELESCOPIC CLK VSS D_ff1
+x5 VDD EN_1_TELESCOPIC EN_0_5T !EN_0_5T CLK VSS D_ff1
+x6 VDD EN_0_5T EN_1_5T !EN_1_5T CLK VSS D_ff1
+x7 VDD EN_1_5T EN_0_CS !EN_0_CS CLK VSS D_ff1
+x8 VDD EN_0_CS EN_1_CS !EN_1_CS CLK VSS D_ff1
+x9 VDD EN_1_CS scan_out net1 CLK VSS D_ff1
+.ends
+
+
+* expanding   symbol:  libs/core_amps/ota_folded_cascode/prgrm_schem/programmable_folded_cascode.sym # of pins=10
+** sym_path: /foss/designs/libs/core_amps/ota_folded_cascode/prgrm_schem/programmable_folded_cascode.sym
+** sch_path: /foss/designs/libs/core_amps/ota_folded_cascode/prgrm_schem/programmable_folded_cascode.sch
+.subckt programmable_folded_cascode EN0 VDD !EN0 VSS EN1 !EN1 INN INP OUT VG_BIAS
+*.PININFO OUT:B VSS:B VDD:B EN0:B !EN0:B EN1:B !EN1:B INN:B INP:B VG_BIAS:B
+M29 net7 net7 VDD VDD pfet_03v3 L=1u W=23u nf=1 m=5
+M30 VBP2 VBP2 net7 VDD pfet_03v3 L=.5u W=19.6u nf=1 m=10
+M31 VBP2 VG_BIAS VSS VSS nfet_03v3 L=1u W=27.1u nf=1 m=1
+M32 VBN1 VBN1 VSS VSS nfet_03v3 L=1u W=27.1u nf=1 m=1
+M33 VBN1 net7 VDD VDD pfet_03v3 L=1u W=23u nf=1 m=5
+M34 VBP1 VBP1 VDD VDD pfet_03v3 L=1u W=23u nf=1 m=5
+M35 VBP1 VG_BIAS VSS VSS nfet_03v3 L=1u W=27.1u nf=1 m=1
+x1 net1 VSS VBN1 VSS !EN0 VDD !EN1 EN0 EN1 VSS programmable_nfet width=20u length=1u nf=1 mult=2
+x2 net2 VSS INN net1 !EN0 VDD !EN1 EN0 EN1 VSS programmable_nfet width=30u length=0.5u nf=1 mult=2
+x3 net3 VSS INP net1 !EN0 VDD !EN1 EN0 EN1 VSS programmable_nfet width=30u length=0.5u nf=1 mult=2
+x4 net5 VSS net5 VSS !EN0 VDD !EN1 EN0 EN1 VSS programmable_nfet width=20.5u length=1u nf=1 mult=1
+x5 net6 VSS net5 VSS !EN0 VDD !EN1 EN0 EN1 VSS programmable_nfet width=20.5u length=1u nf=1 mult=1
+x6 net4 VSS net4 net5 !EN0 VDD !EN1 EN0 EN1 VSS programmable_nfet width=10.5u length=0.5u nf=1 mult=1
+x7 OUT VSS net4 net6 !EN0 VDD !EN1 EN0 EN1 VSS programmable_nfet width=10.5u length=0.5u nf=1 mult=1
+x8 net4 VDD VBP2 net3 !EN0 VDD !EN1 EN0 EN1 VSS programmable_pfet width=29.6u length=0.5u nf=1 mult=5
+x9 OUT VDD VBP2 net2 !EN0 VDD !EN1 EN0 EN1 VSS programmable_pfet width=29.6u length=0.5u nf=1 mult=5
+x10 net3 VDD VBP1 VDD !EN0 VDD !EN1 EN0 EN1 VSS programmable_pfet width=34.8u length=1u nf=1 mult=10
+x11 net2 VDD VBP1 VDD !EN0 VDD !EN1 EN0 EN1 VSS programmable_pfet width=34.8u length=1u nf=1 mult=10
+.ends
+
+
+* expanding   symbol:  libs/core_amps/cs_stage/prgrm_schem/programmable_common_source.sym # of pins=9
+** sym_path: /foss/designs/libs/core_amps/cs_stage/prgrm_schem/programmable_common_source.sym
+** sch_path: /foss/designs/libs/core_amps/cs_stage/prgrm_schem/programmable_common_source.sch
+.subckt programmable_common_source !EN0 VSS VDD EN1 !EN1 EN0 IN OUT VG_BIAS
+*.PININFO VSS:B VDD:B EN0:B !EN0:B EN1:B !EN1:B OUT:B IN:B VG_BIAS:B
+x1 OUT VSS VG_BIAS VSS !EN0 VDD !EN1 EN0 EN1 VSS programmable_nfet width=27.1u length=1u nf=1 mult=1
+x2 OUT VDD IN VDD !EN0 VDD !EN1 EN0 EN1 VSS programmable_pfet width=9.2u length=1u nf=1 mult=10
+.ends
+
+
+* expanding   symbol:  libs/core_amps/ota_5t/prgram_schem/programmable_5tOTA.sym # of pins=10
+** sym_path: /foss/designs/libs/core_amps/ota_5t/prgram_schem/programmable_5tOTA.sym
+** sch_path: /foss/designs/libs/core_amps/ota_5t/prgram_schem/programmable_5tOTA.sch
+.subckt programmable_5tOTA VDD EN0 !EN0 vout EN1 !EN1 vin- vin+ V_bias VSS
+*.PININFO VDD:I vout:O vin+:I vin-:I V_bias:I VSS:I EN0:I !EN0:I EN1:I !EN1:I
+x1 net1 VSS vin+ net2 !EN0 VDD !EN1 EN0 EN1 VSS programmable_nfet width=11.4u length=0.5u nf=1 mult=3
+x2 vout VSS vin- net2 !EN0 VDD !EN1 EN0 EN1 VSS programmable_nfet width=11.4u length=0.5u nf=1 mult=3
+x4 vout VDD net1 VDD !EN0 VDD !EN1 EN0 EN1 VSS programmable_pfet width=50u length=0.5u nf=1 mult=2
+x3 net1 VDD net1 VDD !EN0 VDD !EN1 EN0 EN1 VSS programmable_pfet width=50u length=0.5u nf=1 mult=2
+x5 net2 VSS V_bias VSS !EN0 VDD !EN1 EN0 EN1 VSS programmable_nfet width=22.8u length=1u nf=1 mult=3
+.ends
+
+
+* expanding   symbol:  libs/core_digital/schem/inv1.sym # of pins=4
+** sym_path: /foss/designs/libs/core_digital/schem/inv1.sym
+** sch_path: /foss/designs/libs/core_digital/schem/inv1.sch
+
+
+* expanding   symbol:  libs/core_digital/schem/transmission_gate.sym # of pins=6
+** sym_path: /foss/designs/libs/core_digital/schem/transmission_gate.sym
+** sch_path: /foss/designs/libs/core_digital/schem/transmission_gate.sch
+
+
+* expanding   symbol:  libs/core_amps/ota_telescopic/programmable_ota_telescopic_schematics/programmable_telescopic_cascode.sym #
+*+ of pins=10
+** sym_path: /foss/designs/libs/core_amps/ota_telescopic/programmable_ota_telescopic_schematics/programmable_telescopic_cascode.sym
+** sch_path: /foss/designs/libs/core_amps/ota_telescopic/programmable_ota_telescopic_schematics/programmable_telescopic_cascode.sch
+.subckt programmable_telescopic_cascode VDD output EN0 !EN0 EN1 !EN1 INN INP VSS VG_BIAS
+*.PININFO output:O VDD:B !EN0:B EN1:B EN0:B !EN1:B INP:I INN:I VSS:B VG_BIAS:B
+**** begin user architecture code
+
+
+.include /foss/pdks/gf180mcuD/libs.tech/ngspice/design.ngspice
+.lib /foss/pdks/gf180mcuD/libs.tech/ngspice/sm141064.ngspice typical
+
+**** end user architecture code
+M1 VBN VG_BIAS VSS VSS nfet_03v3 L=0.5u W=30u nf=1 m=1
+M2 VBP VBP VSS VSS nfet_03v3 L=0.5u W=1.5u nf=1 m=1
+M4 VBP VBN VDD VDD pfet_03v3 L=0.50u W=70u nf=1 m=1
+M3 VBN VBN VDD VDD pfet_03v3 L=0.50u W=70u nf=1 m=1
+x9 net6 VDD net4 VDD !EN0 VDD !EN1 EN0 EN1 VSS programmable_pfet width=40u length=0.5u nf=1 mult=6
+x8 net5 VDD net4 VDD !EN0 VDD !EN1 EN0 EN1 VSS programmable_pfet width=40u length=0.5u nf=1 mult=6
+x6 net4 VDD VBP net5 !EN0 VDD !EN1 EN0 EN1 VSS programmable_pfet width=47u length=0.5u nf=1 mult=5
+x7 output VDD VBP net6 !EN0 VDD !EN1 EN0 EN1 VSS programmable_pfet width=47u length=0.5u nf=1 mult=5
+x5 output VSS VBN net2 !EN0 VDD !EN1 EN0 EN1 VSS programmable_nfet width=45u length=0.4u nf=1 mult=6
+x4 net4 VSS VBN net3 !EN0 VDD !EN1 EN0 EN1 VSS programmable_nfet width=45u length=0.4u nf=1 mult=6
+x2 net3 VSS INP net1 !EN0 VDD !EN1 EN0 EN1 VSS programmable_nfet width=30u length=0.5u nf=1 mult=1
+x3 net2 VSS INN net1 !EN0 VDD !EN1 EN0 EN1 VSS programmable_nfet width=30u length=0.5u nf=1 mult=1
+x1 net1 VSS VG_BIAS VSS !EN0 VDD !EN1 EN0 EN1 VSS programmable_nfet width=27.1u length=1u nf=1 mult=2
+.ends
+
+
+* expanding   symbol:  libs/secondary_esd/io_secondary_5p0.sym # of pins=4
+** sym_path: /foss/designs/libs/secondary_esd/io_secondary_5p0.sym
+** sch_path: /foss/designs/libs/secondary_esd/io_secondary_5p0.sch
+.subckt io_secondary_5p0 VDD to_gate ASIG5V VSS
+
+
+*.PININFO VSS:B VDD:B to_gate:B ASIG5V:B
+D1 to_gate VDD diode_pd2nw_06v0 area='10u * 10u ' pj='2*10u + 2*10u ' m=4
+R1 to_gate ASIG5V VSS ppolyf_u W=40e-6 L=10e-6 m=1
+D2 VSS to_gate diode_nd2ps_06v0 area='10u * 10u ' pj='2*10u + 2*10u ' m=4
+.ends
+
+
+* expanding   symbol:  libs/core_digital/schem/D_ff1.sym # of pins=6
+** sym_path: /foss/designs/libs/core_digital/schem/D_ff1.sym
+** sch_path: /foss/designs/libs/core_digital/schem/D_ff1.sch
+.subckt D_ff1 VDD D Q Q_bar CLK VSS
+*.PININFO D:I CLK:I VDD:I VSS:I Q:O Q_bar:O
+x1 VDD D net2 net3 CLK VSS D_latch1
+x2 VDD net2 Q Q_bar net1 VSS D_latch1
+* -- flattened x3 (inv1) --
+M1_3 net1 CLK VSS VSS nfet_03v3 L=0.28u W=0.42u nf=1 m=1
+M2_3 net1 CLK VDD VDD pfet_03v3 L=0.28u W=0.84u nf=1 m=1
+* -- end flattened x3 --
+.ends
+
+
+* expanding   symbol:  libs/core_digital/schem/programmable_nfet.sym # of pins=10
+** sym_path: /foss/designs/libs/core_digital/schem/programmable_nfet.sym
+** sch_path: /foss/designs/libs/core_digital/schem/programmable_nfet.sch
+.subckt programmable_nfet d b g s ena_bar<0> VDD ena_bar<1> ena<0> ena<1> VSS  width=0.22u length=0.28u nf=1 mult=1
+*.PININFO VSS:I VDD:I g:I ena_bar<1>:I ena_bar<0>:I ena<1>:I ena<0>:I d:B s:B b:I
+M1 d net2 s b nfet_03v3 L={length} W={width} nf={nf} m={mult}
+M3 d net1 s b nfet_03v3 L={length} W={2*width} nf={2*nf} m={mult}
+M2 net1 ena_bar<1> VSS VSS nfet_03v3 L=0.28u W=0.42u nf=1 m=1
+M4 net2 ena_bar<0> VSS VSS nfet_03v3 L=0.28u W=0.42u nf=1 m=1
+* -- flattened x1 (transmission_gate) --
+M1_1 g ena_bar<0> net2 VDD pfet_03v3 L=0.28u W=0.42u nf=1 m=1
+M2_1 g ena<0> net2 VSS nfet_03v3 L=0.28u W=0.42u nf=1 m=1
+* -- end flattened x1 --
+* -- flattened x2 (transmission_gate) --
+M1_2 g ena_bar<1> net1 VDD pfet_03v3 L=0.28u W=0.42u nf=1 m=1
+M2_2 g ena<1> net1 VSS nfet_03v3 L=0.28u W=0.42u nf=1 m=1
+* -- end flattened x2 --
+M5 d g s b nfet_03v3 L={length} W={width} nf={nf} m={mult}
+.ends
+
+
+* expanding   symbol:  libs/core_digital/schem/programmable_pfet.sym # of pins=10
+** sym_path: /foss/designs/libs/core_digital/schem/programmable_pfet.sym
+** sch_path: /foss/designs/libs/core_digital/schem/programmable_pfet.sch
+.subckt programmable_pfet d b g s ena_bar<0> VDD ena_bar<1> ena<0> ena<1> VSS  width=0.22u length=0.28u nf=1 mult=1
+*.PININFO VSS:I VDD:I g:I ena_bar<1>:I ena_bar<0>:I ena<0>:I s:B d:B b:I ena<1>:I
+M1 d net2 s b pfet_03v3 L={length} W={width} nf={nf} m={mult}
+M3 d net1 s b pfet_03v3 L={length} W={2*width} nf={2*nf} m={mult}
+M2 net1 ena<1> VDD VDD pfet_03v3 L=0.28u W=0.42u nf=1 m=1
+M4 net2 ena<0> VDD VDD pfet_03v3 L=0.28u W=0.42u nf=1 m=1
+* -- flattened x1 (transmission_gate) --
+M1_1 g ena_bar<0> net2 VDD pfet_03v3 L=0.28u W=0.42u nf=1 m=1
+M2_1 g ena<0> net2 VSS nfet_03v3 L=0.28u W=0.42u nf=1 m=1
+* -- end flattened x1 --
+* -- flattened x2 (transmission_gate) --
+M1_2 g ena_bar<1> net1 VDD pfet_03v3 L=0.28u W=0.42u nf=1 m=1
+M2_2 g ena<1> net1 VSS nfet_03v3 L=0.28u W=0.42u nf=1 m=1
+* -- end flattened x2 --
+M5 d g s b pfet_03v3 L={length} W={width} nf={nf} m={mult}
+.ends
+
+
+* expanding   symbol:  libs/core_digital/schem/D_latch1.sym # of pins=6
+** sym_path: /foss/designs/libs/core_digital/schem/D_latch1.sym
+** sch_path: /foss/designs/libs/core_digital/schem/D_latch1.sch
+.subckt D_latch1 Vdd D Q Q_bar clk Vss
+*.PININFO D:I Vdd:I Vss:I clk:I Q:O Q_bar:O
+x1 Vdd net3 D clk Vss NAND2
+x2 Vdd net2 net1 clk Vss NAND2
+x3 Vdd Q_bar Q net2 Vss NAND2
+x4 Vdd Q net3 Q_bar Vss NAND2
+* -- flattened x5 (inv1) --
+M1_5 net1 D Vss Vss nfet_03v3 L=0.28u W=0.42u nf=1 m=1
+M2_5 net1 D Vdd Vdd pfet_03v3 L=0.28u W=0.84u nf=1 m=1
+* -- end flattened x5 --
+.ends
+
+
+* expanding   symbol:  libs/core_digital/schem/NAND2.sym # of pins=5
+** sym_path: /foss/designs/libs/core_digital/schem/NAND2.sym
+** sch_path: /foss/designs/libs/core_digital/schem/NAND2.sch
+.subckt NAND2 Vdd Y A B Vss
+*.PININFO A:I B:I Vss:I Vdd:I Y:O
+M1 Y A net1 Vss nfet_03v3 L=0.28u W=0.42u nf=1 m=1
+M2 net1 B Vss Vss nfet_03v3 L=0.28u W=0.42u nf=1 m=1
+M3 Y A Vdd Vdd pfet_03v3 L=0.28u W=0.42u nf=1 m=1
+M4 Y B Vdd Vdd pfet_03v3 L=0.28u W=0.42u nf=1 m=1
+.ends
+

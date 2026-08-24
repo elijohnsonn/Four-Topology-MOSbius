@@ -63,7 +63,7 @@ C {iopin.sym} 1190 220 0 0 {name=p30 lab=SCAN_IN_PU}
 C {iopin.sym} 1190 260 0 0 {name=p31 lab=SCAN_IN_PD}
 C {iopin.sym} 1000 330 0 0 {name=p32 lab=PROG_ENA_PU}
 C {iopin.sym} 1000 370 0 0 {name=p33 lab=PROG_ENA_PD}
-C {lab_wire.sym} 800 240 0 0 {name=p34 sig_type=std_logic lab=VSS}
+C {lab_wire.sym} 800 240 0 0 {name=p34 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 1150 220 0 0 {name=p35 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 1150 60 0 0 {name=p36 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 960 330 0 0 {name=p37 sig_type=std_logic lab=VSS}
