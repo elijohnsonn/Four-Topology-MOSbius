@@ -113,7 +113,7 @@ value=
 tran 1u 5m
 
 plot v(out_telescopic) v(inn_telescopic)
-wrdata /foss/designs/libs/pex/start_up_cir/tele/2x.csv v(out_telescopic) v(inn_telescopic)
+wrdata /foss/designs/libs/verification/start_up_cir/tele/2x.csv v(out_telescopic) v(inn_telescopic)
 
 meas tran vout_pp pp v(out_telescopic) from=2m to=5m
 meas tran vin_pp pp v(inn_telescopic) from=2m to=5m
@@ -195,5 +195,5 @@ C {lab_pin.sym} 200 120 1 1 {name=p7 sig_type=std_logic lab=CLK_ENA}
 C {lab_pin.sym} 220 140 3 0 {name=p22 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 240 120 1 1 {name=p23 sig_type=std_logic lab=!CLK_ENA}
 C {gnd.sym} 150 210 0 0 {name=l2 lab=GND}
-C {vsource.sym} 150 150 0 0 {name=V2 value=1.661 savecurrent=false}
-C {libs/core_amps/start_up_cir/start_up_cir_cap.sym} 170 40 0 0 {name=x2}
+C {vsource.sym} 150 150 0 0 {name=V2 value=1.65 savecurrent=false}
+C {libs/core_amps/start_up_cir/start_up_cir.sym} 220 70 0 0 {name=x2}
