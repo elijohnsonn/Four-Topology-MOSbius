@@ -67,7 +67,7 @@ set color0 = white
 set color1 = black
 
 plot v(out_5t) v(inn_5t)
-wrdata /foss/designs/libs/pex/start_up_cir/5t/default.csv v(out_5T) v(inn_5T)
+wrdata /foss/designs/libs/verification/start_up_cir/5t/default.csv v(out_5T) v(inn_5T)
 
 meas tran vout_pp pp v(out_5t) from=2m to=5m
 meas tran vin_pp pp v(inn_5t) from=2m to=5m

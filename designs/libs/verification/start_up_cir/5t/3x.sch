@@ -22,7 +22,7 @@ L 4 80 -390 750 -390 {}
 L 4 750 50 1120 50 {}
 L 4 750 -390 1120 -390 {}
 T {VDD, GND, SCAN INPUT, PROGRAMMABLE ENABLE} 20 140 0 0 1 1 {}
-T {Scan chain input artificially generated to enable 5T OTA 3x sizing
+T {Scan chain input artificially generated to enable 5T OTA 2x sizing
 prog_ena sets default (low) or program (high)} 300 210 0 0 0.4 0.4 {}
 T {R2 = 500K} -880 350 0 0 0.75 0.75 {}
 T {R1 = 100K} -1460 -60 0 0 0.75 0.75 {}
@@ -30,10 +30,10 @@ T {DC = 1.65V
 500Hz Frequency 
 50mV Amplitude
 1ms Delay} -1590 250 0 0 0.5 0.5 {}
-T {DC = 1.65V} -1780 250 0 0 0.5 0.5 {}
+T {DC = 1.65V} -1790 250 0 0 0.5 0.5 {}
 T {IBIAS = 100u} -1200 210 0 0 0.4 0.4 {}
 T {IMPLEMENTATION} -1110 -640 0 0 1 1 {}
-T {Configure the 5T OTA in 4× mode 
+T {Configure the 5T OTA in 3× mode 
 as an inverting amplifier to amplify a 
 sine wave input by 5 while driving a 
 120pF capacitive load.} -1100 -580 0 0 0.4 0.4 {}
@@ -122,7 +122,7 @@ N -290 -40 -290 -30 {lab=!CLK_ENA}
 N -330 -40 -330 -30 {lab=CLK_ENA}
 N -380 30 -380 60 {lab=GND}
 N -380 -70 -380 -30 {lab=#net5}
-C {vsource.sym} 560 420 0 0 {name=V3 value="PWL(0 0 0.1499m 0 0.15m 3.3 0.24999m 3.3 0.25m 0)" savecurrent=false}
+C {vsource.sym} 560 420 0 0 {name=V3 value="PWL(0 0 0.1499m 0 0.15m 3.3 0.1999m 3.3 0.2m 0)" savecurrent=false}
 C {gnd.sym} 560 490 0 0 {name=l1 lab=GND}
 C {gnd.sym} -950 -320 0 0 {name=l2 lab=GND}
 C {vsource.sym} 410 420 0 0 {name=V1 value=3.3 savecurrent=false}
@@ -153,7 +153,7 @@ set color0 = white
 set color1 = black
 
 plot v(out_5T) v(inn_5T)
-wrdata /foss/designs/libs/pex/start_up_cir/5t/4x.csv v(out_5T) v(inn_5T)
+wrdata /foss/designs/libs/verification/start_up_cir/5t/3x.csv v(out_5T) v(inn_5T)
 
 meas tran vout_pp pp v(out_5T) from=2m to=5m
 meas tran vin_pp pp v(inn_5T) from=2m to=5m

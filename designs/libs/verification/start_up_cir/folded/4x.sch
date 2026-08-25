@@ -153,7 +153,7 @@ set color1 = black
 tran 1u 5m
 
 plot v(out_folded) v(inn_folded)
-wrdata /foss/designs/libs/pex/start_up_cir/folded/4x.csv v(out_folded) v(inn_folded)
+wrdata /foss/designs/libs/verification/start_up_cir/folded/4x.csv v(out_folded) v(inn_folded)
 
 meas tran vout_pp pp v(out_folded) from=2m to=5m
 meas tran vin_pp pp v(inn_folded) from=2m to=5m

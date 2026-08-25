@@ -113,7 +113,7 @@ value=
 tran 1u 5m
 
 plot v(out_telescopic) v(inn_telescopic)
-wrdata /foss/designs/libs/pex/start_up_cir/tele/3x.csv v(out_telescopic) v(inn_telescopic)
+wrdata /foss/designs/libs/verification/start_up_cir/tele/3x.csv v(out_telescopic) v(inn_telescopic)
 
 meas tran vout_pp pp v(out_telescopic) from=2m to=5m
 meas tran vin_pp pp v(inn_telescopic) from=2m to=5m

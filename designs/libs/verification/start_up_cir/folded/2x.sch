@@ -22,18 +22,18 @@ L 4 80 -390 750 -390 {}
 L 4 750 50 1120 50 {}
 L 4 750 -390 1120 -390 {}
 T {VDD, GND, SCAN INPUT, PROGRAMMABLE ENABLE} 20 140 0 0 1 1 {}
-T {Scan chain input artificially generated to enable 5T OTA 2x sizing
+T {Scan chain input artificially generated to enable folded cascode 1x sizing
 prog_ena sets default (low) or program (high)} 300 210 0 0 0.4 0.4 {}
 T {R2 = 500K} -880 350 0 0 0.75 0.75 {}
-T {R1 = 100K} -1460 -60 0 0 0.75 0.75 {}
+T {R1 = 100K} -1460 -120 0 0 0.75 0.75 {}
 T {DC = 1.65V
 500Hz Frequency 
 50mV Amplitude
-1ms Delay} -1590 250 0 0 0.5 0.5 {}
-T {DC = 1.65V} -1790 250 0 0 0.5 0.5 {}
+1ms Delay} -1590 190 0 0 0.5 0.5 {}
+T {DC = 1.65V} -1780 190 0 0 0.5 0.5 {}
 T {IBIAS = 100u} -1200 210 0 0 0.4 0.4 {}
 T {IMPLEMENTATION} -1110 -640 0 0 1 1 {}
-T {Configure the 5T OTA in 3× mode 
+T {Configure the folded cascode in 2× mode 
 as an inverting amplifier to amplify a 
 sine wave input by 5 while driving a 
 120pF capacitive load.} -1100 -580 0 0 0.4 0.4 {}
@@ -41,7 +41,7 @@ T {CLOCK GENERATION} 340 -550 0 0 1 1 {}
 T {Artificially generate a clock signal and ensure it 
 turns off after around .425ms, which is when the 
 scan in signal has fully propogated through the scan chain} 320 -480 0 0 0.4 0.4 {}
-T {CL = 120p} -310 60 0 0 0.75 0.75 {}
+T {CL = 120p} -310 0 0 0 0.75 0.75 {}
 N -750 -340 -750 -300 {lab=CLK}
 N -720 -340 -720 -300 {lab=SCAN_IN}
 N 560 340 560 390 {lab=SCAN_IN}
@@ -56,32 +56,35 @@ N -880 -340 -880 -300 {lab=VDD}
 N -1130 -10 -1040 -10 {lab=#net1}
 N -1130 -10 -1130 90 {lab=#net1}
 N -1130 150 -1130 180 {lab=VDD}
-N -1210 -160 -1040 -160 {lab=INP_5T}
-N -1150 -130 -1040 -130 {lab=#net2}
-N -560 -90 -510 -90 {lab=#net3}
-N -510 -90 -380 -90 {lab=#net3}
+N -1210 -220 -1040 -220 {lab=INP_FOLDED}
+N -1150 -190 -1040 -190 {lab=#net2}
+N -560 -150 -510 -150 {lab=#net3}
+N -510 -150 -380 -150 {lab=#net3}
+N -430 -150 -430 330 {lab=#net3}
 N -1230 -10 -1230 330 {lab=#net2}
-N -1230 -80 -1230 -10 {lab=#net2}
-N -1710 170 -1710 200 {lab=GND}
-N -1710 -160 -1710 40 {lab=INP_5T}
-N -1570 -160 -1210 -160 {lab=INP_5T}
-N -1710 40 -1710 70 {lab=INP_5T}
-N -1710 70 -1710 110 {lab=INP_5T}
-N -1230 -130 -1150 -130 {lab=#net2}
-N -1230 -130 -1230 -80 {lab=#net2}
-N -1310 -130 -1230 -130 {lab=#net2}
-N -1420 -130 -1370 -130 {lab=INN_5T}
-N -1570 -130 -1570 -80 {lab=INN_5T}
-N -1570 170 -1570 200 {lab=GND}
+N -1230 -140 -1230 -70 {lab=#net2}
+N -1710 110 -1710 140 {lab=GND}
+N -1710 -220 -1710 -20 {lab=INP_FOLDED}
+N -1570 -220 -1210 -220 {lab=INP_FOLDED}
+N -1710 -20 -1710 10 {lab=INP_FOLDED}
+N -1710 10 -1710 50 {lab=INP_FOLDED}
+N -1230 -70 -1230 -10 {lab=#net2}
+N -1230 -190 -1150 -190 {lab=#net2}
+N -1230 -190 -1230 -140 {lab=#net2}
+N -1310 -190 -1230 -190 {lab=#net2}
+N -1420 -190 -1370 -190 {lab=INN_FOLDED}
+N -1570 -190 -1570 -140 {lab=INN_FOLDED}
+N -1570 110 -1570 140 {lab=GND}
 N -640 430 -430 430 {lab=#net3}
+N -430 330 -430 430 {lab=#net3}
 N -770 430 -640 430 {lab=#net3}
 N -1230 430 -830 430 {lab=#net2}
 N -1230 330 -1230 430 {lab=#net2}
-N -1710 -160 -1660 -160 {lab=INP_5T}
-N -1570 -130 -1530 -130 {lab=INN_5T}
-N -1660 -160 -1570 -160 {lab=INP_5T}
-N -1530 -130 -1420 -130 {lab=INN_5T}
-N -1570 -80 -1570 110 {lab=INN_5T}
+N -1710 -220 -1660 -220 {lab=INP_FOLDED}
+N -1570 -190 -1530 -190 {lab=INN_FOLDED}
+N -1660 -220 -1570 -220 {lab=INP_FOLDED}
+N -1530 -190 -1420 -190 {lab=INN_FOLDED}
+N -1570 -140 -1570 50 {lab=INN_FOLDED}
 N -1100 40 -1040 40 {lab=PROG_ENA}
 N 930 340 930 390 {lab=PROG_ENA}
 N 930 450 930 490 {lab=GND}
@@ -113,16 +116,15 @@ N 850 -280 850 -250 {lab=VDD}
 N 900 -290 900 -250 {lab=CLK_ENA}
 N 450 -130 520 -130 {lab=CLK_ENA}
 N 500 -340 570 -340 {lab=!CLK_ENA}
-N -430 -90 -430 430 {lab=#net3}
-N -240 -90 -180 -90 {lab=OUT_5T}
-N -220 -90 -220 -60 {lab=OUT_5T}
-N -220 0 -220 40 {lab=GND}
-N -310 -40 -310 -10 {lab=VDD}
-N -290 -40 -290 -30 {lab=!CLK_ENA}
-N -330 -40 -330 -30 {lab=CLK_ENA}
-N -380 30 -380 60 {lab=GND}
-N -380 -70 -380 -30 {lab=#net5}
-C {vsource.sym} 560 420 0 0 {name=V3 value="PWL(0 0 0.1499m 0 0.15m 3.3 0.1999m 3.3 0.2m 0)" savecurrent=false}
+N -240 -150 -180 -150 {lab=OUT_FOLDED}
+N -220 -150 -220 -120 {lab=OUT_FOLDED}
+N -220 -60 -220 -20 {lab=GND}
+N -310 -100 -310 -70 {lab=VDD}
+N -290 -100 -290 -90 {lab=!CLK_ENA}
+N -330 -100 -330 -90 {lab=CLK_ENA}
+N -380 -30 -380 0 {lab=GND}
+N -380 -130 -380 -90 {lab=#net5}
+C {vsource.sym} 560 420 0 0 {name=V3 value="PWL(0 0 0.39999m 0 0.4m 3.3 0.499999m 3.3 0.5m 0)" savecurrent=false}
 C {gnd.sym} 560 490 0 0 {name=l1 lab=GND}
 C {gnd.sym} -950 -320 0 0 {name=l2 lab=GND}
 C {vsource.sym} 410 420 0 0 {name=V1 value=3.3 savecurrent=false}
@@ -140,7 +142,7 @@ value="
 .include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 "}
-C {code_shown.sym} 1390 -140 0 0 {name=Simulation1 only_toplevel=false 
+C {code_shown.sym} 1390 -150 0 0 {name=Simulation1 only_toplevel=false 
 
 value=
 
@@ -149,19 +151,16 @@ value=
 .control
 tran 1u 5m
 
-set color0 = white
-set color1 = black
+plot v(out_folded) v(inn_folded)
+wrdata /foss/designs/libs/verification/start_up_cir/folded/2x.csv v(out_folded) v(inn_folded)
 
-plot v(out_5T) v(inn_5T)
-wrdata /foss/designs/libs/pex/start_up_cir/5t/3x.csv v(out_5T) v(inn_5T)
-
-meas tran vout_pp pp v(out_5T) from=2m to=5m
-meas tran vin_pp pp v(inn_5T) from=2m to=5m
+meas tran vout_pp pp v(out_folded) from=2m to=5m
+meas tran vin_pp pp v(inn_folded) from=2m to=5m
 let gain = vout_pp / vin_pp
 print gain
 
-meas tran vout_dc avg v(out_5T) from=2m to=5m
-meas tran vin_dc avg v(inn_5T) from=2m to=5m
+meas tran vout_dc avg v(out_folded) from=2m to=5m
+meas tran vin_dc avg v(inn_folded) from=2m to=5m
 let dc_offset = vout_dc - vin_dc
 let input_offset = dc_offset / 6
 print vout_dc vin_dc dc_offset input_offset
@@ -175,17 +174,17 @@ let power = abs(idd) * 3.3
 print idd power
 .endc
 "}
-C {gnd.sym} -1710 200 0 0 {name=l9 lab=GND}
-C {vsource.sym} -1710 140 0 0 {name=V7 value=1.65 savecurrent=false}
-C {res.sym} -1340 -130 1 0 {name=R2
+C {gnd.sym} -1710 140 0 0 {name=l9 lab=GND}
+C {vsource.sym} -1710 80 0 0 {name=V7 value=1.65 savecurrent=false}
+C {res.sym} -1340 -190 1 0 {name=R2
 value=100k
 footprint=1206
 device=resistor
 m=1}
-C {vsource.sym} -1570 140 0 0 {name=V6 value= "dc 1.65 ac 0 sin(1.65 10m 500 1m)" savecurrent=false}
-C {gnd.sym} -1570 200 0 0 {name=l10 lab=GND}
-C {lab_pin.sym} -1570 -130 0 0 {name=p13 sig_type=std_logic lab=INN_5T}
-C {lab_pin.sym} -1710 -160 0 0 {name=p12 sig_type=std_logic lab=INP_5T}
+C {vsource.sym} -1570 80 0 0 {name=V6 value= "dc 1.65 ac 0 sin(1.65 10m 500 1m)" savecurrent=false}
+C {gnd.sym} -1570 140 0 0 {name=l10 lab=GND}
+C {lab_pin.sym} -1570 -190 0 0 {name=p13 sig_type=std_logic lab=INN_FOLDED}
+C {lab_pin.sym} -1710 -220 0 0 {name=p12 sig_type=std_logic lab=INP_FOLDED}
 C {res.sym} -800 430 1 0 {name=R1
 value=500k
 footprint=1206
@@ -215,16 +214,16 @@ C {lab_pin.sym} 900 -140 0 1 {name=p19 sig_type=std_logic lab=!CLK_ENA}
 C {lab_pin.sym} 520 -130 0 1 {name=p20 sig_type=std_logic lab=CLK_ENA}
 C {lab_pin.sym} 570 -340 0 1 {name=p21 sig_type=std_logic lab=!CLK_ENA}
 C {libs/pex/DUT.sym} -810 -90 0 0 {name=x1}
-C {lab_pin.sym} -180 -90 0 1 {name=p4 sig_type=std_logic lab=OUT_5T}
-C {capa.sym} -220 -30 0 0 {name=CLOAD1
+C {lab_pin.sym} -180 -150 0 1 {name=p4 sig_type=std_logic lab=OUT_FOLDED}
+C {capa.sym} -220 -90 0 0 {name=CLOAD1
 m=1
 value=120p
 footprint=1206
 device="ceramic capacitor"}
-C {gnd.sym} -220 40 0 0 {name=l4 lab=GND}
-C {lab_pin.sym} -330 -30 1 1 {name=p6 sig_type=std_logic lab=CLK_ENA}
-C {lab_pin.sym} -310 -10 3 0 {name=p22 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} -290 -30 1 1 {name=p23 sig_type=std_logic lab=!CLK_ENA}
-C {gnd.sym} -380 60 0 0 {name=l5 lab=GND}
-C {vsource.sym} -380 0 0 0 {name=V2 value=1.65 savecurrent=false}
-C {libs/core_amps/start_up_cir/start_up_cir.sym} -310 -80 0 0 {name=x2}
+C {gnd.sym} -220 -20 0 0 {name=l4 lab=GND}
+C {lab_pin.sym} -330 -90 1 1 {name=p6 sig_type=std_logic lab=CLK_ENA}
+C {lab_pin.sym} -310 -70 3 0 {name=p22 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} -290 -90 1 1 {name=p23 sig_type=std_logic lab=!CLK_ENA}
+C {gnd.sym} -380 0 0 0 {name=l5 lab=GND}
+C {vsource.sym} -380 -60 0 0 {name=V2 value=1.65 savecurrent=false}
+C {libs/core_amps/start_up_cir/start_up_cir.sym} -310 -140 0 0 {name=x2}
