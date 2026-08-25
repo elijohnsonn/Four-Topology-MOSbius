@@ -30,7 +30,7 @@ T {DC = 1.65V
 500Hz Frequency 
 50mV Amplitude
 1ms Delay} -1590 250 0 0 0.5 0.5 {}
-T {DC = 1.6425V} -1780 250 0 0 0.5 0.5 {}
+T {DC = 1.65V} -1780 250 0 0 0.5 0.5 {}
 T {IBIAS = 100u} -1200 210 0 0 0.4 0.4 {}
 T {IMPLEMENTATION} -1110 -640 0 0 1 1 {}
 T {Configure the 5T OTA in 4× mode 
@@ -176,7 +176,7 @@ print idd power
 .endc
 "}
 C {gnd.sym} -1710 200 0 0 {name=l9 lab=GND}
-C {vsource.sym} -1710 140 0 0 {name=V7 value=1.6425 savecurrent=false}
+C {vsource.sym} -1710 140 0 0 {name=V7 value=1.65 savecurrent=false}
 C {res.sym} -1340 -130 1 0 {name=R2
 value=100k
 footprint=1206
@@ -226,5 +226,5 @@ C {lab_pin.sym} -330 -30 1 1 {name=p6 sig_type=std_logic lab=CLK_ENA}
 C {lab_pin.sym} -310 -10 3 0 {name=p22 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} -290 -30 1 1 {name=p23 sig_type=std_logic lab=!CLK_ENA}
 C {gnd.sym} -380 60 0 0 {name=l5 lab=GND}
-C {vsource.sym} -380 0 0 0 {name=V2 value=1.653 savecurrent=false}
-C {libs/core_amps/start_up_cir/start_up_cir_cap.sym} -360 -110 0 0 {name=x2}
+C {vsource.sym} -380 0 0 0 {name=V2 value=1.65 savecurrent=false}
+C {libs/core_amps/start_up_cir/start_up_cir.sym} -310 -80 0 0 {name=x2}

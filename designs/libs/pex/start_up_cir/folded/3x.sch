@@ -225,5 +225,5 @@ C {lab_pin.sym} -330 -90 1 1 {name=p6 sig_type=std_logic lab=CLK_ENA}
 C {lab_pin.sym} -310 -70 3 0 {name=p22 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} -290 -90 1 1 {name=p23 sig_type=std_logic lab=!CLK_ENA}
 C {gnd.sym} -380 0 0 0 {name=l5 lab=GND}
-C {vsource.sym} -380 -60 0 0 {name=V3 value=1.645 savecurrent=false}
-C {libs/core_amps/start_up_cir/start_up_cir_cap.sym} -360 -170 0 0 {name=x2}
+C {vsource.sym} -380 -60 0 0 {name=V3 value=1.65 savecurrent=false}
+C {libs/core_amps/start_up_cir/start_up_cir.sym} -310 -140 0 0 {name=x2}

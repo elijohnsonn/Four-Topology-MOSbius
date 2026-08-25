@@ -18,28 +18,28 @@ N 80 -300 110 -300 {lab=GND}
 N 110 -300 110 -280 {lab=GND}
 N 520 160 520 200 {lab=GND}
 N 520 50 520 100 {lab=VDD}
-N 240 -120 370 -120 {lab=OUT_5t}
-N 370 -120 370 -90 {lab=OUT_5t}
-N 370 -120 440 -120 {lab=OUT_5t}
-N 370 -30 370 0 {lab=GND}
-N 300 -120 300 260 {lab=OUT_5t}
+N 240 -60 370 -60 {lab=OUT_5t}
+N 370 -60 370 -30 {lab=OUT_5t}
+N 370 -60 440 -60 {lab=OUT_5t}
+N 370 30 370 60 {lab=GND}
 N 60 260 300 260 {lab=OUT_5t}
 N -360 260 0 260 {lab=#net1}
-N -380 -90 -380 260 {lab=#net1}
-N -440 -160 -240 -160 {lab=#net1}
-N -380 -160 -380 -90 {lab=#net1}
-N -570 -160 -500 -160 {lab=INN_5t}
-N -600 -160 -570 -160 {lab=INN_5t}
-N -600 -160 -600 -100 {lab=INN_5t}
-N -600 -40 -600 40 {lab=GND}
-N -770 -40 -770 40 {lab=GND}
-N -770 -190 -770 -100 {lab=#net2}
-N -710 -190 -240 -190 {lab=#net2}
-N -770 -190 -710 -190 {lab=#net2}
+N -440 -100 -240 -100 {lab=#net1}
+N -380 -100 -380 -30 {lab=#net1}
+N -570 -100 -500 -100 {lab=INN_5t}
+N -600 -100 -570 -100 {lab=INN_5t}
+N -600 -100 -600 -40 {lab=INN_5t}
+N -600 20 -600 100 {lab=GND}
+N -770 20 -770 100 {lab=GND}
+N -770 -130 -770 -40 {lab=#net2}
+N -710 -130 -240 -130 {lab=#net2}
+N -770 -130 -710 -130 {lab=#net2}
 N -320 170 -320 200 {lab=VDD}
 N -380 260 -360 260 {lab=#net1}
 N -320 20 -240 20 {lab=#net3}
 N -320 20 -320 110 {lab=#net3}
+N 300 -60 300 260 {lab=OUT_5t}
+N -380 -30 -380 260 {lab=#net1}
 C {gnd.sym} -270 100 0 1 {name=l2 lab=GND}
 C {gnd.sym} -140 -280 0 1 {name=l1 lab=GND}
 C {lab_pin.sym} -80 -300 0 1 {name=p1 sig_type=std_logic lab=VDD}
@@ -90,28 +90,28 @@ print idd power
 
 .endc
 "}
-C {capa.sym} 370 -60 0 0 {name=CLOAD
+C {capa.sym} 370 0 0 0 {name=CLOAD
 m=1
 value=120p
 footprint=1206
 device="ceramic capacitor"}
-C {lab_pin.sym} 440 -120 0 1 {name=p11 sig_type=std_logic lab=OUT_5t}
-C {gnd.sym} 370 0 0 0 {name=l8 lab=GND}
+C {lab_pin.sym} 440 -60 0 1 {name=p11 sig_type=std_logic lab=OUT_5t}
+C {gnd.sym} 370 60 0 0 {name=l8 lab=GND}
 C {res.sym} 30 260 1 0 {name=R1
 value=500k
 footprint=1206
 device=resistor
 m=1}
-C {res.sym} -470 -160 1 0 {name=R2
+C {res.sym} -470 -100 1 0 {name=R2
 value=100k
 footprint=1206
 device=resistor
 m=1}
-C {vsource.sym} -600 -70 0 0 {name=V6 value= "dc 1.65 ac 0 sin(1.65 10m 500 1m)" savecurrent=false}
-C {gnd.sym} -600 40 0 0 {name=l6 lab=GND}
-C {vsource.sym} -770 -70 0 1 {name=V7 value=1.65 savecurrent=false}
-C {gnd.sym} -770 40 0 1 {name=l7 lab=GND}
-C {lab_pin.sym} -600 -160 0 0 {name=p13 sig_type=std_logic lab=INN_5t}
+C {vsource.sym} -600 -10 0 0 {name=V6 value= "dc 1.65 ac 0 sin(1.65 10m 500 1m)" savecurrent=false}
+C {gnd.sym} -600 100 0 0 {name=l6 lab=GND}
+C {vsource.sym} -770 -10 0 1 {name=V7 value=1.65 savecurrent=false}
+C {gnd.sym} -770 100 0 1 {name=l7 lab=GND}
+C {lab_pin.sym} -600 -100 0 0 {name=p13 sig_type=std_logic lab=INN_5t}
 C {isource.sym} -320 140 2 0 {name=IBIAS value=100u}
 C {lab_pin.sym} -320 200 0 1 {name=p9 sig_type=std_logic lab=VDD}
 C {libs/pex/DUT.sym} -10 -60 0 0 {name=x1}
