@@ -41,7 +41,8 @@ T {CLOCK GENERATION} 350 -560 0 0 1 1 {}
 T {Artificially generate a clock signal and ensure it 
 turns off after around .425ms, which is when the 
 scan in signal has fully propogated through the scan chain} 330 -490 0 0 0.4 0.4 {}
-T {CL = 120p} -300 -10 0 0 0.75 0.75 {}
+T {CL = 120p} -250 0 0 0 0.75 0.75 {}
+T {VCM} -410 70 0 0 0.75 0.75 {}
 N -740 -350 -740 -310 {lab=CLK}
 N -710 -350 -710 -310 {lab=SCAN_IN}
 N 570 330 570 380 {lab=SCAN_IN}
@@ -59,7 +60,6 @@ N -1120 140 -1120 170 {lab=VDD}
 N -1200 -230 -1030 -230 {lab=INP_FOLDED}
 N -1140 -200 -1030 -200 {lab=#net2}
 N -550 -160 -500 -160 {lab=#net3}
-N -500 -160 -370 -160 {lab=#net3}
 N -420 -160 -420 320 {lab=#net3}
 N -1220 -20 -1220 320 {lab=#net2}
 N -1220 -150 -1220 -80 {lab=#net2}
@@ -116,14 +116,17 @@ N 860 -290 860 -260 {lab=VDD}
 N 910 -300 910 -260 {lab=CLK_ENA}
 N 460 -140 530 -140 {lab=CLK_ENA}
 N 510 -350 580 -350 {lab=!CLK_ENA}
-N -230 -160 -170 -160 {lab=OUT_FOLDED}
-N -210 -160 -210 -130 {lab=OUT_FOLDED}
-N -210 -70 -210 -30 {lab=GND}
-N -300 -110 -300 -80 {lab=VDD}
-N -280 -110 -280 -100 {lab=!CLK_ENA}
-N -320 -110 -320 -100 {lab=CLK_ENA}
-N -370 -40 -370 -10 {lab=GND}
-N -370 -140 -370 -100 {lab=#net5}
+N -220 -160 -160 -160 {lab=OUT_FOLDED}
+N -200 -160 -200 -130 {lab=OUT_FOLDED}
+N -200 -70 -200 -30 {lab=GND}
+N -290 -110 -290 -80 {lab=VDD}
+N -270 -110 -270 -100 {lab=!CLK_ENA}
+N -310 -110 -310 -100 {lab=CLK_ENA}
+N -380 20 -380 50 {lab=GND}
+N -380 -160 -360 -160 {lab=#net3}
+N -500 -160 -380 -160 {lab=#net3}
+N -380 -140 -360 -140 {lab=#net5}
+N -380 -140 -380 -40 {lab=#net5}
 C {gnd.sym} 570 480 0 0 {name=l1 lab=GND}
 C {gnd.sym} -940 -330 0 0 {name=l2 lab=GND}
 C {vsource.sym} 420 410 0 0 {name=V1 value=3.3 savecurrent=false}
@@ -216,16 +219,16 @@ C {lab_pin.sym} 530 -140 0 1 {name=p20 sig_type=std_logic lab=CLK_ENA}
 C {lab_pin.sym} 580 -350 0 1 {name=p21 sig_type=std_logic lab=!CLK_ENA}
 C {vsource.sym} 570 410 0 0 {name=V2 value="PWL(0 0 0.34999m 0 0.35m 3.3 0.499999m 3.3 0.5m 0)" savecurrent=false}
 C {libs/pex/DUT.sym} -800 -100 0 0 {name=x1}
-C {lab_pin.sym} -170 -160 0 1 {name=p4 sig_type=std_logic lab=OUT_FOLDED}
-C {capa.sym} -210 -100 0 0 {name=CLOAD1
+C {lab_pin.sym} -160 -160 0 1 {name=p4 sig_type=std_logic lab=OUT_FOLDED}
+C {capa.sym} -200 -100 0 0 {name=CLOAD1
 m=1
 value=120p
 footprint=1206
 device="ceramic capacitor"}
-C {gnd.sym} -210 -30 0 0 {name=l4 lab=GND}
-C {lab_pin.sym} -320 -100 1 1 {name=p6 sig_type=std_logic lab=CLK_ENA}
-C {lab_pin.sym} -300 -80 3 0 {name=p22 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} -280 -100 1 1 {name=p23 sig_type=std_logic lab=!CLK_ENA}
-C {gnd.sym} -370 -10 0 0 {name=l5 lab=GND}
-C {vsource.sym} -370 -70 0 0 {name=V3 value=1.65 savecurrent=false}
-C {libs/core_amps/start_up_cir/start_up_cir.sym} -300 -150 0 0 {name=x2}
+C {gnd.sym} -200 -30 0 0 {name=l4 lab=GND}
+C {lab_pin.sym} -310 -100 1 1 {name=p6 sig_type=std_logic lab=CLK_ENA}
+C {lab_pin.sym} -290 -80 3 0 {name=p22 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} -270 -100 1 1 {name=p23 sig_type=std_logic lab=!CLK_ENA}
+C {gnd.sym} -380 50 0 0 {name=l5 lab=GND}
+C {vsource.sym} -380 -10 0 0 {name=V3 value=1.65 savecurrent=false}
+C {libs/core_amps/start_up_cir/start_up_cir.sym} -290 -150 0 0 {name=x2}
