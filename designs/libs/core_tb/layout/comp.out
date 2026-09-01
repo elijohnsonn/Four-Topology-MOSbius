@@ -1,0 +1,551 @@
+
+Cell nfet_03v3 (0) disconnected node: drain
+Cell nfet_03v3 (0) disconnected node: gate
+Cell nfet_03v3 (0) disconnected node: source
+Cell nfet_03v3 (0) disconnected node: bulk
+Equate elements:  no current cell.
+Device classes nfet_03v3 and nfet_03v3 are equivalent.
+
+Cell pfet_03v3 (0) disconnected node: drain
+Cell pfet_03v3 (0) disconnected node: gate
+Cell pfet_03v3 (0) disconnected node: source
+Cell pfet_03v3 (0) disconnected node: bulk
+Equate elements:  no current cell.
+Device classes pfet_03v3 and pfet_03v3 are equivalent.
+Flattening unmatched subcell D_latch1 in circuit D_ff1 (1)(2 instances)
+Flattening unmatched subcell NAND2 in circuit D_ff1 (1)(8 instances)
+Flattening unmatched subcell inv1 in circuit D_ff1 (1)(3 instances)
+
+Subcircuit summary:
+Circuit 1: D_ff1                           |Circuit 2: D_ff1                           
+-------------------------------------------|-------------------------------------------
+pfet_03v3 (19)                             |pfet_03v3 (19)                             
+nfet_03v3 (19)                             |nfet_03v3 (19)                             
+Number of devices: 38                      |Number of devices: 38                      
+Number of nets: 23                         |Number of nets: 23                         
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: D_ff1                           |Circuit 2: D_ff1                           
+-------------------------------------------|-------------------------------------------
+Q                                          |Q                                          
+Q_bar                                      |Q_bar                                      
+D                                          |D                                          
+VSS                                        |VSS                                        
+CLK                                        |CLK                                        
+VDD                                        |VDD                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes D_ff1 and D_ff1 are equivalent.
+Flattening unmatched subcell programmable_nfet in circuit programmable_folded_cascode (1)(7 instances)
+Flattening unmatched subcell transmission_gate in circuit programmable_folded_cascode (1)(14 instances)
+Flattening unmatched subcell programmable_pfet in circuit programmable_folded_cascode (1)(4 instances)
+Flattening unmatched subcell transmission_gate in circuit programmable_folded_cascode (1)(8 instances)
+
+Subcircuit summary:
+Circuit 1: programmable_folded_cascode     |Circuit 2: programmable_folded_cascode     
+-------------------------------------------|-------------------------------------------
+pfet_03v3 (46)                             |pfet_03v3 (67->46)                         
+nfet_03v3 (60)                             |nfet_03v3 (60)                             
+Number of devices: 106                     |Number of devices: 106                     
+Number of nets: 42                         |Number of nets: 42                         
+---------------------------------------------------------------------------------------
+Resolving symmetries by property value.
+Resolving symmetries by pin name.
+Netlists match uniquely with property errors.
+nfet_03v3:$35 vs. programmable_nfet:1/nfet_03v3:M3:
+ W circuit1: 8e-05   circuit2: 4.4e-07   (delta=198%, cutoff=1%)
+ L circuit1: 1e-06   circuit2: 2.8e-07   (delta=112%, cutoff=1%)
+nfet_03v3:$31 vs. programmable_nfet:1/nfet_03v3:M1:
+ W circuit1: 4e-05   circuit2: 2.2e-07   (delta=198%, cutoff=1%)
+ L circuit1: 1e-06   circuit2: 2.8e-07   (delta=112%, cutoff=1%)
+nfet_03v3:$32 vs. programmable_nfet:1/nfet_03v3:M5:
+ W circuit1: 4e-05   circuit2: 2.2e-07   (delta=198%, cutoff=1%)
+ L circuit1: 1e-06   circuit2: 2.8e-07   (delta=112%, cutoff=1%)
+nfet_03v3:$79 vs. programmable_nfet:2/nfet_03v3:M1:
+ W circuit1: 6e-05   circuit2: 2.2e-07   (delta=199%, cutoff=1%)
+ L circuit1: 5e-07   circuit2: 2.8e-07   (delta=56.4%, cutoff=1%)
+nfet_03v3:$71 vs. programmable_nfet:2/nfet_03v3:M3:
+ W circuit1: 0.00012   circuit2: 4.4e-07   (delta=199%, cutoff=1%)
+ L circuit1: 5e-07   circuit2: 2.8e-07   (delta=56.4%, cutoff=1%)
+nfet_03v3:$75 vs. programmable_nfet:3/nfet_03v3:M1:
+ W circuit1: 6e-05   circuit2: 2.2e-07   (delta=199%, cutoff=1%)
+ L circuit1: 5e-07   circuit2: 2.8e-07   (delta=56.4%, cutoff=1%)
+nfet_03v3:$67 vs. programmable_nfet:3/nfet_03v3:M3:
+ W circuit1: 0.00012   circuit2: 4.4e-07   (delta=199%, cutoff=1%)
+ L circuit1: 5e-07   circuit2: 2.8e-07   (delta=56.4%, cutoff=1%)
+nfet_03v3:$80 vs. programmable_nfet:2/nfet_03v3:M5:
+ W circuit1: 6e-05   circuit2: 2.2e-07   (delta=199%, cutoff=1%)
+ L circuit1: 5e-07   circuit2: 2.8e-07   (delta=56.4%, cutoff=1%)
+nfet_03v3:$76 vs. programmable_nfet:3/nfet_03v3:M5:
+ W circuit1: 6e-05   circuit2: 2.2e-07   (delta=199%, cutoff=1%)
+ L circuit1: 5e-07   circuit2: 2.8e-07   (delta=56.4%, cutoff=1%)
+nfet_03v3:$47 vs. programmable_nfet:4/nfet_03v3:M1:
+ W circuit1: 2.05e-05   circuit2: 2.2e-07   (delta=196%, cutoff=1%)
+ L circuit1: 1e-06   circuit2: 2.8e-07   (delta=112%, cutoff=1%)
+nfet_03v3:$43 vs. programmable_nfet:4/nfet_03v3:M3:
+ W circuit1: 4.1e-05   circuit2: 4.4e-07   (delta=196%, cutoff=1%)
+ L circuit1: 1e-06   circuit2: 2.8e-07   (delta=112%, cutoff=1%)
+nfet_03v3:$48 vs. programmable_nfet:4/nfet_03v3:M5:
+ W circuit1: 2.05e-05   circuit2: 2.2e-07   (delta=196%, cutoff=1%)
+ L circuit1: 1e-06   circuit2: 2.8e-07   (delta=112%, cutoff=1%)
+nfet_03v3:$49 vs. programmable_nfet:5/nfet_03v3:M1:
+ W circuit1: 2.05e-05   circuit2: 2.2e-07   (delta=196%, cutoff=1%)
+ L circuit1: 1e-06   circuit2: 2.8e-07   (delta=112%, cutoff=1%)
+nfet_03v3:$45 vs. programmable_nfet:5/nfet_03v3:M3:
+ W circuit1: 4.1e-05   circuit2: 4.4e-07   (delta=196%, cutoff=1%)
+ L circuit1: 1e-06   circuit2: 2.8e-07   (delta=112%, cutoff=1%)
+nfet_03v3:$50 vs. programmable_nfet:5/nfet_03v3:M5:
+ W circuit1: 2.05e-05   circuit2: 2.2e-07   (delta=196%, cutoff=1%)
+ L circuit1: 1e-06   circuit2: 2.8e-07   (delta=112%, cutoff=1%)
+nfet_03v3:$59 vs. programmable_nfet:6/nfet_03v3:M1:
+ W circuit1: 1.05e-05   circuit2: 2.2e-07   (delta=192%, cutoff=1%)
+ L circuit1: 5e-07   circuit2: 2.8e-07   (delta=56.4%, cutoff=1%)
+nfet_03v3:$55 vs. programmable_nfet:6/nfet_03v3:M3:
+ W circuit1: 2.1e-05   circuit2: 4.4e-07   (delta=192%, cutoff=1%)
+ L circuit1: 5e-07   circuit2: 2.8e-07   (delta=56.4%, cutoff=1%)
+nfet_03v3:$60 vs. programmable_nfet:6/nfet_03v3:M5:
+ W circuit1: 1.05e-05   circuit2: 2.2e-07   (delta=192%, cutoff=1%)
+ L circuit1: 5e-07   circuit2: 2.8e-07   (delta=56.4%, cutoff=1%)
+nfet_03v3:$61 vs. programmable_nfet:7/nfet_03v3:M1:
+ W circuit1: 1.05e-05   circuit2: 2.2e-07   (delta=192%, cutoff=1%)
+ L circuit1: 5e-07   circuit2: 2.8e-07   (delta=56.4%, cutoff=1%)
+nfet_03v3:$57 vs. programmable_nfet:7/nfet_03v3:M3:
+ W circuit1: 2.1e-05   circuit2: 4.4e-07   (delta=192%, cutoff=1%)
+ L circuit1: 5e-07   circuit2: 2.8e-07   (delta=56.4%, cutoff=1%)
+nfet_03v3:$62 vs. programmable_nfet:7/nfet_03v3:M5:
+ W circuit1: 1.05e-05   circuit2: 2.2e-07   (delta=192%, cutoff=1%)
+ L circuit1: 5e-07   circuit2: 2.8e-07   (delta=56.4%, cutoff=1%)
+pfet_03v3:$108 vs. programmable_pfet:8/pfet_03v3:M1:
+ W circuit1: 0.000148   circuit2: 2.2e-07   (delta=199%, cutoff=1%)
+ L circuit1: 5e-07   circuit2: 2.8e-07   (delta=56.4%, cutoff=1%)
+pfet_03v3:$87 vs. programmable_pfet:8/pfet_03v3:M3:
+ W circuit1: 0.000296   circuit2: 4.4e-07   (delta=199%, cutoff=1%)
+ L circuit1: 5e-07   circuit2: 2.8e-07   (delta=56.4%, cutoff=1%)
+pfet_03v3:$107 vs. programmable_pfet:8/pfet_03v3:M5:
+ W circuit1: 0.000148   circuit2: 2.2e-07   (delta=199%, cutoff=1%)
+ L circuit1: 5e-07   circuit2: 2.8e-07   (delta=56.4%, cutoff=1%)
+pfet_03v3:$118 vs. programmable_pfet:9/pfet_03v3:M1:
+ W circuit1: 0.000148   circuit2: 2.2e-07   (delta=199%, cutoff=1%)
+ L circuit1: 5e-07   circuit2: 2.8e-07   (delta=56.4%, cutoff=1%)
+pfet_03v3:$97 vs. programmable_pfet:9/pfet_03v3:M3:
+ W circuit1: 0.000296   circuit2: 4.4e-07   (delta=199%, cutoff=1%)
+ L circuit1: 5e-07   circuit2: 2.8e-07   (delta=56.4%, cutoff=1%)
+pfet_03v3:$117 vs. programmable_pfet:9/pfet_03v3:M5:
+ W circuit1: 0.000148   circuit2: 2.2e-07   (delta=199%, cutoff=1%)
+ L circuit1: 5e-07   circuit2: 2.8e-07   (delta=56.4%, cutoff=1%)
+pfet_03v3:$192 vs. programmable_pfet:10/pfet_03v3:M1:
+ W circuit1: 0.000348   circuit2: 2.2e-07   (delta=200%, cutoff=1%)
+ L circuit1: 1e-06   circuit2: 2.8e-07   (delta=112%, cutoff=1%)
+pfet_03v3:$151 vs. programmable_pfet:10/pfet_03v3:M3:
+ W circuit1: 0.000696   circuit2: 4.4e-07   (delta=200%, cutoff=1%)
+ L circuit1: 1e-06   circuit2: 2.8e-07   (delta=112%, cutoff=1%)
+pfet_03v3:$172 vs. programmable_pfet:11/pfet_03v3:M1:
+ W circuit1: 0.000348   circuit2: 2.2e-07   (delta=200%, cutoff=1%)
+ L circuit1: 1e-06   circuit2: 2.8e-07   (delta=112%, cutoff=1%)
+pfet_03v3:$131 vs. programmable_pfet:11/pfet_03v3:M3:
+ W circuit1: 0.000696   circuit2: 4.4e-07   (delta=200%, cutoff=1%)
+ L circuit1: 1e-06   circuit2: 2.8e-07   (delta=112%, cutoff=1%)
+pfet_03v3:$191 vs. programmable_pfet:10/pfet_03v3:M5:
+ W circuit1: 0.000348   circuit2: 2.2e-07   (delta=200%, cutoff=1%)
+ L circuit1: 1e-06   circuit2: 2.8e-07   (delta=112%, cutoff=1%)
+pfet_03v3:$171 vs. programmable_pfet:11/pfet_03v3:M5:
+ W circuit1: 0.000348   circuit2: 2.2e-07   (delta=200%, cutoff=1%)
+ L circuit1: 1e-06   circuit2: 2.8e-07   (delta=112%, cutoff=1%)
+
+Subcircuit pins:
+Circuit 1: programmable_folded_cascode     |Circuit 2: programmable_folded_cascode     
+-------------------------------------------|-------------------------------------------
+EN1                                        |EN1                                        
+EN0                                        |EN0                                        
+INN                                        |INN                                        
+INP                                        |INP                                        
+OUT                                        |OUT                                        
+\!EN1                                      |!EN1                                       
+\!EN0                                      |!EN0                                       
+VG_BIAS                                    |VG_BIAS                                    
+VSS                                        |VSS                                        
+VDD                                        |VDD                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes programmable_folded_cascode and programmable_folded_cascode are equivalent.
+
+Cell programmable_telescopic_cascode (1) disconnected node: VDD
+Cell programmable_telescopic_cascode (1) disconnected node: output
+Cell programmable_telescopic_cascode (1) disconnected node: EN0
+Cell programmable_telescopic_cascode (1) disconnected node: !EN0
+Cell programmable_telescopic_cascode (1) disconnected node: EN1
+Cell programmable_telescopic_cascode (1) disconnected node: !EN1
+Cell programmable_telescopic_cascode (1) disconnected node: INN
+Cell programmable_telescopic_cascode (1) disconnected node: INP
+Cell programmable_telescopic_cascode (1) disconnected node: VSS
+Cell programmable_telescopic_cascode (1) disconnected node: VG_BIAS
+Equate elements:  no current cell.
+Device classes programmable_telescopic_cascode and programmable_telescopic_cascode are equivalent.
+Flattening unmatched subcell programmable_nfet in circuit programmable_5tOTA (1)(3 instances)
+Flattening unmatched subcell transmission_gate in circuit programmable_5tOTA (1)(6 instances)
+Flattening unmatched subcell programmable_pfet in circuit programmable_5tOTA (1)(2 instances)
+Flattening unmatched subcell transmission_gate in circuit programmable_5tOTA (1)(4 instances)
+
+Subcircuit summary:
+Circuit 1: programmable_5tOTA              |Circuit 2: programmable_5tOTA              
+-------------------------------------------|-------------------------------------------
+nfet_03v3 (25)                             |nfet_03v3 (25)                             
+pfet_03v3 (20)                             |pfet_03v3 (20)                             
+Number of devices: 45                      |Number of devices: 45                      
+Number of nets: 22                         |Number of nets: 22                         
+---------------------------------------------------------------------------------------
+Resolving symmetries by property value.
+Resolving symmetries by pin name.
+Resolving symmetries by net name.
+Netlists match with 27 symmetries with property errors.
+pfet_03v3:$47 vs. programmable_pfet:4/pfet_03v3:M1:
+ W circuit1: 0.0002   circuit2: 2.2e-07   (delta=200%, cutoff=1%)
+ L circuit1: 5e-07   circuit2: 2.8e-07   (delta=56.4%, cutoff=1%)
+pfet_03v3:$56 vs. programmable_pfet:4/pfet_03v3:M3:
+ W circuit1: 0.0001   circuit2: 4.4e-07   (delta=198%, cutoff=1%)
+ L circuit1: 5e-07   circuit2: 2.8e-07   (delta=56.4%, cutoff=1%)
+pfet_03v3:$55 vs. programmable_pfet:4/pfet_03v3:M5:
+ W circuit1: 0.0001   circuit2: 2.2e-07   (delta=199%, cutoff=1%)
+ L circuit1: 5e-07   circuit2: 2.8e-07   (delta=56.4%, cutoff=1%)
+pfet_03v3:$51 vs. programmable_pfet:3/pfet_03v3:M1:
+ W circuit1: 0.0002   circuit2: 2.2e-07   (delta=200%, cutoff=1%)
+ L circuit1: 5e-07   circuit2: 2.8e-07   (delta=56.4%, cutoff=1%)
+pfet_03v3:$60 vs. programmable_pfet:3/pfet_03v3:M3:
+ W circuit1: 0.0001   circuit2: 4.4e-07   (delta=198%, cutoff=1%)
+ L circuit1: 5e-07   circuit2: 2.8e-07   (delta=56.4%, cutoff=1%)
+pfet_03v3:$59 vs. programmable_pfet:3/pfet_03v3:M5:
+ W circuit1: 0.0001   circuit2: 2.2e-07   (delta=199%, cutoff=1%)
+ L circuit1: 5e-07   circuit2: 2.8e-07   (delta=56.4%, cutoff=1%)
+nfet_03v3:$31 vs. programmable_nfet:1/nfet_03v3:M1:
+ W circuit1: 6.84e-05   circuit2: 2.2e-07   (delta=199%, cutoff=1%)
+ L circuit1: 5e-07   circuit2: 2.8e-07   (delta=56.4%, cutoff=1%)
+nfet_03v3:$21 vs. programmable_nfet:1/nfet_03v3:M3:
+ W circuit1: 3.42e-05   circuit2: 4.4e-07   (delta=195%, cutoff=1%)
+ L circuit1: 5e-07   circuit2: 2.8e-07   (delta=56.4%, cutoff=1%)
+nfet_03v3:$19 vs. programmable_nfet:1/nfet_03v3:M5:
+ W circuit1: 3.42e-05   circuit2: 2.2e-07   (delta=197%, cutoff=1%)
+ L circuit1: 5e-07   circuit2: 2.8e-07   (delta=56.4%, cutoff=1%)
+nfet_03v3:$37 vs. programmable_nfet:2/nfet_03v3:M1:
+ W circuit1: 6.84e-05   circuit2: 2.2e-07   (delta=199%, cutoff=1%)
+ L circuit1: 5e-07   circuit2: 2.8e-07   (delta=56.4%, cutoff=1%)
+nfet_03v3:$27 vs. programmable_nfet:2/nfet_03v3:M3:
+ W circuit1: 3.42e-05   circuit2: 4.4e-07   (delta=195%, cutoff=1%)
+ L circuit1: 5e-07   circuit2: 2.8e-07   (delta=56.4%, cutoff=1%)
+nfet_03v3:$25 vs. programmable_nfet:2/nfet_03v3:M5:
+ W circuit1: 3.42e-05   circuit2: 2.2e-07   (delta=197%, cutoff=1%)
+ L circuit1: 5e-07   circuit2: 2.8e-07   (delta=56.4%, cutoff=1%)
+nfet_03v3:$3 vs. programmable_nfet:5/nfet_03v3:M1:
+ W circuit1: 0.0001368   circuit2: 2.2e-07   (delta=199%, cutoff=1%)
+ L circuit1: 1e-06   circuit2: 2.8e-07   (delta=112%, cutoff=1%)
+nfet_03v3:$8 vs. programmable_nfet:5/nfet_03v3:M3:
+ W circuit1: 6.84e-05   circuit2: 4.4e-07   (delta=197%, cutoff=1%)
+ L circuit1: 1e-06   circuit2: 2.8e-07   (delta=112%, cutoff=1%)
+nfet_03v3:$7 vs. programmable_nfet:5/nfet_03v3:M5:
+ W circuit1: 6.84e-05   circuit2: 2.2e-07   (delta=199%, cutoff=1%)
+ L circuit1: 1e-06   circuit2: 2.8e-07   (delta=112%, cutoff=1%)
+
+Subcircuit pins:
+Circuit 1: programmable_5tOTA              |Circuit 2: programmable_5tOTA              
+-------------------------------------------|-------------------------------------------
+ena<1>                                     |EN0 **Mismatch**                           
+ena<0>                                     |EN1 **Mismatch**                           
+VDD                                        |VDD                                        
+VOUT                                       |vout                                       
+vin+                                       |vin+                                       
+vin\x2d                                    |vin- **Mismatch**                          
+V_bias                                     |V_bias                                     
+ena_bar<1>                                 |!EN0 **Mismatch**                          
+ena_bar<0>                                 |!EN1 **Mismatch**                          
+VSS                                        |VSS                                        
+---------------------------------------------------------------------------------------
+Cell pin lists for programmable_5tOTA and programmable_5tOTA altered to match.
+Device classes programmable_5tOTA and programmable_5tOTA are equivalent.
+Flattening unmatched subcell programmable_nfet in circuit programmable_common_source (1)(1 instance)
+Flattening unmatched subcell transmission_gate in circuit programmable_common_source (1)(2 instances)
+Flattening unmatched subcell programmable_pfet in circuit programmable_common_source (1)(1 instance)
+Flattening unmatched subcell transmission_gate in circuit programmable_common_source (1)(2 instances)
+
+Subcircuit summary:
+Circuit 1: programmable_common_source      |Circuit 2: programmable_common_source      
+-------------------------------------------|-------------------------------------------
+nfet_03v3 (9)                              |nfet_03v3 (9)                              
+pfet_03v3 (9)                              |pfet_03v3 (9)                              
+Number of devices: 18                      |Number of devices: 18                      
+Number of nets: 13                         |Number of nets: 13                         
+---------------------------------------------------------------------------------------
+Resolving symmetries by property value.
+Resolving symmetries by pin name.
+Netlists match uniquely with property errors.
+pfet_03v3:$32 vs. programmable_pfet:2/pfet_03v3:M1:
+ W circuit1: 9.2e-05   circuit2: 2.2e-07   (delta=199%, cutoff=1%)
+ L circuit1: 1e-06   circuit2: 2.8e-07   (delta=112%, cutoff=1%)
+pfet_03v3:$9 vs. programmable_pfet:2/pfet_03v3:M3:
+ W circuit1: 0.000184   circuit2: 4.4e-07   (delta=199%, cutoff=1%)
+ L circuit1: 1e-06   circuit2: 2.8e-07   (delta=112%, cutoff=1%)
+pfet_03v3:$29 vs. programmable_pfet:2/pfet_03v3:M5:
+ W circuit1: 9.2e-05   circuit2: 2.2e-07   (delta=199%, cutoff=1%)
+ L circuit1: 1e-06   circuit2: 2.8e-07   (delta=112%, cutoff=1%)
+nfet_03v3:$5 vs. programmable_nfet:1/nfet_03v3:M1:
+ W circuit1: 2.71e-05   circuit2: 2.2e-07   (delta=197%, cutoff=1%)
+ L circuit1: 1e-06   circuit2: 2.8e-07   (delta=112%, cutoff=1%)
+nfet_03v3:$3 vs. programmable_nfet:1/nfet_03v3:M3:
+ W circuit1: 5.42e-05   circuit2: 4.4e-07   (delta=197%, cutoff=1%)
+ L circuit1: 1e-06   circuit2: 2.8e-07   (delta=112%, cutoff=1%)
+nfet_03v3:$6 vs. programmable_nfet:1/nfet_03v3:M5:
+ W circuit1: 2.71e-05   circuit2: 2.2e-07   (delta=197%, cutoff=1%)
+ L circuit1: 1e-06   circuit2: 2.8e-07   (delta=112%, cutoff=1%)
+
+Subcircuit pins:
+Circuit 1: programmable_common_source      |Circuit 2: programmable_common_source      
+-------------------------------------------|-------------------------------------------
+VG_BIAS                                    |VG_BIAS                                    
+IN                                         |IN                                         
+OUT                                        |OUT                                        
+\!EN0                                      |!EN0                                       
+\!EN1                                      |!EN1                                       
+EN0                                        |EN0                                        
+EN1                                        |EN1                                        
+VSS                                        |VSS                                        
+VDD                                        |VDD                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes programmable_common_source and programmable_common_source are equivalent.
+
+Cell scan_chain (0) disconnected node: \!EN_1_CS \!EN_0_CS
+Subcircuit summary:
+Circuit 1: scan_chain                      |Circuit 2: scan_chain                      
+-------------------------------------------|-------------------------------------------
+D_ff1 (9)                                  |D_ff1 (9)                                  
+Number of devices: 9                       |Number of devices: 9                       
+Number of nets: 22                         |Number of nets: 22                         
+---------------------------------------------------------------------------------------
+Netlists match uniquely with port errors.
+
+Subcircuit pins:
+Circuit 1: scan_chain                      |Circuit 2: scan_chain                      
+-------------------------------------------|-------------------------------------------
+scan_in                                    |scan_in                                    
+\!EN_0_FOLDED                              |!EN_0_FOLDED                               
+\!EN_1_FOLDED                              |!EN_1_FOLDED                               
+\!EN_0_TELESCOPIC                          |!EN_0_TELESCOPIC                           
+\!EN_1_5T                                  |!EN_1_5T                                   
+\!EN_0_5T                                  |!EN_0_5T                                   
+\!EN_1_TELESCOPIC                          |!EN_1_TELESCOPIC                           
+scan_out                                   |scan_out                                   
+EN_0_FOLDED                                |EN_0_FOLDED                                
+EN_1_FOLDED                                |EN_1_FOLDED                                
+EN_0_CS                                    |EN_0_CS                                    
+EN_0_TELESCOPIC                            |EN_0_TELESCOPIC                            
+EN_0_5T                                    |EN_0_5T                                    
+EN_1_TELESCOPIC                            |EN_1_TELESCOPIC                            
+EN_1_5T                                    |EN_1_5T                                    
+EN_1_CS                                    |EN_1_CS                                    
+VDD                                        |VDD                                        
+CLK                                        |CLK                                        
+VSS                                        |VSS                                        
+(no pin, node is \!EN_1_CS)                |!EN_1_CS                                   
+(no pin, node is \!EN_0_CS)                |!EN_0_CS                                   
+\!EN_1_CS \!EN_0_CS                        |(no matching pin)                          
+---------------------------------------------------------------------------------------
+Cell pin lists for scan_chain and scan_chain altered to match.
+Device classes scan_chain and scan_chain are equivalent.
+Flattening unmatched subcell inv1 in circuit DUT (1)(1 instance)
+Flattening unmatched subcell transmission_gate in circuit DUT (1)(8 instances)
+
+Cell DUT (0) disconnected node: INP_TELESCOPIC
+Cell DUT (0) disconnected node: INP_FOLDED
+Cell DUT (0) disconnected node: INP_5T
+Cell DUT (0) disconnected node: INN_TELESCOPIC
+Cell DUT (0) disconnected node: INN_FOLDED
+Cell DUT (0) disconnected node: INN_5T
+Cell DUT (0) disconnected node: IBIAS
+Cell DUT (0) disconnected node: IN_CS
+Cell DUT (1) disconnected node: INP_FOLDED
+Cell DUT (1) disconnected node: IBIAS
+Cell DUT (1) disconnected node: INN_FOLDED
+Cell DUT (1) disconnected node: INP_5T
+Cell DUT (1) disconnected node: INN_5T
+Cell DUT (1) disconnected node: INP_TELESCOPIC
+Cell DUT (1) disconnected node: IN_CS
+Cell DUT (1) disconnected node: INN_TELESCOPIC
+Subcircuit summary:
+Circuit 1: DUT                             |Circuit 2: DUT                             
+-------------------------------------------|-------------------------------------------
+programmable_folded_cascode (1)            |programmable_folded_cascode (1)            
+programmable_telescopic_cascode (1)        |programmable_telescopic_cascode (1)        
+programmable_5tOTA (1)                     |programmable_5tOTA (1)                     
+programmable_common_source (1)             |programmable_common_source (1)             
+scan_chain (1)                             |scan_chain (1)                             
+cap_nmos_03v3_b (1)                        |cap_nmos_03v3_b (53->1)                    
+nfet_03v3 (10)                             |nfet_03v3 (10)                             
+pfet_03v3 (9)                              |pfet_03v3 (9)                              
+Number of devices: 25                      |Number of devices: 25                      
+Number of nets: 38 **Mismatch**            |Number of nets: 35 **Mismatch**            
+---------------------------------------------------------------------------------------
+NET mismatches: Class fragments follow (with fanout counts):
+Circuit 1: DUT                             |Circuit 2: DUT                             
+
+---------------------------------------------------------------------------------------
+Net: OUT_TELESCOPIC                        |Net: OUT_TELESCOPIC                        
+  programmable_telescopic_cascode/output = |  programmable_telescopic_cascode/output = 
+                                           |                                           
+Net: \$6                                   |Net: INN_TELESCOPIC_PROT                   
+  programmable_telescopic_cascode/INP = 1  |  programmable_telescopic_cascode/INN = 1  
+                                           |                                           
+Net: \$24                                  |Net: INP_TELESCOPIC_PROT                   
+  programmable_telescopic_cascode/INN = 1  |  programmable_telescopic_cascode/INP = 1  
+                                           |                                           
+Net: \$44                                  |Net: EN_1_5T                               
+  programmable_common_source/\!EN1 = 1     |  scan_chain/EN_1_5T = 1                   
+                                           |  programmable_5tOTA/EN1 = 1               
+                                           |  pfet_03v3/(1|3) = 1                      
+                                           |  nfet_03v3/(1|3) = 1                      
+                                           |                                           
+Net: \$39 \$38                             |Net: EN_0_5T                               
+  scan_chain/EN_0_TELESCOPIC = 1           |  scan_chain/EN_0_5T = 1                   
+                                           |  programmable_5tOTA/EN0 = 1               
+                                           |  pfet_03v3/(1|3) = 1                      
+                                           |  nfet_03v3/(1|3) = 1                      
+                                           |                                           
+Net: dummy_45                              |Net: EN_0_TELESCOPIC                       
+  scan_chain/proxy!EN_1_CS = 1             |  scan_chain/EN_0_TELESCOPIC = 1           
+                                           |  pfet_03v3/(1|3) = 1                      
+                                           |  nfet_03v3/(1|3) = 1                      
+                                           |  programmable_telescopic_cascode/EN0 = 1  
+                                           |                                           
+Net: dummy_46                              |Net: EN_1_TELESCOPIC                       
+  scan_chain/proxy!EN_0_CS = 1             |  scan_chain/EN_1_TELESCOPIC = 1           
+                                           |  pfet_03v3/(1|3) = 1                      
+                                           |  nfet_03v3/(1|3) = 1                      
+                                           |  programmable_telescopic_cascode/EN1 = 1  
+                                           |                                           
+Net: \$96                                  |Net: !EN_1_CS                              
+  programmable_5tOTA/ena<1> = 1            |  scan_chain/!EN_1_CS = 1                  
+  scan_chain/\!EN_0_5T = 1                 |  programmable_common_source/!EN1 = 1      
+  pfet_03v3/(drain|source) = 1             |                                           
+  nfet_03v3/(drain|source) = 1             |                                           
+                                           |                                           
+Net: \$94                                  |Net: !EN_0_TELESCOPIC                      
+  programmable_5tOTA/ena<0> = 1            |  scan_chain/!EN_0_TELESCOPIC = 1          
+  scan_chain/EN_0_5T = 1                   |  programmable_telescopic_cascode/!EN0 = 1 
+  pfet_03v3/(drain|source) = 1             |                                           
+  nfet_03v3/(drain|source) = 1             |                                           
+                                           |                                           
+Net: \$40                                  |Net: !EN_0_CS                              
+  programmable_telescopic_cascode/\!EN1 =  |  scan_chain/!EN_0_CS = 1                  
+  scan_chain/EN_1_TELESCOPIC = 1           |  programmable_common_source/!EN0 = 1      
+                                           |                                           
+Net: \$43                                  |Net: !EN_1_5T                              
+  programmable_telescopic_cascode/\!EN0 =  |  scan_chain/!EN_1_5T = 1                  
+  scan_chain/\!EN_0_TELESCOPIC = 1         |  programmable_5tOTA/!EN1 = 1              
+                                           |                                           
+Net: \$95                                  |Net: !EN_0_5T                              
+  programmable_5tOTA/ena_bar<1> = 1        |  scan_chain/!EN_0_5T = 1                  
+  scan_chain/EN_1_5T = 1                   |  programmable_5tOTA/!EN0 = 1              
+                                           |                                           
+Net: \$93                                  |Net: !EN_1_TELESCOPIC                      
+  programmable_5tOTA/ena_bar<0> = 1        |  scan_chain/!EN_1_TELESCOPIC = 1          
+  scan_chain/\!EN_1_TELESCOPIC = 1         |  programmable_telescopic_cascode/!EN1 = 1 
+                                           |                                           
+Net: \$53                                  |(no matching net)                          
+  programmable_common_source/\!EN0 = 1     |                                           
+  scan_chain/\!EN_1_5T = 1                 |                                           
+                                           |                                           
+Net: \$39                                  |(no matching net)                          
+  programmable_telescopic_cascode/EN1 = 1  |                                           
+  pfet_03v3/(drain|source) = 1             |                                           
+  nfet_03v3/(drain|source) = 1             |                                           
+                                           |                                           
+Net: \$38                                  |(no matching net)                          
+  programmable_telescopic_cascode/EN0 = 1  |                                           
+  pfet_03v3/(drain|source) = 1             |                                           
+  nfet_03v3/(drain|source) = 1             |                                           
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: \$16                                  |Net: IBIAS_PROT                            
+  programmable_folded_cascode/VG_BIAS = 1  |  programmable_folded_cascode/VG_BIAS = 1  
+  programmable_telescopic_cascode/VG_BIAS  |  programmable_telescopic_cascode/VG_BIAS  
+  programmable_5tOTA/V_bias = 1            |  programmable_5tOTA/V_bias = 1            
+  programmable_common_source/VG_BIAS = 1   |  programmable_common_source/VG_BIAS = 1   
+  nfet_03v3/gate = 1                       |  nfet_03v3/(1|3) = 1                      
+  nfet_03v3/(drain|source) = 1             |  nfet_03v3/2 = 1                          
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: VDD                                   |Net: VDD                                   
+  programmable_folded_cascode/VDD = 1      |  programmable_folded_cascode/VDD = 1      
+  programmable_telescopic_cascode/VDD = 1  |  programmable_telescopic_cascode/VDD = 1  
+  programmable_5tOTA/VDD = 1               |  programmable_5tOTA/VDD = 1               
+  programmable_common_source/VDD = 1       |  programmable_common_source/VDD = 1       
+  scan_chain/VDD = 1                       |  scan_chain/VDD = 1                       
+  cap_nmos_03v3_b/top = 1                  |  cap_nmos_03v3_b/top = 1                  
+  pfet_03v3/(drain|source) = 1             |  pfet_03v3/(1|3) = 1                      
+  pfet_03v3/bulk = 9                       |  pfet_03v3/4 = 9                          
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: VSS                                   |Net: VSS                                   
+  programmable_folded_cascode/VSS = 1      |  programmable_folded_cascode/VSS = 1      
+  programmable_telescopic_cascode/VSS = 1  |  programmable_telescopic_cascode/VSS = 1  
+  programmable_5tOTA/VSS = 1               |  programmable_5tOTA/VSS = 1               
+  programmable_common_source/VSS = 1       |  programmable_common_source/VSS = 1       
+  scan_chain/VSS = 1                       |  scan_chain/VSS = 1                       
+  cap_nmos_03v3_b/bottom = 1               |  cap_nmos_03v3_b/bottom = 1               
+  nfet_03v3/(drain|source) = 10            |  pfet_03v3/(1|3) = 8                      
+  nfet_03v3/bulk = 10                      |  nfet_03v3/4 = 10                         
+  pfet_03v3/(drain|source) = 8             |  nfet_03v3/(1|3) = 10                     
+---------------------------------------------------------------------------------------
+DEVICE mismatches: Class fragments follow (with node fanout counts):
+Circuit 1: DUT                             |Circuit 2: DUT                             
+
+---------------------------------------------------------------------------------------
+Instance: programmable_telescopic_cascode: |Instance: programmable_telescopic_cascode: 
+  \!EN1 = 2                                |  !EN1 = 2                                 
+  \!EN0 = 2                                |  !EN0 = 2                                 
+  VDD = 16                                 |  VDD = 16                                 
+  VSS = 34                                 |  VSS = 34                                 
+  VG_BIAS = 6                              |  VG_BIAS = 6                              
+  EN1 = 3                                  |  EN1 = 4                                  
+  EN0 = 3                                  |  EN0 = 4                                  
+  output = 1                               |  output = 1                               
+  INP = 1                                  |  INP = 1                                  
+  INN = 1                                  |  INN = 1                                  
+---------------------------------------------------------------------------------------
+Netlists do not match.
+Port matching may fail to disambiguate symmetries.
+
+Subcircuit pins:
+Circuit 1: DUT                             |Circuit 2: DUT                             
+-------------------------------------------|-------------------------------------------
+OUT_TELESCOPIC                             |(no pin, node is INN_TELESCOPIC_PROT)      
+SCAN_OUT                                   |SCAN_OUT                                   
+SCAN_IN                                    |SCAN_IN                                    
+CLK                                        |CLK                                        
+OUT_CS                                     |OUT_CS                                     
+OUT_5T                                     |OUT_5T                                     
+OUT_FOLDED                                 |OUT_FOLDED                                 
+PROG_ENA                                   |PROG_ENA                                   
+VDD                                        |VDD                                        
+VSS                                        |VSS                                        
+INP_TELESCOPIC                             |INP_TELESCOPIC                             
+INP_FOLDED                                 |INP_FOLDED                                 
+INP_5T                                     |INP_5T                                     
+INN_TELESCOPIC                             |INN_TELESCOPIC                             
+INN_FOLDED                                 |INN_FOLDED                                 
+INN_5T                                     |INN_5T                                     
+IBIAS                                      |IBIAS                                      
+IN_CS                                      |IN_CS                                      
+(no pin, node is \$38)                     |OUT_TELESCOPIC                             
+---------------------------------------------------------------------------------------
+Cell pin lists for DUT and DUT altered to match.
+Device classes DUT and DUT are equivalent.
+
+Final result: Top level cell failed pin matching.
+
+The following cells had property errors:
+ programmable_folded_cascode
+ programmable_5tOTA
+ programmable_common_source
