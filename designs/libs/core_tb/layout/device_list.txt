@@ -1,0 +1,12 @@
+Device Declaration for C1 Four-Topology MOSbius
+================================================
+
+Primitive devices used:
+- nfet_03v3 (3.3V NMOS transistor)
+- pfet_03v3 (3.3V PMOS transistor)
+- cap_nmos_03v3_b (3.3V NMOS capacitor with bulk tie)
+- diode_pd2nw_06v0 (P-diffusion to N-well diode, 6V)
+- diode_nd2ps_06v0 (N-diffusion to P-sub diode, 6V)
+- ppolyf_u (Unsilicided P-poly resistor)
+
+All devices are from the GF180MCU open-source PDK (gf180mcuD).
