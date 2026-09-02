@@ -1,0 +1,36 @@
+Pin List for C1 Four-Topology MOSbius
+======================================
+
+Power:
+  VDD              - Power supply (3.3V)
+  VSS              - Ground (substrate tie in padframe)
+
+Bias:
+  IBIAS            - Reference bias current input (100uA)
+
+Digital Control:
+  CLK              - Scan chain clock input
+  SCAN_IN          - Scan chain serial data input
+  SCAN_OUT         - Scan chain serial data output
+  PROG_ENA         - Global programmable enable
+
+Folded Cascode OTA:
+  INP_FOLDED       - Non-inverting input
+  INN_FOLDED       - Inverting input
+  OUT_FOLDED       - Output
+
+5-Transistor OTA:
+  INP_5T           - Non-inverting input
+  INN_5T           - Inverting input
+  OUT_5T           - Output
+
+Telescopic Cascode OTA:
+  INP_TELESCOPIC   - Non-inverting input
+  INN_TELESCOPIC   - Inverting input
+  OUT_TELESCOPIC   - Output
+
+Common Source Stage:
+  IN_CS            - Input
+  OUT_CS           - Output
+
+Total pins: 18
