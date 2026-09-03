@@ -1,4 +1,5 @@
 {
+  "libs_DUT": "/foss/designs/libs/pex/DUT.gds",
   "cs_stage_programmable_common_source": "/foss/designs/libs/core_amps/cs_stage/layout/programmable_common_source.gds",
   "layout_programmable_pfet_w50_l0P5_nf1_mult2": "/foss/designs/libs/core_amps/ota_5t/layout/programmable_pfet_w50_l0P5_nf1_mult2/programmable_pfet_w50_l0P5_nf1_mult2.gds",
   "layout_programmable_nfet_w22P8_l1_nf1_mult3": "/foss/designs/libs/core_amps/ota_5t/layout/programmable_nfet_w22P8_l1_nf1_mult3/programmable_nfet_w22P8_l1_nf1_mult3.gds",
@@ -19,6 +20,8 @@
   "prgrm_layout_programmable_pfet_w34p8_l1_nf1_mult10": "/foss/designs/libs/core_amps/ota_folded_cascode/prgrm_layout/programmable_pfet_w34p8_l1_nf1_mult10/programmable_pfet_w34p8_l1_nf1_mult10.gds",
   "prgrm_layout_ota_folded_cascode_layout": "/foss/designs/libs/core_amps/ota_folded_cascode/prgrm_layout/ota_folded_cascode_layout/ota_folded_cascode_layout.gds",
   "core_tb_DUT": "/foss/designs/libs/core_tb/layout/DUT.gds",
+  "libs_fourtopmos": "/foss/designs/libs/layout_logos/fourtopmos.gds",
+  "libs_names_logos": "/foss/designs/libs/layout_logos/names_logos.gds",
   "core_digital_scan_chain": "/foss/designs/libs/core_digital/layout/scan_chain.gds",
   "core_digital_transmission_gate": "/foss/designs/libs/core_digital/layout/transmission_gate.gds",
   "core_digital_inv1": "/foss/designs/libs/core_digital/layout/inv1.gds",
@@ -26,5 +29,6 @@
   "core_digital_NAND2": "/foss/designs/libs/core_digital/layout/NAND2.gds",
   "core_digital_D_latch1": "/foss/designs/libs/core_digital/layout/D_latch1.gds",
   "layout_programmable_nfet_w27P1_l1_f1_m1": "/foss/designs/libs/core_digital/layout/n_w27P1_l1_f1_m1/programmable_nfet_w27P1_l1_f1_m1.gds",
-  "layout_programmable_pfet_w9P2_l1_f1_m10": "/foss/designs/libs/core_digital/layout/p_w9P2_l1_f1_m10/programmable_pfet_w9P2_l1_f1_m10.gds"
+  "layout_programmable_pfet_w9P2_l1_f1_m10": "/foss/designs/libs/core_digital/layout/p_w9P2_l1_f1_m10/programmable_pfet_w9P2_l1_f1_m10.gds",
+  "libs_secondary_ESD_m2": "/foss/designs/libs/secondary_esd/secondary_ESD_m2.gds"
 }

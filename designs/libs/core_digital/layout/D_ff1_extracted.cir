@@ -1,4 +1,4 @@
-* Extracted by KLayout with GF180MCU LVS runset on : 01/08/2026 19:01
+* Extracted by KLayout with GF180MCU LVS runset on : 03/09/2026 04:11
 
 .SUBCKT D_ff1 CLK VDD VSS D Q Q_bar
 X$1 VSS VDD D \$11 \$I7 CLK D_latch1
