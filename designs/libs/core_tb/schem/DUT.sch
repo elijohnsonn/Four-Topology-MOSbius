@@ -30,7 +30,9 @@ L 4 -80 880 -80 2080 {}
 L 4 1630 760 1630 1710 {}
 L 4 1630 760 2890 760 {}
 L 4 2890 760 2890 1710 {}
-L 4 1630 1710 2890 1710 {}
+L 4 1630 1710 1630 2140 {}
+L 4 2890 1700 2890 2140 {}
+L 4 1630 2140 2890 2140 {}
 T {PROGRAMMING ENABLE} -990 770 0 0 1 1 {}
 T {CORE AMPLIFIERS} 530 780 0 0 1 1 {}
 T {BIAS AND POWER PINS} 100 80 0 0 1 1 {}
@@ -177,10 +179,6 @@ N 450 210 450 220 {lab=VDD}
 C {libs/core_digital/schem/scan_chain.sym} -610 430 0 0 {name=x1}
 C {libs/core_amps/ota_folded_cascode/prgrm_schem/programmable_folded_cascode.sym} 430 1070 0 0 {name=x2}
 C {libs/core_amps/cs_stage/prgrm_schem/programmable_common_source.sym} 1060 1380 0 0 {name=x5}
-C {iopin.sym} 600 1070 2 1 {name=p35 lab=OUT_FOLDED}
-C {iopin.sym} 1270 1090 2 1 {name=p1 lab=OUT_5T}
-C {iopin.sym} 610 1370 2 1 {name=p2 lab=OUT_TELESCOPIC}
-C {iopin.sym} 1250 1380 2 1 {name=p3 lab=OUT_CS}
 C {lab_pin.sym} 660 380 0 0 {name=p36 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 540 380 0 0 {name=p37 sig_type=std_logic lab=VSS}
 C {iopin.sym} 540 440 1 0 {name=p38 lab=VSS}
@@ -410,3 +408,43 @@ spiceprefix=X
 m=53}
 C {lab_pin.sym} 450 210 0 0 {name=p70 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 450 300 0 0 {name=p145 sig_type=std_logic lab=VSS}
+C {libs/secondary_esd/io_secondary_5p0.sym} 2000 1890 0 1 {name=IO9
+spiceprefix=X
+}
+C {libs/secondary_esd/io_secondary_5p0.sym} 2630 1890 0 1 {name=IO10
+spiceprefix=X
+}
+C {lab_pin.sym} 2630 1810 0 1 {name=p153 sig_type=std_logic lab=OUT_5T_PROT}
+C {lab_pin.sym} 2000 1810 0 1 {name=p154 sig_type=std_logic lab=OUT_CS_PROT}
+C {iopin.sym} 1800 1810 2 0 {name=p155 lab=OUT_CS}
+C {lab_pin.sym} 1920 1730 0 0 {name=p156 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} 2550 1730 0 0 {name=p157 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} 1920 1890 0 0 {name=p158 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 2550 1890 0 0 {name=p159 sig_type=std_logic lab=VSS}
+C {iopin.sym} 2430 1810 0 1 {name=p160 lab=OUT_5T
+}
+C {libs/secondary_esd/io_secondary_5p0.sym} 2000 2100 0 1 {name=IO11
+spiceprefix=X
+}
+C {libs/secondary_esd/io_secondary_5p0.sym} 2630 2100 0 1 {name=IO12
+spiceprefix=X
+}
+C {lab_pin.sym} 2630 2020 0 1 {name=p161 sig_type=std_logic lab=OUT_FOLDED_PROT}
+C {lab_pin.sym} 2000 2020 0 1 {name=p162 sig_type=std_logic lab=OUT_TELESCOPIC_PROT}
+C {iopin.sym} 1800 2020 2 0 {name=p163 lab=OUT_TELESCOPIC}
+C {lab_pin.sym} 1920 1940 0 0 {name=p164 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} 2550 1940 0 0 {name=p165 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} 1920 2100 0 0 {name=p166 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 2550 2100 0 0 {name=p167 sig_type=std_logic lab=VSS}
+C {iopin.sym} 2430 2020 0 1 {name=p168 lab=OUT_FOLDED
+}
+C {lab_pin.sym} 1250 1380 0 1 {name=p1 sig_type=std_logic lab=OUT_CS_PROT}
+C {lab_pin.sym} 1270 1090 0 1 {name=p2 sig_type=std_logic lab=OUT_5T_PROT}
+C {lab_pin.sym} -110 660 0 1 {name=p3 sig_type=std_logic lab=OUT_CS_PROT}
+C {lab_pin.sym} 610 1370 0 1 {name=p35 sig_type=std_logic lab=OUT_TELESCOPIC_PROT}
+C {lab_pin.sym} -120 440 0 1 {name=p169 sig_type=std_logic lab=OUT_5T_PROT}
+C {lab_pin.sym} -1500 10 0 1 {name=p170 sig_type=std_logic lab=OUT_CS_PROT}
+C {lab_pin.sym} 600 1070 0 1 {name=p171 sig_type=std_logic lab=OUT_FOLDED_PROT}
+C {lab_pin.sym} -1420 420 0 1 {name=p172 sig_type=std_logic lab=OUT_TELESCOPIC_PROT}
+C {lab_pin.sym} -2150 -510 0 1 {name=p173 sig_type=std_logic lab=OUT_5T_PROT}
+C {lab_pin.sym} -3530 -940 0 1 {name=p174 sig_type=std_logic lab=OUT_CS_PROT}
