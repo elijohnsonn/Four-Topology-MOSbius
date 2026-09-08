@@ -443,8 +443,4 @@ C {lab_pin.sym} 1270 1090 0 1 {name=p2 sig_type=std_logic lab=OUT_5T_PROT}
 C {lab_pin.sym} -110 660 0 1 {name=p3 sig_type=std_logic lab=OUT_CS_PROT}
 C {lab_pin.sym} 610 1370 0 1 {name=p35 sig_type=std_logic lab=OUT_TELESCOPIC_PROT}
 C {lab_pin.sym} -120 440 0 1 {name=p169 sig_type=std_logic lab=OUT_5T_PROT}
-C {lab_pin.sym} -1500 10 0 1 {name=p170 sig_type=std_logic lab=OUT_CS_PROT}
 C {lab_pin.sym} 600 1070 0 1 {name=p171 sig_type=std_logic lab=OUT_FOLDED_PROT}
-C {lab_pin.sym} -1420 420 0 1 {name=p172 sig_type=std_logic lab=OUT_TELESCOPIC_PROT}
-C {lab_pin.sym} -2150 -510 0 1 {name=p173 sig_type=std_logic lab=OUT_5T_PROT}
-C {lab_pin.sym} -3530 -940 0 1 {name=p174 sig_type=std_logic lab=OUT_CS_PROT}
