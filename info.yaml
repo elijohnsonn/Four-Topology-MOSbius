@@ -17,6 +17,12 @@ project:
   discord: "elij0100"                   # Optional: Discord username (for support / communication)
   description: "PDK test data"  # Short one-line description
   lvs_config: "./DRC_dry_run/lvs_config.json"
+  gf_def_ready: true 
+  ws_def_ready: true 
+  def_ready: true
+  drc_ready: true
+  lvs_ready: true
+  
 
 pins: 
   - name: VSS
