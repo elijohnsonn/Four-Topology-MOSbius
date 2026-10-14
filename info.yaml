@@ -21,6 +21,7 @@ project:
   ws_def_ready: false 
   drc_ready: true
   lvs_ready: true
+  export_control: "GF_form.pdf"   # Required export control document
   
 
 pins: 
